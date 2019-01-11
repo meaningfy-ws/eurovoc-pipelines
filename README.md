@@ -11,7 +11,7 @@ Following is a description of the transformation processes for SRC-AP assets tha
 * To generate SKOS-core 
 * To generate SKOS-AP-EU public (for broad dissemination) 
 * To generate SKOS-AP-EU backwards compatible (for activation in Cellar) (+backwards compatible) 
-* And to generate SKOS candidates (for GIL Eurovoc) 
+* And to generate SKOS candidates  (for GIL Eurovoc) 
 
 ### ETL pipelines description
 * Phase-0 : ingests the data exported from VocBench application (4.0+) into SRC-AP and loads them into ETL pipeline :    
