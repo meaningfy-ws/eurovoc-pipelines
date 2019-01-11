@@ -19,8 +19,12 @@ Following is a description of the transformation processes for SRC-AP assets tha
     * and export candidates data into http://publications.europa.eu/resource/dataset/eurovoc/src-ap-candidates graph 
 
 * Phase A.3. : this is the first pre-process phase on the SRC-AP data (4.9 specific). 
-    * It checks and controls the data, and moves them from http://publications.europa.eu/resource/dataset/eurovoc/src-ap to http://publications.europa.eu/resource/dataset/eurovoc/src-ap-49 and into local files.  
-A.5. pre-process SRC-AP (generic) 
+    * It checks, cleans and controls the data, and moves them :
+        * from http://publications.europa.eu/resource/dataset/eurovoc/src-ap 
+        * to http://publications.europa.eu/resource/dataset/eurovoc/src-ap-49 
+        * and into local files.  
+
+* Phase A.5. pre-process SRC-AP (generic) 
 from http://publications.europa.eu/resource/dataset/eurovoc/src-ap-49 
 into http://publications.europa.eu/resource/dataset/eurovoc/src-ap-generic  
 into local file  
@@ -43,6 +47,8 @@ B.5. publish SRC-AP candidates as SKOS-core candidates
 
 from http://publications.europa.eu/resource/dataset/eurovoc/src-ap-candidates 
 into local file only 
+
+![The process description](./ProcessDescription.png)
 
 A.3 Version specific  preprocessing (4.9)
 4.9 specific clean up
