@@ -14,21 +14,22 @@ Following is a description of the transformation processes for SRC-AP assets tha
 * And to generate SKOS candidates  (for GIL Eurovoc) 
 
 ### ETL pipelines description
-* Phase-0 : ingests the data exported from VocBench application (4.0+) into SRC-AP and loads them into ETL pipeline :    
+* **Phase-0** : ingests the data exported from VocBench application (4.0+) into SRC-AP and loads them into an ETL pipeline :    
     * from VocBench (SRC-AP), export data into the graph http://publications.europa.eu/resource/dataset/eurovoc/src-ap graph 
     * and export candidates data into http://publications.europa.eu/resource/dataset/eurovoc/src-ap-candidates graph 
 
-* Phase A.3. : this is the first pre-process phase on the SRC-AP data (4.9 specific). 
-    * It checks, cleans and controls the data, and moves them :
-        * from http://publications.europa.eu/resource/dataset/eurovoc/src-ap 
-        * to http://publications.europa.eu/resource/dataset/eurovoc/src-ap-49 
-        * and into local files.  
+* **Phase A.3.** : this is the first pre-process phase on the SRC-AP data (4.9 specific). It checks, cleans and controls the data, and moves them :
+    * from http://publications.europa.eu/resource/dataset/eurovoc/src-ap 
+    * to http://publications.europa.eu/resource/dataset/eurovoc/src-ap-49 
+    * and into local files.  
 
-* Phase A.5. pre-process SRC-AP (generic) 
-from http://publications.europa.eu/resource/dataset/eurovoc/src-ap-49 
-into http://publications.europa.eu/resource/dataset/eurovoc/src-ap-generic  
-into local file  
-B.0. publish SRC-AP as SKOS-AP-EU (2015) 
+* **Phase A.5.** : this second pre-process SRC-AP (generic) in order to create a SRC-AP that can be imported back into VocBench and ready to be published as SKOS-AP.
+it transform the data and moves them :
+    * from http://publications.europa.eu/resource/dataset/eurovoc/src-ap-49 
+    * to http://publications.europa.eu/resource/dataset/eurovoc/src-ap-generic  
+    * and into local file  
+
+* **Phase B.0.** : publish SRC-AP as SKOS-AP-EU (2015) 
 from http://publications.europa.eu/resource/dataset/eurovoc/src-ap-generic  
 into http://publications.europa.eu/resource/dataset/eurovoc/skos-ap-2015  
 into local file  
@@ -50,42 +51,43 @@ into local file only
 
 ![The process description](./ProcessDescription.png)
 
-A.3 Version specific  preprocessing (4.9)
-4.9 specific clean up
+### A.3 Version 4.9 specific preprocessing (clean-up)
 
-A.3.1 : remove lexvo properties from pref and alt labels  
-A.3.2 : select all the labels in GA that have the same values as EN and remove the ones in GA  
-A.3.3 : delete all the alignments from the dataset   
-A.3.3.a : additionally delete the statements belonging to the foreign URIs (the ones that eurovoc concept is mapped to) 
-A.3.3.b :before this operation, check/ask whenter there is any eurovoc concept mapped to another eurovoc concept 
-·        A.3.4 : delete all the ?subjects that do not belong to the eurovoc namespace by handpicking specific namespaces (knowing their distinguished marker)
+* A.3.1 : remove lexvo properties from pref and alt labels  
+* A.3.2 : select all the labels in GA that have the same values as EN and remove the ones in GA  
+* A.3.3 : delete all the alignments from the dataset   
+* A.3.3.a : additionally delete the statements belonging to the foreign URIs (the ones that eurovoc concept is mapped to) 
+* A.3.3.b :before this operation, check/ask whenter there is any eurovoc concept mapped to another eurovoc concept 
+* A.3.4 : delete all the ?subjects that do not belong to the eurovoc namespace by handpicking specific namespaces (knowing their distinguished marker)
 
-·        ?ms ?p ?o .
-·        FILTER( contains( str(?ms), "stw") 
-·        || contains( str(?ms), "agrovoc") 
-·        || contains( str(?ms), "gemet") 
-·        || contains( str(?ms), "gnd") 
-·        || contains( str(?ms), "id.loc")
-·        || contains( str(?ms), "bnf") 
-·        || contains( str(?ms), "zbw") 
-·        || contains( str(?ms), "uba") 
-·        || contains( str(?ms), "lib-thesaurus")
-·        || contains( str(?ms), "unesco")
-|| contains( str(?ms), "itm:"))
-A.3.4.a : test that the remaining triples contain no NON-eurovoc subjects 
-A.3.5 : check for concepts that belong only to EuroVoc concept scheme (or none) and mark them as deprecated 
-A.3.6 : delete (the reified) skos:notations that have duplicate values (rdf:value and if available dct:type) 
-to be checked if the context works for NALs (expected dct:type for the notation type) 
-A.3.7 : if there are non-reified skos:note, reify them with euvoc:XlNote objects (rdf:value value property) 
-A.3.8 : if there are non-reified skos:notation, reify them with euvoc:XlNotation objects (rdf:value value property) 
-A.3.9 : delete objects (except those from eurovoc namespace) of type alignment, ontology or dataset : <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Ontology>, <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Alignment>, owl:Ontology;  
-A.3.10 : if a concept belongs only to <http://eurovoc.europa.eu/100141> concept scheme then mark it as owl:depracated "true"^^xsd:boolean. 
-A.3.11 : delete the dct:title from reified notes and notations (all of them) 
-A.3.12 : fix the ontology statements  
-A.3.12 (a) : delete ns0:Ontology statement (subject is http://eurovoc.europa.eu) 
-A.3.12 (b) :change the owl:Ontology subject from http://eurovoc.europa.eu/ into http://eurovoc.europa.eu 
-A.5. Generic pre-processing/normalisation SRC-AP
-here the goal is to create a SRC-AP that can be imported back into VB3 and ready to published as SKOS-AP
+                   ?ms ?p ?o .
+                    FILTER( contains( str(?ms), "stw") 
+                    || contains( str(?ms), "agrovoc") 
+                    || contains( str(?ms), "gemet") 
+                    || contains( str(?ms), "gnd") 
+                    || contains( str(?ms), "id.loc")
+                    || contains( str(?ms), "bnf") 
+                    || contains( str(?ms), "zbw") 
+                    || contains( str(?ms), "uba") 
+                    || contains( str(?ms), "lib-thesaurus")
+                    || contains( str(?ms), "unesco")
+                    || contains( str(?ms), "itm:"))
+        
+* A.3.4.a : test that the remaining triples contain no NON-eurovoc subjects 
+* A.3.5 : check for concepts that belong only to EuroVoc concept scheme (or none) and mark them as deprecated 
+* A.3.6 : delete (the reified) skos:notations that have duplicate values (rdf:value and if available dct:type) 
+    Note : to be checked if the context works for NALs (expected dct:type for the notation type) 
+* A.3.7 : if there are non-reified skos:note, reify them with euvoc:XlNote objects (rdf:value value property) 
+* A.3.8 : if there are non-reified skos:notation, reify them with euvoc:XlNotation objects (rdf:value value property) 
+* A.3.9 : delete objects (except those from eurovoc namespace) of type alignment, ontology or dataset : <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Ontology>, <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#Alignment>, owl:Ontology;  
+* A.3.10 : if a concept belongs only to <http://eurovoc.europa.eu/100141> concept scheme then mark it as owl:depracated "true"^^xsd:boolean. 
+* A.3.11 : delete the dct:title from reified notes and notations (all of them) 
+* A.3.12 : fix the ontology statements  
+* A.3.12 (a) : delete ns0:Ontology statement (subject is http://eurovoc.europa.eu) 
+* A.3.12 (b) :change the owl:Ontology subject from http://eurovoc.europa.eu/ into http://eurovoc.europa.eu 
+
+### A.5. Generic pre-processing/normalisation SRC-AP
+
 
 A.5.1 :  if a concept lack start date add euvoc:startDate, set it to [1952-06-16].  
 A.5.2 :   normalise the date format (remove the datetime instances) [dct:created, dct:modified, euvoc:startDate, euvoc:endDate]  
