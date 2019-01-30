@@ -22,9 +22,14 @@ RUN wget http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/ap
 # Getting the source code
 RUN git clone https://github.com/linkedpipes/etl.git
 RUN cd /etl && mvn install -Dmaven.test.skip=true
+RUN cp /etl/executor/deploy/* /etl/deploy  && \
+    cp /etl/executor-monitor/deploy/* /etl/deploy && \
+    cp /etl/storage/deploy/* /etl/deploy && \
+    cp /etl/frontend/deploy/* /etl/deploy
 RUN chmod uag+rx /etl/deploy/executor.sh && \
     chmod uag+rx /etl/deploy/executor-monitor.sh && \
-    chmod uag+rx /etl/deploy/frontend.sh
+    chmod uag+rx /etl/deploy/frontend.sh && \
+    chmod uag+rx /etl/deploy/storage.sh
 COPY ./configuration_update.properties /etl/deploy/configuration.properties
 
 # Install FDP-to-RDF-component:
