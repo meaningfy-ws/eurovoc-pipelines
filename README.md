@@ -4,9 +4,9 @@ Following is a description of the transformation processes for SRC-AP assets tha
 
 #### **Folders:** 
 
-The folder SkosCore_To_SrcAP contains the process for publishing DET.
-Eurovoc_Publication_Process contains the complete process to publish Eurovoc.
-Old_Process contains all the developped process for previous publication (currently 9.1).
+* The folder SkosCore_To_SrcAP contains the process for publishing DET.
+* Eurovoc_Publication_Process contains the complete process to publish Eurovoc.
+* Old_Process contains all the developped process for previous publication (currently 9.1).
 
 #### **Input:** 
 
