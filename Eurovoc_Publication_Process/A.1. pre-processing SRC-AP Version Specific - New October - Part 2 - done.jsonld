@@ -137,7 +137,7 @@
       "@value" : "1677"
     } ],
     "http://purl.org/dc/terms/description" : [ {
-      "@value" : "A.1.14a : If a concept, label, note (...) have any of the default\nstartDate, then remove the default startDate [1952-06-16]  \nwith the format xsd:date"
+      "@value" : "A.1.13 : If a concept, label, note (...) have any of the default\nstartDate, then remove the default startDate [1952-06-16]  \nwith the format xsd:date"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "SPARQL update"
@@ -248,7 +248,7 @@
       "@value" : "1817"
     } ],
     "http://purl.org/dc/terms/description" : [ {
-      "@value" : "A.1.14b : delete the owl:versionInfo in skos:conceptSchemes \n(except for http://eurovoc.europa.eu/100141)"
+      "@value" : "A.1.14 : delete the owl:versionInfo in skos:conceptSchemes \n(except for http://eurovoc.europa.eu/100141)"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "SPARQL update"
@@ -489,7 +489,7 @@
     "@id" : "http://localhost:8080/resources/pipelines/1570021082832/46/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query" : [ {
-      "@value" : "PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\nPREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>\nPREFIX dc:<http://purl.org/dc/elements/1.1/>\nPREFIX auth:<http://publications.europa.eu/ontology/authority/>\nPREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>\nprefix cdm: <http://publications.europa.eu/ontology/cdm#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix skos-xl: <http://www.w3.org/2008/05/skos-xl#>\nprefix geo: <http://www.opengis.net/ont/geosparql#>\nprefix org: <http://www.w3.org/ns/org#>\nprefix status: <http://publications.europa.eu/resource/authority/concept-status/>\nprefix evo:<http://eurovoc.europa.schema#>\nprefix tp: <http://publications.europa.eu/resource/authority/label-type/>\n\n#A.1.14a\n\nDELETE{\n   ?s euvoc:startDate ?date\n}\n\nwhere \n{\n  \n  ?s euvoc:startDate ?date\n  FILTER ( str(?date) = \"1952-06-16\")\n}\n\n\n"
+      "@value" : "PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\nPREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>\nPREFIX dc:<http://purl.org/dc/elements/1.1/>\nPREFIX auth:<http://publications.europa.eu/ontology/authority/>\nPREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>\nprefix cdm: <http://publications.europa.eu/ontology/cdm#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix skos-xl: <http://www.w3.org/2008/05/skos-xl#>\nprefix geo: <http://www.opengis.net/ont/geosparql#>\nprefix org: <http://www.w3.org/ns/org#>\nprefix status: <http://publications.europa.eu/resource/authority/concept-status/>\nprefix evo:<http://eurovoc.europa.schema#>\nprefix tp: <http://publications.europa.eu/resource/authority/label-type/>\n\n#A.1.13\n\nDELETE{\n   ?s euvoc:startDate ?date\n}\n\nwhere \n{\n  \n  ?s euvoc:startDate ?date\n  FILTER ( str(?date) = \"1952-06-16\")\n}\n\n\n"
     } ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#queryControl" : [ {
       "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
