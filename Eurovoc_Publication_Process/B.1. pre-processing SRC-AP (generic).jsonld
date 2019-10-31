@@ -79,7 +79,7 @@
       "@value" : "-202"
     } ],
     "http://purl.org/dc/terms/description" : [ {
-      "@value" : "B.1.2 :  set/increase owl:versionInfo to \"4.9.2\" to \nhttp://eurovoc.europa.eu/100141"
+      "@value" : "B.1.2 :  set/increase owl:versionInfo to \"4.10\" to \nhttp://eurovoc.europa.eu/100141"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "SPARQL update"
@@ -414,7 +414,7 @@
       "@value" : "15"
     } ],
     "http://purl.org/dc/terms/description" : [ {
-      "@value" : "B.1.3.2 : Set  owl:versionInfo to \"4.9.2\" on Labels"
+      "@value" : "B.1.3.2 : Set  owl:versionInfo to \"4.10\" on Labels"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "SPARQL update"
@@ -985,7 +985,7 @@
       "@value" : "-93"
     } ],
     "http://purl.org/dc/terms/description" : [ {
-      "@value" : "B.1.3.1. : Set owl:versionInfo to \"4.9.2\" on Concept \n(get the latest version from http://eurovoc.europa.eu/100141)"
+      "@value" : "B.1.3.1. : Set owl:versionInfo to \"4.10\" on Concept \n(get the latest version from http://eurovoc.europa.eu/100141)"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "SPARQL update"
@@ -1310,7 +1310,7 @@
   "@id" : "http://localhost:8080/resources/pipelines/1572261326020/graph/67"
 }, {
   "@graph" : [ {
-    "@id" : "http://localhost:8080/resources/pipelines/1572261326020/68",
+    "@id" : "http://localhost:8080/resources/pipelines/1572261326020/9/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query" : [ {
       "@value" : "prefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\n\n# Insert the last version number of version if it does not exist on the concept using the one of \n# <http://eurovoc.europa.eu/100141>\n\n#B.1.3.1\n\nINSERT { ?s owl:versionInfo ?version }\n\nWHERE{ \n     <http://eurovoc.europa.eu/100141> owl:versionInfo ?version .\n     ?s a skos:Concept.\n     FILTER NOT EXISTS {?s owl:versionInfo ?o.} \n}\n"
@@ -1422,10 +1422,10 @@
   "@id" : "http://localhost:8080/resources/pipelines/1572261326020/graph/82"
 }, {
   "@graph" : [ {
-    "@id" : "http://localhost:8080/resources/pipelines/1572261326020/83",
+    "@id" : "http://localhost:8080/resources/pipelines/1572261326020/12/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query" : [ {
-      "@value" : "prefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\n\n#B.1.3\n\nDELETE {\n   <http://eurovoc.europa.eu/100141> owl:versionInfo ?v .\n}\nINSERT {\n     <http://eurovoc.europa.eu/100141> owl:versionInfo \"4.9.2\"^^xsd:string .\n}\nWHERE {\n   <http://eurovoc.europa.eu/100141> owl:versionInfo ?v .\n}\n"
+      "@value" : "prefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\n\n#B.1.3\n\nDELETE {\n   <http://eurovoc.europa.eu/100141> owl:versionInfo ?v .\n}\nINSERT {\n     <http://eurovoc.europa.eu/100141> owl:versionInfo \"4.10\"^^xsd:string .\n}\nWHERE {\n   <http://eurovoc.europa.eu/100141> owl:versionInfo ?v .\n}\n"
     } ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#queryControl" : [ {
       "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
@@ -1434,7 +1434,7 @@
   "@id" : "http://localhost:8080/resources/pipelines/1572261326020/graph/84"
 }, {
   "@graph" : [ {
-    "@id" : "http://localhost:8080/resources/pipelines/1572261326020/85",
+    "@id" : "http://localhost:8080/resources/pipelines/1572261326020/29/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query" : [ {
       "@value" : "prefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\n\n# Add a versionInfo on the labels (taking the one from the related concept)\n\n# B.1.4.2\n\nINSERT { ?s owl:versionInfo ?version }\n\nWHERE{\n  \n  <http://eurovoc.europa.eu/100141> owl:versionInfo ?version .\n  ?s a skosxl:Label .\n  FILTER NOT EXISTS { ?s  owl:versionInfo ?value }\n}\n"
