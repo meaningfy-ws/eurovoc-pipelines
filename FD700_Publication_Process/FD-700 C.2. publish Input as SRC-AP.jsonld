@@ -2191,7 +2191,7 @@
       "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
     } ],
     "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointConstructScrollableCursor#innerSelect" : [ {
-      "@value" : "?s a skos:ConceptScheme .\noptional { ?s owl:versionInfo ?version  }\noptional { ?s dct:modified ?modified }\noptional { ?s dct:created ?created }"
+      "@value" : "?s a skos:ConceptScheme .\nBind(STRDT(\"20191211-0\",  <http://www.w3.org/2001/XMLSchema#string>  ) as ?version)\noptional { ?s dct:modified ?modified }\noptional { ?s dct:created ?created }"
     } ],
     "http://plugins.linkedpipes.com/ontology/e-sparqlEndpointConstructScrollableCursor#innerSelectControl" : [ {
       "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
