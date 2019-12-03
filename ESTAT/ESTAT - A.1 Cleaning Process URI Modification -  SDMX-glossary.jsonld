@@ -300,7 +300,7 @@
     } ],
     "http://linkedpipes.com/ontology/x" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "261"
+      "@value" : "259"
     } ],
     "http://linkedpipes.com/ontology/y" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -350,7 +350,7 @@
     } ],
     "http://linkedpipes.com/ontology/y" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "1753"
+      "@value" : "1752"
     } ],
     "http://purl.org/dc/terms/description" : [ {
       "@value" : "A.1.1b : modification of the URI of the main concept scheme"
@@ -373,7 +373,7 @@
     } ],
     "http://linkedpipes.com/ontology/y" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "1859"
+      "@value" : "1858"
     } ],
     "http://purl.org/dc/terms/description" : [ {
       "@value" : "A.1.2 : modification of the URI of the concept schemes"
@@ -597,7 +597,7 @@
     } ],
     "http://linkedpipes.com/ontology/y" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "1657"
+      "@value" : "1656"
     } ],
     "http://purl.org/dc/terms/description" : [ {
       "@value" : "A.1.1a : modification of the URI of the main concept scheme"
@@ -666,7 +666,7 @@
     "@id" : "http://localhost:8080/resources/pipelines/1575366543837/27/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query" : [ {
-      "@value" : "PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\nPREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>\nPREFIX dc:<http://purl.org/dc/elements/1.1/>\nPREFIX auth:<http://publications.europa.eu/ontology/authority/>\nPREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>\nprefix cdm: <http://publications.europa.eu/ontology/cdm#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix skos-xl: <http://www.w3.org/2008/05/skos-xl#>\nprefix geo: <http://www.opengis.net/ont/geosparql#>\nprefix org: <http://www.w3.org/ns/org#>\nprefix status: <http://publications.europa.eu/resource/authority/concept-status/>\nprefix evo:<http://eurovoc.europa.schema#>\nprefix tp: <http://publications.europa.eu/resource/authority/label-type/>\n\n\n\nDELETE{\n  \t?s ?p ?o .\n    ?n ?t ?s .\n}\nINSERT {\n ?scheme_uri ?p ?o .\n ?n ?t ?scheme_uri .\n}\nwhere \n{  \n  ?s a skos:ConceptScheme.\n  bind(replace(str(?s),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?localSegment)\n  optional {\n  \t?s ?p ?o\n  }\n  optional {\n  \t?n ?t ?s\n  }\n  \n  BIND ( IRI(concat(\"http://publications.europa.eu/resource/authority/cpa21/\",?localSegment)) as ?scheme_uri)\n  FILTER  (?s != <http://publications.europa.eu/resource/authority/cpa21>)\n\n}\n\n\n"
+      "@value" : "PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\nPREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>\nPREFIX dc:<http://purl.org/dc/elements/1.1/>\nPREFIX auth:<http://publications.europa.eu/ontology/authority/>\nPREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>\nprefix cdm: <http://publications.europa.eu/ontology/cdm#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix skos-xl: <http://www.w3.org/2008/05/skos-xl#>\nprefix geo: <http://www.opengis.net/ont/geosparql#>\nprefix org: <http://www.w3.org/ns/org#>\nprefix status: <http://publications.europa.eu/resource/authority/concept-status/>\nprefix evo:<http://eurovoc.europa.schema#>\nprefix tp: <http://publications.europa.eu/resource/authority/label-type/>\n\n\n\nDELETE{\n  \t?s ?p ?o .\n    ?n ?t ?s .\n}\nINSERT {\n ?scheme_uri ?p ?o .\n ?n ?t ?scheme_uri .\n}\nwhere \n{  \n  ?s a skos:ConceptScheme.\n  bind(replace(str(?s),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?localSegment)\n  optional {\n  \t?s ?p ?o\n  }\n  optional {\n  \t?n ?t ?s\n  }\n  \n  BIND ( IRI(concat(\"http://publications.europa.eu/resource/authority/sdmxglossary2018/\",?localSegment)) as ?scheme_uri)\n  FILTER  (?s != <http://publications.europa.eu/resource/authority/sdmxglossary2018>)\n\n}\n\n\n"
     } ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#queryControl" : [ {
       "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
@@ -678,7 +678,7 @@
     "@id" : "http://localhost:8080/resources/pipelines/1575366543837/23/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query" : [ {
-      "@value" : "prefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\nprefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#>\n\n#A.1.5\n\nDELETE{\n  \t?s ?p ?o .\n    ?n ?t ?s .\n}\nINSERT {\n ?class_uri ?p ?o .\n ?n ?t ?class_uri .\n}\nwhere \n{  \n  ?s a xkos:ClassificationLevel .\n  bind(replace(str(?s),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?localSegment)\n  optional {\n  \t?s ?p ?o\n  }\n  optional {\n  \t?n ?t ?s\n  }\n  \n  BIND ( IRI(concat(\"http://publications.europa.eu/resource/authority/cpa21/\",?localSegment)) as ?concept_uri)\n\n}\n\n\n"
+      "@value" : "prefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\nprefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#>\n\n#A.1.5\n\nDELETE{\n  \t?s ?p ?o .\n    ?n ?t ?s .\n}\nINSERT {\n ?class_uri ?p ?o .\n ?n ?t ?class_uri .\n}\nwhere \n{  \n  ?s a xkos:ClassificationLevel .\n  bind(replace(str(?s),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?localSegment)\n  optional {\n  \t?s ?p ?o\n  }\n  optional {\n  \t?n ?t ?s\n  }\n  \n  BIND ( IRI(concat(\"http://publications.europa.eu/resource/authority/sdmxglossary2018/\",?localSegment)) as ?concept_uri)\n\n}\n\n\n"
     } ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#queryControl" : [ {
       "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
@@ -718,7 +718,7 @@
   "@id" : "http://localhost:8080/resources/pipelines/1575366543837/62"
 }, {
   "@graph" : [ {
-    "@id" : "http://localhost:8080/resources/pipelines/1575366543837/63",
+    "@id" : "http://localhost:8080/resources/pipelines/1575366543837/22/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#failOnTrue" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -932,7 +932,7 @@
     "@id" : "http://localhost:8080/resources/pipelines/1575366543837/4/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query" : [ {
-      "@value" : "PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\nPREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>\nPREFIX dc:<http://purl.org/dc/elements/1.1/>\nPREFIX auth:<http://publications.europa.eu/ontology/authority/>\nPREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>\nprefix cdm: <http://publications.europa.eu/ontology/cdm#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix skos-xl: <http://www.w3.org/2008/05/skos-xl#>\nprefix geo: <http://www.opengis.net/ont/geosparql#>\nprefix org: <http://www.w3.org/ns/org#>\nprefix status: <http://publications.europa.eu/resource/authority/concept-status/>\nprefix evo:<http://eurovoc.europa.schema#>\nprefix tp: <http://publications.europa.eu/resource/authority/label-type/>\n\n\n\nDELETE{\n  \t?s ?p ?o .\n    ?n ?t ?s .\n}\nINSERT {\n ?concept_uri ?p ?o .\n ?n ?t ?concept_uri .\n}\nwhere \n{  \n  ?s a skos:Concept.\n  bind(replace(str(?s),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?localSegment)\n  optional {\n  \t?s ?p ?o\n  }\n  optional {\n  \t?n ?t ?s\n  }\n  \n  BIND ( IRI(concat(\"http://publications.europa.eu/resource/authority/cpa21/\",?localSegment)) as ?concept_uri)\n\n}\n\n\n"
+      "@value" : "PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\nPREFIX euvoc: <http://publications.europa.eu/ontology/euvoc#>\nPREFIX dc:<http://purl.org/dc/elements/1.1/>\nPREFIX auth:<http://publications.europa.eu/ontology/authority/>\nPREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>\nprefix cdm: <http://publications.europa.eu/ontology/cdm#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix skos-xl: <http://www.w3.org/2008/05/skos-xl#>\nprefix geo: <http://www.opengis.net/ont/geosparql#>\nprefix org: <http://www.w3.org/ns/org#>\nprefix status: <http://publications.europa.eu/resource/authority/concept-status/>\nprefix evo:<http://eurovoc.europa.schema#>\nprefix tp: <http://publications.europa.eu/resource/authority/label-type/>\n\n\n\nDELETE{\n  \t?s ?p ?o .\n    ?n ?t ?s .\n}\nINSERT {\n ?concept_uri ?p ?o .\n ?n ?t ?concept_uri .\n}\nwhere \n{  \n  ?s a skos:Concept.\n  bind(replace(str(?s),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?localSegment)\n  optional {\n  \t?s ?p ?o\n  }\n  optional {\n  \t?n ?t ?s\n  }\n  \n  BIND ( IRI(concat(\"http://publications.europa.eu/resource/authority/sdmxglossary2018/\",?localSegment)) as ?concept_uri)\n\n}\n\n\n"
     } ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#queryControl" : [ {
       "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
@@ -987,7 +987,7 @@
     "@id" : "http://localhost:8080/resources/pipelines/1575366543837/12/configuration",
     "@type" : [ "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#Configuration" ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#query" : [ {
-      "@value" : "prefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\nprefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#>\n\n\nDELETE{\n  \t?s ?p ?o .\n    ?n ?t ?s .\n}\nINSERT {\n ?concept_uri ?p ?o .\n ?n ?t ?concept_uri .\n}\nwhere \n{  \n  ?s a skos:Collection.\n  bind(replace(str(?s),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?localSegment)\n  optional {\n  \t?s ?p ?o\n  }\n  optional {\n  \t?n ?t ?s\n  }\n  \n  BIND ( IRI(concat(\"http://publications.europa.eu/resource/authority/cpa21/\",?localSegment)) as ?concept_uri)\n\n}\n"
+      "@value" : "prefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\nprefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#>\n\n\nDELETE{\n  \t?s ?p ?o .\n    ?n ?t ?s .\n}\nINSERT {\n ?concept_uri ?p ?o .\n ?n ?t ?concept_uri .\n}\nwhere \n{  \n  ?s a skos:Collection.\n  bind(replace(str(?s),\"(^.*[\\\\/#])(.*)$\",\"$2\") as ?localSegment)\n  optional {\n  \t?s ?p ?o\n  }\n  optional {\n  \t?n ?t ?s\n  }\n  \n  BIND ( IRI(concat(\"http://publications.europa.eu/resource/authority/sdmxglossary2018/\",?localSegment)) as ?concept_uri)\n\n}\n"
     } ],
     "http://plugins.linkedpipes.com/ontology/t-sparqlUpdate#queryControl" : [ {
       "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
