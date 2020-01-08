@@ -42,11 +42,11 @@
     } ],
     "http://linkedpipes.com/ontology/x" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "1203"
+      "@value" : "1190"
     } ],
     "http://linkedpipes.com/ontology/y" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "4483"
+      "@value" : "4518"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "Graph store protocol"
@@ -932,11 +932,11 @@
     } ],
     "http://linkedpipes.com/ontology/x" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "1188"
+      "@value" : "1184"
     } ],
     "http://linkedpipes.com/ontology/y" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "4587"
+      "@value" : "4632"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "Graph store protocol"
@@ -1484,11 +1484,11 @@
     } ],
     "http://linkedpipes.com/ontology/x" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "904"
+      "@value" : "903"
     } ],
     "http://linkedpipes.com/ontology/y" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "4475"
+      "@value" : "4497"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "RDF to file"
@@ -1682,11 +1682,11 @@
     } ],
     "http://linkedpipes.com/ontology/x" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "1211"
+      "@value" : "1206"
     } ],
     "http://linkedpipes.com/ontology/y" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-      "@value" : "4354"
+      "@value" : "4406"
     } ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "Files to local"
@@ -1705,6 +1705,44 @@
     } ],
     "http://linkedpipes.com/ontology/targetComponent" : [ {
       "@id" : "http://localhost:8080/resources/pipelines/1578408792024/85"
+    } ]
+  }, {
+    "@id" : "http://localhost:8080/resources/pipelines/1578408792024/component/8570-a8ac",
+    "@type" : [ "http://linkedpipes.com/ontology/Component" ],
+    "http://linkedpipes.com/ontology/configurationGraph" : [ {
+      "@id" : "http://localhost:8080/resources/pipelines/1578408792024/component/8570-a8ac/configuration"
+    } ],
+    "http://linkedpipes.com/ontology/template" : [ {
+      "@id" : "http://etl.linkedpipes.com/resources/components/q-sparqlAsk/0.0.0"
+    } ],
+    "http://linkedpipes.com/ontology/x" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "903"
+    } ],
+    "http://linkedpipes.com/ontology/y" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "4293"
+    } ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@value" : "A.1.33 :check if there are no 2prefLabels for the\nsame language on a concept"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@value" : "SPARQL ask"
+    } ]
+  }, {
+    "@id" : "http://localhost:8080/resources/pipelines/1578408792024/connection/9729-9d84",
+    "@type" : [ "http://linkedpipes.com/ontology/Connection" ],
+    "http://linkedpipes.com/ontology/sourceBinding" : [ {
+      "@value" : "OutputRdf"
+    } ],
+    "http://linkedpipes.com/ontology/sourceComponent" : [ {
+      "@id" : "http://localhost:8080/resources/pipelines/1578408792024/70"
+    } ],
+    "http://linkedpipes.com/ontology/targetBinding" : [ {
+      "@value" : "InputRdf"
+    } ],
+    "http://linkedpipes.com/ontology/targetComponent" : [ {
+      "@id" : "http://localhost:8080/resources/pipelines/1578408792024/component/8570-a8ac"
     } ]
   } ],
   "@id" : "http://localhost:8080/resources/pipelines/1578408792024"
@@ -2025,6 +2063,25 @@
     } ]
   } ],
   "@id" : "http://localhost:8080/resources/pipelines/1578408792024/162"
+}, {
+  "@graph" : [ {
+    "@id" : "http://localhost:8080/resources/pipelines/1578408792024/component/8570-a8ac/configuration",
+    "@type" : [ "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#Configuration" ],
+    "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#failOnTrue" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+      "@value" : "true"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#failOnTrueControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#query" : [ {
+      "@value" : "PREFIX xs: <http://www.w3.org/2001/XMLSchema#>\nprefix ev: <http://eurovoc.europa.eu/> \nprefix dc: <http://purl.org/dc/elements/1.1/> \nprefix evo: <http://eurovoc.europa.eu/schema#> \nprefix dcat: <http://www.w3.org/ns/dcat#> \nprefix dct: <http://purl.org/dc/terms/> \nprefix euvoc: <http://publications.europa.eu/ontology/euvoc#> \nprefix foaf: <http://xmlns.com/foaf/0.1/> \nprefix isothes: <http://purl.org/iso25964/skos-thes#> \nprefix lemon: <http://lemon-model.net/lemon#> \nprefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> \nprefix lexvo: <http://lexvo.org/ontology#> \nprefix owl: <http://www.w3.org/2002/07/owl#> \nprefix prov: <http://www.w3.org/ns/prov#> \nprefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> \nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \nprefix skos: <http://www.w3.org/2004/02/skos/core#> \nprefix skosxl: <http://www.w3.org/2008/05/skos-xl#> \nprefix vcard: <http://www.w3.org/2006/vcard/ns#> \nprefix void: <http://rdfs.org/ns/void#> \nprefix xsd: <http://www.w3.org/2001/XMLSchema#> \nprefix vocbench: <http://art.uniroma2.it/ontologies/vocbench#> \nprefix labelType: <http://publications.europa.eu/resource/authority/label-type/> \nprefix conceptStatus: <http://publications.europa.eu/resource/authority/concept-status/> \nprefix align: <http://knowledgeweb.semanticweb.org/heterogeneity/alignment#>\n\nask\n\nwhere {\n\n     ?c skosxl:prefLabel ?pref1 .\n   ?c skosxl:prefLabel ?pref2 .\n  ?pref1 skosxl:literalForm ?val1 .\n  ?pref2 skosxl:literalForm ?val2 .\n  filter ( lang(?val1) = lang(?val2) && (str(?pref1) < str(?pref2)))\n}\n"
+    } ],
+    "http://plugins.linkedpipes.com/ontology/q-sparqlAsk#queryControl" : [ {
+      "@id" : "http://plugins.linkedpipes.com/resource/configuration/None"
+    } ]
+  } ],
+  "@id" : "http://localhost:8080/resources/pipelines/1578408792024/component/8570-a8ac/configuration"
 }, {
   "@graph" : [ {
     "@id" : "http://localhost:8080/resources/pipelines/1578408792024/99",
