@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  graphdb:
+    image: ontotext/graphdb:10.1.3
+    container_name: graphdb-linkedpipes
+    environment:
+      GDB_JAVA_OPTS: >-
+        -Xmx20g -Xms20g
+        -Dgraphdb.home=/opt/graphdb/home
+        -Dgraphdb.workbench.importDirectory=/opt/graphdb/home/graphdb-import
+        -Dgraphdb.workbench.cors.enable=true
+        -Dgraphdb.global.page.cache=true
+        -Denable-context-index=true
+        -Dentity-pool-implementation=transactional
+        -Dhealth.max.query.time.seconds=60
+        -Dgraphdb.append.request.id.headers=true
+        -Dreuse.vars.in.subselects=true
+    volumes:
+      - graphdb-linked-pipes-data:/opt/graphdb/home
+    networks:
+      - linked-pipes
+      - proxy-net
+    labels:
+      #### Labels define the behavior and rules of the traefik proxy for this container ####
+      - "traefik.enable=true" # <== Enable traefik to proxy this container
+      - "traefik.http.routers.${ENVIRONMENT}-graphdb.rule=Host(`graphdb.${SUBDOMAIN}${DOMAIN}`)" # <== Your Domain Name goes here for the http rule
+      - "traefik.http.routers.${ENVIRONMENT}-graphdb.entrypoints=web" # <== Defining the entrypoint for http, **ref: line 30
+      - "traefik.http.routers.${ENVIRONMENT}-graphdb.middlewares=redirect@file" # <== This is a middleware to redirect to https
+      - "traefik.http.routers.${ENVIRONMENT}-graphdb-secured.rule=Host(`graphdb.${SUBDOMAIN}${DOMAIN}`)" # <== Your Domain Name for the https rule
+      - "traefik.http.routers.${ENVIRONMENT}-graphdb-secured.entrypoints=web-secured" # <== Defining entrypoint for https, **ref: line 31
+      - "traefik.http.routers.${ENVIRONMENT}-graphdb-secured.tls.certResolver=mytlschallenge" # <== Defining certsresolvers for https
+
+
+volumes:
+  graphdb-linked-pipes-data:
+    name: graphdb-linked-pipes-data
+
+
+networks:
+  linked-pipes:
+    external:
+      name: linked-pipes
+  proxy-net:
+    external:
+      name: proxy-net

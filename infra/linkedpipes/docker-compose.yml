@@ -1,0 +1,89 @@
+#
+# Environment variables:
+# * LP_ETL_DOMAIN - URL prefix, for example http://localhost:9080
+# * LP_ETL_PORT - port number to expose LP-ETL on
+# * LP_VERSION - 'main' by default or 'develop'
+#
+version: "3"
+services:
+  storage:
+    container_name: linkedpipes-storage
+    image: linkedpipes/etl-storage:${LP_VERSION-main}
+    volumes:
+      - data-storage:/data/lp-etl/storage
+      - configuration:/data/lp-etl/configuration
+      - data-logs:/data/lp-etl/logs
+    environment:
+#      - LP_ETL_DOMAIN=https://linkedpipes.${SUBDOMAIN}${DOMAIN}
+      - LP_ETL_DOMAIN
+    restart: always
+    networks:
+      - linked-pipes
+  frontend:
+    container_name: linkedpipes-ui
+    image: linkedpipes/etl-frontend:${LP_VERSION-main}
+    volumes:
+      - configuration:/data/lp-etl/configuration
+      - data-logs:/data/lp-etl/logs
+    ports:
+      - ${LP_ETL_PORT-8089}:8080
+    environment:
+#      - LP_ETL_DOMAIN=https://linkedpipes.${SUBDOMAIN}${DOMAIN}
+      - LP_ETL_DOMAIN
+    restart: always
+    networks:
+      - linked-pipes
+      - proxy-net
+    labels:
+      #### Labels define the behavior and rules of the traefik proxy for this container ####
+      - "traefik.enable=true" # <== Enable traefik to proxy this container
+      - "traefik.http.routers.${ENVIRONMENT}-linkedpipes.rule=Host(`linkedpipes.${SUBDOMAIN}${DOMAIN}`)" # <== Your Domain Name goes here for the http rule
+      - "traefik.http.routers.${ENVIRONMENT}-linkedpipes.entrypoints=web" # <== Defining the entrypoint for http, **ref: line 30
+      - "traefik.http.routers.${ENVIRONMENT}-linkedpipes.middlewares=redirect@file" # <== This is a middleware to redirect to https
+      - "traefik.http.routers.${ENVIRONMENT}-linkedpipes-secured.rule=Host(`linkedpipes.${SUBDOMAIN}${DOMAIN}`)" # <== Your Domain Name for the https rule
+      - "traefik.http.routers.${ENVIRONMENT}-linkedpipes-secured.entrypoints=web-secured" # <== Defining entrypoint for https, **ref: line 31
+      - "traefik.http.routers.${ENVIRONMENT}-linkedpipes-secured.tls.certresolver=mytlschallenge" # <== Defining certsresolvers for https
+
+  executor-monitor:
+    container_name: linkedpipes-executor-monitor
+    image: linkedpipes/etl-executor-monitor:${LP_VERSION-main}
+    volumes:
+      - data-execution:/data/lp-etl/executor
+      - data-logs:/data/lp-etl/logs
+      - configuration:/data/lp-etl/configuration
+    environment:
+#      - LP_ETL_DOMAIN=https://linkedpipes.${SUBDOMAIN}${DOMAIN}
+      - LP_ETL_DOMAIN
+    restart: always
+    networks:
+      - linked-pipes
+  executor:
+    container_name: linkedpipes-executor
+    image: linkedpipes/etl-executor:${LP_VERSION-main}
+    volumes:
+      - data-execution:/data/lp-etl/executor
+      - data-logs:/data/lp-etl/logs
+      - configuration:/data/lp-etl/configuration
+    environment:
+#      - LP_ETL_DOMAIN=https://linkedpipes.${SUBDOMAIN}${DOMAIN}
+      - LP_ETL_DOMAIN
+    restart: always
+    networks:
+      - linked-pipes
+
+
+volumes:
+  data-logs:
+  data-execution:
+  data-storage:
+  configuration:
+  # When binding configuration it must contain file configuration.properties.
+  # Do not forget that LP_ETL_DOMAIN overwrites domain.uri in the
+  # configuration file.
+networks:
+  linked-pipes:
+    external: true
+      name: linked-pipes
+  proxy-net:
+    external:
+      name: proxy-net
