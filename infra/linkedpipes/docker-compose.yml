@@ -25,8 +25,8 @@ services:
     volumes:
       - configuration:/data/lp-etl/configuration
       - data-logs:/data/lp-etl/logs
-    ports:
-      - ${LP_ETL_PORT-8089}:8080
+#    ports:
+#      - ${LP_ETL_PORT-8089}:8080
     environment:
 #      - LP_ETL_DOMAIN=https://linkedpipes.${SUBDOMAIN}${DOMAIN}
       - LP_ETL_DOMAIN

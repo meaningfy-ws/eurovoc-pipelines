@@ -45,16 +45,16 @@ build-externals:
 
 start-linkedpipes: build-externals
 	@ echo -e "$(BUILD_PRINT)Starting LinkedPipes service $(END_BUILD_PRINT)"
-	@ docker-compose -p common --file infra/linkedpipes/docker-compose.yml --env-file ${ENV_FILE} up -d
+	@ docker-compose -p linkedpipes --file infra/linkedpipes/docker-compose.yml --env-file ${ENV_FILE} up -d
 
-stopt-linkedpipes:
+stop-linkedpipes:
 	@ echo -e "$(BUILD_PRINT)Stopping LinkedPipes service $(END_BUILD_PRINT)"
-	@ docker-compose -p common --file infra/linkedpipes/docker-compose.yml --env-file ${ENV_FILE} down
+	@ docker-compose -p linkedpipes --file infra/linkedpipes/docker-compose.yml --env-file ${ENV_FILE} down
 
 start-graphdb: build-externals
 	@ echo -e "$(BUILD_PRINT)Starting the GraphDB services $(END_BUILD_PRINT)"
-	@ docker-compose -p ${ENVIRONMENT} --file ./infra/graphdb/docker-compose.yml --env-file ${ENV_FILE} up -d
+	@ docker-compose -p linkedpipes --file ./infra/graphdb/docker-compose.yml --env-file ${ENV_FILE} up -d
 
 stop-graphdb:
 	@ echo -e "$(BUILD_PRINT)Stopping the GraphDB services $(END_BUILD_PRINT)"
-	@ docker-compose -p ${ENVIRONMENT} --file ./infra/graphdb/docker-compose.yml --env-file ${ENV_FILE} down
+	@ docker-compose -p linkedpipes --file ./infra/graphdb/docker-compose.yml --env-file ${ENV_FILE} down
