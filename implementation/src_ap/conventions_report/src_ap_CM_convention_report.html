@@ -56,7 +56,7 @@
                   Generalisations</em>. Each major section lists model items that need correction of errors
                or consideration of warnings.</p>
             <p>The UML model in file <em>src_ap_CM.xml</em> 
-               was tested at 20:08 on October 18, 2023.</p>
+               was tested at 20:37 on October 18, 2023.</p>
          </div>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="nomenclature">Nomenclature</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classNames">Class names</h2>
@@ -68,7 +68,7 @@
             <li><a href="#Label-type">Label-type</a></li>
             <li><a href="#NotationType">NotationType</a></li>
             <li><a href="#owl:Ontology">owl:Ontology</a></li>
-            <li><a href="#skos:Concept ">skos:Concept </a></li>
+            <li><a href="#skos:Concept">skos:Concept</a></li>
             <li><a href="#skos:ConceptScheme ">skos:ConceptScheme </a></li>
             <li><a href="#skosxl:Label">skosxl:Label</a></li>
             <li><a href="#UseContext">UseContext</a></li>
@@ -79,7 +79,7 @@
                      <li>euvoc:XlNotation (xsd:dateTime) [0..1]</li>
                      <li>euvoc:XlNote (xsd:dateTime) [0..1]</li>
                      <li>owl:Ontology (xsd:dateTime) [0..1]</li>
-                     <li>skos:Concept  (xsd:dateTime) [0..1]</li>
+                     <li>skos:Concept (xsd:dateTime) [0..1]</li>
                      <li>skos:ConceptScheme  (xsd:dateTime) [0..1]</li>
                      <li>skosxl:Label (xsd:dateTime) [0..1]</li></em></ul>
             </li>
@@ -90,7 +90,7 @@
             <li><a href="#attribute-dct:modified-usage">dct:modified (5)</a><ul><em>
                      <li>euvoc:XlNotation (xsd:dateTime) [0..1]</li>
                      <li>euvoc:XlNote (xsd:dateTime) [0..1]</li>
-                     <li>skos:Concept  (xsd:dateTime) [0..1]</li>
+                     <li>skos:Concept (xsd:dateTime) [0..1]</li>
                      <li>skos:ConceptScheme  (xsd:dateTime) [0..1]</li>
                      <li>skosxl:Label (xsd:dateTime) [0..1]</li></em></ul>
             </li>
@@ -98,21 +98,21 @@
             <li><a href="#attribute-euvoc:endDate-usage">euvoc:endDate (5)</a><ul><em>
                      <li>euvoc:XlNotation (xsd:date) [0..1]</li>
                      <li>euvoc:XlNote (:xsd:date) [0..1]</li>
-                     <li>skos:Concept  (xsd:date) [0..1]</li>
+                     <li>skos:Concept (xsd:date) [0..1]</li>
                      <li>skos:ConceptScheme  (xsd:date) [0..1]</li>
                      <li>skosxl:Label (xsd:date) [0..1]</li></em></ul>
             </li>
             <li><a href="#attribute-euvoc:startDate-usage">euvoc:startDate (5)</a><ul><em>
                      <li>euvoc:XlNotation (xsd:date) [0..1]</li>
                      <li>euvoc:XlNote (xsd:date) [0..1]</li>
-                     <li>skos:Concept  (xsd:date) [0..1]</li>
+                     <li>skos:Concept (xsd:date) [0..1]</li>
                      <li>skos:ConceptScheme  (xsd:date) [0..1]</li>
                      <li>skosxl:Label (xsd:date) [0..1]</li></em></ul>
             </li>
             <li><a href="#attribute-owl:deprecated-usage">owl:deprecated (5)</a><ul><em>
                      <li>euvoc:XlNotation (xsd:boolean) [0..1]</li>
                      <li>euvoc:XlNote (xsd:boolean) [0..1]</li>
-                     <li>skos:Concept  (xsd:boolean) [0..1]</li>
+                     <li>skos:Concept (xsd:boolean) [0..1]</li>
                      <li>skos:ConceptScheme  (xsd:boolean) [0..1]</li>
                      <li>skosxl:Label (xsd:boolean) [0..1]</li></em></ul>
             </li>
@@ -137,7 +137,7 @@
             </li>
             <li><a href="#connector-euvoc:status">euvoc:status (2)</a><ul><em>
                      <li>skosxl:Label -&gt; Concept-status [0..1]</li>
-                     <li>skos:Concept  -&gt; Concept-status [0..1]</li></em></ul>
+                     <li>skos:Concept -&gt; Concept-status [0..1]</li></em></ul>
             </li>
             <li>euvoc:xlChangeNote</li>
             <li>euvoc:xlDefinition</li>
@@ -305,17 +305,11 @@
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:created is missing a description. All concepts should be defined or described.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="skos:Concept ">skos:Concept </h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="skos:Concept">skos:Concept</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name skos:Concept  does not match the pattern. The name should respect the syntax
-                  prefix:localSegment (similar to the XML QName).</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The local name segment Concept  contains token delimiters. It is best if the names
-                  are camel cased and delimiters removed.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>skos:Concept  is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class name skos:Concept  is invalid. The class name must start with a capital
-                  case.</dd>
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>skos:Concept is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-dct:created">
                <dt>dct:created</dt>
@@ -473,7 +467,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; Concept-status (+euvoc:status)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; Concept-status (+euvoc:status)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -481,7 +475,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; euvoc:XlNotation (+euvoc:xlNotation)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; euvoc:XlNotation (+euvoc:xlNotation)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -489,7 +483,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; euvoc:XlNote (+euvoc:xlHistoryNote)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; euvoc:XlNote (+euvoc:xlHistoryNote)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -497,7 +491,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; euvoc:XlNote (+euvoc:xlNote)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; euvoc:XlNote (+euvoc:xlNote)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -505,7 +499,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; euvoc:XlNote (+euvoc:xlChangeNote)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; euvoc:XlNote (+euvoc:xlChangeNote)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -513,7 +507,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; euvoc:XlNote (+euvoc:xlDefinition)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; euvoc:XlNote (+euvoc:xlDefinition)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -521,7 +515,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; skosxl:Label (+skosxl:altLabe)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skosxl:Label (+skosxl:altLabe)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -529,7 +523,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; skosxl:Label (+skosxl:prefLabel)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skosxl:Label (+skosxl:prefLabel)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -537,7 +531,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; skos:ConceptScheme  (+skos:topConceptOf)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:ConceptScheme  (+skos:topConceptOf)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -545,7 +539,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; skos:Concept  (+dct:isReplacedBy)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:Concept (+dct:isReplacedBy)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -553,7 +547,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; skos:Concept  (+skos:narrower)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:Concept (+skos:narrower)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -561,7 +555,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; skos:Concept  (+skos:broader)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:Concept (+skos:broader)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -569,7 +563,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; UseContext (+euvoc:context)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; UseContext (+euvoc:context)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -577,7 +571,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; skos:Concept  (+dct:replaces)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:Concept (+dct:replaces)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -585,7 +579,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept  -&gt; skos:ConceptScheme  (+skos:inScheme)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:ConceptScheme  (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -601,7 +595,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:ConceptScheme  -&gt; skos:Concept  (+skos:hasTopConcept)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:ConceptScheme  -&gt; skos:Concept (+skos:hasTopConcept)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -650,7 +644,7 @@
                <ul>
                   <li>xsd:date (euvoc:XlNotation) </li>
                   <li>:xsd:date (euvoc:XlNote) </li>
-                  <li>xsd:date (skos:Concept ) </li>
+                  <li>xsd:date (skos:Concept) </li>
                   <li>xsd:date (skos:ConceptScheme ) </li>
                   <li>xsd:date (skosxl:Label) </li>
                </ul>
