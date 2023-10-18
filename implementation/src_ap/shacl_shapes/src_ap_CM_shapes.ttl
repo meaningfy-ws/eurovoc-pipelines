@@ -1,0 +1,531 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix atold: <http://publications.europa.eu/resource/authority/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix core-shape: <http://data.europa.eu/a4g/data-shape#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+core-shape:Concept-status a sh:NodeShape ;
+    rdfs:label "Concept-status" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:targetClass :Concept-status .
+
+core-shape:Label-type a sh:NodeShape ;
+    rdfs:label "Label-type" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:targetClass :Label-type .
+
+core-shape:NotationType a sh:NodeShape ;
+    rdfs:label "Notation type" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:targetClass :NotationType .
+
+core-shape:UseContext a sh:NodeShape ;
+    rdfs:label "Use context" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:targetClass :UseContext .
+
+core-shape:correction-status a sh:NodeShape ;
+    rdfs:label "Correction-status" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:targetClass :correction-status .
+
+core-shape:euvoc-XlNotation a sh:NodeShape ;
+    rdfs:label "Xl notation" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:euvoc-XlNotation-dct-created,
+        core-shape:euvoc-XlNotation-dct-modified,
+        core-shape:euvoc-XlNotation-dct-type,
+        core-shape:euvoc-XlNotation-euvoc-endDate,
+        core-shape:euvoc-XlNotation-euvoc-startDate,
+        core-shape:euvoc-XlNotation-owl-deprecated,
+        core-shape:euvoc-XlNotation-rdf-value ;
+    sh:targetClass euvoc:XlNotation .
+
+core-shape:euvoc-XlNote a sh:NodeShape ;
+    rdfs:label "Xl note" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:euvoc-XlNote-dct-created,
+        core-shape:euvoc-XlNote-dct-creator,
+        core-shape:euvoc-XlNote-dct-modified,
+        core-shape:euvoc-XlNote-euvoc-corrStatus,
+        core-shape:euvoc-XlNote-euvoc-endDate,
+        core-shape:euvoc-XlNote-euvoc-startDate,
+        core-shape:euvoc-XlNote-owl-deprecated,
+        core-shape:euvoc-XlNote-rdf-value ;
+    sh:targetClass euvoc:XlNote .
+
+core-shape:owl-Ontology a sh:NodeShape ;
+    rdfs:label "Ontology" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:owl-Ontology-dct-created,
+        core-shape:owl-Ontology-owl-imports ;
+    sh:targetClass owl:Ontology .
+
+core-shape:skos-Concept a sh:NodeShape ;
+    rdfs:label "Concept" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:skos-Concept-dct-created,
+        core-shape:skos-Concept-dct-dateAccepted,
+        core-shape:skos-Concept-dct-dateSubmitted,
+        core-shape:skos-Concept-dct-isReplacedBy,
+        core-shape:skos-Concept-dct-modified,
+        core-shape:skos-Concept-dct-replaces,
+        core-shape:skos-Concept-euvoc-context,
+        core-shape:skos-Concept-euvoc-endDate,
+        core-shape:skos-Concept-euvoc-startDate,
+        core-shape:skos-Concept-euvoc-status,
+        core-shape:skos-Concept-euvoc-xlChangeNote,
+        core-shape:skos-Concept-euvoc-xlDefinition,
+        core-shape:skos-Concept-euvoc-xlHistoryNote,
+        core-shape:skos-Concept-euvoc-xlNotation,
+        core-shape:skos-Concept-euvoc-xlNote,
+        core-shape:skos-Concept-owl-deprecated,
+        core-shape:skos-Concept-skos-broader,
+        core-shape:skos-Concept-skos-inScheme,
+        core-shape:skos-Concept-skos-narrower,
+        core-shape:skos-Concept-skos-topConceptOf,
+        core-shape:skos-Concept-skosxl-altLabe,
+        core-shape:skos-Concept-skosxl-prefLabel ;
+    sh:targetClass skos:Concept .
+
+core-shape:skos-ConceptScheme a sh:NodeShape ;
+    rdfs:label "Concept scheme" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:skos-ConceptScheme-dct-created,
+        core-shape:skos-ConceptScheme-dct-identifier,
+        core-shape:skos-ConceptScheme-dct-modified,
+        core-shape:skos-ConceptScheme-dct-title,
+        core-shape:skos-ConceptScheme-euvoc-endDate,
+        core-shape:skos-ConceptScheme-euvoc-startDate,
+        core-shape:skos-ConceptScheme-owl-deprecated,
+        core-shape:skos-ConceptScheme-owl-imports,
+        core-shape:skos-ConceptScheme-skos-hasTopConcept ;
+    sh:targetClass skos:ConceptScheme .
+
+core-shape:skosxl-Label a sh:NodeShape ;
+    rdfs:label "Label" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:skosxl-Label-dct-created,
+        core-shape:skosxl-Label-dct-modified,
+        core-shape:skosxl-Label-dct-type,
+        core-shape:skosxl-Label-euvoc-corrStatus,
+        core-shape:skosxl-Label-euvoc-endDate,
+        core-shape:skosxl-Label-euvoc-startDate,
+        core-shape:skosxl-Label-euvoc-status,
+        core-shape:skosxl-Label-owl-deprecated,
+        core-shape:skosxl-Label-skosxl-literalForm ;
+    sh:targetClass skosxl:Label .
+
+core-shape:euvoc-XlNotation-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+core-shape:euvoc-XlNotation-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+core-shape:euvoc-XlNotation-dct-type a sh:PropertyShape ;
+    sh:class :NotationType ;
+    sh:name "Type" ;
+    sh:path dcterms:type ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/type> ?that . ?that <http://purl.org/dc/terms/type> ?this .} " ] .
+
+core-shape:euvoc-XlNotation-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+core-shape:euvoc-XlNotation-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+core-shape:euvoc-XlNotation-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+core-shape:euvoc-XlNotation-rdf-value a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Value" ;
+    sh:path rdf:value .
+
+core-shape:euvoc-XlNote-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+core-shape:euvoc-XlNote-dct-creator a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Creator" ;
+    sh:path dcterms:creator .
+
+core-shape:euvoc-XlNote-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+core-shape:euvoc-XlNote-euvoc-corrStatus a sh:PropertyShape ;
+    sh:class :correction-status ;
+    sh:maxCount 1 ;
+    sh:name "Corr status" ;
+    sh:path euvoc:corrStatus ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#corrStatus> ?that . ?that <http://publications.europa.eu/ontology/euvoc#corrStatus> ?this .} " ] .
+
+core-shape:euvoc-XlNote-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+core-shape:euvoc-XlNote-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+core-shape:euvoc-XlNote-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+core-shape:euvoc-XlNote-rdf-value a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Value" ;
+    sh:path rdf:value .
+
+core-shape:owl-Ontology-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+core-shape:owl-Ontology-owl-imports a sh:PropertyShape ;
+    sh:class owl:Ontology ;
+    sh:name "Imports" ;
+    sh:path owl:imports ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2002/07/owl#imports> ?that . ?that <http://www.w3.org/2002/07/owl#imports> ?this .} " ] .
+
+core-shape:skos-Concept-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+core-shape:skos-Concept-dct-dateAccepted a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Date accepted" ;
+    sh:path dcterms:dateAccepted .
+
+core-shape:skos-Concept-dct-dateSubmitted a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Date submitted" ;
+    sh:path dcterms:dateSubmitted .
+
+core-shape:skos-Concept-dct-isReplacedBy a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:name "Is replaced by" ;
+    sh:path dcterms:isReplacedBy ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/isReplacedBy> ?that . ?that <http://purl.org/dc/terms/isReplacedBy> ?this .} " ] .
+
+core-shape:skos-Concept-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+core-shape:skos-Concept-dct-replaces a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:name "Replaces" ;
+    sh:path dcterms:replaces ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/replaces> ?that . ?that <http://purl.org/dc/terms/replaces> ?this .} " ] .
+
+core-shape:skos-Concept-euvoc-context a sh:PropertyShape ;
+    sh:class :UseContext ;
+    sh:name "Context" ;
+    sh:path euvoc:context ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#context> ?that . ?that <http://publications.europa.eu/ontology/euvoc#context> ?this .} " ] .
+
+core-shape:skos-Concept-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+core-shape:skos-Concept-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+core-shape:skos-Concept-euvoc-status a sh:PropertyShape ;
+    sh:class :Concept-status ;
+    sh:maxCount 1 ;
+    sh:name "Status" ;
+    sh:path euvoc:status ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#status> ?that . ?that <http://publications.europa.eu/ontology/euvoc#status> ?this .} " ] .
+
+core-shape:skos-Concept-euvoc-xlChangeNote a sh:PropertyShape ;
+    sh:class euvoc:XlNote ;
+    sh:name "Xl change note" ;
+    sh:path euvoc:xlChangeNote ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlChangeNote> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlChangeNote> ?this .} " ] .
+
+core-shape:skos-Concept-euvoc-xlDefinition a sh:PropertyShape ;
+    sh:class euvoc:XlNote ;
+    sh:name "Xl definition" ;
+    sh:path euvoc:xlDefinition ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlDefinition> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlDefinition> ?this .} " ] .
+
+core-shape:skos-Concept-euvoc-xlHistoryNote a sh:PropertyShape ;
+    sh:class euvoc:XlNote ;
+    sh:name "Xl history note" ;
+    sh:path euvoc:xlHistoryNote ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlHistoryNote> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlHistoryNote> ?this .} " ] .
+
+core-shape:skos-Concept-euvoc-xlNotation a sh:PropertyShape ;
+    sh:class euvoc:XlNotation ;
+    sh:name "Xl notation" ;
+    sh:path euvoc:xlNotation ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlNotation> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlNotation> ?this .} " ] .
+
+core-shape:skos-Concept-euvoc-xlNote a sh:PropertyShape ;
+    sh:class euvoc:XlNote ;
+    sh:name "Xl note" ;
+    sh:path euvoc:xlNote ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlNote> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlNote> ?this .} " ] .
+
+core-shape:skos-Concept-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+core-shape:skos-Concept-skos-broader a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:name "Broader" ;
+    sh:path skos:broader ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#broader> ?that . ?that <http://www.w3.org/2004/02/skos/core#broader> ?this .} " ] .
+
+core-shape:skos-Concept-skos-inScheme a sh:PropertyShape ;
+    sh:class skos:ConceptScheme ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#inScheme> ?that . ?that <http://www.w3.org/2004/02/skos/core#inScheme> ?this .} " ] .
+
+core-shape:skos-Concept-skos-narrower a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:name "Narrower" ;
+    sh:path skos:narrower ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#narrower> ?that . ?that <http://www.w3.org/2004/02/skos/core#narrower> ?this .} " ] .
+
+core-shape:skos-Concept-skos-topConceptOf a sh:PropertyShape ;
+    sh:class skos:ConceptScheme ;
+    sh:name "Top concept of" ;
+    sh:path skos:topConceptOf ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#topConceptOf> ?that . ?that <http://www.w3.org/2004/02/skos/core#topConceptOf> ?this .} " ] .
+
+core-shape:skos-Concept-skosxl-altLabe a sh:PropertyShape ;
+    sh:class skosxl:Label ;
+    sh:name "Alt labe" ;
+    sh:path skosxl:altLabe ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2008/05/skos-xl#altLabe> ?that . ?that <http://www.w3.org/2008/05/skos-xl#altLabe> ?this .} " ] .
+
+core-shape:skos-Concept-skosxl-prefLabel a sh:PropertyShape ;
+    sh:class skosxl:Label ;
+    sh:name "Pref label" ;
+    sh:path skosxl:prefLabel ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2008/05/skos-xl#prefLabel> ?that . ?that <http://www.w3.org/2008/05/skos-xl#prefLabel> ?this .} " ] .
+
+core-shape:skos-ConceptScheme-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+core-shape:skos-ConceptScheme-dct-identifier a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:name "Identifier" ;
+    sh:path dcterms:identifier .
+
+core-shape:skos-ConceptScheme-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+core-shape:skos-ConceptScheme-dct-title a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:maxCount 1 ;
+    sh:name "Title" ;
+    sh:path dcterms:title .
+
+core-shape:skos-ConceptScheme-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+core-shape:skos-ConceptScheme-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+core-shape:skos-ConceptScheme-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+core-shape:skos-ConceptScheme-owl-imports a sh:PropertyShape ;
+    sh:class owl:Ontology ;
+    sh:name "Imports" ;
+    sh:path owl:imports ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2002/07/owl#imports> ?that . ?that <http://www.w3.org/2002/07/owl#imports> ?this .} " ] .
+
+core-shape:skos-ConceptScheme-skos-hasTopConcept a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:name "Has top concept" ;
+    sh:path skos:hasTopConcept ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#hasTopConcept> ?that . ?that <http://www.w3.org/2004/02/skos/core#hasTopConcept> ?this .} " ] .
+
+core-shape:skosxl-Label-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+core-shape:skosxl-Label-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+core-shape:skosxl-Label-dct-type a sh:PropertyShape ;
+    sh:class :Label-type ;
+    sh:name "Type" ;
+    sh:path dcterms:type ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/type> ?that . ?that <http://purl.org/dc/terms/type> ?this .} " ] .
+
+core-shape:skosxl-Label-euvoc-corrStatus a sh:PropertyShape ;
+    sh:class :correction-status ;
+    sh:maxCount 1 ;
+    sh:name "Corr status" ;
+    sh:path euvoc:corrStatus ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#corrStatus> ?that . ?that <http://publications.europa.eu/ontology/euvoc#corrStatus> ?this .} " ] .
+
+core-shape:skosxl-Label-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+core-shape:skosxl-Label-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+core-shape:skosxl-Label-euvoc-status a sh:PropertyShape ;
+    sh:class :Concept-status ;
+    sh:maxCount 1 ;
+    sh:name "Status" ;
+    sh:path euvoc:status ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#status> ?that . ?that <http://publications.europa.eu/ontology/euvoc#status> ?this .} " ] .
+
+core-shape:skosxl-Label-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+core-shape:skosxl-Label-skosxl-literalForm a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Literal form" ;
+    sh:path skosxl:literalForm .
+
+core-shape:core-shape a owl:Ontology ;
+    cc:attributionName "European Union" ;
+    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcterms:description "This artefact provides the generic datashape specifications for the eProcurement Ontology Core.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:issued "2023-10-18"^^xsd:date ;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents         (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the         CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided         that appropriate credit is given and any changes are indicated." ;
+    dcterms:title "ePO Core shapes"@en ;
+    bibo:status "Semantic Specification Realease" ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from src_ap_CM.xml on 2023-10-18" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports 
