@@ -56,7 +56,7 @@
                   Generalisations</em>. Each major section lists model items that need correction of errors
                or consideration of warnings.</p>
             <p>The UML model in file <em>src_ap_CM.xml</em> 
-               was tested at 15:07 on October 18, 2023.</p>
+               was tested at 16:00 on October 18, 2023.</p>
          </div>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="nomenclature">Nomenclature</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classNames">Class names</h2>
@@ -73,7 +73,7 @@
             <li><a href="#euvoc:XlNote">euvoc:XlNote</a></li>
             <li><a href="#Label-type">Label-type</a></li>
             <li><a href="#NotationType">NotationType</a></li>
-            <li><a href="# owl:Ontology"> owl:Ontology</a></li>
+            <li><a href="#owl:Ontology">owl:Ontology</a></li>
             <li><a href="#Place">Place</a></li>
             <li><a href="#Script">Script</a></li>
             <li><a href="#Site">Site</a></li>
@@ -89,9 +89,9 @@
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesNames">Class attribute names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#">
             <li><a href="#attribute-dct:created-usage">dct:created (7)</a><ul><em>
-                     <li> owl:Ontology (xsd:dateTime) [0..1]</li>
                      <li>euvoc:XlNotation (xsd:dateTime) [0..1]</li>
                      <li>euvoc:XlNote (xsd:dateTime) [0..1]</li>
+                     <li>owl:Ontology (xsd:dateTime) [0..1]</li>
                      <li>skos:Concept  (xsd:dateTime) [0..1]</li>
                      <li>skos:ConceptScheme  (xsd:dateTime) [0..1]</li>
                      <li>skosxl:Label (xsd:dateTime) [0..1]</li>
@@ -190,8 +190,8 @@
             <li>org:role</li>
             <li>org:siteOf</li>
             <li><a href="#connector-owl:imports">owl:imports (2)</a><ul><em>
-                     <li> owl:Ontology -&gt;  owl:Ontology [0..*]</li>
-                     <li>skos:ConceptScheme  -&gt;  owl:Ontology [0..*]</li></em></ul>
+                     <li>owl:Ontology -&gt; owl:Ontology [0..*]</li>
+                     <li>skos:ConceptScheme  -&gt; owl:Ontology [0..*]</li></em></ul>
             </li>
             <li>skos:broader</li>
             <li>skos:hasTopConcept</li>
@@ -296,7 +296,6 @@
             </dl>
             <dl id="attribute-euvoc:order">
                <dt>euvoc:order</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:order is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-foaf:homepage">
@@ -364,7 +363,6 @@
             </dl>
             <dl id="attribute-euvoc:decimalPlace">
                <dt>euvoc:decimalPlace</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:decimalPlace is missing a description. All concepts should be defined or described.</dd>
             </dl>
          </section>
@@ -372,7 +370,6 @@
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:XlNotation is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-dct:created">
@@ -385,12 +382,10 @@
             </dl>
             <dl id="attribute-euvoc:endDate">
                <dt>euvoc:endDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:endDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-euvoc:startDate">
                <dt>euvoc:startDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:startDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-owl:deprecated">
@@ -406,7 +401,6 @@
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:XlNote is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-dct:created">
@@ -423,7 +417,6 @@
             </dl>
             <dl id="attribute-euvoc:endDate">
                <dt>euvoc:endDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:endDate is missing a description. All concepts should be defined or described.</dd>
                <dd class="filter errors"><i class="fa fa-times-circle error"></i>The attribute type :xsd:date type is invalid. Attributes must use types that are either:
                   (a) XSD or RDF datatypes or (b) belonging to a shortlist of custom URIs (datatypes
@@ -431,7 +424,6 @@
             </dl>
             <dl id="attribute-euvoc:startDate">
                <dt>euvoc:startDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:startDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-owl:deprecated">
@@ -473,18 +465,11 @@
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class NotationType has no attributes provided. A class should define some attributes.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id=" owl:Ontology"> owl:Ontology</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="owl:Ontology">owl:Ontology</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name  owl:Ontology does not match the pattern. The name should respect the syntax
-                  prefix:localSegment (similar to the XML QName).</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name prefix  owl , is invalid. Please provide a short prefix name containing only
-                  alphanumeric characters [a-zA-Z0-9]+.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix  owl is not defined. A prefix must be associated to a namespace URI.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i> owl:Ontology is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class name  owl:Ontology is invalid. The class name must start with a capital
-                  case.</dd>
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>owl:Ontology is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-dct:created">
                <dt>dct:created</dt>
@@ -506,7 +491,6 @@
             </dl>
             <dl id="attribute-euvoc:culturalCity">
                <dt>euvoc:culturalCity</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:culturalCity is missing a description. All concepts should be defined or described.</dd>
             </dl>
          </section>
@@ -577,12 +561,10 @@
             </dl>
             <dl id="attribute-euvoc:endDate">
                <dt>euvoc:endDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:endDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-euvoc:startDate">
                <dt>euvoc:startDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:startDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-owl:deprecated">
@@ -620,12 +602,10 @@
             </dl>
             <dl id="attribute-euvoc:endDate">
                <dt>euvoc:endDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:endDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-euvoc:startDate">
                <dt>euvoc:startDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:startDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-owl:deprecated">
@@ -649,12 +629,10 @@
             </dl>
             <dl id="attribute-euvoc:endDate">
                <dt>euvoc:endDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:endDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-euvoc:startDate">
                <dt>euvoc:startDate</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:startDate is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-owl:deprecated">
@@ -729,7 +707,6 @@
             </dl>
             <dl id="attribute-euvoc:postbox">
                <dt>euvoc:postbox</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix euvoc is not defined. A prefix must be associated to a namespace URI.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:postbox is missing a description. All concepts should be defined or described.</dd>
             </dl>
             <dl id="attribute-vcard:locality">
@@ -796,8 +773,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:legallyBasedOnTreaty is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -806,8 +781,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:usedIn is not defined. A prefix must be associated to a
-               namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -826,12 +799,10 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:corrStatus is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#"> owl:Ontology -&gt;  owl:Ontology (+owl:imports)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">owl:Ontology -&gt; owl:Ontology (+owl:imports)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -888,8 +859,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:managedBy is not defined. A prefix must be associated to
-               a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -898,8 +867,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:countryCode is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -908,8 +875,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:localityCode is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -942,8 +907,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:status is not defined. A prefix must be associated to a
-               namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -952,8 +915,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:xlNotation is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -962,8 +923,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:xlHistoryNote is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -972,8 +931,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:xlNote is not defined. A prefix must be associated to a
-               namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -982,8 +939,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:xlChangeNote is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -992,8 +947,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:xlDefinition is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -1050,8 +1003,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:context is not defined. A prefix must be associated to
-               a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -1071,7 +1022,7 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:ConceptScheme  -&gt;  owl:Ontology (+owl:imports)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:ConceptScheme  -&gt; owl:Ontology (+owl:imports)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -1092,8 +1043,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:status is not defined. A prefix must be associated to a
-               namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -1102,8 +1051,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:corrStatus is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -1120,8 +1067,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name lexvo:inScript is not defined. A prefix must be associated to
-               a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -1146,8 +1091,6 @@
             <dt>
                Unmet association conventions
                </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role name euvoc:localityCode is not defined. A prefix must be associated
-               to a namespace URI.</dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
@@ -1179,14 +1122,6 @@
             following element types were found in model and are not supported
             <ul>
                <li>uml:Interface</li>
-            </ul>
-         </dd>
-         <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter errors"><i class="fa fa-times-circle error"></i>Not all prefixes  are defined. All used namespaces shall be defined (prefix = base
-            URI), including the default one. Here is the list of undefined prefixes
-            <ul>
-               <li> owl</li>
-               <li>euvoc</li>
-               <li>lexvo</li>
             </ul>
          </dd>
       </main>
