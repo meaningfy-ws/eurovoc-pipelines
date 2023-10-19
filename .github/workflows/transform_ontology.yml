@@ -5,6 +5,7 @@ on:
       - "**"
     paths:
       - "implementation/src_ap/xmi_conceptual_model/src_ap_CM.xml"
+      - "implementation/cob_src_ap/xmi_conceptual_model/cob_src_ap_CM.xml"
 
 jobs:
   transform:
@@ -27,7 +28,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
