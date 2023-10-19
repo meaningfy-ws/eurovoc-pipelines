@@ -41,11 +41,19 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>euvoc:Corporate Body</td>
+                     <td>Class1</td>
                      <td></td>
                   </tr>
                   <tr>
-                     <td>Treaty</td>
+                     <td>euvoc:CorporateBody</td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>euvoc:Treaty</td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>TreatyProfile</td>
                      <td></td>
                   </tr>
                </tbody>
@@ -62,25 +70,25 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>euvoc:Corporate Body</td>
+                     <td>euvoc:CorporateBody</td>
                      <td>euvoc:order</td>
                      <td></td>
                      <td>xsd:string [0..1]</td>
                   </tr>
                   <tr>
-                     <td>euvoc:Corporate Body</td>
+                     <td>euvoc:CorporateBody</td>
                      <td>foaf:homepage</td>
                      <td></td>
                      <td>xsd:anyURI [0..1]</td>
                   </tr>
                   <tr>
-                     <td>euvoc:Corporate Body</td>
+                     <td>euvoc:CorporateBody</td>
                      <td>skos:editorialNote</td>
                      <td></td>
                      <td>xsd:string [0..*]</td>
                   </tr>
                   <tr>
-                     <td>euvoc:Corporate Body</td>
+                     <td>euvoc:CorporateBody</td>
                      <td>vcard:hasEmail</td>
                      <td></td>
                      <td>rdf:PlainLiteral [0..1]</td>
@@ -100,12 +108,12 @@
                   <tr>
                      <td>euvoc:legallyBasedOnTreaty</td>
                      <td></td>
-                     <td>euvoc:Corporate Body -&gt; Treaty [0..*]</td>
+                     <td>euvoc:CorporateBody -&gt; euvoc:Treaty [0..*]</td>
                   </tr>
                   <tr>
                      <td>skos:inSchemce</td>
                      <td></td>
-                     <td>euvoc:Corporate Body -&gt; at-voc:corporate-body [1]</td>
+                     <td>euvoc:CorporateBody -&gt; at-voc:corporate-body [1]</td>
                   </tr>
                </tbody>
             </table>
