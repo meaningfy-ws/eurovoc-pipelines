@@ -56,6 +56,10 @@
                      <td>TreatyProfile</td>
                      <td></td>
                   </tr>
+                  <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td></td>
+                  </tr>
                </tbody>
             </table>
             <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Attributes (datatype properties) names and definitions</h2>
@@ -70,6 +74,12 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>dct:description</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>euvoc:CorporateBody</td>
                      <td>euvoc:order</td>
                      <td></td>
@@ -82,16 +92,16 @@
                      <td>xsd:anyURI [0..1]</td>
                   </tr>
                   <tr>
-                     <td>euvoc:CorporateBody</td>
-                     <td>skos:editorialNote</td>
-                     <td></td>
-                     <td>xsd:string [0..*]</td>
-                  </tr>
-                  <tr>
-                     <td>euvoc:CorporateBody</td>
+                     <td>vcard:ContactPoint</td>
                      <td>vcard:hasEmail</td>
                      <td></td>
                      <td>rdf:PlainLiteral [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>vcard:telephone</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                </tbody>
             </table>
@@ -105,6 +115,11 @@
                   </tr>
                </thead>
                <tbody>
+                  <tr>
+                     <td>euvoc:hasPrimaryContactPoint</td>
+                     <td> </td>
+                     <td>euvoc:CorporateBody -&gt; vcard:ContactPoint [0..*]<br><br></td>
+                  </tr>
                   <tr>
                      <td>euvoc:legallyBasedOnTreaty</td>
                      <td></td>
