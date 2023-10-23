@@ -19,7 +19,7 @@
    <body>
       <header class="counter-skip">
          <h1 class="title">UML Conventions Comformance Report</h1>
-         <h2>[ 20/10/2023 ]</h2>
+         <h2>[ 23/10/2023 ]</h2>
          <div class="authors col-span">
             <div class="author">
                <div>Publications Office of the European Union</div>
@@ -56,22 +56,17 @@
                   Generalisations</em>. Each major section lists model items that need correction of errors
                or consideration of warnings.</p>
             <p>The UML model in file <em>src_ap_CM.xml</em> 
-               was tested at 09:39 on October 20, 2023.</p>
+               was tested at 09:33 on October 23, 2023.</p>
          </div>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="nomenclature">Nomenclature</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classNames">Class names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#" class="display-in-two-columns">
-            <li><a href="#Concept-status">Concept-status</a></li>
-            <li><a href="#correction-status">correction-status</a></li>
             <li><a href="#euvoc:XlNotation">euvoc:XlNotation</a></li>
             <li><a href="#euvoc:XlNote">euvoc:XlNote</a></li>
-            <li><a href="#Label-type">Label-type</a></li>
-            <li><a href="#NotationType">NotationType</a></li>
             <li><a href="#owl:Ontology">owl:Ontology</a></li>
             <li><a href="#skos:Concept">skos:Concept</a></li>
             <li><a href="#skos:ConceptScheme">skos:ConceptScheme</a></li>
             <li><a href="#skosxl:Label">skosxl:Label</a></li>
-            <li><a href="#UseContext">UseContext</a></li>
          </ul>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesNames">Class attribute names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#">
@@ -116,6 +111,7 @@
                      <li>skos:ConceptScheme (xsd:boolean) [0..1]</li>
                      <li>skosxl:Label (xsd:boolean) [0..1]</li></em></ul>
             </li>
+            <li><a href="#attribute-owl:versionInfo">owl:versionInfo</a></li>
             <li><a href="#attribute-rdf:value-usage">rdf:value (2)</a><ul><em>
                      <li>euvoc:XlNotation (rdf:langString) [1..1]</li>
                      <li>euvoc:XlNote (rdf:langString) [1..1]</li></em></ul>
@@ -127,17 +123,17 @@
             <li>dct:isReplacedBy</li>
             <li>dct:replaces</li>
             <li><a href="#connector-dct:type">dct:type (2)</a><ul><em>
-                     <li>euvoc:XlNotation -&gt; NotationType []</li>
-                     <li>skosxl:Label -&gt; Label-type [0..*]</li></em></ul>
+                     <li>euvoc:XlNotation -&gt;  []</li>
+                     <li>skosxl:Label -&gt;  [0..*]</li></em></ul>
             </li>
             <li>euvoc:context</li>
             <li><a href="#connector-euvoc:corrStatus">euvoc:corrStatus (2)</a><ul><em>
-                     <li>euvoc:XlNote -&gt; correction-status [0..1]</li>
-                     <li>skosxl:Label -&gt; correction-status [0..1]</li></em></ul>
+                     <li>euvoc:XlNote -&gt;  [0..1]</li>
+                     <li>skosxl:Label -&gt;  [0..1]</li></em></ul>
             </li>
             <li><a href="#connector-euvoc:status">euvoc:status (2)</a><ul><em>
-                     <li>skosxl:Label -&gt; Concept-status [0..1]</li>
-                     <li>skos:Concept -&gt; Concept-status [0..1]</li></em></ul>
+                     <li>skos:Concept -&gt;  [0..1]</li>
+                     <li>skosxl:Label -&gt;  [0..1]</li></em></ul>
             </li>
             <li>euvoc:xlChangeNote</li>
             <li>euvoc:xlDefinition</li>
@@ -150,57 +146,18 @@
                      <li>skos:ConceptScheme -&gt; owl:Ontology [0..*]</li></em></ul>
             </li>
             <li>skos:broader</li>
+            <li>skos:exactMatch</li>
             <li>skos:hasTopConcept</li>
             <li>skos:inScheme</li>
             <li>skos:narrower</li>
             <li>skos:topConceptOf</li>
-            <li>skosxl:altLabe</li>
+            <li>skosxl:altLabel</li>
+            <li>skosxl:hiddenLabel</li>
             <li>skosxl:prefLabel</li>
          </ul>
          <h1 class="selector-heading" id="classes">Classes</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="Concept-status">Concept-status</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name Concept-status does not match the pattern. The name should respect the syntax
-                  prefix:localSegment (similar to the XML QName).</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name of element Concept-status is missing a prefix. The name should comprise a
-                  prefix respecing the syntax prefix:localSegment.</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name prefix  , is invalid. Please provide a short prefix name containing only
-                  alphanumeric characters [a-zA-Z0-9]+.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix  is not defined. A prefix must be associated to a namespace URI.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>Concept-status is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name is possibly in plural grammatical number. Names shall be usually provided
-                  in singular number.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class Concept-status has no attributes provided. A class should define some attributes.</dd>
-            </dl>
-         </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="correction-status">correction-status</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name correction-status does not match the pattern. The name should respect the
-                  syntax prefix:localSegment (similar to the XML QName).</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name of element correction-status is missing a prefix. The name should comprise
-                  a prefix respecing the syntax prefix:localSegment.</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name prefix  , is invalid. Please provide a short prefix name containing only
-                  alphanumeric characters [a-zA-Z0-9]+.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix  is not defined. A prefix must be associated to a namespace URI.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>correction-status is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name is possibly in plural grammatical number. Names shall be usually provided
-                  in singular number.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class name correction-status is invalid. The class name must start with a capital
-                  case.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class correction-status has no attributes provided. A class should define some
-                  attributes.</dd>
-            </dl>
-         </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:XlNotation">euvoc:XlNotation</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:XlNotation is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-dct:created">
                <dt>dct:created</dt>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:created is missing a description. All concepts should be defined or described.</dd>
@@ -228,10 +185,6 @@
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:XlNote">euvoc:XlNote</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:XlNote is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-dct:created">
                <dt>dct:created</dt>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:created is missing a description. All concepts should be defined or described.</dd>
@@ -264,36 +217,6 @@
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>rdf:value is missing a description. All concepts should be defined or described.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="Label-type">Label-type</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name Label-type does not match the pattern. The name should respect the syntax
-                  prefix:localSegment (similar to the XML QName).</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name of element Label-type is missing a prefix. The name should comprise a prefix
-                  respecing the syntax prefix:localSegment.</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name prefix  , is invalid. Please provide a short prefix name containing only
-                  alphanumeric characters [a-zA-Z0-9]+.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix  is not defined. A prefix must be associated to a namespace URI.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>Label-type is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class Label-type has no attributes provided. A class should define some attributes.</dd>
-            </dl>
-         </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="NotationType">NotationType</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name NotationType does not match the pattern. The name should respect the syntax
-                  prefix:localSegment (similar to the XML QName).</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name of element NotationType is missing a prefix. The name should comprise a prefix
-                  respecing the syntax prefix:localSegment.</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name prefix  , is invalid. Please provide a short prefix name containing only
-                  alphanumeric characters [a-zA-Z0-9]+.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix  is not defined. A prefix must be associated to a namespace URI.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>NotationType is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class NotationType has no attributes provided. A class should define some attributes.</dd>
-            </dl>
-         </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="owl:Ontology">owl:Ontology</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
@@ -307,10 +230,6 @@
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="skos:Concept">skos:Concept</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>skos:Concept is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-dct:created">
                <dt>dct:created</dt>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:created is missing a description. All concepts should be defined or described.</dd>
@@ -342,10 +261,6 @@
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="skos:ConceptScheme">skos:ConceptScheme</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>skos:ConceptScheme is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-dct:created">
                <dt>dct:created</dt>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:created is missing a description. All concepts should be defined or described.</dd>
@@ -374,13 +289,15 @@
                <dt>owl:deprecated</dt>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>owl:deprecated is missing a description. All concepts should be defined or described.</dd>
             </dl>
+            <dl id="attribute-owl:versionInfo">
+               <dt>owl:versionInfo</dt>
+               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The attribute type rdf:PlainaLiteral type is invalid. Attributes must use types that
+                  are either: (a) XSD or RDF datatypes or (b) belonging to a shortlist of custom URIs
+                  (datatypes or classes).</dd>
+            </dl>
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="skosxl:Label">skosxl:Label</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>skosxl:Label is missing a description. All concepts should be defined or described.</dd>
-            </dl>
             <dl id="attribute-dct:created">
                <dt>dct:created</dt>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:created is missing a description. All concepts should be defined or described.</dd>
@@ -406,62 +323,13 @@
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>skosxl:literalForm is missing a description. All concepts should be defined or described.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="UseContext">UseContext</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name UseContext does not match the pattern. The name should respect the syntax
-                  prefix:localSegment (similar to the XML QName).</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name of element UseContext is missing a prefix. The name should comprise a prefix
-                  respecing the syntax prefix:localSegment.</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name prefix  , is invalid. Please provide a short prefix name containing only
-                  alphanumeric characters [a-zA-Z0-9]+.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The prefix  is not defined. A prefix must be associated to a namespace URI.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>UseContext is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class UseContext has no attributes provided. A class should define some attributes.</dd>
-            </dl>
-         </section>
          <h1 class="selector-heading" id="enumerations">Enumerations</h1>
          <h1 class="selector-heading" id="dataTypes">Data-types</h1>
          <h1 class="selector-heading" id="packages">Packages</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">common src-ap</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet package conventions 
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The package name common src-ap contains invalid characters. Package name shall be
-               a short alphanumeric string representing an acronym or a short name.</dd>
-         </dl>
          <h1 class="selector-heading" id="object">Object</h1>
          <h1 class="selector-heading" id="generalizations">Generalizations</h1>
          <h1 class="selector-heading" id="associations">Associations</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:XlNotation -&gt; NotationType (+dct:type)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The target role of euvoc:XlNotation -&gt; NotationType (+dct:type) has no multiplicity.
-               Cardinality must be provided for each role.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:XlNote -&gt; correction-status (+euvoc:corrStatus)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">owl:Ontology -&gt; owl:Ontology (+owl:imports)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; Concept-status (+euvoc:status)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -509,22 +377,6 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skosxl:Label (+skosxl:altLabe)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skosxl:Label (+skosxl:prefLabel)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:ConceptScheme (+skos:topConceptOf)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
@@ -550,14 +402,6 @@
                define and describe all the relations.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:Concept (+skos:broader)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; UseContext (+euvoc:context)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -597,32 +441,33 @@
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skosxl:Label -&gt; Concept-status (+euvoc:status)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skosxl:Label -&gt; correction-status (+euvoc:corrStatus)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skosxl:Label -&gt; Label-type (+dct:type)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
          <h1 class="selector-heading" id="dependencies">Dependencies</h1>
          <h1 class="selector-heading" id="realisations">Realisations</h1>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:corporate-body -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:currency -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:language -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:place -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:site -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="connectorsUsage">Connectors with multiple usages</h1>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-dct:type">
             <dt>dct:type</dt>
