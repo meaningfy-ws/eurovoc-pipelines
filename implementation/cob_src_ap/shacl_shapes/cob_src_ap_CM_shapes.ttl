@@ -122,4 +122,30 @@ core-shape:core-shape a owl:Ontology ;
         <https://github.com/eprocurementontology/eprocurementontology>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports 
+    owl:imports :core,
+        :core-restriction,
+        cccev:,
+        <http://data.europa.eu/nuts>,
+        <http://lexvo.org/ontology>,
+        <http://publications.europa.eu/ontology/euvoc>,
+        at-voc:,
+        dcterms:,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <ttp://publications.europa.eu/ontology/authority/> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "3.0.1" ;
+    owl:versionIRI core-shape:core-shape-3.1.0 ;
+    owl:versionInfo "3.1.0" .
+

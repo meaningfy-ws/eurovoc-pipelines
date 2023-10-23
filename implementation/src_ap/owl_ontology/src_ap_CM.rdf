@@ -56,6 +56,7 @@
       <owl:imports rdf:resource="http://www.w3.org/ns/person"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
       <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
       <owl:imports rdf:resource="http://lexvo.org/ontology"/>
       <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
       <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
@@ -102,6 +103,11 @@ Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SK
    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Ontology"/>
    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Ontology">
       <skos:prefLabel xml:lang="en">Ontology</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Ontology">
+      <skos:definition xml:lang="en">Date of creation of the resource.
+
+</skos:definition>
    </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
@@ -186,9 +192,16 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
       <skos:prefLabel xml:lang="en">Top concept of</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
+      <skos:definition xml:lang="en">A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (skos:Concept -&gt; skos:ConceptScheme (+skos:topConceptOf)) </skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isReplacedBy"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/isReplacedBy">
       <skos:prefLabel xml:lang="en">Is replaced by</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/isReplacedBy">
+      <skos:definition xml:lang="en">A related resource that supplants, displaces, or supersedes the described resource. 
+ (skos:Concept -&gt; skos:Concept (+dct:isReplacedBy)) </skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#narrower">
@@ -222,37 +235,105 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
       <skos:prefLabel xml:lang="en">In scheme</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <skos:definition xml:lang="en">A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (skos:Concept -&gt; skos:ConceptScheme (+skos:inScheme)) </skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept">
       <skos:prefLabel xml:lang="en">Has top concept</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#gender"/>
+   <rdf:Description rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#gender">
+      <skos:prefLabel xml:lang="en">Gender</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#gender">
+      <skos:definition xml:lang="en">A grammatical category that indicates grammatical relationships between words in sentences.
+ (skosxl:Label -&gt; euvoc:GrammaticalGender (+lexinfo:gender)) </skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://lexvo.org/ontology#inScript"/>
    <rdf:Description rdf:about="http://lexvo.org/ontology#inScript">
       <skos:prefLabel xml:lang="en">In script</skos:prefLabel>
    </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#number"/>
+   <rdf:Description rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#number">
+      <skos:prefLabel xml:lang="en">Number</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#number">
+      <skos:definition xml:lang="en">Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to.
+ (skosxl:Label -&gt; euvoc:GrammaticalNumber (+lexinfo:number)) </skos:definition>
+   </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
       <skos:prefLabel xml:lang="en">Created</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+      <skos:definition xml:lang="en">Date of creation of the resource.
+
+ (euvoc:XlNotation) Date of creation of the resource.
+
+ (owl:Ontology) Date of creation of the resource.
+ (skos:Concept) Date of creation of the resource.
+
+ (skos:ConceptScheme) Date of creation of the resource.
+ (skosxl:Label) </skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
       <skos:prefLabel xml:lang="en">Modified</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+      <skos:definition xml:lang="en">Date of modification of the resource.
+
+ (euvoc:XlNotation) Date of modification of the resource.
+
+ (skos:Concept) Date of modification of the resource.
+
+ (skos:ConceptScheme) Date of modification of the resource.
+
+ (skosxl:Label) </skos:definition>
+   </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://publications.europa.eu/ontology/euvoc#endDate"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#endDate">
       <skos:prefLabel xml:lang="en">End date</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#endDate">
+      <skos:definition xml:lang="en">End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+ (euvoc:XlNotation) End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+ (euvoc:XlNote) End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+ (skos:Concept) End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+ (skos:ConceptScheme) End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+ (skosxl:Label) </skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://publications.europa.eu/ontology/euvoc#startDate"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#startDate">
       <skos:prefLabel xml:lang="en">Start date</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#startDate">
+      <skos:definition xml:lang="en">Beginning of the validity period.  (euvoc:XlNotation) Beginning of the validity period.  (euvoc:XlNote) Beginning of the validity period. 
+
+ (skos:Concept) Beginning of the validity period.  (skos:ConceptScheme) Beginning of the validity period.
+ (skosxl:Label) </skos:definition>
+   </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated"/>
    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#deprecated">
       <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#deprecated">
+      <skos:definition xml:lang="en">States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.
+Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future. 
+ (euvoc:XlNotation) The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI.
+An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [&lt;xref scope="external" href="https://www.w3.org/TR/rdf-concepts/"&gt;&lt;foreign otherprops="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
+
+ (skos:Concept) States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.
+Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.  (skosxl:Label) </skos:definition>
+   </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
    <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">
       <skos:prefLabel xml:lang="en">Value</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">
+      <skos:definition xml:lang="en">The literal form of the note.
+ (euvoc:XlNotation) </skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/creator"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
@@ -262,17 +343,15 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    <rdf:Description rdf:about="http://purl.org/dc/terms/dateAccepted">
       <skos:prefLabel xml:lang="en">Date accepted</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/dateAccepted">
+      <skos:definition xml:lang="en">Date of acceptance of the resource. (skos:Concept) </skos:definition>
+   </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/dateSubmitted"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/dateSubmitted">
       <skos:prefLabel xml:lang="en">Date submitted</skos:prefLabel>
    </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
-   <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
-      <skos:prefLabel xml:lang="en">Identifier</skos:prefLabel>
-   </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
-   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-      <skos:prefLabel xml:lang="en">Title</skos:prefLabel>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/dateSubmitted">
+      <skos:definition xml:lang="en">Date of submission of the resource. (skos:Concept) </skos:definition>
    </rdf:Description>
    <rdf:Property rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
@@ -280,10 +359,32 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
       <skos:definition xml:lang="en">An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.
+
+ (skos:Concept) An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.
  (skos:ConceptScheme) </skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+      <skos:prefLabel xml:lang="en">Identifier</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+      <skos:definition xml:lang="en">An unambiguous reference to the resource within a given context.
+
+Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.
+
+
+ (skos:ConceptScheme) </skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+      <skos:prefLabel xml:lang="en">Title</skos:prefLabel>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/2008/05/skos-xl#literalForm"/>
    <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#literalForm">
       <skos:prefLabel xml:lang="en">Literal form</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#literalForm">
+      <skos:definition xml:lang="en">An instance of the class skosxl:Label has one and only one literal form. 
+ (skosxl:Label) </skos:definition>
    </rdf:Description>
 </rdf:RDF>

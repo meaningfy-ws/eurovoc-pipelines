@@ -59,9 +59,10 @@
       <owl:imports rdf:resource="http://www.w3.org/ns/person"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
       <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
       <owl:imports rdf:resource="http://lexvo.org/ontology"/>
       <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
-      <owl:imports rdf:resource=" http://www.lexinfo.net/ontology/2.0/lexinfo"/>
+      <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
       <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
       <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
@@ -121,6 +122,11 @@ Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SK
       <rdfs:label>Ontology</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology">
+      <rdfs:comment>Date of creation of the resource.
+
+</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -171,6 +177,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
+      <sh:description>Date of creation of the resource.
+
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
@@ -187,6 +198,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
       <sh:name>Modified</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
+      <sh:description>Date of modification of the resource.
+
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -207,6 +223,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
@@ -223,6 +243,9 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
       <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
+      <sh:description>Beginning of the validity period. </sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -243,6 +266,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Deprecated</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.
+Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future. 
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
@@ -259,6 +287,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
       <sh:name>Value</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
+      <sh:description>The literal form of the note.
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -334,6 +366,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
@@ -347,6 +383,9 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
       <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
+      <sh:description>Beginning of the validity period. </sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -404,6 +443,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology-dct-created">
+      <sh:description>Date of creation of the resource.
+
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology-dct-created">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology-dct-created">
@@ -420,6 +464,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
       <sh:name>Created</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
+      <sh:description>Date of creation of the resource.
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -440,6 +488,9 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Date accepted</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
+      <sh:description>Date of acceptance of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
@@ -456,6 +507,9 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
       <sh:name>Date submitted</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
+      <sh:description>Date of submission of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -476,6 +530,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Modified</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
+      <sh:description>Date of modification of the resource.
+
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
@@ -492,6 +551,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
       <sh:name>End date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -512,6 +575,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Start date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
+      <sh:description>Beginning of the validity period. 
+
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
@@ -530,12 +598,38 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Deprecated</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
+      <sh:description>The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI.
+An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [&lt;a href="$inet://https://www.w3.org/TR/rdf-concepts/"&gt;&lt;font color="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
+
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <sh:path rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <sh:name>Version info</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <sh:description>An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.
+
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
@@ -546,6 +640,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
       <sh:name>Created</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
+      <sh:description>Date of creation of the resource.
+
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -566,6 +665,14 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Identifier</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
+      <sh:description>An unambiguous reference to the resource within a given context.
+
+Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.
+
+
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
@@ -582,6 +689,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
       <sh:name>Modified</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
+      <sh:description>Date of modification of the resource.
+
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -620,6 +732,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
@@ -636,6 +752,9 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
       <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
+      <sh:description>Beginning of the validity period. </sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -693,6 +812,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
+      <sh:description>Date of creation of the resource.
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
@@ -709,6 +832,11 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
       <sh:name>Modified</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
+      <sh:description>Date of modification of the resource.
+
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -729,6 +857,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
+</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
@@ -745,6 +877,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
       <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
+      <sh:description>Beginning of the validity period.
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -765,6 +901,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Deprecated</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.
+Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future. </sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
@@ -781,6 +921,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
       <sh:name>Literal form</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
+      <sh:description>An instance of the class skosxl:Label has one and only one literal form. 
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
@@ -991,6 +1135,9 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf">
       <sh:name>Top concept of</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf">
+      <sh:description>A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme.</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </rdf:Description>
@@ -1007,6 +1154,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
       <sh:name>Is replaced by</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
+      <sh:description>A related resource that supplants, displaces, or supersedes the described resource. 
+</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -1096,6 +1247,9 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
       <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
+      <sh:description>A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-skos-hasTopConcept">
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
