@@ -59,7 +59,9 @@
                   </tr>
                   <tr>
                      <td>owl:Ontology</td>
-                     <td></td>
+                     <td>Date of creation of the resource.
+                        
+                        </td>
                   </tr>
                   <tr>
                      <td>skos:Concept</td>
@@ -103,7 +105,15 @@
                   <tr>
                      <td>euvoc:XlNotation<br>euvoc:XlNote<br>owl:Ontology<br>skos:Concept<br>skos:ConceptScheme<br>skosxl:Label<br></td>
                      <td>dct:created</td>
-                     <td>     </td>
+                     <td>Date of creation of the resource.
+                        
+                          Date of creation of the resource.
+                        
+                         Date of creation of the resource.
+                         Date of creation of the resource.
+                        
+                         Date of creation of the resource.
+                        </td>
                      <td>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br></td>
                   </tr>
                   <tr>
@@ -115,25 +125,39 @@
                   <tr>
                      <td>skos:Concept</td>
                      <td>dct:dateAccepted</td>
-                     <td></td>
+                     <td>Date of acceptance of the resource.</td>
                      <td>xsd:date [0..1]</td>
                   </tr>
                   <tr>
                      <td>skos:Concept</td>
                      <td>dct:dateSubmitted</td>
-                     <td></td>
+                     <td>Date of submission of the resource.</td>
                      <td>xsd:date [0..1]</td>
                   </tr>
                   <tr>
                      <td>skos:ConceptScheme</td>
                      <td>dct:identifier</td>
-                     <td></td>
+                     <td>An unambiguous reference to the resource within a given context.
+                        
+                        Recommended best practice is to identify the resource by means of a string conforming
+                        to a formal identification system.
+                        
+                        
+                        </td>
                      <td>xsd:string [0..1]</td>
                   </tr>
                   <tr>
                      <td>euvoc:XlNotation<br>euvoc:XlNote<br>skos:Concept<br>skos:ConceptScheme<br>skosxl:Label<br></td>
                      <td>dct:modified</td>
-                     <td>    </td>
+                     <td>Date of modification of the resource.
+                        
+                          Date of modification of the resource.
+                        
+                         Date of modification of the resource.
+                        
+                         Date of modification of the resource.
+                        
+                        </td>
                      <td>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br>xsd:dateTime [0..1]<br></td>
                   </tr>
                   <tr>
@@ -145,40 +169,77 @@
                   <tr>
                      <td>euvoc:XlNotation<br>euvoc:XlNote<br>skos:Concept<br>skos:ConceptScheme<br>skosxl:Label<br></td>
                      <td>euvoc:endDate</td>
-                     <td>    </td>
+                     <td>End of the validity period. If a resource has an end date then it must be marked as
+                        deprecated. 
+                         End of the validity period. If a resource has an end date then it must be marked as
+                        deprecated. 
+                         End of the validity period. If a resource has an end date then it must be marked as
+                        deprecated. 
+                         End of the validity period. If a resource has an end date then it must be marked as
+                        deprecated. 
+                         End of the validity period. If a resource has an end date then it must be marked as
+                        deprecated. 
+                        </td>
                      <td>xsd:date [0..1]<br>:xsd:date [0..1]<br>xsd:date [0..1]<br>xsd:date [0..1]<br>xsd:date [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:XlNotation<br>euvoc:XlNote<br>skos:Concept<br>skos:ConceptScheme<br>skosxl:Label<br></td>
                      <td>euvoc:startDate</td>
-                     <td>    </td>
+                     <td>Beginning of the validity period.  Beginning of the validity period.  Beginning of the validity period. 
+                        
+                         Beginning of the validity period.  Beginning of the validity period.
+                        </td>
                      <td>xsd:date [0..1]<br>xsd:date [0..1]<br>xsd:date [0..1]<br>xsd:date [0..1]<br>xsd:date [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:XlNotation<br>euvoc:XlNote<br>skos:Concept<br>skos:ConceptScheme<br>skosxl:Label<br></td>
                      <td>owl:deprecated</td>
-                     <td>    </td>
+                     <td>States whether the resource is current or deprecated. By deprecating a resource, it
+                        means that it should not be used in new documents.
+                        Deprecation is a feature commonly used in versioning software to indicate that a particular
+                        feature is preserved for backward-compatibility purposes, but may be phased out in
+                        the future. 
+                          The class skosxl:Label is a special class of lexical entities. An instance of the
+                        class skosxl:Label is a resource and may be named with a URI.
+                        An instance of the class skosxl:Label has a single literal form. This literal form
+                        is an RDF plain literal (which is a string of UNICODE characters and an optional language
+                        tag [&lt;xref scope="external" href="https://www.w3.org/TR/rdf-concepts/"&gt;&lt;foreign otherprops="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;]).
+                        The property skosxl:literalForm is used to give the literal form of an skosxl:Label.
+                        If two instances of the class skosxl:Label have the same literal form, they are not
+                        necessarily the same resource.
+                        
+                          States whether the resource is current or deprecated. By deprecating a resource, it
+                        means that it should not be used in new documents.
+                        Deprecation is a feature commonly used in versioning software to indicate that a particular
+                        feature is preserved for backward-compatibility purposes, but may be phased out in
+                        the future. </td>
                      <td>xsd:boolean [0..1]<br>xsd:boolean [0..1]<br>xsd:boolean [0..1]<br>xsd:boolean [0..1]<br>xsd:boolean [0..1]<br></td>
                   </tr>
                   <tr>
-                     <td>skos:ConceptScheme</td>
+                     <td>skos:Concept<br>skos:ConceptScheme<br></td>
                      <td>owl:versionInfo</td>
                      <td>An owl:versionInfo statement generally has as its object a string giving information
                         about this version. This statement does not contribute to the logical meaning of the
                         resource.
+                        
+                         An owl:versionInfo statement generally has as its object a string giving information
+                        about this version. This statement does not contribute to the logical meaning of the
+                        resource.
                         </td>
-                     <td>rdf:PlainaLiteral [0..1]</td>
+                     <td>rdf:PlainaLiteral [0..1]<br>rdf:PlainaLiteral [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:XlNotation<br>euvoc:XlNote<br></td>
                      <td>rdf:value</td>
-                     <td> </td>
+                     <td>The literal form of the note.
+                         </td>
                      <td>rdf:langString [1..1]<br>rdf:langString [1..1]<br></td>
                   </tr>
                   <tr>
                      <td>skosxl:Label</td>
                      <td>skosxl:literalForm</td>
-                     <td></td>
+                     <td>An instance of the class skosxl:Label has one and only one literal form. 
+                        </td>
                      <td>rdf:langString [1..1]</td>
                   </tr>
                </tbody>
@@ -195,7 +256,9 @@
                <tbody>
                   <tr>
                      <td>dct:isReplacedBy</td>
-                     <td></td>
+                     <td>A related resource that supplants, displaces, or supersedes the described resource.
+                        
+                        </td>
                      <td>skos:Concept -&gt; skos:Concept [0..*]</td>
                   </tr>
                   <tr>
@@ -253,7 +316,8 @@
                   </tr>
                   <tr>
                      <td>skos:inScheme</td>
-                     <td></td>
+                     <td>A concept scheme in which the concept is included. A concept may be a member of more
+                        than one concept scheme.</td>
                      <td>skos:Concept -&gt; skos:ConceptScheme [0..*]</td>
                   </tr>
                   <tr>
@@ -263,7 +327,8 @@
                   </tr>
                   <tr>
                      <td>skos:topConceptOf</td>
-                     <td></td>
+                     <td>A concept scheme in which the concept is included. A concept may be a member of more
+                        than one concept scheme.</td>
                      <td>skos:Concept -&gt; skos:ConceptScheme [0..*]</td>
                   </tr>
                   <tr>
