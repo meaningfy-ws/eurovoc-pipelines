@@ -64,12 +64,12 @@
       <dct:title xml:lang="en">ePO Core core</dct:title>
       <dct:description xml:lang="en">This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from src_ap_CM.xml on 2023-10-20</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from src_ap_CM.xml on 2023-10-23</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-20</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-23</dct:issued>
       <owl:versionInfo>3.1.0</owl:versionInfo>
       <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
       <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#core-3.1.0"/>
@@ -82,41 +82,22 @@
       <cc:attributionName>European Union</cc:attributionName>
       <cc:attributionURL rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
    </owl:Ontology>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Concept-status"/>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#Concept-status">
-      <skos:prefLabel xml:lang="en">Concept-status</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#Concept-status">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
-   </rdf:Description>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#correction-status"/>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#correction-status">
-      <skos:prefLabel xml:lang="en">Correction-status</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#correction-status">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
-   </rdf:Description>
    <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#XlNotation"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#XlNotation">
       <skos:prefLabel xml:lang="en">Xl notation</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#XlNotation">
+      <skos:definition xml:lang="en">A notation is a string of characters used to uniquely identify a concept within a specified context.
+Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SKOS notation statements. This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions. 
+</skos:definition>
    </rdf:Description>
    <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#XlNote"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#XlNote">
       <skos:prefLabel xml:lang="en">Xl note</skos:prefLabel>
    </rdf:Description>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Label-type"/>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#Label-type">
-      <skos:prefLabel xml:lang="en">Label-type</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#Label-type">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
-   </rdf:Description>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#NotationType"/>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#NotationType">
-      <skos:prefLabel xml:lang="en">Notation type</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#NotationType">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#XlNote">
+      <skos:definition xml:lang="en">Like the skosxl:Label class reifies SKOS label statements, XlNote reifies SKOS note statements (i.e. skos:editorialNote, skos:example, skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote). This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions. 
+</skos:definition>
    </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Ontology"/>
    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Ontology">
@@ -126,103 +107,24 @@
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
       <skos:prefLabel xml:lang="en">Concept</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+      <skos:definition xml:lang="en">A concept is a unit of thought. The semantic content of a concept can be re-expressed by a combination of other and different concepts, which may vary from one language or culture to another. Concepts exist in the mind as abstract entities that are independent of the terms used to label them.</skos:definition>
+   </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
       <skos:prefLabel xml:lang="en">Concept scheme</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+      <skos:definition xml:lang="en">A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas.</skos:definition>
    </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2008/05/skos-xl#Label"/>
    <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#Label">
       <skos:prefLabel xml:lang="en">Label</skos:prefLabel>
    </rdf:Description>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#UseContext"/>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#UseContext">
-      <skos:prefLabel xml:lang="en">Use context</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#UseContext">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
-   </rdf:Description>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Concept-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#correction-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Label-type">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#NotationType">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#UseContext">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Concept-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#correction-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Label-type">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#NotationType">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#UseContext">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Concept-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#correction-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Label-type">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#NotationType">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#UseContext">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Concept-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#correction-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Label-type">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#NotationType">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#UseContext">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Concept-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#correction-status">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#Label-type">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#NotationType">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#UseContext">
-      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   </owl:Class>
-   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#status"/>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#status">
-      <skos:prefLabel xml:lang="en">Status</skos:prefLabel>
-   </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#corrStatus"/>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#corrStatus">
-      <skos:prefLabel xml:lang="en">Corr status</skos:prefLabel>
+   <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#Label">
+      <skos:definition xml:lang="en">The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI.
+An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [&lt;xref scope="external" href="https://www.w3.org/TR/rdf-concepts/"&gt;&lt;foreign otherprops="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
+</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/type"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/type">
@@ -231,6 +133,10 @@
    <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#xlNotation"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#xlNotation">
       <skos:prefLabel xml:lang="en">Xl notation</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#corrStatus"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#corrStatus">
+      <skos:prefLabel xml:lang="en">Corr status</skos:prefLabel>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#xlHistoryNote"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#xlHistoryNote">
@@ -252,13 +158,29 @@
    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#imports">
       <skos:prefLabel xml:lang="en">Imports</skos:prefLabel>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://www.w3.org/2008/05/skos-xl#altLabe"/>
-   <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#altLabe">
-      <skos:prefLabel xml:lang="en">Alt labe</skos:prefLabel>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/2008/05/skos-xl#altLabel"/>
+   <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#altLabel">
+      <skos:prefLabel xml:lang="en">Alt label</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#altLabel">
+      <skos:definition xml:lang="en">An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. 
+ (skos:Concept -&gt; skosxl:Label (+skosxl:altLabel)) </skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2008/05/skos-xl#prefLabel"/>
    <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#prefLabel">
       <skos:prefLabel xml:lang="en">Pref label</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#prefLabel">
+      <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language. No two concepts in the same concept scheme may have the same preferred label in a given language. 
+
+ (skos:Concept -&gt; skosxl:Label (+skosxl:prefLabel)) </skos:definition>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+      <skos:prefLabel xml:lang="en">Exact match</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+      <skos:definition xml:lang="en">The property skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch. (skos:Concept -&gt; skos:Concept (+skos:exactMatch)) </skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
@@ -280,9 +202,21 @@
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#context">
       <skos:prefLabel xml:lang="en">Context</skos:prefLabel>
    </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/2008/05/skos-xl#hiddenLabel"/>
+   <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#hiddenLabel">
+      <skos:prefLabel xml:lang="en">Hidden label</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#hiddenLabel">
+      <skos:definition xml:lang="en">A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations. Mis-spelled terms are normally included as hidden labels.
+ (skos:Concept -&gt; skosxl:Label (+skosxl:hiddenLabel)) </skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/replaces"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/replaces">
       <skos:prefLabel xml:lang="en">Replaces</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#status"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#status">
+      <skos:prefLabel xml:lang="en">Status</skos:prefLabel>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
@@ -339,6 +273,14 @@
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
       <skos:prefLabel xml:lang="en">Title</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Property rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+      <skos:prefLabel xml:lang="en">Version info</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+      <skos:definition xml:lang="en">An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.
+ (skos:ConceptScheme) </skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/2008/05/skos-xl#literalForm"/>
    <rdf:Description rdf:about="http://www.w3.org/2008/05/skos-xl#literalForm">

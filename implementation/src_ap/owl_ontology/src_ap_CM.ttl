@@ -16,147 +16,11 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:Concept-status a owl:Class ;
-    rdfs:isDefinedBy :core ;
-    rdfs:subClassOf skos:Concept ;
-    skos:prefLabel "Concept-status"@en .
-
-:Label-type a owl:Class ;
-    rdfs:isDefinedBy :core ;
-    rdfs:subClassOf skos:Concept ;
-    skos:prefLabel "Label-type"@en .
-
-:NotationType a owl:Class ;
-    rdfs:isDefinedBy :core ;
-    rdfs:subClassOf skos:Concept ;
-    skos:prefLabel "Notation type"@en .
-
-:UseContext a owl:Class ;
-    rdfs:isDefinedBy :core ;
-    rdfs:subClassOf skos:Concept ;
-    skos:prefLabel "Use context"@en .
-
-:correction-status a owl:Class ;
-    rdfs:isDefinedBy :core ;
-    rdfs:subClassOf skos:Concept ;
-    skos:prefLabel "Correction-status"@en .
-
-lexvo:inScript a owl:ObjectProperty ;
-    skos:prefLabel "In script"@en .
-
-euvoc:XlNotation a owl:Class ;
-    skos:prefLabel "Xl notation"@en .
-
-euvoc:XlNote a owl:Class ;
-    skos:prefLabel "Xl note"@en .
-
-euvoc:context a owl:ObjectProperty ;
-    skos:prefLabel "Context"@en .
-
-euvoc:corrStatus a owl:ObjectProperty ;
-    skos:prefLabel "Corr status"@en .
-
-euvoc:endDate a owl:DatatypeProperty ;
-    skos:prefLabel "End date"@en .
-
-euvoc:startDate a owl:DatatypeProperty ;
-    skos:prefLabel "Start date"@en .
-
-euvoc:status a owl:ObjectProperty ;
-    skos:prefLabel "Status"@en .
-
-euvoc:xlChangeNote a owl:ObjectProperty ;
-    skos:prefLabel "Xl change note"@en .
-
-euvoc:xlDefinition a owl:ObjectProperty ;
-    skos:prefLabel "Xl definition"@en .
-
-euvoc:xlHistoryNote a owl:ObjectProperty ;
-    skos:prefLabel "Xl history note"@en .
-
-euvoc:xlNotation a owl:ObjectProperty ;
-    skos:prefLabel "Xl notation"@en .
-
-euvoc:xlNote a owl:ObjectProperty ;
-    skos:prefLabel "Xl note"@en .
-
-dcterms:created a owl:DatatypeProperty ;
-    skos:prefLabel "Created"@en .
-
-dcterms:creator a owl:DatatypeProperty ;
-    skos:prefLabel "Creator"@en .
-
-dcterms:dateAccepted a owl:DatatypeProperty ;
-    skos:prefLabel "Date accepted"@en .
-
-dcterms:dateSubmitted a owl:DatatypeProperty ;
-    skos:prefLabel "Date submitted"@en .
-
-dcterms:identifier a owl:DatatypeProperty ;
-    skos:prefLabel "Identifier"@en .
-
-dcterms:isReplacedBy a owl:ObjectProperty ;
-    skos:prefLabel "Is replaced by"@en .
-
-dcterms:modified a owl:DatatypeProperty ;
-    skos:prefLabel "Modified"@en .
-
-dcterms:replaces a owl:ObjectProperty ;
-    skos:prefLabel "Replaces"@en .
-
-dcterms:title a owl:DatatypeProperty ;
-    skos:prefLabel "Title"@en .
-
-dcterms:type a owl:ObjectProperty ;
-    skos:prefLabel "Type"@en .
-
-rdf:value a owl:DatatypeProperty ;
-    skos:prefLabel "Value"@en .
-
-owl:deprecated a owl:DatatypeProperty ;
-    skos:prefLabel "Deprecated"@en .
-
-owl:imports a owl:ObjectProperty ;
-    skos:prefLabel "Imports"@en .
-
-skos:ConceptScheme a owl:Class ;
-    skos:prefLabel "Concept scheme"@en .
-
-skos:broader a owl:ObjectProperty ;
-    skos:prefLabel "Broader"@en .
-
-skos:hasTopConcept a owl:ObjectProperty ;
-    skos:prefLabel "Has top concept"@en .
-
-skos:inScheme a owl:ObjectProperty ;
-    skos:prefLabel "In scheme"@en .
-
-skos:narrower a owl:ObjectProperty ;
-    skos:prefLabel "Narrower"@en .
-
-skos:topConceptOf a owl:ObjectProperty ;
-    skos:prefLabel "Top concept of"@en .
-
-skosxl:Label a owl:Class ;
-    skos:prefLabel "Label"@en .
-
-skosxl:altLabe a owl:ObjectProperty ;
-    skos:prefLabel "Alt labe"@en .
-
-skosxl:literalForm a owl:DatatypeProperty ;
-    skos:prefLabel "Literal form"@en .
-
-skosxl:prefLabel a owl:ObjectProperty ;
-    skos:prefLabel "Pref label"@en .
-
-owl:Ontology a owl:Class ;
-    skos:prefLabel "Ontology"@en .
-
 :core a owl:Ontology ;
     cc:attributionName "European Union" ;
     cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
     dcterms:description "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
-    dcterms:issued "2023-10-20"^^xsd:date ;
+    dcterms:issued "2023-10-23"^^xsd:date ;
     dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents         (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the         CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided         that appropriate credit is given and any changes are indicated." ;
@@ -164,7 +28,7 @@ owl:Ontology a owl:Class ;
     bibo:status "Semantic Specification Realease" ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from src_ap_CM.xml on 2023-10-20" ;
+    rdfs:comment "This version is automatically generated from src_ap_CM.xml on 2023-10-23" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
         <https://github.com/eprocurementontology/eprocurementontology>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
