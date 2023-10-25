@@ -3,34 +3,6 @@
 	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1560"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_847AAF46_7A5F_4dc3_A40B_96B8AFA75225" name="place">
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70" name="euvoc:Capital Classification">
-				<generalization xmi:type="uml:Generalization" xmi:id="EAID_AB36CAC1_1B0D_4e6d_970D_5E07AD407FBB" general="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839"/>
-			</packagedElement>
-			<packagedElement xmi:type="uml:Association" xmi:id="EAID_2ED48AD0_4211_41fa_A635_0EB5B15AE185">
-				<memberEnd xmi:idref="EAID_dstD48AD0_4211_41fa_A635_0EB5B15AE185"/>
-				<memberEnd xmi:idref="EAID_srcD48AD0_4211_41fa_A635_0EB5B15AE185"/>
-				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcD48AD0_4211_41fa_A635_0EB5B15AE185" association="EAID_2ED48AD0_4211_41fa_A635_0EB5B15AE185">
-					<type xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106"/>
-				</ownedEnd>
-			</packagedElement>
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_7D09E3B1_4318_48cf_B160_97186F930FB3" name="euvoc:GrammaticalNumber"/>
-			<packagedElement xmi:type="uml:Association" xmi:id="EAID_F2D8AAA6_1185_40c6_B7D5_DC327A7CB41B">
-				<memberEnd xmi:idref="EAID_dstD8AAA6_1185_40c6_B7D5_DC327A7CB41B"/>
-				<memberEnd xmi:idref="EAID_srcD8AAA6_1185_40c6_B7D5_DC327A7CB41B"/>
-				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcD8AAA6_1185_40c6_B7D5_DC327A7CB41B" association="EAID_F2D8AAA6_1185_40c6_B7D5_DC327A7CB41B">
-					<type xmi:idref="EAID_BFC33475_4AF8_4eb7_ABAF_96FF0EB61C0F"/>
-				</ownedEnd>
-			</packagedElement>
-			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_6B934627_D1F5_406a_AD59_A400A0C72904" name="at-voc:place"/>
-			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_B5AC25A3_97F9_4a42_810E_E0C4C797A566" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_6B934627_D1F5_406a_AD59_A400A0C72904"/>
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_58CA9635_4F04_42f3_9689_29C5B7C84C5D" name="euvoc:GrammaticalGender"/>
-			<packagedElement xmi:type="uml:Association" xmi:id="EAID_A84253A8_ED0E_4435_BA91_46322FA862EF">
-				<memberEnd xmi:idref="EAID_dst4253A8_ED0E_4435_BA91_46322FA862EF"/>
-				<memberEnd xmi:idref="EAID_src4253A8_ED0E_4435_BA91_46322FA862EF"/>
-				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src4253A8_ED0E_4435_BA91_46322FA862EF" association="EAID_A84253A8_ED0E_4435_BA91_46322FA862EF">
-					<type xmi:idref="EAID_BFC33475_4AF8_4eb7_ABAF_96FF0EB61C0F"/>
-				</ownedEnd>
-			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106" name="euvoc:Place">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_355359F0_CD71_4e1f_8D41_782E07953C8E" name="euvoc:culturalCity">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_CD71_4e1f_8D41_782E07953C8E" value="0"/>
@@ -58,6 +30,13 @@
 				<memberEnd xmi:idref="EAID_dst82E9BF_859C_41f6_ABE1_BD5F026E3315"/>
 				<memberEnd xmi:idref="EAID_src82E9BF_859C_41f6_ABE1_BD5F026E3315"/>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src82E9BF_859C_41f6_ABE1_BD5F026E3315" association="EAID_0182E9BF_859C_41f6_ABE1_BD5F026E3315">
+					<type xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106"/>
+				</ownedEnd>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Association" xmi:id="EAID_2ED48AD0_4211_41fa_A635_0EB5B15AE185">
+				<memberEnd xmi:idref="EAID_dstD48AD0_4211_41fa_A635_0EB5B15AE185"/>
+				<memberEnd xmi:idref="EAID_srcD48AD0_4211_41fa_A635_0EB5B15AE185"/>
+				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcD48AD0_4211_41fa_A635_0EB5B15AE185" association="EAID_2ED48AD0_4211_41fa_A635_0EB5B15AE185">
 					<type xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106"/>
 				</ownedEnd>
 			</packagedElement>
@@ -90,6 +69,8 @@
 					<type xmi:idref="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F"/>
 				</ownedEnd>
 			</packagedElement>
+			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_6B934627_D1F5_406a_AD59_A400A0C72904" name="at-voc:place"/>
+			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_B5AC25A3_97F9_4a42_810E_E0C4C797A566" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_6B934627_D1F5_406a_AD59_A400A0C72904"/>
 		</packagedElement>
 		<umldi:Diagram xmi:type="umldi:UMLClassDiagram" xmi:id="EAID_193DBFC0_ED8A_4f4a_AEC4_BC97A1F58191" isFrame="false" modelElement="EAPK_847AAF46_7A5F_4dc3_A40B_96B8AFA75225">
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_193DBFC0_ED8A_4f4a_8677_620356AA3106" modelElement="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106">
@@ -117,7 +98,7 @@
 				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_ED8A_4f4a_86CE_4EDDA8A5264C" x="926" y="506" width="117" height="73"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_193DBFC0_ED8A_4f4a_A339_C1BEA98F8E70" modelElement="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70">
-				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_ED8A_4f4a_A339_C1BEA98F8E70" text="euvoc:Capital Classification"/>
+				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_ED8A_4f4a_A339_C1BEA98F8E70" text="euvoc:CapitalClassification"/>
 				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_ED8A_4f4a_A339_C1BEA98F8E70" x="743" y="425" width="90" height="70"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_193DBFC0_ED8A_4f4a_AD59_A400A0C72904" modelElement="EAID_6B934627_D1F5_406a_AD59_A400A0C72904">
@@ -374,7 +355,7 @@
 				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_2883_4812_86CE_4EDDA8A5264C" x="362" y="331" width="117" height="73"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_D93A9AF2_2883_4812_A339_C1BEA98F8E70" modelElement="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70">
-				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_2883_4812_A339_C1BEA98F8E70" text="euvoc:Capital Classification"/>
+				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_2883_4812_A339_C1BEA98F8E70" text="euvoc:CapitalClassification"/>
 				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_2883_4812_A339_C1BEA98F8E70" x="88" y="291" width="164" height="153"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_D93A9AF2_2883_4812_8048_EE8451F78445" modelElement="EAID_ECBBB41F_9D75_410b_8048_EE8451F78445">
@@ -440,60 +421,6 @@
 				<times created="2023-10-18 21:59:45" modified="2023-10-20 11:44:31"/>
 				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
 			</element>
-			<element xmi:idref="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70" xmi:type="uml:Class" name="euvoc:Capital Classification" scope="public">
-				<model package="EAPK_847AAF46_7A5F_4dc3_A40B_96B8AFA75225" tpos="0" ea_localid="40" ea_eleType="element"/>
-				<properties documentation="The Capital classification NAL provides possible locality statuses." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-18 13:36:30" modified="2023-10-23 15:40:53" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="place"/>
-				<links>
-					<Generalization xmi:id="EAID_AB36CAC1_1B0D_4e6d_970D_5E07AD407FBB" start="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70" end="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839"/>
-					<Association xmi:id="EAID_2ED48AD0_4211_41fa_A635_0EB5B15AE185" start="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106" end="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70"/>
-				</links>
-			</element>
-			<element xmi:idref="EAID_7D09E3B1_4318_48cf_B160_97186F930FB3" xmi:type="uml:Class" name="euvoc:GrammaticalNumber" scope="public">
-				<model package="EAPK_847AAF46_7A5F_4dc3_A40B_96B8AFA75225" tpos="0" ea_localid="71" ea_eleType="element"/>
-				<properties documentation="The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: &quot;singular&quot;, &quot;dual&quot; or &quot;plural&quot;. There is also a concept &quot;generic&quot; for forms that do not distinguish between grammatical numbers. " isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-23 15:37:23" modified="2023-10-23 15:40:13" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="place"/>
-				<links>
-					<Association xmi:id="EAID_F2D8AAA6_1185_40c6_B7D5_DC327A7CB41B" start="EAID_BFC33475_4AF8_4eb7_ABAF_96FF0EB61C0F" end="EAID_7D09E3B1_4318_48cf_B160_97186F930FB3"/>
-				</links>
-			</element>
-			<element xmi:idref="EAID_6B934627_D1F5_406a_AD59_A400A0C72904" xmi:type="uml:Enumeration" name="at-voc:place" scope="public">
-				<model package="EAPK_847AAF46_7A5F_4dc3_A40B_96B8AFA75225" tpos="0" ea_localid="68" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-20 11:15:43" modified="2023-10-20 11:15:59" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="place"/>
-				<links>
-					<Realisation xmi:id="EAID_B5AC25A3_97F9_4a42_810E_E0C4C797A566" start="EAID_6B934627_D1F5_406a_AD59_A400A0C72904" end="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
-					<Dependency xmi:id="EAID_CD803676_55E6_4bd9_92EB_C005F09781BE" start="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106" end="EAID_6B934627_D1F5_406a_AD59_A400A0C72904"/>
-				</links>
-			</element>
-			<element xmi:idref="EAID_58CA9635_4F04_42f3_9689_29C5B7C84C5D" xmi:type="uml:Class" name="euvoc:GrammaticalGender" scope="public">
-				<model package="EAPK_847AAF46_7A5F_4dc3_A40B_96B8AFA75225" tpos="0" ea_localid="70" ea_eleType="element"/>
-				<properties documentation="The grammatical-gender authority table is a controlled vocabulary which provides the list of the grammatical genders in languages which have gender distinctions: &quot;male&quot;, &quot;female&quot;, &quot;neuter&quot; or &quot;utrum&quot;. It also contains concepts for &quot;no gender&quot; (in languages that do not have gender distinctions) and &quot;generic&quot; (identical forms in languages that make gender distinctions)." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-23 15:32:51" modified="2023-10-23 15:39:40" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="place"/>
-				<links>
-					<Association xmi:id="EAID_A84253A8_ED0E_4435_BA91_46322FA862EF" start="EAID_BFC33475_4AF8_4eb7_ABAF_96FF0EB61C0F" end="EAID_58CA9635_4F04_42f3_9689_29C5B7C84C5D"/>
-				</links>
-			</element>
 			<element xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106" xmi:type="uml:Class" name="euvoc:Place" scope="public">
 				<model package="EAPK_847AAF46_7A5F_4dc3_A40B_96B8AFA75225" tpos="0" ea_localid="31" ea_eleType="element"/>
 				<properties documentation="The Place authority table (AT) is a controlled vocabulary that lists concepts associated with the localities of the world. It provides authority codes that are based on UN/LOCODE codes. The Place AT uses the classification (membership classification) and the authority codes of the Country AT. This AT also provides ISO 3166-2 codes, as well as geographical coordinates. The European capitals of culture are also included. The original name of each locality is indicated. The Corporate body AT uses this AT to identify the seat of each concept (LOC_id), and the Site AT uses it to identify the location of each site (loc_code). The Place authority table is updated based on the stakeholders’ need" isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
@@ -531,214 +458,22 @@
 					<Association xmi:id="EAID_A99B8F6F_2BC4_4a8d_9651_03DB1ABD07D3" start="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F" end="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106"/>
 				</links>
 			</element>
+			<element xmi:idref="EAID_6B934627_D1F5_406a_AD59_A400A0C72904" xmi:type="uml:Enumeration" name="at-voc:place" scope="public">
+				<model package="EAPK_847AAF46_7A5F_4dc3_A40B_96B8AFA75225" tpos="0" ea_localid="68" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-20 11:15:43" modified="2023-10-20 11:15:59" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="place"/>
+				<links>
+					<Realisation xmi:id="EAID_B5AC25A3_97F9_4a42_810E_E0C4C797A566" start="EAID_6B934627_D1F5_406a_AD59_A400A0C72904" end="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
+					<Dependency xmi:id="EAID_CD803676_55E6_4bd9_92EB_C005F09781BE" start="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106" end="EAID_6B934627_D1F5_406a_AD59_A400A0C72904"/>
+				</links>
+			</element>
 		</elements>
 		<connectors>
-			<connector xmi:idref="EAID_AB36CAC1_1B0D_4e6d_970D_5E07AD407FBB">
-				<source xmi:idref="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70">
-					<model ea_localid="40" type="Class" name="euvoc:Capital Classification"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839">
-					<model ea_localid="5" type="Class" name="skos:Concept"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="51"/>
-				<properties ea_type="Generalization" direction="Source -&gt; Destination"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_2ED48AD0_4211_41fa_A635_0EB5B15AE185">
-				<source xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106">
-					<model ea_localid="31" type="Class" name="euvoc:Place"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70">
-					<model ea_localid="40" type="Class" name="euvoc:Capital Classification"/>
-					<role name="org:role" visibility="Public" targetScope="instance"/>
-					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="52"/>
-				<properties ea_type="Association" direction="Source -&gt; Destination"/>
-				<modifiers isRoot="false" isLeaf="false"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="0..1" rt="+org:role"/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_F2D8AAA6_1185_40c6_B7D5_DC327A7CB41B">
-				<source xmi:idref="EAID_BFC33475_4AF8_4eb7_ABAF_96FF0EB61C0F">
-					<model ea_localid="6" type="Class" name="skosxl:Label"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_7D09E3B1_4318_48cf_B160_97186F930FB3">
-					<model ea_localid="71" type="Class" name="euvoc:GrammaticalNumber"/>
-					<role name="lexinfo:number" visibility="Public" targetScope="instance"/>
-					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="80"/>
-				<properties ea_type="Association" direction="Source -&gt; Destination"/>
-				<modifiers isRoot="false" isLeaf="false"/>
-				<parameterSubstitutions/>
-				<documentation value="Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to.&#xA;"/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="0..1" rt="+lexinfo:number"/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_B5AC25A3_97F9_4a42_810E_E0C4C797A566">
-				<source xmi:idref="EAID_6B934627_D1F5_406a_AD59_A400A0C72904">
-					<model ea_localid="68" type="Enumeration" name="at-voc:place"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
-					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="72"/>
-				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_CD803676_55E6_4bd9_92EB_C005F09781BE">
-				<source xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106">
-					<model ea_localid="31" type="Class" name="euvoc:Place"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_6B934627_D1F5_406a_AD59_A400A0C72904">
-					<model ea_localid="68" type="Enumeration" name="at-voc:place"/>
-					<role name="skos:inSchemce" visibility="Public" targetScope="instance"/>
-					<type multiplicity="1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="71"/>
-				<properties ea_type="Dependency" direction="Source -&gt; Destination"/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="1" rt="+skos:inSchemce"/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_A84253A8_ED0E_4435_BA91_46322FA862EF">
-				<source xmi:idref="EAID_BFC33475_4AF8_4eb7_ABAF_96FF0EB61C0F">
-					<model ea_localid="6" type="Class" name="skosxl:Label"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_58CA9635_4F04_42f3_9689_29C5B7C84C5D">
-					<model ea_localid="70" type="Class" name="euvoc:GrammaticalGender"/>
-					<role name="lexinfo:gender" visibility="Public" targetScope="instance"/>
-					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="79"/>
-				<properties ea_type="Association" direction="Source -&gt; Destination"/>
-				<modifiers isRoot="false" isLeaf="false"/>
-				<parameterSubstitutions/>
-				<documentation value="A grammatical category that indicates grammatical relationships between words in sentences.&#xA;"/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="0..1" rt="+lexinfo:gender"/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
 			<connector xmi:idref="EAID_0182E9BF_859C_41f6_ABE1_BD5F026E3315">
 				<source xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106">
 					<model ea_localid="31" type="Class" name="euvoc:Place"/>
@@ -769,6 +504,41 @@
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="0..*" rt="+wgs:location"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_2ED48AD0_4211_41fa_A635_0EB5B15AE185">
+				<source xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106">
+					<model ea_localid="31" type="Class" name="euvoc:Place"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_F8460E43_650B_4519_A339_C1BEA98F8E70">
+					<model ea_localid="40" type="Class" name="euvoc:CapitalClassification"/>
+					<role name="org:role" visibility="Public" targetScope="instance"/>
+					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="52"/>
+				<properties ea_type="Association" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rb="0..1" rt="+org:role"/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
@@ -838,6 +608,39 @@
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="1" rt="+geosparql:sfWithin"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_CD803676_55E6_4bd9_92EB_C005F09781BE">
+				<source xmi:idref="EAID_3AFFCF2D_8C04_429c_8677_620356AA3106">
+					<model ea_localid="31" type="Class" name="euvoc:Place"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_6B934627_D1F5_406a_AD59_A400A0C72904">
+					<model ea_localid="68" type="Enumeration" name="at-voc:place"/>
+					<role name="skos:inSchemce" visibility="Public" targetScope="instance"/>
+					<type multiplicity="1" aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="71"/>
+				<properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rb="1" rt="+skos:inSchemce"/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
@@ -943,6 +746,40 @@
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="0..*" rt="+wgs:location"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_B5AC25A3_97F9_4a42_810E_E0C4C797A566">
+				<source xmi:idref="EAID_6B934627_D1F5_406a_AD59_A400A0C72904">
+					<model ea_localid="68" type="Enumeration" name="at-voc:place"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
+					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="72"/>
+				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
