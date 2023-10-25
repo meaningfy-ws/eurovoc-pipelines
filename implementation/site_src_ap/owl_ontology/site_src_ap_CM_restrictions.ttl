@@ -6,14 +6,13 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :core-restriction a owl:Ontology ;
@@ -28,7 +27,7 @@
     bibo:status "Semantic Specification Realease" ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment """This version is automatically generated from cob_src_ap_CM.xml on 
+    rdfs:comment """This version is automatically generated from site_src_ap_CM.xml on 
                 2023-10-25""" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
         <https://github.com/eprocurementontology/eprocurementontology>,
@@ -60,48 +59,39 @@
     owl:versionIRI :core-restriction-3.1.0 ;
     owl:versionInfo "3.1.0" .
 
-euvoc:hasPrimaryContactPoint rdfs:domain [ a owl:Class ;
-            owl:unionOf ( euvoc:Site euvoc:CorporateBody ) ] ;
+euvoc:countryCode rdfs:domain euvoc:Site ;
+    rdfs:range euvoc:Country .
+
+euvoc:hasPrimaryContactPoint rdfs:domain euvoc:Site ;
     rdfs:range vcard:ContactPoint .
 
-euvoc:legallyBasedOnTreaty rdfs:domain euvoc:CorporateBody ;
-    rdfs:range euvoc:Treaty .
+euvoc:localityCode rdfs:domain euvoc:Site ;
+    rdfs:range euvoc:Place .
 
 euvoc:managedBy rdfs:domain euvoc:Site ;
     rdfs:range euvoc:CorporateBody .
 
-dcterms:description rdfs:domain vcard:ContactPoint ;
-    rdfs:range rdf:PlainLiteral .
-
-wgs1:location rdfs:domain euvoc:CorporateBody ;
-    rdfs:range euvoc:Place .
-
-skos:inSchemce rdfs:domain euvoc:CorporateBody ;
+skos:inSchemce rdfs:domain euvoc:Site ;
     rdfs:range skos:Concept .
 
-vcard:telephone rdfs:domain vcard:ContactPoint ;
-    rdfs:range rdf:PlainLiteral .
+vcard:hasAddress rdfs:domain euvoc:Site ;
+    rdfs:range vcard:Address .
 
 org:siteOf rdfs:domain euvoc:Site ;
     rdfs:range euvoc:CorporateBody .
 
-euvoc:order rdfs:domain euvoc:CorporateBody ;
+vcard:fn a owl:FunctionalProperty ;
+    rdfs:domain euvoc:Site ;
     rdfs:range xsd:string .
 
-vcard:hasEmail rdfs:domain vcard:ContactPoint ;
-    rdfs:range rdf:PlainLiteral .
+locn:geometry a owl:AsymmetricProperty ;
+    rdfs:domain euvoc:Site ;
+    rdfs:range euvoc:Site .
 
-foaf:homepage rdfs:domain euvoc:CorporateBody ;
-    rdfs:range xsd:anyURI .
-
-vcard:ContactPoint rdfs:subClassOf [ a owl:Restriction ;
+euvoc:Site rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty vcard:hasEmail ] .
-
-euvoc:CorporateBody rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty euvoc:order ],
+            owl:onProperty locn:geometry ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty foaf:homepage ] .
+            owl:cardinality 1 ;
+            owl:onProperty vcard:fn ] .
 
