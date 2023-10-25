@@ -6,6 +6,7 @@ on:
     paths:
       - "implementation/src_ap/xmi_conceptual_model/src_ap_CM.xml"
       - "implementation/cob_src_ap/xmi_conceptual_model/cob_src_ap_CM.xml"
+      - "implementation/site_src_ap/xmi_conceptual_model/site_src_ap_CM.xml"
 
 
 jobs:
@@ -29,7 +30,7 @@ jobs:
 
       - name: generate convention report and glossary
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
