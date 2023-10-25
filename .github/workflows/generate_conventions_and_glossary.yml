@@ -8,6 +8,7 @@ on:
       - "implementation/cob_src_ap/xmi_conceptual_model/cob_src_ap_CM.xml"
       - "implementation/site_src_ap/xmi_conceptual_model/site_src_ap_CM.xml"
       - "implementation/place_src_ap/xmi_conceptual_model/place_src_ap_CM.xml"
+      - "implementation/language_src_ap/xmi_conceptual_model/language_src_ap_CM.xml"
 
 
 jobs:
@@ -31,7 +32,7 @@ jobs:
 
       - name: generate convention report and glossary
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap language_src_ap)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
