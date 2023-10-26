@@ -6,13 +6,11 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :core a owl:Ontology ;
@@ -27,7 +25,7 @@
     bibo:status "Semantic Specification Realease" ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from site_src_ap_CM.xml on 2023-10-26" ;
+    rdfs:comment "This version is automatically generated from currency_src_ap_CM.xml on 2023-10-26" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
         <https://github.com/eprocurementontology/eprocurementontology>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -57,34 +55,20 @@
     owl:versionIRI :core-3.1.0 ;
     owl:versionInfo "3.1.0" .
 
-euvoc:Site a owl:Class ;
-    skos:definition "The Site authority table provides the sites occupied by the various EU institutions and bodies and is maintained by the Publications Office of the European Union on the EU Vocabularies website."@en ;
-    skos:prefLabel "Site"@en .
+euvoc:Currency a owl:Class ;
+    skos:definition """The Currency authority table is a controlled vocabulary that lists concepts associated with currencies and currency subunits.
 
-euvoc:countryCode a owl:ObjectProperty ;
-    skos:prefLabel "Country code"@en .
+The concepts included are correlated with the ISO 4217 international standard.
 
-euvoc:hasPrimaryContactPoint a owl:ObjectProperty ;
-    skos:prefLabel "Has primary contact point"@en .
+The Currency authority table is updated based on the stakeholders’ needs."""@en ;
+    skos:prefLabel "Currency"@en .
 
-euvoc:localityCode a owl:ObjectProperty ;
-    skos:prefLabel "Locality code"@en .
+euvoc:decimalPlace a owl:DatatypeProperty ;
+    skos:prefLabel "Decimal place"@en .
 
-euvoc:managedBy a owl:ObjectProperty ;
-    skos:prefLabel "Managed by"@en .
+euvoc:usedIn a owl:ObjectProperty ;
+    skos:prefLabel "Used in"@en .
 
-skos:inSchemce a owl:ObjectProperty ;
-    skos:prefLabel "In schemce"@en .
-
-vcard:fn a owl:DatatypeProperty ;
-    skos:prefLabel "Fn"@en .
-
-vcard:hasAddress a owl:ObjectProperty ;
-    skos:prefLabel "Has address"@en .
-
-locn:geometry a owl:ObjectProperty ;
-    skos:prefLabel "Geometry"@en .
-
-org:siteOf a owl:ObjectProperty ;
-    skos:prefLabel "Site of"@en .
+skos:inScheme a owl:ObjectProperty ;
+    skos:prefLabel "In scheme"@en .
 

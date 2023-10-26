@@ -67,7 +67,7 @@
       <dct:title xml:lang="en">ePO Core restrictions</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">This artefact provides the restrictions and inference-related specifications for the eProcurement Ontology Core.         This artefact excludes the definitions of concepts.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
-      <rdfs:comment>This version is automatically generated from place_src_ap_CM.xml on 
+      <rdfs:comment>This version is automatically generated from currency_src_ap_CM.xml on 
                 2023-10-26</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
@@ -86,61 +86,30 @@
       <cc:attributionName>European Union</cc:attributionName>
       <cc:attributionURL rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
    </owl:Ontology>
-   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Currency">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://publications.europa.eu/ontology/euvoc#decimalPlace"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
       <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#culturalCity">
-      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Place"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#decimalPlace">
+      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Currency"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#culturalCity">
-      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#decimalPlace">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-      <rdfs:domain>
-         <owl:Class>
-            <owl:unionOf rdf:parseType="Collection">
-               <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Place"/>
-               <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
-            </owl:unionOf>
-         </owl:Class>
-      </rdfs:domain>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#usedIn">
+      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Currency"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
-      <rdfs:range>
-         <owl:Class>
-            <owl:unionOf rdf:parseType="Collection">
-               <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-               <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Place"/>
-            </owl:unionOf>
-         </owl:Class>
-      </rdfs:range>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/ns/org#role">
-      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Place"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/ns/org#role">
-      <rdfs:range rdf:resource="http://publications.europa.eu/ontology/euvoc#CapitalClassification"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
-      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Place"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#usedIn">
       <rdfs:range rdf:resource="http://publications.europa.eu/ontology/euvoc#Country"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
-      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Place"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
-      <rdfs:domain>
-         <owl:Class>
-            <owl:unionOf rdf:parseType="Collection">
-               <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Site"/>
-               <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address"/>
-            </owl:unionOf>
-         </owl:Class>
-      </rdfs:domain>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
-      <rdfs:range rdf:resource="http://publications.europa.eu/ontology/euvoc#Place"/>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Currency"/>
    </rdf:Description>
 </rdf:RDF>
