@@ -3,8 +3,6 @@
 	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1560"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" name="currency">
-			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" name="at-voc:currency"/>
-			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" name="euvoc:Currency ">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_F0F7B9FB_668E_46d4_82CB_9A03C80374F9" name="euvoc:decimalPlace">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_668E_46d4_82CB_9A03C80374F9" value="0"/>
@@ -26,6 +24,8 @@
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Dependency" xmi:id="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" supplier="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" client="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E"/>
+			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" name="at-voc:currency"/>
+			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
 		</packagedElement>
 		<umldi:Diagram xmi:type="umldi:UMLClassDiagram" xmi:id="EAID_67D1EEE9_7A25_49c4_918E_84DD5E245D50" isFrame="false" modelElement="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357">
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_67D1EEE9_7A25_49c4_9CF1_B961C580F839" modelElement="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839">
@@ -363,20 +363,6 @@
 				<times created="2023-10-19 10:37:48" modified="2023-10-19 10:37:48"/>
 				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
 			</element>
-			<element xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" xmi:type="uml:Enumeration" name="at-voc:currency" scope="public">
-				<model package="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" tpos="0" ea_localid="61" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-19 13:22:24" modified="2023-10-19 13:22:36" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="currency"/>
-				<links>
-					<Realisation xmi:id="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E" start="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" end="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
-					<Dependency xmi:id="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" start="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" end="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
-				</links>
-			</element>
 			<element xmi:idref="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" xmi:type="uml:Class" name="euvoc:Currency " scope="public">
 				<model package="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" tpos="0" ea_localid="27" ea_eleType="element"/>
 				<properties documentation="The Currency authority table is a controlled vocabulary that lists concepts associated with currencies and currency subunits.&#xA;&#xA;The concepts included are correlated with the ISO 4217 international standard.&#xA;&#xA;The Currency authority table is updated based on the stakeholders’ needs." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
@@ -409,75 +395,22 @@
 					<Dependency xmi:id="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" start="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" end="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
 				</links>
 			</element>
+			<element xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" xmi:type="uml:Enumeration" name="at-voc:currency" scope="public">
+				<model package="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" tpos="0" ea_localid="61" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-19 13:22:24" modified="2023-10-19 13:22:36" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="currency"/>
+				<links>
+					<Realisation xmi:id="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E" start="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" end="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
+					<Dependency xmi:id="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" start="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" end="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
+				</links>
+			</element>
 		</elements>
 		<connectors>
-			<connector xmi:idref="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E">
-				<source xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
-					<model ea_localid="61" type="Enumeration" name="at-voc:currency"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
-					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="64"/>
-				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363">
-				<source xmi:idref="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E">
-					<model ea_localid="27" type="Class" name="euvoc:Currency "/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
-					<model ea_localid="61" type="Enumeration" name="at-voc:currency"/>
-					<role name="skos:inSchemce" visibility="Public" targetScope="instance"/>
-					<type multiplicity="1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="63"/>
-				<properties ea_type="Dependency" direction="Source -&gt; Destination"/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="1" rt="+skos:inSchemce"/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
 			<connector xmi:idref="EAID_6452D8C6_F959_472b_BA87_FCEEE4AFF748">
 				<source xmi:idref="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E">
 					<model ea_localid="27" type="Class" name="euvoc:Currency "/>
@@ -542,6 +475,73 @@
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="0..*" rt="+euvoc:usedIn"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363">
+				<source xmi:idref="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E">
+					<model ea_localid="27" type="Class" name="euvoc:Currency "/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
+					<model ea_localid="61" type="Enumeration" name="at-voc:currency"/>
+					<role name="skos:inScheme" visibility="Public" targetScope="instance"/>
+					<type multiplicity="1" aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="63"/>
+				<properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rb="1" rt="+skos:inScheme"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E">
+				<source xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
+					<model ea_localid="61" type="Enumeration" name="at-voc:currency"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
+					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="64"/>
+				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
