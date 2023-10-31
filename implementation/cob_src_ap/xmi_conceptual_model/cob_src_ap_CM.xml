@@ -94,8 +94,6 @@
 					<type xmi:idref="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB"/>
 				</ownedEnd>
 			</packagedElement>
-			<packagedElement xmi:type="uml:Interface" xmi:id="EAID_2EB1AE01_C1BC_4069_BABC_4D0FAA7AD187" name="TreatyProfile" isAbstract="true"/>
-			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_99556BDC_8B80_427b_B980_8E63BE7F3578" supplier="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9" client="EAID_2EB1AE01_C1BC_4069_BABC_4D0FAA7AD187"/>
 			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5" name="at-voc:corporate-body"/>
 			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_17FCBDB4_AB2D_4007_AAFB_175F9673F6D0" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5"/>
 		</packagedElement>
@@ -505,7 +503,6 @@
 				<extendedProperties tagged="0" package_name="corporate body"/>
 				<links>
 					<Generalization xmi:id="EAID_12B4B944_0223_4a27_93CB_5CF1F7CE4DA8" start="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9" end="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839"/>
-					<Realisation xmi:id="EAID_99556BDC_8B80_427b_B980_8E63BE7F3578" start="EAID_2EB1AE01_C1BC_4069_BABC_4D0FAA7AD187" end="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9"/>
 					<Association xmi:id="EAID_BF3AC389_0A30_4a5c_AD23_D551BC5932C5" start="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F" end="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9"/>
 				</links>
 			</element>
@@ -568,19 +565,6 @@
 				<links>
 					<Association xmi:id="EAID_8200CBA3_4E99_49ac_BAC0_15B01658F27F" start="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB" end="EAID_B7F07D5F_4F96_43e9_ADFE_AA9B3F071974"/>
 					<Association xmi:id="EAID_C4DEF0A9_4F02_4fba_BA24_630DA8D095E6" start="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F" end="EAID_B7F07D5F_4F96_43e9_ADFE_AA9B3F071974"/>
-				</links>
-			</element>
-			<element xmi:idref="EAID_2EB1AE01_C1BC_4069_BABC_4D0FAA7AD187" xmi:type="uml:Interface" name="TreatyProfile" scope="public">
-				<model package="EAPK_D2D3120D_8EE2_4d7e_843F_0CD376A24E87" tpos="0" ea_localid="64" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Interface" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="true"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-19 14:33:41" modified="2023-10-19 14:35:11" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="corporate body"/>
-				<links>
-					<Realisation xmi:id="EAID_99556BDC_8B80_427b_B980_8E63BE7F3578" start="EAID_2EB1AE01_C1BC_4069_BABC_4D0FAA7AD187" end="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9"/>
 				</links>
 			</element>
 			<element xmi:idref="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5" xmi:type="uml:Enumeration" name="at-voc:corporate-body" scope="public">
@@ -866,40 +850,6 @@
 				</target>
 				<model ea_localid="53"/>
 				<properties ea_type="Generalization" direction="Source -&gt; Destination"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_99556BDC_8B80_427b_B980_8E63BE7F3578">
-				<source xmi:idref="EAID_2EB1AE01_C1BC_4069_BABC_4D0FAA7AD187">
-					<model ea_localid="64" type="Interface" name="TreatyProfile"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9">
-					<model ea_localid="42" type="Class" name="euvoc:Treaty"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="67"/>
-				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
 				<parameterSubstitutions/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
