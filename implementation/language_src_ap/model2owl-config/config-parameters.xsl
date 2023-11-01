@@ -37,7 +37,7 @@
     <xsl:variable name="base-restriction-uri" select="$base-ontology-uri"/>
     <!--    Shapes Module URI-->
     <xsl:variable name="shapeArtefactURI"
-        select="fn:concat($base-shape-uri,$defaultDelimiter, $moduleReference, '-shape')"/>
+        select="fn:concat($base-shape-uri, $defaultDelimiter, $moduleReference, '-shape')"/>
     <!--    Restrictions Module URI-->
     <xsl:variable name="restrictionsArtefactURI"
         select="fn:concat($base-restriction-uri, $defaultDelimiter, $moduleReference, '-restriction')"/>
@@ -64,24 +64,24 @@
     <xsl:variable name="stereotypeValidOnDatatypes" select="()"/>
     <xsl:variable name="stereotypeValidOnEnumerations" select="()"/>
     <xsl:variable name="stereotypeValidOnPackages" select="()"/>
+
     <xsl:variable name="abstractClassesStereotypes" select="('Abstract', 'abstract class', 'abstract')"/>
 
     <!--    This variable controls whether the enumeration items are transformed into skos concepts or ignored-->
     <xsl:variable name="enableGenerationOfSkosConcept" select="fn:false()"/>
 
     <!--    This variable controls whether the enumerations are transformed into skos schemes or ignored-->
-    <xsl:variable name="enableGenerationOfConceptSchemes" select="fn:false()"/>
-
-
+    <xsl:variable name="enableGenerationOfConceptSchemes" select="fn:true()"/>
 
     <!--Allowed characters for a normalized string-->
     <xsl:variable name="allowedStrings" select="'^[\w\d-_:]+$'"/>
+
     <!--    Generate reused classes, attributes and connectors-->
     <xsl:variable name="generateReusedConcepts" select="fn:true()"/>
 
 
+    <xsl:variable name="reference-to-external-classes-in-glossary" select="fn:true()"/>
 
-    <xsl:variable name="reference-to-external-classes-in-glossary" select="fn:false()"/>
     <xsl:variable name="generateObjectsAndRealisations" select="fn:false()"/>
 
     <xsl:variable name="conventionReportCopyrightText" select="'Publications Office of the European Union, 2023'"/>
@@ -94,62 +94,43 @@
     <!--                            METADATA SECTION                               -->
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
-    <xsl:variable name="moduleReference" select="'core'"/>
-    <!--    dct:title-->
-    <xsl:variable name="ontologyTitleCore" select="'ePO Core core'"/>
-    <xsl:variable name="ontologyTitleRestrictions" select="'ePO Core restrictions'"/>
-    <xsl:variable name="ontologyTitleShapes" select="'ePO Core shapes'"/>
+    <xsl:variable name="moduleReference" select="'cat'"/>
+    <!--    dct:title -->
+    <xsl:variable name="ontologyTitleCore" select="'eProcurement Ontology Catalogue - core'"/>
+    <xsl:variable name="ontologyTitleRestrictions" select="'eProcurement Ontology Catalogue - core restrictions'"/>
+    <xsl:variable name="ontologyTitleShapes" select="'eProcurement Ontology Catalogue - core shapes'"/>
     <!--    dct:description-->
     <xsl:variable name="ontologyDescriptionCore"
-        select="
-        'This artefact provides the definitions for the eProcurement Ontology Core.
-        This artefact excludes the restrictions.
-        The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
-        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.'"/>
+        select="'The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
     <xsl:variable name="ontologyDescriptionRestrictions"
-        select="
-        'This artefact provides the restrictions and inference-related specifications for the eProcurement Ontology Core.
-        This artefact excludes the definitions of concepts.
-        The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
-        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.'"/>
+        select="'The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core.'"/>
     <xsl:variable name="ontologyDescriptionShapes"
-        select="
-        'This artefact provides the generic datashape specifications for the eProcurement Ontology Core.
-        The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
-        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.'"/>
-
+        select="'The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.'"/>
     <!--    rdfs:seeAlso -->
     <xsl:variable name="seeAlsoResources"
         select="
-            ('https://github.com/eprocurementontology/eprocurementontology',
-            'https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about', 'https://op.europa.eu/en/web/eu-vocabularies/e-procurement',
-            'https://docs.ted.europa.eu/EPO/latest/index.html')"/>
+            ('https://github.com/OP-TED/ePO/releases',
+            'https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about',
+            'https://op.europa.eu/en/web/eu-vocabularies/e-procurement',
+            'https://docs.ted.europa.eu/home/index.html')"/>
     <!--    dct:issued-->
     <xsl:variable name="issuedDate" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     <!--    owl:incompatibleWith -->
-    <xsl:variable name="incompatibleWith" select="'2.1.0'"/>
+    <xsl:variable name="incompatibleWith" select="'3.1.0'"/>
     <!--    owl:versionInfo -->
-    <xsl:variable name="versionInfo" select="'3.1.0'"/>
+    <xsl:variable name="versionInfo" select="'4.0.0'"/>
     <!--    bibo:status-->
-    <xsl:variable name="ontologyStatus" select="'Semantic Specification Realease'"/>
+    <xsl:variable name="ontologyStatus" select="'Semantic Specification Release'"/>
     <!--    owl:priorVersion -->
-    <xsl:variable name="priorVersion" select="'3.0.1'"/>
+    <xsl:variable name="priorVersion" select="'3.1.0'"/>
     <!--    vann:preferredNamespaceUri -->
     <xsl:variable name="preferredNamespaceUri" select="'http://data.europa.eu/a4g/ontology#'"/>
     <!--    vann:preferredNamespacePrefix -->
     <xsl:variable name="preferredNamespacePrefix" select="'epo'"/>
-
-
-    <xsl:variable name="rightsLiteral" select="'The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents
-        (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the
-        CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided
-        that appropriate credit is given and any changes are indicated.'"/>
-    <xsl:variable name="licenseURI" select="'http://creativecommons.org/licenses/by-sa/4.0'"/>
-    <xsl:variable name="attributionNameLiteral" select="'European Union'"/>
-    <xsl:variable name="attributionURL" select="'http://publications.europa.eu/resource/authority/corporate-body/EURUN'"/>
+    <!--    dct:license-->
+    <xsl:variable name="licenseLiteral" select="'© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).'"/>
+    <!--    dct:created-->
+    <xsl:variable name="createdDate" select="'2021-06-01'"/>
     <!--    dct:publisher-->
     <xsl:variable name="publisher" select="'http://publications.europa.eu/resource/authority/corporate-body/PUBL'"/>
-
-
-
 </xsl:stylesheet>
