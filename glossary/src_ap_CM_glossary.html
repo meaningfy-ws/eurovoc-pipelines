@@ -267,6 +267,29 @@
                      <td>skos:Concept -&gt; skos:Concept [0..*]</td>
                   </tr>
                   <tr>
+                     <td>dct:type</td>
+                     <td>Specify the context where a specified notation is considered unique. 
+                         </td>
+                     <td>euvoc:XlNotation -&gt; euvoc:NotationType (external) [1]<br>skosxl:Label -&gt; euvoc:Label-type (external) [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>euvoc:context</td>
+                     <td>It signifies that the concept is applicable or relevant within the context of the
+                        identified use context.</td>
+                     <td>skos:Concept -&gt; euvoc:UseContext (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>euvoc:corrStatus</td>
+                     <td>A status of proofreading of labels and descriptions. A status of proofreading of labels and descriptions.
+                        </td>
+                     <td>euvoc:XlNote -&gt; euvoc:CorrectionStatus (external) [0..1]<br>skosxl:Label -&gt; euvoc:CorrectionStatus (external) [0..1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>euvoc:status</td>
+                     <td> </td>
+                     <td>skos:Concept -&gt; euvoc:ConceptStatus (external) [0..1]<br>skosxl:Label -&gt; euvoc:ConceptStatus (external) [0..1]<br></td>
+                  </tr>
+                  <tr>
                      <td>euvoc:xlChangeNote</td>
                      <td>A note about a modification to a concept.
                         </td>
@@ -294,6 +317,24 @@
                      <td>euvoc:xlNote</td>
                      <td></td>
                      <td>skos:Concept -&gt; euvoc:XlNote [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>lexinfo:gender</td>
+                     <td>A grammatical category that indicates grammatical relationships between words in sentences.
+                        </td>
+                     <td>skosxl:Label -&gt; euvoc:GrammaticalGender (external) [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>lexinfo:number</td>
+                     <td>Grammatical category for the variation in form of nouns, pronouns, and any words agreeing
+                        with them, depending on how many persons or things are referred to.
+                        </td>
+                     <td>skosxl:Label -&gt; euvoc:GrammaticalNumber (external) [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>lexvo:inScript</td>
+                     <td></td>
+                     <td>skosxl:Label -&gt; euvoc:Script (external) [0..1]</td>
                   </tr>
                   <tr>
                      <td>owl:imports</td>

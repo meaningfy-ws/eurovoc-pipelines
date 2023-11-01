@@ -78,14 +78,44 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>euvoc:countryCode</td>
+                     <td></td>
+                     <td>euvoc:Site -&gt; euvoc:Country (external) [1]</td>
+                  </tr>
+                  <tr>
+                     <td>euvoc:hasPrimaryContactPoint</td>
+                     <td></td>
+                     <td>euvoc:Site -&gt; vcard:ContactPoint (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>euvoc:localityCode</td>
+                     <td></td>
+                     <td>euvoc:Site -&gt; euvoc:Place (external) [1]</td>
+                  </tr>
+                  <tr>
+                     <td>euvoc:managedBy</td>
+                     <td></td>
+                     <td>euvoc:Site -&gt; euvoc:CorporateBody (external) [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>locn:geometry</td>
                      <td></td>
                      <td>euvoc:Site -&gt; euvoc:Site [0..1]</td>
                   </tr>
                   <tr>
+                     <td>org:siteOf</td>
+                     <td></td>
+                     <td>euvoc:Site -&gt; euvoc:CorporateBody (external) [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>skos:inSchemce</td>
                      <td></td>
                      <td>euvoc:Site -&gt; at-voc:site [1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:hasAddress</td>
+                     <td></td>
+                     <td>euvoc:Site -&gt; vcard:Address (external) [1]</td>
                   </tr>
                </tbody>
             </table>

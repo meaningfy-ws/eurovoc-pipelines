@@ -116,7 +116,7 @@
                   <tr>
                      <td>euvoc:hasPrimaryContactPoint</td>
                      <td> </td>
-                     <td>euvoc:CorporateBody -&gt; vcard:ContactPoint [0..*]<br><br></td>
+                     <td>euvoc:CorporateBody -&gt; vcard:ContactPoint [0..*]<br>euvoc:Site (external) -&gt; vcard:ContactPoint [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:legallyBasedOnTreaty</td>
@@ -124,9 +124,24 @@
                      <td>euvoc:CorporateBody -&gt; euvoc:Treaty [0..*]</td>
                   </tr>
                   <tr>
+                     <td>euvoc:managedBy</td>
+                     <td></td>
+                     <td>euvoc:Site (external) -&gt; euvoc:CorporateBody [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:siteOf</td>
+                     <td></td>
+                     <td>euvoc:Site (external) -&gt; euvoc:CorporateBody [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>skos:inSchemce</td>
                      <td></td>
                      <td>euvoc:CorporateBody -&gt; at-voc:corporate-body [1]</td>
+                  </tr>
+                  <tr>
+                     <td>wgs:location</td>
+                     <td></td>
+                     <td>euvoc:CorporateBody -&gt; euvoc:Place (external) [0..*]</td>
                   </tr>
                </tbody>
             </table>

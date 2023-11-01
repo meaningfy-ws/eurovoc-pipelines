@@ -84,6 +84,21 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>euvoc:localityCode</td>
+                     <td> </td>
+                     <td>euvoc:Site (external) -&gt; euvoc:Place [1]<br>vcard:Address (external) -&gt; euvoc:Place [1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>geosparql:sfWithin</td>
+                     <td></td>
+                     <td>euvoc:Place -&gt; euvoc:Country (external) [1]</td>
+                  </tr>
+                  <tr>
+                     <td>org:role</td>
+                     <td></td>
+                     <td>euvoc:Place -&gt; euvoc:CapitalClassification (external) [0..1]</td>
+                  </tr>
+                  <tr>
                      <td>skos:inSchemce</td>
                      <td></td>
                      <td>euvoc:Place -&gt; at-voc:place [1]</td>
@@ -91,7 +106,7 @@
                   <tr>
                      <td>wgs:location</td>
                      <td> </td>
-                     <td><br><br></td>
+                     <td>euvoc:Place -&gt; wgs:SpatialThing (external) [0..*]<br>euvoc:CorporateBody (external) -&gt; euvoc:Place [0..*]<br></td>
                   </tr>
                </tbody>
             </table>
