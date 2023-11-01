@@ -1,0 +1,94 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix core-shape: <http://data.europa.eu/a4g/data-shape#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+core-shape:euvoc-Site a sh:NodeShape ;
+    rdfs:label "Site" ;
+    rdfs:comment "The Site authority table provides the sites occupied by the various EU institutions and bodies and is maintained by the Publications Office of the European Union on the EU Vocabularies website." ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:euvoc-Site-locn-geometry,
+        core-shape:euvoc-Site-skos-inSchemce,
+        core-shape:euvoc-Site-vcard-fn ;
+    sh:targetClass euvoc:Site .
+
+core-shape:euvoc-Site-locn-geometry a sh:PropertyShape ;
+    sh:class euvoc:Site ;
+    sh:maxCount 1 ;
+    sh:name "Geometry" ;
+    sh:path locn:geometry ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/locn#geometry> ?that . ?that <http://www.w3.org/ns/locn#geometry> ?this .} " ] .
+
+core-shape:euvoc-Site-skos-inSchemce a sh:PropertyShape ;
+    sh:class at-voc:site ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In schemce" ;
+    sh:path skos:inSchemce .
+
+core-shape:euvoc-Site-vcard-fn a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Fn" ;
+    sh:path vcard:fn .
+
+core-shape:core-shape a owl:Ontology ;
+    cc:attributionName "European Union" ;
+    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcterms:description "This artefact provides the generic datashape specifications for the eProcurement Ontology Core.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:issued "2023-10-26"^^xsd:date ;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents         (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the         CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided         that appropriate credit is given and any changes are indicated." ;
+    dcterms:title "ePO Core shapes"@en ;
+    bibo:status "Semantic Specification Realease" ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from site_src_ap_CM.xml on 2023-10-26" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports :core,
+        :core-restriction,
+        cccev:,
+        <http://data.europa.eu/nuts>,
+        <http://lexvo.org/ontology>,
+        <http://publications.europa.eu/ontology/euvoc>,
+        at-voc:,
+        dcterms:,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <ttp://publications.europa.eu/ontology/authority/> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "3.0.1" ;
+    owl:versionIRI core-shape:core-shape-3.1.0 ;
+    owl:versionInfo "3.1.0" .
+

@@ -1,0 +1,81 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:core a owl:Ontology ;
+    cc:attributionName "European Union" ;
+    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcterms:description "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:issued "2023-10-26"^^xsd:date ;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents         (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the         CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided         that appropriate credit is given and any changes are indicated." ;
+    dcterms:title "ePO Core core"@en ;
+    bibo:status "Semantic Specification Realease" ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from place_src_ap_CM.xml on 2023-10-26" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports cccev:,
+        <http://data.europa.eu/nuts>,
+        <http://lexvo.org/ontology>,
+        <http://publications.europa.eu/ontology/euvoc>,
+        at-voc:,
+        dcterms:,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <ttp://publications.europa.eu/ontology/authority/> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "3.0.1" ;
+    owl:versionIRI :core-3.1.0 ;
+    owl:versionInfo "3.1.0" .
+
+euvoc:Place a owl:Class ;
+    skos:definition "The Place authority table (AT) is a controlled vocabulary that lists concepts associated with the localities of the world. It provides authority codes that are based on UN/LOCODE codes. The Place AT uses the classification (membership classification) and the authority codes of the Country AT. This AT also provides ISO 3166-2 codes, as well as geographical coordinates. The European capitals of culture are also included. The original name of each locality is indicated. The Corporate body AT uses this AT to identify the seat of each concept (LOC_id), and the Site AT uses it to identify the location of each site (loc_code). The Place authority table is updated based on the stakeholders’ need"@en ;
+    skos:prefLabel "Place"@en .
+
+euvoc:culturalCity a owl:DatatypeProperty ;
+    skos:prefLabel "Cultural city"@en .
+
+euvoc:localityCode a owl:ObjectProperty ;
+    skos:prefLabel "Locality code"@en .
+
+geo:sfWithin a owl:ObjectProperty ;
+    skos:prefLabel "Sf within"@en .
+
+wgs1:location a owl:ObjectProperty ;
+    skos:prefLabel "Location"@en .
+
+skos:inSchemce a owl:ObjectProperty ;
+    skos:prefLabel "In schemce"@en .
+
+org:role a owl:ObjectProperty ;
+    skos:prefLabel "Role"@en .
+
