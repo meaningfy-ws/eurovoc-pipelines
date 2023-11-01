@@ -5,6 +5,11 @@ on:
       - "**"
     paths:
       - "implementation/src_ap/xmi_conceptual_model/src_ap_CM.xml"
+      - "implementation/cob_src_ap/xmi_conceptual_model/cob_src_ap_CM.xml"
+      - "implementation/site_src_ap/xmi_conceptual_model/site_src_ap_CM.xml"
+      - "implementation/place_src_ap/xmi_conceptual_model/place_src_ap_CM.xml"
+      - "implementation/language_src_ap/xmi_conceptual_model/language_src_ap_CM.xml"
+      - "implementation/currency_src_ap/xmi_conceptual_model/currency_src_ap_CM.xml"
 
 jobs:
   report_and_glossary:
@@ -27,7 +32,7 @@ jobs:
 
       - name: generate convention report and glossary
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
@@ -60,7 +65,7 @@ jobs:
 
 #      - name: merge implementations xmi files into one
 #        run: |
-#          AVAILABLE_IMPLEMENTATIONS=(src_ap)
+#          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap)
 #          cd model2owl
 #          mkdir -p merge-xmis
 #          for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
@@ -129,7 +134,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
