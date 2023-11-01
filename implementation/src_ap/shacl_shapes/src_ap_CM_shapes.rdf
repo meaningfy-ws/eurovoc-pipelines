@@ -5,12 +5,10 @@
          xmlns:at-voc="http://publications.europa.eu/resource/authority/"
          xmlns:at-voc-new="http://publications.europa.eu/resource/authority/new/"
          xmlns:atold="http://publications.europa.eu/resource/authority/"
-         xmlns:bibo="http://purl.org/ontology/bibo/"
-         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:cat-res="http://data.europa.eu/a4g/ontology#"
+         xmlns:cat-shape="http://data.europa.eu/a4g/data-shape#"
          xmlns:cccev="http://data.europa.eu/m8g/"
          xmlns:core="http://data.europa.eu/m8g/"
-         xmlns:core-res="http://data.europa.eu/a4g/ontology#"
-         xmlns:core-shape="http://data.europa.eu/a4g/data-shape#"
          xmlns:cpov="http://data.europa.eu/m8g/"
          xmlns:cpsv="http://data.europa.eu/m8g/"
          xmlns:cpv="http://data.europa.eu/m8g/"
@@ -39,7 +37,7 @@
          xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
          xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#core-shape">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#cat-shape">
       <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
       <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
@@ -65,28 +63,25 @@
       <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
       <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
-      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
-      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#core-restriction"/>
-      <dct:title xml:lang="en">ePO Core shapes</dct:title>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cat"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cat-restriction"/>
+      <dct:title xml:lang="en">eProcurement Ontology Catalogue - core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <dct:description xml:lang="en">This artefact provides the generic datashape specifications for the eProcurement Ontology Core.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
-      <rdfs:comment>This version is automatically generated from src_ap_CM.xml on 2023-10-26</rdfs:comment>
-      <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
+      <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
+      <rdfs:comment>This version is automatically generated from src_ap_CM.xml on 2023-11-01</rdfs:comment>
+      <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
-      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-26</dct:issued>
-      <owl:versionInfo>3.1.0</owl:versionInfo>
-      <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
-      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape-3.1.0"/>
-      <bibo:status>Semantic Specification Realease</bibo:status>
-      <owl:priorVersion>3.0.1</owl:priorVersion>
+      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</dct:issued>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
+      <owl:versionInfo>4.0.0</owl:versionInfo>
+      <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/a4g/data-shape#cat-shape-3.1.0</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
-      <dct:rights>The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents         (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the         CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided         that appropriate credit is given and any changes are indicated.</dct:rights>
-      <dct:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0"/>
-      <cc:attributionName>European Union</cc:attributionName>
-      <cc:attributionURL rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
+      <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
       <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNotation"/>
@@ -95,12 +90,10 @@
       <rdfs:label>Xl notation</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
-      <rdfs:comment>A notation is a string of characters used to uniquely identify a concept within a specified context.
-Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SKOS notation statements. This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions. 
-</rdfs:comment>
+      <rdfs:comment>A notation is a string of characters used to uniquely identify a concept within a specified context. Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SKOS notation statements. This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
       <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
@@ -109,11 +102,10 @@ Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SK
       <rdfs:label>Xl note</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
-      <rdfs:comment>Like the skosxl:Label class reifies SKOS label statements, XlNote reifies SKOS note statements (i.e. skos:editorialNote, skos:example, skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote). This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions. 
-</rdfs:comment>
+      <rdfs:comment>Like the skosxl:Label class reifies SKOS label statements, XlNote reifies SKOS note statements (i.e. skos:editorialNote, skos:example, skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote). This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology">
       <sh:targetClass rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -122,12 +114,10 @@ Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SK
       <rdfs:label>Ontology</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology">
-      <rdfs:comment>Date of creation of the resource.
-
-</rdfs:comment>
+      <rdfs:comment>Date of creation of the resource.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
       <sh:targetClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -139,7 +129,7 @@ Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SK
       <rdfs:comment>A concept is a unit of thought. The semantic content of a concept can be re-expressed by a combination of other and different concepts, which may vary from one language or culture to another. Concepts exist in the mind as abstract entities that are independent of the terms used to label them.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
       <sh:targetClass rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
@@ -151,7 +141,7 @@ Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SK
       <rdfs:comment>A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
       <sh:targetClass rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
@@ -160,12 +150,10 @@ Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SK
       <rdfs:label>Label</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
-      <rdfs:comment>The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI.
-An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [&lt;xref scope="external" href="https://www.w3.org/TR/rdf-concepts/"&gt;&lt;foreign otherprops="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
-</rdfs:comment>
+      <rdfs:comment>The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI. An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [&lt;xref scope="external" href="https://www.w3.org/TR/rdf-concepts/"&gt;&lt;foreign otherprops="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
       <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created"/>
@@ -177,12 +165,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
-      <sh:description>Date of creation of the resource.
-
-</sh:description>
+      <sh:description>Date of creation of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -200,12 +186,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Modified</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
-      <sh:description>Date of modification of the resource.
-
-</sh:description>
+      <sh:description>Date of modification of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -223,11 +207,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
-      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
-</sh:description>
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -245,10 +228,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Start date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
-      <sh:description>Beginning of the validity period. </sh:description>
+      <sh:description>Beginning of the validity period.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -266,12 +249,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Deprecated</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
-      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.
-Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future. 
-</sh:description>
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -289,11 +270,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Value</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
-      <sh:description>The literal form of the note.
-</sh:description>
+      <sh:description>The literal form of the note.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
@@ -312,7 +292,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -330,7 +310,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Creator</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -348,7 +328,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Modified</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -366,11 +346,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
-      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
-</sh:description>
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
@@ -385,10 +364,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Start date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
-      <sh:description>Beginning of the validity period. </sh:description>
+      <sh:description>Beginning of the validity period.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -406,7 +385,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Deprecated</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -424,7 +403,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Value</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
@@ -443,12 +422,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology-dct-created">
-      <sh:description>Date of creation of the resource.
-
-</sh:description>
+      <sh:description>Date of creation of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology-dct-created">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology-dct-created">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -466,11 +443,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
-      <sh:description>Date of creation of the resource.
-</sh:description>
+      <sh:description>Date of creation of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -491,7 +467,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:description>Date of acceptance of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -512,7 +488,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:description>Date of submission of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -530,12 +506,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Modified</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
-      <sh:description>Date of modification of the resource.
-
-</sh:description>
+      <sh:description>Date of modification of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -553,11 +527,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
-      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
-</sh:description>
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -575,12 +548,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Start date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
-      <sh:description>Beginning of the validity period. 
-
-</sh:description>
+      <sh:description>Beginning of the validity period.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -598,13 +569,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Deprecated</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
-      <sh:description>The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI.
-An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [&lt;a href="$inet://https://www.w3.org/TR/rdf-concepts/"&gt;&lt;font color="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
-
-</sh:description>
+      <sh:description>The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI. An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [&lt;a href="$inet://https://www.w3.org/TR/rdf-concepts/"&gt;&lt;font color="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -622,12 +590,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Version info</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
-      <sh:description>An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.
-
-</sh:description>
+      <sh:description>An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
@@ -642,12 +608,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
-      <sh:description>Date of creation of the resource.
-
-</sh:description>
+      <sh:description>Date of creation of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -665,15 +629,10 @@ An instance of the class skosxl:Label has a single literal form. This literal fo
       <sh:name>Identifier</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
-      <sh:description>An unambiguous reference to the resource within a given context.
-
-Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.
-
-
-</sh:description>
+      <sh:description>An unambiguous reference to the resource within a given context. Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -691,12 +650,10 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>Modified</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
-      <sh:description>Date of modification of the resource.
-
-</sh:description>
+      <sh:description>Date of modification of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -717,7 +674,7 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:description>It represents the title or name of a resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
@@ -735,11 +692,10 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
-      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
-</sh:description>
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -760,7 +716,7 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:description>Beginning of the validity period.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -778,7 +734,7 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>Deprecated</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -796,11 +752,10 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>Version info</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo">
-      <sh:description>An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.
-</sh:description>
+      <sh:description>An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
@@ -815,11 +770,10 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
-      <sh:description>Date of creation of the resource.
-</sh:description>
+      <sh:description>Date of creation of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -837,12 +791,10 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>Modified</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
-      <sh:description>Date of modification of the resource.
-
-</sh:description>
+      <sh:description>Date of modification of the resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -860,11 +812,10 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>End date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
-      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated. 
-</sh:description>
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -882,11 +833,10 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>Start date</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
-      <sh:description>Beginning of the validity period.
-</sh:description>
+      <sh:description>Beginning of the validity period.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -904,11 +854,10 @@ Recommended best practice is to identify the resource by means of a string confo
       <sh:name>Deprecated</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
-      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.
-Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future. </sh:description>
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -926,11 +875,10 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Literal form</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
-      <sh:description>An instance of the class skosxl:Label has one and only one literal form. 
-</sh:description>
+      <sh:description>An instance of the class skosxl:Label has one and only one literal form.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
@@ -944,7 +892,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlNotation&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlNotation&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlNotation&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlNotation&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -956,12 +904,15 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation">
       <sh:name>Xl notation</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation">
+      <sh:description>A notation is a string of characters such as "T58.5" or "303.4833" used to uniquely identify a concept within the scope of a given concept scheme or within a specified context.</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
       <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlHistoryNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlHistoryNote&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlHistoryNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlHistoryNote&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -973,12 +924,15 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
       <sh:name>Xl history note</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
+      <sh:description>A note about the past state/use/meaning of a concept.</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNote">
       <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNote">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlNote&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlNote&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -995,7 +949,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlChangeNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlChangeNote&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlChangeNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlChangeNote&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1007,12 +961,15 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote">
       <sh:name>Xl change note</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote">
+      <sh:description>A note about a modification to a concept.</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
       <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlDefinition&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlDefinition&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlDefinition&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlDefinition&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1024,12 +981,15 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
       <sh:name>Xl definition</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
+      <sh:description>A statement or formal explanation of the meaning of a concept.</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology-owl-imports">
       <sh:class rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology-owl-imports">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2002/07/owl#imports&gt; ?that . ?that &lt;http://www.w3.org/2002/07/owl#imports&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2002/07/owl#imports&gt; ?that . ?that &lt;http://www.w3.org/2002/07/owl#imports&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#owl-Ontology">
@@ -1046,7 +1006,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-imports">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2002/07/owl#imports&gt; ?that . ?that &lt;http://www.w3.org/2002/07/owl#imports&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2002/07/owl#imports&gt; ?that . ?that &lt;http://www.w3.org/2002/07/owl#imports&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
@@ -1063,7 +1023,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-altLabel">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#altLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#altLabel&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#altLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#altLabel&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1076,15 +1036,14 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Alt label</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-altLabel">
-      <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. 
-</sh:description>
+      <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel">
       <sh:class rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#prefLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#prefLabel&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#prefLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#prefLabel&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1097,16 +1056,14 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Pref label</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel">
-      <sh:description>The preferred lexical label for a resource, in a given language. No two concepts in the same concept scheme may have the same preferred label in a given language. 
-
-</sh:description>
+      <sh:description>The preferred lexical label for a resource, in a given language. No two concepts in the same concept scheme may have the same preferred label in a given language.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-exactMatch">
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-exactMatch">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1126,7 +1083,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#topConceptOf&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#topConceptOf&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#topConceptOf&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#topConceptOf&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1146,7 +1103,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/isReplacedBy&gt; ?that . ?that &lt;http://purl.org/dc/terms/isReplacedBy&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/isReplacedBy&gt; ?that . ?that &lt;http://purl.org/dc/terms/isReplacedBy&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1159,15 +1116,14 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Is replaced by</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
-      <sh:description>A related resource that supplants, displaces, or supersedes the described resource. 
-</sh:description>
+      <sh:description>A related resource that supplants, displaces, or supersedes the described resource.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#narrower&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#narrower&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#narrower&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#narrower&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1179,12 +1135,15 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
       <sh:name>Narrower</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
+      <sh:description>A concept that is less general in meaning. Narrower concepts are typically rendered as children in a concept hierarchy (tree).</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#broader&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#broader&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#broader&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#broader&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1196,12 +1155,15 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
       <sh:name>Broader</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
+      <sh:description>A concept that is more general in meaning. Broader concepts are typically rendered as parents in a concept hierarchy (tree).</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel">
       <sh:class rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#hiddenLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#hiddenLabel&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#hiddenLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#hiddenLabel&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1214,15 +1176,14 @@ Deprecation is a feature commonly used in versioning software to indicate that a
       <sh:name>Hidden label</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel">
-      <sh:description>A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations. Mis-spelled terms are normally included as hidden labels.
-</sh:description>
+      <sh:description>A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations. Mis-spelled terms are normally included as hidden labels.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/replaces&gt; ?that . ?that &lt;http://purl.org/dc/terms/replaces&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/replaces&gt; ?that . ?that &lt;http://purl.org/dc/terms/replaces&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1234,12 +1195,15 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
       <sh:name>Replaces</sh:name>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
+      <sh:description>A related resource that is supplanted, displaced, or superseded by the described resource.</sh:description>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#inScheme&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#inScheme&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#inScheme&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#inScheme&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
@@ -1259,7 +1223,7 @@ Deprecation is a feature commonly used in versioning software to indicate that a
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-skos-hasTopConcept">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#hasTopConcept&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#hasTopConcept&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#hasTopConcept&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#hasTopConcept&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">

@@ -1,7 +1,5 @@
 @prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix cc: <http://creativecommons.org/ns#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
@@ -15,75 +13,18 @@
 @prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:Class1 a owl:Class ;
-    rdfs:isDefinedBy :core ;
-    skos:prefLabel "Class1"@en .
-
-:TreatyProfile a owl:Class ;
-    rdfs:isDefinedBy :core ;
-    rdfs:subClassOf euvoc:Treaty ;
-    skos:prefLabel "Treaty profile"@en .
-
-euvoc:CorporateBody a owl:Class ;
-    skos:definition "The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible. "@en ;
-    skos:prefLabel "Corporate body"@en .
-
-euvoc:hasPrimaryContactPoint a owl:ObjectProperty ;
-    skos:prefLabel "Has primary contact point"@en .
-
-euvoc:legallyBasedOnTreaty a owl:ObjectProperty ;
-    skos:prefLabel "Legally based on treaty"@en .
-
-euvoc:managedBy a owl:ObjectProperty ;
-    skos:prefLabel "Managed by"@en .
-
-euvoc:order a owl:DatatypeProperty ;
-    skos:prefLabel "Order"@en .
-
-dcterms:description a owl:DatatypeProperty ;
-    skos:prefLabel "Description"@en .
-
-wgs1:location a owl:ObjectProperty ;
-    skos:prefLabel "Location"@en .
-
-skos:inSchemce a owl:ObjectProperty ;
-    skos:prefLabel "In schemce"@en .
-
-vcard:ContactPoint a owl:Class ;
-    skos:definition """Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with.
-"""@en ;
-    skos:prefLabel "Contact point"@en .
-
-vcard:hasEmail a owl:DatatypeProperty ;
-    skos:prefLabel "Has email"@en .
-
-vcard:telephone a owl:DatatypeProperty ;
-    skos:prefLabel "Telephone"@en .
-
-org:siteOf a owl:ObjectProperty ;
-    skos:prefLabel "Site of"@en .
-
-foaf:homepage a owl:DatatypeProperty ;
-    skos:prefLabel "Homepage"@en .
-
-euvoc:Treaty a owl:Class ;
-    skos:prefLabel "Treaty"@en .
-
-:core a owl:Ontology ;
-    cc:attributionName "European Union" ;
-    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
-    dcterms:description "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
-    dcterms:issued "2023-10-26"^^xsd:date ;
-    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+:cat a owl:Ontology ;
+    dcterms:created "2021-06-01"^^xsd:date ;
+    dcterms:description "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
+    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents         (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the         CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided         that appropriate credit is given and any changes are indicated." ;
-    dcterms:title "ePO Core core"@en ;
-    bibo:status "Semantic Specification Realease" ;
+    dcterms:title "eProcurement Ontology Catalogue - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from cob_src_ap_CM.xml on 2023-10-26" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
-        <https://github.com/eprocurementontology/eprocurementontology>,
+    rdfs:comment "This version is automatically generated from cob_src_ap_CM.xml on 2023-11-01" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
     owl:imports cccev:,
@@ -106,8 +47,55 @@ euvoc:Treaty a owl:Class ;
         foaf:,
         <https://data.europa.eu/m8g/>,
         <ttp://publications.europa.eu/ontology/authority/> ;
-    owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "3.0.1" ;
-    owl:versionIRI :core-3.1.0 ;
-    owl:versionInfo "3.1.0" .
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#cat-3.1.0" ;
+    owl:versionIRI :cat-4.0.0 ;
+    owl:versionInfo "4.0.0" .
+
+euvoc:CorporateBody a owl:Class ;
+    skos:definition "The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible."@en ;
+    skos:prefLabel "Corporate body"@en .
+
+euvoc:Treaty a owl:Class ;
+    skos:prefLabel "Treaty"@en .
+
+euvoc:hasPrimaryContactPoint a owl:ObjectProperty ;
+    skos:prefLabel "Has primary contact point"@en .
+
+euvoc:legallyBasedOnTreaty a owl:ObjectProperty ;
+    skos:prefLabel "Legally based on treaty"@en .
+
+euvoc:managedBy a owl:ObjectProperty ;
+    skos:prefLabel "Managed by"@en .
+
+euvoc:order a owl:DatatypeProperty ;
+    skos:prefLabel "Order"@en .
+
+at-voc:corporate-body a skos:ConceptScheme ;
+    skos:prefLabel "Corporate-body"@en .
+
+dcterms:description a owl:DatatypeProperty ;
+    skos:prefLabel "Description"@en .
+
+wgs1:location a owl:ObjectProperty ;
+    skos:prefLabel "Location"@en .
+
+skos:inSchemce a owl:ObjectProperty ;
+    skos:prefLabel "In schemce"@en .
+
+vcard:ContactPoint a owl:Class ;
+    skos:definition "Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with."@en ;
+    skos:prefLabel "Contact point"@en .
+
+vcard:hasEmail a owl:DatatypeProperty ;
+    skos:prefLabel "Has email"@en .
+
+vcard:telephone a owl:DatatypeProperty ;
+    skos:prefLabel "Telephone"@en .
+
+org:siteOf a owl:ObjectProperty ;
+    skos:prefLabel "Site of"@en .
+
+foaf:homepage a owl:DatatypeProperty ;
+    skos:prefLabel "Homepage"@en .
 
