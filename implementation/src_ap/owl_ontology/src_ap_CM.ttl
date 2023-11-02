@@ -1,3 +1,4 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -13,4 +14,202 @@
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:src a owl:Ontology ;
+    dcterms:created "2021-06-01"^^xsd:date ;
+    dcterms:description "The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
+    dcterms:issued "2023-11-02"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "common SRC_AP Ontology  - core"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from src_ap_CM.xml on 2023-11-02" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports cccev:,
+        <http://data.europa.eu/nuts>,
+        <http://lexvo.org/ontology>,
+        <http://publications.europa.eu/ontology/euvoc>,
+        at-voc:,
+        dcterms:,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <ttp://publications.europa.eu/ontology/authority/> ;
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#src-3.1.0" ;
+    owl:versionIRI :src-4.0.0 ;
+    owl:versionInfo "4.0.0" .
+
+lexvo:inScript a owl:ObjectProperty ;
+    skos:prefLabel "In script"@en .
+
+euvoc:XlNotation a owl:Class ;
+    skos:definition "A notation is a string of characters used to uniquely identify a concept within a specified context. Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SKOS notation statements. This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions."@en ;
+    skos:prefLabel "Xl notation"@en .
+
+euvoc:XlNote a owl:Class ;
+    skos:definition "Like the skosxl:Label class reifies SKOS label statements, XlNote reifies SKOS note statements (i.e. skos:editorialNote, skos:example, skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote). This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions."@en ;
+    skos:prefLabel "Xl note"@en .
+
+euvoc:context a owl:ObjectProperty ;
+    skos:definition "It signifies that the concept is applicable or relevant within the context of the identified use context. (skos:Concept -> euvoc:UseContext (+euvoc:context))"@en ;
+    skos:prefLabel "Context"@en .
+
+euvoc:corrStatus a owl:ObjectProperty ;
+    skos:definition "A status of proofreading of labels and descriptions. (euvoc:XlNote -> euvoc:CorrectionStatus (+euvoc:corrStatus)) A status of proofreading of labels and descriptions. (skosxl:Label -> euvoc:CorrectionStatus (+euvoc:corrStatus))"@en ;
+    skos:prefLabel "Corr status"@en .
+
+euvoc:endDate a owl:DatatypeProperty ;
+    skos:definition "End of the validity period. If a resource has an end date then it must be marked as deprecated. (euvoc:XlNotation) End of the validity period. If a resource has an end date then it must be marked as deprecated. (euvoc:XlNote) End of the validity period. If a resource has an end date then it must be marked as deprecated. (skos:Concept) End of the validity period. If a resource has an end date then it must be marked as deprecated. (skos:ConceptScheme) End of the validity period. If a resource has an end date then it must be marked as deprecated. (skosxl:Label)"@en ;
+    skos:prefLabel "End date"@en .
+
+euvoc:startDate a owl:DatatypeProperty ;
+    skos:definition "Beginning of the validity period. (euvoc:XlNotation) Beginning of the validity period. (euvoc:XlNote) Beginning of the validity period. (skos:Concept) Beginning of the validity period. (skos:ConceptScheme) Beginning of the validity period. (skosxl:Label)"@en ;
+    skos:prefLabel "Start date"@en .
+
+euvoc:status a owl:ObjectProperty ;
+    skos:prefLabel "Status"@en .
+
+euvoc:xlChangeNote a owl:ObjectProperty ;
+    skos:definition "A note about a modification to a concept. (skos:Concept -> euvoc:XlNote (+euvoc:xlChangeNote))"@en ;
+    skos:prefLabel "Xl change note"@en .
+
+euvoc:xlDefinition a owl:ObjectProperty ;
+    skos:definition "A statement or formal explanation of the meaning of a concept. (skos:Concept -> euvoc:XlNote (+euvoc:xlDefinition))"@en ;
+    skos:prefLabel "Xl definition"@en .
+
+euvoc:xlHistoryNote a owl:ObjectProperty ;
+    skos:definition "A note about the past state/use/meaning of a concept. (skos:Concept -> euvoc:XlNote (+euvoc:xlHistoryNote))"@en ;
+    skos:prefLabel "Xl history note"@en .
+
+euvoc:xlNotation a owl:ObjectProperty ;
+    skos:definition "A notation is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme or within a specified context. (skos:Concept -> euvoc:XlNotation (+euvoc:xlNotation))"@en ;
+    skos:prefLabel "Xl notation"@en .
+
+euvoc:xlNote a owl:ObjectProperty ;
+    skos:prefLabel "Xl note"@en .
+
+dcterms:created a owl:DatatypeProperty ;
+    skos:definition "Date of creation of the resource. (euvoc:XlNotation) Date of creation of the resource. (skos:Concept) Date of creation of the resource. (skos:ConceptScheme) Date of creation of the resource. (skosxl:Label)"@en ;
+    skos:prefLabel "Created"@en .
+
+dcterms:creator a owl:DatatypeProperty ;
+    skos:prefLabel "Creator"@en .
+
+dcterms:dateAccepted a owl:DatatypeProperty ;
+    skos:definition "Date of acceptance of the resource. (skos:Concept)"@en ;
+    skos:prefLabel "Date accepted"@en .
+
+dcterms:dateSubmitted a owl:DatatypeProperty ;
+    skos:definition "Date of submission of the resource. (skos:Concept)"@en ;
+    skos:prefLabel "Date submitted"@en .
+
+dcterms:identifier a owl:DatatypeProperty ;
+    skos:definition "An unambiguous reference to the resource within a given context. Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. (skos:ConceptScheme)"@en ;
+    skos:prefLabel "Identifier"@en .
+
+dcterms:isReplacedBy a owl:ObjectProperty ;
+    skos:definition "A related resource that supplants, displaces, or supersedes the described resource. (skos:Concept -> skos:Concept (+dct:isReplacedBy))"@en ;
+    skos:prefLabel "Is replaced by"@en .
+
+dcterms:modified a owl:DatatypeProperty ;
+    skos:definition "Date of modification of the resource. (euvoc:XlNotation) Date of modification of the resource. (skos:Concept) Date of modification of the resource. (skos:ConceptScheme) Date of modification of the resource. (skosxl:Label)"@en ;
+    skos:prefLabel "Modified"@en .
+
+dcterms:replaces a owl:ObjectProperty ;
+    skos:definition "A related resource that is supplanted, displaced, or superseded by the described resource. (skos:Concept -> skos:Concept (+dct:replaces))"@en ;
+    skos:prefLabel "Replaces"@en .
+
+dcterms:title a owl:DatatypeProperty ;
+    skos:definition "It represents the title or name of a resource. (skos:ConceptScheme)"@en ;
+    skos:prefLabel "Title"@en .
+
+dcterms:type a owl:ObjectProperty ;
+    skos:definition "Specify the context where a specified notation is considered unique. (euvoc:XlNotation -> euvoc:NotationType (+dct:type))"@en ;
+    skos:prefLabel "Type"@en .
+
+lexinfo:gender a owl:ObjectProperty ;
+    skos:definition "A grammatical category that indicates grammatical relationships between words in sentences. (skosxl:Label -> euvoc:GrammaticalGender (+lexinfo:gender))"@en ;
+    skos:prefLabel "Gender"@en .
+
+lexinfo:number a owl:ObjectProperty ;
+    skos:definition "Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to. (skosxl:Label -> euvoc:GrammaticalNumber (+lexinfo:number))"@en ;
+    skos:prefLabel "Number"@en .
+
+rdf:value a owl:DatatypeProperty ;
+    skos:definition "The literal form of the note. (euvoc:XlNotation)"@en ;
+    skos:prefLabel "Value"@en .
+
+owl:deprecated a owl:DatatypeProperty ;
+    skos:definition "States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future. (euvoc:XlNotation) The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI. An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [<xref scope=\"external\" href=\"https://www.w3.org/TR/rdf-concepts/\"><foreign otherprops=\"#0000ff\"><u>RDF-CONCEPTS</u></foreign></xref>]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource. (skos:Concept) States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future. (skosxl:Label)"@en ;
+    skos:prefLabel "Deprecated"@en .
+
+owl:versionInfo a rdf:Property ;
+    skos:definition "An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource. (skos:Concept) An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource. (skos:ConceptScheme)"@en ;
+    skos:prefLabel "Version info"@en .
+
+skos:Concept a owl:Class ;
+    skos:definition "A concept is a unit of thought. The semantic content of a concept can be re-expressed by a combination of other and different concepts, which may vary from one language or culture to another. Concepts exist in the mind as abstract entities that are independent of the terms used to label them."@en ;
+    skos:prefLabel "Concept"@en .
+
+skos:ConceptScheme a owl:Class ;
+    skos:definition "A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas."@en ;
+    skos:prefLabel "Concept scheme"@en .
+
+skos:broader a owl:ObjectProperty ;
+    skos:definition "A concept that is more general in meaning. Broader concepts are typically rendered as parents in a concept hierarchy (tree). (skos:Concept -> skos:Concept (+skos:broader))"@en ;
+    skos:prefLabel "Broader"@en .
+
+skos:exactMatch a owl:ObjectProperty ;
+    skos:definition "The property skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch. (skos:Concept -> skos:Concept (+skos:exactMatch))"@en ;
+    skos:prefLabel "Exact match"@en .
+
+skos:hasTopConcept a owl:ObjectProperty ;
+    skos:prefLabel "Has top concept"@en .
+
+skos:inScheme a owl:ObjectProperty ;
+    skos:definition "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (skos:Concept -> skos:ConceptScheme (+skos:inScheme))"@en ;
+    skos:prefLabel "In scheme"@en .
+
+skos:narrower a owl:ObjectProperty ;
+    skos:definition "A concept that is less general in meaning. Narrower concepts are typically rendered as children in a concept hierarchy (tree). (skos:Concept -> skos:Concept (+skos:narrower))"@en ;
+    skos:prefLabel "Narrower"@en .
+
+skos:topConceptOf a owl:ObjectProperty ;
+    skos:definition "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (skos:Concept -> skos:ConceptScheme (+skos:topConceptOf))"@en ;
+    skos:prefLabel "Top concept of"@en .
+
+skosxl:Label a owl:Class ;
+    skos:definition "The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI. An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [<xref scope=\"external\" href=\"https://www.w3.org/TR/rdf-concepts/\"><foreign otherprops=\"#0000ff\"><u>RDF-CONCEPTS</u></foreign></xref>]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource."@en ;
+    skos:prefLabel "Label"@en .
+
+skosxl:altLabel a owl:ObjectProperty ;
+    skos:definition "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. (skos:Concept -> skosxl:Label (+skosxl:altLabel))"@en ;
+    skos:prefLabel "Alt label"@en .
+
+skosxl:hiddenLabel a owl:ObjectProperty ;
+    skos:definition "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations. Mis-spelled terms are normally included as hidden labels. (skos:Concept -> skosxl:Label (+skosxl:hiddenLabel))"@en ;
+    skos:prefLabel "Hidden label"@en .
+
+skosxl:literalForm a owl:DatatypeProperty ;
+    skos:definition "An instance of the class skosxl:Label has one and only one literal form. (skosxl:Label)"@en ;
+    skos:prefLabel "Literal form"@en .
+
+skosxl:prefLabel a owl:ObjectProperty ;
+    skos:definition "The preferred lexical label for a resource, in a given language. No two concepts in the same concept scheme may have the same preferred label in a given language. (skos:Concept -> skosxl:Label (+skosxl:prefLabel))"@en ;
+    skos:prefLabel "Pref label"@en .
 
