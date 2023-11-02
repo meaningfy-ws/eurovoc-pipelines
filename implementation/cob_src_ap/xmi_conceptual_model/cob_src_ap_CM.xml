@@ -70,7 +70,7 @@
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9" name="euvoc:Treaty">
 				<generalization xmi:type="uml:Generalization" xmi:id="EAID_12B4B944_0223_4a27_93CB_5CF1F7CE4DA8" general="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839"/>
 			</packagedElement>
-			<packagedElement xmi:type="uml:Dependency" xmi:id="EAID_66A31817_0E44_487e_9C7D_0BF99119139C" name="skos:inScheme" supplier="EAID_66C7526A_3D31_4ece_ADD1_1B158A742CBD" client="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9"/>
+			<packagedElement xmi:type="uml:Dependency" xmi:id="EAID_66A31817_0E44_487e_9C7D_0BF99119139C" supplier="EAID_66C7526A_3D31_4ece_ADD1_1B158A742CBD" client="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9"/>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_B7F07D5F_4F96_43e9_ADFE_AA9B3F071974" name="vcard:ContactPoint">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_39CA6DB4_3826_4546_B0BD_D27219CB9E5B" name="dct:description">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000011_3826_4546_B0BD_D27219CB9E5B" value="0"/>
@@ -373,9 +373,6 @@
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000005_B88C_4131_8E94_749E90C642E3" x="275" y="86"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLEdge" xmi:id="EAID_0318BDD3_B88C_4131_9C7D_0BF99119139C" source="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9" target="EAID_66C7526A_3D31_4ece_ADD1_1B158A742CBD" modelElement="EAID_66A31817_0E44_487e_9C7D_0BF99119139C">
-				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_B88C_4131_9C7D_0BF99119139C" text="skos:inScheme">
-					<bounds xmi:type="dc:bounds" xmi:id="EAID_DBNL000000_B88C_4131_9C7D_0BF99119139C" x="740" y="44" width="61" height="14"/>
-				</ownedElement>
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000000_B88C_4131_9C7D_0BF99119139C" x="689" y="64"/>
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000001_B88C_4131_9C7D_0BF99119139C" x="886" y="64"/>
 			</ownedElement>
@@ -892,7 +889,7 @@
 				<xrefs/>
 				<tags/>
 			</connector>
-			<connector xmi:idref="EAID_66A31817_0E44_487e_9C7D_0BF99119139C" name="skos:inScheme">
+			<connector xmi:idref="EAID_66A31817_0E44_487e_9C7D_0BF99119139C">
 				<source xmi:idref="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9">
 					<model ea_localid="42" type="Class" name="euvoc:Treaty"/>
 					<role visibility="Public" targetScope="instance"/>
@@ -906,8 +903,8 @@
 				</source>
 				<target xmi:idref="EAID_66C7526A_3D31_4ece_ADD1_1B158A742CBD">
 					<model ea_localid="72" type="Enumeration" name="at-voc:treaty"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
+					<role name="skos:inScheme" visibility="Public" targetScope="instance"/>
+					<type multiplicity="1" aggregation="none" containment="Unspecified"/>
 					<constraints/>
 					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
 					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
@@ -919,7 +916,7 @@
 				<properties ea_type="Dependency" direction="Source -&gt; Destination"/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels mt="skos:inScheme"/>
+				<labels rb="1" rt="+skos:inScheme"/>
 				<extendedProperties/>
 				<style/>
 				<xrefs/>
