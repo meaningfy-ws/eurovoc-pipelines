@@ -50,7 +50,13 @@
                   </tr>
                   <tr>
                      <td>euvoc:Treaty</td>
-                     <td></td>
+                     <td>The Treaty authority table (AT) is a controlled vocabulary listing the different EU
+                        treaties, including treaties and protocols, accession treaties, Schengen Convention
+                        and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used
+                        in the exchange between the institutions involved in the legal decision-making process
+                        and the Publications Office of the European Union. It is also used by EUR-Lex. It
+                        provides an authority code, the start-use date of the concept and labels in all official
+                        EU languages. </td>
                   </tr>
                   <tr>
                      <td>vcard:ContactPoint</td>
@@ -86,7 +92,8 @@
                   <tr>
                      <td>euvoc:CorporateBody</td>
                      <td>foaf:homepage</td>
-                     <td></td>
+                     <td>The main web page used by the instance of the concept.
+                        </td>
                      <td>xsd:anyURI [0..1]</td>
                   </tr>
                   <tr>
@@ -134,13 +141,15 @@
                      <td>euvoc:Site (external) -&gt; euvoc:CorporateBody [0..*]</td>
                   </tr>
                   <tr>
-                     <td>skos:inSchemce</td>
-                     <td></td>
-                     <td>euvoc:CorporateBody -&gt; at-voc:corporate-body [1]</td>
+                     <td>skos:inScheme</td>
+                     <td>A concept scheme in which the concept is included. A concept may be a member of more
+                        than one concept scheme.
+                         </td>
+                     <td>euvoc:CorporateBody -&gt; at-voc:corporate-body [1]<br></td>
                   </tr>
                   <tr>
                      <td>wgs:location</td>
-                     <td></td>
+                     <td> It is used to precisely indicate a location's position.</td>
                      <td>euvoc:CorporateBody -&gt; euvoc:Place (external) [0..*]</td>
                   </tr>
                </tbody>
