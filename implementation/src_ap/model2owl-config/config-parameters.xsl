@@ -94,14 +94,14 @@
     <!--                            METADATA SECTION                               -->
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
-    <xsl:variable name="moduleReference" select="'cat'"/>
+    <xsl:variable name="moduleReference" select="' src'"/>
     <!--    dct:title -->
-    <xsl:variable name="ontologyTitleCore" select="'eProcurement Ontology Catalogue - core'"/>
-    <xsl:variable name="ontologyTitleRestrictions" select="'eProcurement Ontology Catalogue - core restrictions'"/>
-    <xsl:variable name="ontologyTitleShapes" select="'eProcurement Ontology Catalogue - core shapes'"/>
+    <xsl:variable name="ontologyTitleCore" select="'common SRC_AP Ontology  - core'"/>
+    <xsl:variable name="ontologyTitleRestrictions" select="'common SRC_AP Ontology - core restrictions'"/>
+    <xsl:variable name="ontologyTitleShapes" select="'common SRC_AP Ontology - core shapes'"/>
     <!--    dct:description-->
     <xsl:variable name="ontologyDescriptionCore"
-        select="'The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
+        select="'The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
     <xsl:variable name="ontologyDescriptionRestrictions"
         select="'The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core.'"/>
     <xsl:variable name="ontologyDescriptionShapes"

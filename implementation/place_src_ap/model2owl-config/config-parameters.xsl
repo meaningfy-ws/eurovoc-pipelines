@@ -94,7 +94,7 @@
     <!--                            METADATA SECTION                               -->
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
-    <xsl:variable name="moduleReference" select="'cat'"/>
+    <xsl:variable name="moduleReference" select="'place'"/>
     <!--    dct:title -->
     <xsl:variable name="ontologyTitleCore" select="'eProcurement Ontology Catalogue - core'"/>
     <xsl:variable name="ontologyTitleRestrictions" select="'eProcurement Ontology Catalogue - core restrictions'"/>
@@ -116,13 +116,13 @@
     <!--    dct:issued-->
     <xsl:variable name="issuedDate" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     <!--    owl:incompatibleWith -->
-    <xsl:variable name="incompatibleWith" select="'3.1.0'"/>
+    <xsl:variable name="incompatibleWith" select="'3.1.4'"/>
     <!--    owl:versionInfo -->
-    <xsl:variable name="versionInfo" select="'4.0.0'"/>
+    <xsl:variable name="versionInfo" select="'4.2.2'"/>
     <!--    bibo:status-->
     <xsl:variable name="ontologyStatus" select="'Semantic Specification Release'"/>
     <!--    owl:priorVersion -->
-    <xsl:variable name="priorVersion" select="'3.1.0'"/>
+    <xsl:variable name="priorVersion" select="'3.1.4'"/>
     <!--    vann:preferredNamespaceUri -->
     <xsl:variable name="preferredNamespaceUri" select="'http://data.europa.eu/a4g/ontology#'"/>
     <!--    vann:preferredNamespacePrefix -->
