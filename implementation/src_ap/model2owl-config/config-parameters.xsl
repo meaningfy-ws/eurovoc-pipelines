@@ -94,7 +94,7 @@
     <!--                            METADATA SECTION                               -->
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
-    <xsl:variable name="moduleReference" select="' src'"/>
+    <xsl:variable name="moduleReference" select="'src'"/>
     <!--    dct:title -->
     <xsl:variable name="ontologyTitleCore" select="'common SRC_AP Ontology  - core'"/>
     <xsl:variable name="ontologyTitleRestrictions" select="'common SRC_AP Ontology - core restrictions'"/>
