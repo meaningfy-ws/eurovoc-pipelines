@@ -1,55 +1,55 @@
 @prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix cat-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix place-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cat-shape:euvoc-Place a sh:NodeShape ;
+place-shape:euvoc-Place a sh:NodeShape ;
     rdfs:label "Place" ;
     rdfs:comment "The Place authority table (AT) is a controlled vocabulary that lists concepts associated with the localities of the world. It provides authority codes that are based on UN/LOCODE codes. The Place AT uses the classification (membership classification) and the authority codes of the Country AT. This AT also provides ISO 3166-2 codes, as well as geographical coordinates. The European capitals of culture are also included. The original name of each locality is indicated. The Corporate body AT uses this AT to identify the seat of each concept (LOC_id), and the Site AT uses it to identify the location of each site (loc_code). The Place authority table is updated based on the stakeholders’ need" ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:euvoc-Place-euvoc-culturalCity,
-        cat-shape:euvoc-Place-skos-inSchemce ;
+    rdfs:isDefinedBy place-shape:place-shape ;
+    sh:property place-shape:euvoc-Place-euvoc-culturalCity,
+        place-shape:euvoc-Place-skos-inSchemce ;
     sh:targetClass euvoc:Place .
 
-cat-shape:euvoc-Place-euvoc-culturalCity a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+place-shape:euvoc-Place-euvoc-culturalCity a sh:PropertyShape ;
+    rdfs:isDefinedBy place-shape:place-shape ;
     sh:datatype xsd:gYear ;
     sh:name "Cultural city" ;
     sh:path euvoc:culturalCity .
 
-cat-shape:euvoc-Place-skos-inSchemce a sh:PropertyShape ;
+place-shape:euvoc-Place-skos-inSchemce a sh:PropertyShape ;
     sh:class at-voc:place ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "In schemce" ;
     sh:path skos:inSchemce .
 
-cat-shape:cat-shape a owl:Ontology ;
+place-shape:place-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:issued "2023-11-02"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from place_src_ap_CM.xml on 2023-11-01" ;
+    rdfs:comment "This version is automatically generated from place_src_ap_CM.xml on 2023-11-02" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports :cat,
-        :cat-restriction,
+    owl:imports :place,
+        :place-restriction,
         cccev:,
         <http://data.europa.eu/nuts>,
         <http://lexvo.org/ontology>,
@@ -70,8 +70,8 @@ cat-shape:cat-shape a owl:Ontology ;
         foaf:,
         <https://data.europa.eu/m8g/>,
         <ttp://publications.europa.eu/ontology/authority/> ;
-    owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/data-shape#cat-shape-3.1.0" ;
-    owl:versionIRI cat-shape:cat-shape-4.0.0 ;
-    owl:versionInfo "4.0.0" .
+    owl:incompatibleWith "3.1.4" ;
+    owl:priorVersion "http://data.europa.eu/a4g/data-shape#place-shape-3.1.4" ;
+    owl:versionIRI place-shape:place-shape-4.2.2 ;
+    owl:versionInfo "4.2.2" .
 

@@ -34,7 +34,7 @@
          xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
          xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-   <owl:Ontology rdf:about="http://data.europa.eu/a4g/ontology#cat">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/ontology#cat2">
       <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
       <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
@@ -63,17 +63,17 @@
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core</dct:title>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-01</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-02</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-02</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
-      <owl:versionInfo>4.0.0</owl:versionInfo>
-      <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
-      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#cat-4.0.0"/>
-      <owl:priorVersion>http://data.europa.eu/a4g/ontology#cat-3.1.0</owl:priorVersion>
+      <owl:versionInfo>4.1.0</owl:versionInfo>
+      <owl:incompatibleWith>3.1.1</owl:incompatibleWith>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#cat2-4.1.0"/>
+      <owl:priorVersion>http://data.europa.eu/a4g/ontology#cat2-3.1.1</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
@@ -89,6 +89,9 @@
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty">
       <skos:prefLabel xml:lang="en">Treaty</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty">
+      <skos:definition xml:lang="en">The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages.</skos:definition>
+   </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
       <skos:prefLabel xml:lang="en">Contact point</skos:prefLabel>
@@ -100,13 +103,23 @@
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/corporate-body">
       <skos:prefLabel xml:lang="en">Corporate-body</skos:prefLabel>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce"/>
-   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
-      <skos:prefLabel xml:lang="en">In schemce</skos:prefLabel>
+   <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/treaty"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/treaty">
+      <skos:prefLabel xml:lang="en">Treaty</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <skos:prefLabel xml:lang="en">In scheme</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <skos:definition xml:lang="en">A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:CorporateBody -&gt; at-voc:corporate-body (+skos:inScheme))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
       <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+      <skos:definition xml:lang="en">It is used to precisely indicate a location's position. (euvoc:CorporateBody -&gt; euvoc:Place (+wgs:location))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty">
@@ -131,6 +144,9 @@
    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
       <skos:prefLabel xml:lang="en">Homepage</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+      <skos:definition xml:lang="en">The main web page used by the instance of the concept. (euvoc:CorporateBody)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/description">

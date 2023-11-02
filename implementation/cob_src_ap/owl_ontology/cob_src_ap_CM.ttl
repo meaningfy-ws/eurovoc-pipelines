@@ -13,16 +13,16 @@
 @prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:cat1 a owl:Ontology ;
+:cat2 a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:issued "2023-11-02"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from cob_src_ap_CM.xml on 2023-11-01" ;
+    rdfs:comment "This version is automatically generated from cob_src_ap_CM.xml on 2023-11-02" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -47,16 +47,17 @@
         foaf:,
         <https://data.europa.eu/m8g/>,
         <ttp://publications.europa.eu/ontology/authority/> ;
-    owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#cat-3.1.0" ;
-    owl:versionIRI :cat1-4.0.0 ;
-    owl:versionInfo "4.0.0" .
+    owl:incompatibleWith "3.1.1" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#cat2-3.1.1" ;
+    owl:versionIRI :cat2-4.1.0 ;
+    owl:versionInfo "4.1.0" .
 
 euvoc:CorporateBody a owl:Class ;
     skos:definition "The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible."@en ;
     skos:prefLabel "Corporate body"@en .
 
 euvoc:Treaty a owl:Class ;
+    skos:definition "The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages."@en ;
     skos:prefLabel "Treaty"@en .
 
 euvoc:hasPrimaryContactPoint a owl:ObjectProperty ;
@@ -74,14 +75,19 @@ euvoc:order a owl:DatatypeProperty ;
 at-voc:corporate-body a skos:ConceptScheme ;
     skos:prefLabel "Corporate-body"@en .
 
+at-voc:treaty a skos:ConceptScheme ;
+    skos:prefLabel "Treaty"@en .
+
 dcterms:description a owl:DatatypeProperty ;
     skos:prefLabel "Description"@en .
 
 wgs1:location a owl:ObjectProperty ;
+    skos:definition "It is used to precisely indicate a location's position. (euvoc:CorporateBody -> euvoc:Place (+wgs:location))"@en ;
     skos:prefLabel "Location"@en .
 
-skos:inSchemce a owl:ObjectProperty ;
-    skos:prefLabel "In schemce"@en .
+skos:inScheme a owl:ObjectProperty ;
+    skos:definition "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:CorporateBody -> at-voc:corporate-body (+skos:inScheme))"@en ;
+    skos:prefLabel "In scheme"@en .
 
 vcard:ContactPoint a owl:Class ;
     skos:definition "Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with."@en ;
@@ -97,5 +103,6 @@ org:siteOf a owl:ObjectProperty ;
     skos:prefLabel "Site of"@en .
 
 foaf:homepage a owl:DatatypeProperty ;
+    skos:definition "The main web page used by the instance of the concept. (euvoc:CorporateBody)"@en ;
     skos:prefLabel "Homepage"@en .
 
