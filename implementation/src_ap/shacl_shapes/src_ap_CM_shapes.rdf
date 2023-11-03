@@ -1135,6 +1135,9 @@
       <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#inScheme&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#inScheme&gt; ?this .}</sh:select>
       </sh:sparql>

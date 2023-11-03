@@ -324,6 +324,7 @@ src-shape:skos-Concept-skos-exactMatch a sh:PropertyShape ;
 src-shape:skos-Concept-skos-inScheme a sh:PropertyShape ;
     sh:class skos:ConceptScheme ;
     sh:description "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme." ;
+    sh:minCount 1 ;
     sh:name "In scheme" ;
     sh:path skos:inScheme ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#inScheme> ?that . ?that <http://www.w3.org/2004/02/skos/core#inScheme> ?this .}" ] .
