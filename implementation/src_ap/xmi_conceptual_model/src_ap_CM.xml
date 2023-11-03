@@ -254,7 +254,7 @@
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst88694B_5D81_46bd_9830_55B957C82BBC" name="skos:inScheme" association="EAID_FE88694B_5D81_46bd_9830_55B957C82BBC">
 					<type xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000079__5D81_46bd_9830_55B957C82BBC" value="0"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000079__5D81_46bd_9830_55B957C82BBC" value="1"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000080__5D81_46bd_9830_55B957C82BBC" value="*"/>
 				</ownedAttribute>
 			</packagedElement>
@@ -566,7 +566,7 @@
 				<ownedElement xmi:type="umldi:UMLAssociationEndLabel" xmi:id="EAID_TEL000000_EC2C_4f17_9830_55B957C82BBC" text="+skos:inScheme" modelElement="EAID_dst88694B_5D81_46bd_9830_55B957C82BBC">
 					<bounds xmi:type="dc:bounds" xmi:id="EAID_DBTEL000000_EC2C_4f17_9830_55B957C82BBC" x="693" y="351" width="66" height="14"/>
 				</ownedElement>
-				<ownedElement xmi:type="umldi:UMLMultiplicityLabel" xmi:id="EAID_TML000000_EC2C_4f17_9830_55B957C82BBC" text="0..*" modelElement="EAID_dst88694B_5D81_46bd_9830_55B957C82BBC">
+				<ownedElement xmi:type="umldi:UMLMultiplicityLabel" xmi:id="EAID_TML000000_EC2C_4f17_9830_55B957C82BBC" text="1..*" modelElement="EAID_dst88694B_5D81_46bd_9830_55B957C82BBC">
 					<bounds xmi:type="dc:bounds" xmi:id="EAID_DBTML000000_EC2C_4f17_9830_55B957C82BBC" x="812" y="351" width="17" height="14"/>
 				</ownedElement>
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000000_EC2C_4f17_9830_55B957C82BBC" x="467" y="420"/>
@@ -2154,7 +2154,7 @@
 				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
 					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
 					<role name="skos:inScheme" visibility="Public" targetScope="instance"/>
-					<type multiplicity="0..*" aggregation="none" containment="Unspecified"/>
+					<type multiplicity="1..*" aggregation="none" containment="Unspecified"/>
 					<constraints/>
 					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
 					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
@@ -2168,7 +2168,7 @@
 				<parameterSubstitutions/>
 				<documentation value="A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme."/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="0..*" rt="+skos:inScheme"/>
+				<labels rb="1..*" rt="+skos:inScheme"/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
