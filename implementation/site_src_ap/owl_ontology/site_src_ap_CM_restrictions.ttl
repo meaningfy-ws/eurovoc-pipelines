@@ -90,9 +90,9 @@ locn:geometry a owl:AsymmetricProperty ;
     rdfs:range euvoc:Site .
 
 euvoc:Site rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty locn:geometry ],
-        [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty vcard:fn ] .
+            owl:onProperty vcard:fn ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:geometry ] .
 

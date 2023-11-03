@@ -103,6 +103,24 @@ euvoc:xlNotation a owl:ObjectProperty ;
 euvoc:xlNote a owl:ObjectProperty ;
     skos:prefLabel "Xl note"@en .
 
+at-voc:corporate-body a owl:NamedIndividual,
+        skos:ConceptScheme .
+
+at-voc:currency a owl:NamedIndividual,
+        skos:ConceptScheme .
+
+at-voc:language a owl:NamedIndividual,
+        skos:ConceptScheme .
+
+at-voc:place a owl:NamedIndividual,
+        skos:ConceptScheme .
+
+at-voc:site a owl:NamedIndividual,
+        skos:ConceptScheme .
+
+at-voc:treaty a owl:NamedIndividual,
+        skos:ConceptScheme .
+
 dcterms:created a owl:DatatypeProperty ;
     skos:definition "Date of creation of the resource. (euvoc:XlNotation) Date of creation of the resource. (skos:Concept) Date of creation of the resource. (skos:ConceptScheme) Date of creation of the resource. (skosxl:Label)"@en ;
     skos:prefLabel "Created"@en .
@@ -166,10 +184,6 @@ skos:Concept a owl:Class ;
     skos:definition "A concept is a unit of thought. The semantic content of a concept can be re-expressed by a combination of other and different concepts, which may vary from one language or culture to another. Concepts exist in the mind as abstract entities that are independent of the terms used to label them."@en ;
     skos:prefLabel "Concept"@en .
 
-skos:ConceptScheme a owl:Class ;
-    skos:definition "A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas."@en ;
-    skos:prefLabel "Concept scheme"@en .
-
 skos:broader a owl:ObjectProperty ;
     skos:definition "A concept that is more general in meaning. Broader concepts are typically rendered as parents in a concept hierarchy (tree). (skos:Concept -> skos:Concept (+skos:broader))"@en ;
     skos:prefLabel "Broader"@en .
@@ -212,4 +226,8 @@ skosxl:literalForm a owl:DatatypeProperty ;
 skosxl:prefLabel a owl:ObjectProperty ;
     skos:definition "The preferred lexical label for a resource, in a given language. No two concepts in the same concept scheme may have the same preferred label in a given language. (skos:Concept -> skosxl:Label (+skosxl:prefLabel))"@en ;
     skos:prefLabel "Pref label"@en .
+
+skos:ConceptScheme a owl:Class ;
+    skos:definition "A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas."@en ;
+    skos:prefLabel "Concept scheme"@en .
 
