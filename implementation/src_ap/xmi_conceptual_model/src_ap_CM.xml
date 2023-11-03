@@ -194,7 +194,7 @@
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dstEA6FDB_9929_4957_A33D_20AC3B9E28FF" name="skos:topConceptOf" association="EAID_6CEA6FDB_9929_4957_A33D_20AC3B9E28FF">
 					<type xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000055__9929_4957_A33D_20AC3B9E28FF" value="0"/>
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000055__9929_4957_A33D_20AC3B9E28FF" value="1"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000056__9929_4957_A33D_20AC3B9E28FF" value="*"/>
 				</ownedAttribute>
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst45E7B2_6058_4254_8155_E67B175A43F3" name="euvoc:xlNote" association="EAID_7545E7B2_6058_4254_8155_E67B175A43F3">
@@ -673,7 +673,7 @@
 				<ownedElement xmi:type="umldi:UMLAssociationEndLabel" xmi:id="EAID_TEL000000_EC2C_4f17_A33D_20AC3B9E28FF" text="+skos:topConceptOf" modelElement="EAID_dstEA6FDB_9929_4957_A33D_20AC3B9E28FF">
 					<bounds xmi:type="dc:bounds" xmi:id="EAID_DBTEL000000_EC2C_4f17_A33D_20AC3B9E28FF" x="577" y="437" width="82" height="14"/>
 				</ownedElement>
-				<ownedElement xmi:type="umldi:UMLMultiplicityLabel" xmi:id="EAID_TML000000_EC2C_4f17_A33D_20AC3B9E28FF" text="0..*" modelElement="EAID_dstEA6FDB_9929_4957_A33D_20AC3B9E28FF">
+				<ownedElement xmi:type="umldi:UMLMultiplicityLabel" xmi:id="EAID_TML000000_EC2C_4f17_A33D_20AC3B9E28FF" text="1..*" modelElement="EAID_dstEA6FDB_9929_4957_A33D_20AC3B9E28FF">
 					<bounds xmi:type="dc:bounds" xmi:id="EAID_DBTML000000_EC2C_4f17_A33D_20AC3B9E28FF" x="688" y="424" width="17" height="14"/>
 				</ownedElement>
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000000_EC2C_4f17_A33D_20AC3B9E28FF" x="467" y="439"/>
@@ -1874,7 +1874,7 @@
 				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
 					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
 					<role name="skos:topConceptOf" visibility="Public" targetScope="instance"/>
-					<type multiplicity="0..*" aggregation="none" containment="Unspecified"/>
+					<type multiplicity="1..*" aggregation="none" containment="Unspecified"/>
 					<constraints/>
 					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
 					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
@@ -1888,7 +1888,7 @@
 				<parameterSubstitutions/>
 				<documentation value="A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme."/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="0..*" rt="+skos:topConceptOf"/>
+				<labels rb="1..*" rt="+skos:topConceptOf"/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>

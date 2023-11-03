@@ -82,7 +82,7 @@
 
     <xsl:variable name="reference-to-external-classes-in-glossary" select="fn:true()"/>
 
-    <xsl:variable name="generateObjectsAndRealisations" select="fn:false()"/>
+    <xsl:variable name="generateObjectsAndRealisations" select="fn:true()"/>
 
     <xsl:variable name="conventionReportCopyrightText" select="'Publications Office of the European Union, 2023'"/>
     <xsl:variable name="conventionReportAuthor" select="'Publications Office of the European Union'"/>
