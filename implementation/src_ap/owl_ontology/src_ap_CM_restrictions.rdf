@@ -364,6 +364,14 @@
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
    <rdf:Description rdf:about="http://purl.org/dc/terms/isReplacedBy">
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
    </rdf:Description>

@@ -338,6 +338,7 @@ src-shape:skos-Concept-skos-narrower a sh:PropertyShape ;
 src-shape:skos-Concept-skos-topConceptOf a sh:PropertyShape ;
     sh:class skos:ConceptScheme ;
     sh:description "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme." ;
+    sh:minCount 1 ;
     sh:name "Top concept of" ;
     sh:path skos:topConceptOf ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#topConceptOf> ?that . ?that <http://www.w3.org/2004/02/skos/core#topConceptOf> ?this .}" ] .

@@ -72,10 +72,12 @@ euvoc:managedBy a owl:ObjectProperty ;
 euvoc:order a owl:DatatypeProperty ;
     skos:prefLabel "Order"@en .
 
-at-voc:corporate-body a skos:ConceptScheme ;
+at-voc:corporate-body a owl:NamedIndividual,
+        skos:ConceptScheme ;
     skos:prefLabel "Corporate-body"@en .
 
-at-voc:treaty a skos:ConceptScheme ;
+at-voc:treaty a owl:NamedIndividual,
+        skos:ConceptScheme ;
     skos:prefLabel "Treaty"@en .
 
 dcterms:description a owl:DatatypeProperty ;
