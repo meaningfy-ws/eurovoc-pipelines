@@ -32,7 +32,7 @@ jobs:
 
       - name: generate convention report and glossary
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap technical)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
@@ -134,7 +134,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(src_ap cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap technical)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
