@@ -154,7 +154,7 @@
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geo:asWKT">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000003_AB69_4609_AB7C_9E4778688178" value="1"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000004_AB69_4609_AB7C_9E4778688178" value="1"/>
-					<type xmi:idref="EAJava_geo_wktLiteral"/>
+					<type xmi:idref="EAJava_rdf_PlainLiteral"/>
 				</ownedAttribute>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Association" xmi:id="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767">
@@ -307,7 +307,7 @@
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_F49AFB1A_47D9_483d_81D3_6A805142A378" modelElement="EAID_CDDE42E3_0540_441b_81D3_6A805142A378">
 				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_47D9_483d_81D3_6A805142A378" text="sf:Polygon "/>
-				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_47D9_483d_81D3_6A805142A378" x="73" y="431" width="136" height="70"/>
+				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_47D9_483d_81D3_6A805142A378" x="74" y="431" width="136" height="70"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLEdge" xmi:id="EAID_F49AFB1A_47D9_483d_9C7D_0BF99119139C" source="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9" target="EAID_66C7526A_3D31_4ece_ADD1_1B158A742CBD" modelElement="EAID_66A31817_0E44_487e_9C7D_0BF99119139C">
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000000_47D9_483d_9C7D_0BF99119139C" x="513" y="59"/>
@@ -544,7 +544,7 @@
 						<initial/>
 						<documentation value="The property geo:asWKT is defined to link a Geometry with its WKT serialization."/>
 						<model ea_localid="61" ea_guid="{A278B2E1-AB69-4609-AB7C-9E4778688178}"/>
-						<properties type="geo:wktLiteral" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="rdf:PlainLiteral" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="1"/>
 						<stereotype/>
@@ -1836,7 +1836,7 @@
 			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package">
 				<packagedElement xmi:type="uml:Package" xmi:id="EAJavaTypesPackage" name="EA_Java_Types_Package">
 					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_xsd_dateTime" name="xsd:dateTime"/>
-					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_geo_wktLiteral" name="geo:wktLiteral"/>
+					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_rdf_PlainLiteral" name="rdf:PlainLiteral"/>
 					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_xsd_string" name="xsd:string"/>
 				</packagedElement>
 			</packagedElement>
@@ -1846,14 +1846,14 @@
 			<diagram xmi:id="EAID_F49AFB1A_47D9_483d_A6BA_BF9ACF85B585">
 				<model package="EAPK_A5992B01_0090_42b8_AC30_21D16082D393" localID="16" owner="EAPK_A5992B01_0090_42b8_AC30_21D16082D393"/>
 				<properties name="technical" type="Logical"/>
-				<project author="ahmadjan" version="1.0" created="2023-11-06 10:52:47" modified="2023-11-06 13:04:15"/>
+				<project author="ahmadjan" version="1.0" created="2023-11-06 10:52:47" modified="2023-11-06 13:56:44"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=3C056BD4;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=935204F5;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-16,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
 				<elements>
-					<element geometry="Left=73;Top=431;Right=209;Bottom=501;" subject="EAID_CDDE42E3_0540_441b_81D3_6A805142A378" seqno="1" style="DUID=D70EAF41;NSL=0;"/>
+					<element geometry="Left=74;Top=431;Right=210;Bottom=501;" subject="EAID_CDDE42E3_0540_441b_81D3_6A805142A378" seqno="1" style="DUID=D70EAF41;NSL=0;"/>
 					<element geometry="Left=492;Top=213;Right=582;Bottom=283;" subject="EAID_DA7B6388_3622_4146_8C9D_3ADAE34291F6" seqno="2" style="DUID=170E6D16;NSL=0;"/>
 					<element geometry="Left=483;Top=431;Right=616;Bottom=501;" subject="EAID_7D09E3B1_4318_48cf_B160_97186F930FB3" seqno="3" style="DUID=79F99A16;NSL=0;"/>
 					<element geometry="Left=588;Top=115;Right=678;Bottom=185;" subject="EAID_58CA9635_4F04_42f3_9689_29C5B7C84C5D" seqno="4" style="DUID=D3083A28;NSL=0;"/>
