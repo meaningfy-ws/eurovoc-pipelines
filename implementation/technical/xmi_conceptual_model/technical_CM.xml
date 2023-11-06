@@ -151,7 +151,7 @@
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000002_553A_4ad1_A5F8_6C0079721BA6" value="1"/>
 					<type xmi:idref="EAJava_xsd_dateTime"/>
 				</ownedAttribute>
-				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geo:asWKT">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geosparql:asWKT">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000003_AB69_4609_AB7C_9E4778688178" value="1"/>
 					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000004_AB69_4609_AB7C_9E4778688178" value="1"/>
 					<type xmi:idref="EAJava_rdf_PlainLiteral"/>
@@ -517,8 +517,8 @@
 			</element>
 			<element xmi:idref="EAID_CDDE42E3_0540_441b_81D3_6A805142A378" xmi:type="uml:Class" name="sf:Polygon" scope="public">
 				<model package="EAPK_A5992B01_0090_42b8_AC30_21D16082D393" tpos="0" ea_localid="74" ea_eleType="element"/>
-				<properties documentation="Date of modification of the resource.&#xA;&#xA;&#xA;" isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-11-06 12:33:45" modified="2023-11-06 14:05:22" complexity="1" status="Proposed"/>
+				<properties documentation="&#xA;&#xA;" isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-11-06 12:33:45" modified="2023-11-06 14:09:13" complexity="1" status="Proposed"/>
 				<code product_name="Java" gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
@@ -527,7 +527,7 @@
 				<attributes>
 					<attribute xmi:idref="EAID_D908A7EE_553A_4ad1_A5F8_6C0079721BA6" name="dct:modified" scope="Public">
 						<initial/>
-						<documentation/>
+						<documentation value="Date of modification of the resource.&#xA;"/>
 						<model ea_localid="60" ea_guid="{D908A7EE-553A-4ad1-A5F8-6C0079721BA6}"/>
 						<properties type="xsd:dateTime" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
@@ -536,11 +536,11 @@
 						<bounds lower="1" upper="1"/>
 						<options/>
 						<style/>
-						<styleex value="volatile=0;"/>
+						<styleex value="volatile=0;union=0;"/>
 						<tags/>
 						<xrefs/>
 					</attribute>
-					<attribute xmi:idref="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geo:asWKT" scope="Public">
+					<attribute xmi:idref="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geosparql:asWKT" scope="Public">
 						<initial/>
 						<documentation value="The property geo:asWKT is defined to link a Geometry with its WKT serialization."/>
 						<model ea_localid="61" ea_guid="{A278B2E1-AB69-4609-AB7C-9E4778688178}"/>
