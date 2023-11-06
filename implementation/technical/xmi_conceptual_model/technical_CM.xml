@@ -3,25 +3,6 @@
 	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1560"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_A5992B01_0090_42b8_AC30_21D16082D393" name="technical">
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_CDDE42E3_0540_441b_81D3_6A805142A378" name=" sf:Polygon ">
-				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_D908A7EE_553A_4ad1_A5F8_6C0079721BA6" name="dct:modified">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_553A_4ad1_A5F8_6C0079721BA6" value="1"/>
-					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000002_553A_4ad1_A5F8_6C0079721BA6" value="1"/>
-					<type xmi:idref="EAJava_xsd_dateTime"/>
-				</ownedAttribute>
-				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geo:asWKT">
-					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000003_AB69_4609_AB7C_9E4778688178" value="1"/>
-					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000004_AB69_4609_AB7C_9E4778688178" value="1"/>
-					<type xmi:idref="EAJava_geo_wktLiteral"/>
-				</ownedAttribute>
-			</packagedElement>
-			<packagedElement xmi:type="uml:Association" xmi:id="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767">
-				<memberEnd xmi:idref="EAID_dst98D2CE_09CE_4f1d_A757_49FBC16F2767"/>
-				<memberEnd xmi:idref="EAID_src98D2CE_09CE_4f1d_A757_49FBC16F2767"/>
-				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src98D2CE_09CE_4f1d_A757_49FBC16F2767" association="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767">
-					<type xmi:idref="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB"/>
-				</ownedEnd>
-			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_304CC29A_A418_4d7c_B8B1_66787638E951" name="euvoc:AddressType"/>
 			<packagedElement xmi:type="uml:Association" xmi:id="EAID_033E452B_0AB1_4ff3_9400_B2959ECD874A">
 				<memberEnd xmi:idref="EAID_dst3E452B_0AB1_4ff3_9400_B2959ECD874A"/>
@@ -162,6 +143,25 @@
 				<memberEnd xmi:idref="EAID_srcAA6B00_D77F_4412_870B_8C4B5E4F3D7A"/>
 				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_srcAA6B00_D77F_4412_870B_8C4B5E4F3D7A" association="EAID_BDAA6B00_D77F_4412_870B_8C4B5E4F3D7A">
 					<type xmi:idref="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839"/>
+				</ownedEnd>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Class" xmi:id="EAID_CDDE42E3_0540_441b_81D3_6A805142A378" name="sf:Polygon ">
+				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_D908A7EE_553A_4ad1_A5F8_6C0079721BA6" name="dct:modified">
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_553A_4ad1_A5F8_6C0079721BA6" value="1"/>
+					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000002_553A_4ad1_A5F8_6C0079721BA6" value="1"/>
+					<type xmi:idref="EAJava_xsd_dateTime"/>
+				</ownedAttribute>
+				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geo:asWKT">
+					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000003_AB69_4609_AB7C_9E4778688178" value="1"/>
+					<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000004_AB69_4609_AB7C_9E4778688178" value="1"/>
+					<type xmi:idref="EAJava_geo_wktLiteral"/>
+				</ownedAttribute>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Association" xmi:id="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767">
+				<memberEnd xmi:idref="EAID_dst98D2CE_09CE_4f1d_A757_49FBC16F2767"/>
+				<memberEnd xmi:idref="EAID_src98D2CE_09CE_4f1d_A757_49FBC16F2767"/>
+				<ownedEnd xmi:type="uml:Property" xmi:id="EAID_src98D2CE_09CE_4f1d_A757_49FBC16F2767" association="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767">
+					<type xmi:idref="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB"/>
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_178C633E_3E94_41a7_B4AF_9D45295B6777" name="vcard:Address">
@@ -306,7 +306,7 @@
 				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_47D9_483d_8C9D_3ADAE34291F6" x="492" y="213" width="90" height="70"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_F49AFB1A_47D9_483d_81D3_6A805142A378" modelElement="EAID_CDDE42E3_0540_441b_81D3_6A805142A378">
-				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_47D9_483d_81D3_6A805142A378" text=" sf:Polygon "/>
+				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_47D9_483d_81D3_6A805142A378" text="sf:Polygon "/>
 				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_47D9_483d_81D3_6A805142A378" x="73" y="431" width="136" height="70"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLEdge" xmi:id="EAID_F49AFB1A_47D9_483d_9C7D_0BF99119139C" source="EAID_44886D99_43AA_412e_B23C_B63B26DA26F9" target="EAID_66C7526A_3D31_4ece_ADD1_1B158A742CBD" modelElement="EAID_66A31817_0E44_487e_9C7D_0BF99119139C">
@@ -344,51 +344,6 @@
 				<paths/>
 				<times created="2023-10-19 09:41:38" modified="2023-10-19 09:41:38"/>
 				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
-			</element>
-			<element xmi:idref="EAID_CDDE42E3_0540_441b_81D3_6A805142A378" xmi:type="uml:Class" name=" sf:Polygon " scope="public">
-				<model package="EAPK_A5992B01_0090_42b8_AC30_21D16082D393" tpos="0" ea_localid="74" ea_eleType="element"/>
-				<properties documentation="Date of modification of the resource.&#xA;&#xA;&#xA;" isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-11-06 12:33:45" modified="2023-11-06 13:28:22" complexity="1" status="Proposed"/>
-				<code product_name="Java" gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="technical"/>
-				<attributes>
-					<attribute xmi:idref="EAID_D908A7EE_553A_4ad1_A5F8_6C0079721BA6" name="dct:modified" scope="Public">
-						<initial/>
-						<documentation/>
-						<model ea_localid="60" ea_guid="{D908A7EE-553A-4ad1-A5F8-6C0079721BA6}"/>
-						<properties type="xsd:dateTime" collection="false" static="0" duplicates="0" changeability="changeable"/>
-						<coords ordered="0"/>
-						<containment containment="Not Specified" position="0"/>
-						<stereotype/>
-						<bounds lower="1" upper="1"/>
-						<options/>
-						<style/>
-						<styleex value="volatile=0;"/>
-						<tags/>
-						<xrefs/>
-					</attribute>
-					<attribute xmi:idref="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geo:asWKT" scope="Public">
-						<initial/>
-						<documentation value="The property geo:asWKT is defined to link a Geometry with its WKT serialization."/>
-						<model ea_localid="61" ea_guid="{A278B2E1-AB69-4609-AB7C-9E4778688178}"/>
-						<properties type="geo:wktLiteral" collection="false" static="0" duplicates="0" changeability="changeable"/>
-						<coords ordered="0"/>
-						<containment containment="Not Specified" position="1"/>
-						<stereotype/>
-						<bounds lower="1" upper="1"/>
-						<options/>
-						<style/>
-						<styleex value="volatile=0;union=0;"/>
-						<tags/>
-						<xrefs/>
-					</attribute>
-				</attributes>
-				<links>
-					<Association xmi:id="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767" start="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB" end="EAID_CDDE42E3_0540_441b_81D3_6A805142A378"/>
-				</links>
 			</element>
 			<element xmi:idref="EAID_304CC29A_A418_4d7c_B8B1_66787638E951" xmi:type="uml:Class" name="euvoc:AddressType" scope="public">
 				<model package="EAPK_A5992B01_0090_42b8_AC30_21D16082D393" tpos="0" ea_localid="36" ea_eleType="element"/>
@@ -560,6 +515,51 @@
 					<Association xmi:id="EAID_BDAA6B00_D77F_4412_870B_8C4B5E4F3D7A" start="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839" end="EAID_D3D65C77_CF4A_4a7d_8BA6_F718E7BD69AE"/>
 				</links>
 			</element>
+			<element xmi:idref="EAID_CDDE42E3_0540_441b_81D3_6A805142A378" xmi:type="uml:Class" name="sf:Polygon " scope="public">
+				<model package="EAPK_A5992B01_0090_42b8_AC30_21D16082D393" tpos="0" ea_localid="74" ea_eleType="element"/>
+				<properties documentation="Date of modification of the resource.&#xA;&#xA;&#xA;" isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-11-06 12:33:45" modified="2023-11-06 13:46:45" complexity="1" status="Proposed"/>
+				<code product_name="Java" gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="technical"/>
+				<attributes>
+					<attribute xmi:idref="EAID_D908A7EE_553A_4ad1_A5F8_6C0079721BA6" name="dct:modified" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="60" ea_guid="{D908A7EE-553A-4ad1-A5F8-6C0079721BA6}"/>
+						<properties type="xsd:dateTime" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0"/>
+						<containment containment="Not Specified" position="0"/>
+						<stereotype/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags/>
+						<xrefs/>
+					</attribute>
+					<attribute xmi:idref="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geo:asWKT" scope="Public">
+						<initial/>
+						<documentation value="The property geo:asWKT is defined to link a Geometry with its WKT serialization."/>
+						<model ea_localid="61" ea_guid="{A278B2E1-AB69-4609-AB7C-9E4778688178}"/>
+						<properties type="geo:wktLiteral" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0"/>
+						<containment containment="Not Specified" position="1"/>
+						<stereotype/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;union=0;"/>
+						<tags/>
+						<xrefs/>
+					</attribute>
+				</attributes>
+				<links>
+					<Association xmi:id="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767" start="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB" end="EAID_CDDE42E3_0540_441b_81D3_6A805142A378"/>
+				</links>
+			</element>
 			<element xmi:idref="EAID_178C633E_3E94_41a7_B4AF_9D45295B6777" xmi:type="uml:Class" name="vcard:Address" scope="public">
 				<model package="EAPK_A5992B01_0090_42b8_AC30_21D16082D393" tpos="0" ea_localid="35" ea_eleType="element"/>
 				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
@@ -725,41 +725,6 @@
 			</element>
 		</elements>
 		<connectors>
-			<connector xmi:idref="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767">
-				<source xmi:idref="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB">
-					<model ea_localid="30" type="Class" name="euvoc:Site"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_CDDE42E3_0540_441b_81D3_6A805142A378">
-					<model ea_localid="74" type="Class" name=" sf:Polygon "/>
-					<role name="locn:geometry" visibility="Public" targetScope="instance"/>
-					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="85"/>
-				<properties ea_type="Association" direction="Source -&gt; Destination"/>
-				<modifiers isRoot="false" isLeaf="false"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="0..1" rt="+locn:geometry"/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
 			<connector xmi:idref="EAID_033E452B_0AB1_4ff3_9400_B2959ECD874A">
 				<source xmi:idref="EAID_178C633E_3E94_41a7_B4AF_9D45295B6777">
 					<model ea_localid="35" type="Class" name="vcard:Address"/>
@@ -1653,6 +1618,41 @@
 				<documentation value="It signifies that the concept is applicable or relevant within the context of the identified use context."/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="0..*" rt="+euvoc:context"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_4F98D2CE_09CE_4f1d_A757_49FBC16F2767">
+				<source xmi:idref="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB">
+					<model ea_localid="30" type="Class" name="euvoc:Site"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_CDDE42E3_0540_441b_81D3_6A805142A378">
+					<model ea_localid="74" type="Class" name="sf:Polygon "/>
+					<role name="locn:geometry" visibility="Public" targetScope="instance"/>
+					<type multiplicity="0..1" aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="85"/>
+				<properties ea_type="Association" direction="Source -&gt; Destination"/>
+				<modifiers isRoot="false" isLeaf="false"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rb="0..1" rt="+locn:geometry"/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
