@@ -17,14 +17,14 @@
 :cat2-restriction a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-11-03"^^xsd:date ;
+    dcterms:issued "2023-11-06"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from cob_src_ap_CM.xml on 
-                2023-11-03""" ;
+                2023-11-06""" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -38,6 +38,7 @@
         dcterms:,
         <http://www.lexinfo.net/ontology/2.0/lexinfo>,
         <http://www.opengis.net/ont/geosparql>,
+        <http://www.opengis.net/ont/sf>,
         <http://www.w3.org/2003/01/geo/wgs84_pos>,
         <http://www.w3.org/2004/02/skos/core>,
         <http://www.w3.org/2006/time>,
@@ -86,11 +87,8 @@ at-voc:corporate-body a owl:Class ;
             owl:hasValue at-voc:corporate-body ;
             owl:onProperty skos:inScheme ] .
 
-at-voc:treaty a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:treaty ;
-            owl:onProperty skos:inScheme ] .
+skos:inScheme rdfs:domain euvoc:CorporateBody ;
+    rdfs:range skos:Concept .
 
 vcard:hasEmail rdfs:domain vcard:ContactPoint ;
     rdfs:range rdf:PlainLiteral .
@@ -98,18 +96,14 @@ vcard:hasEmail rdfs:domain vcard:ContactPoint ;
 foaf:homepage rdfs:domain euvoc:CorporateBody ;
     rdfs:range xsd:anyURI .
 
-skos:inScheme rdfs:domain [ a owl:Class ;
-            owl:unionOf ( euvoc:CorporateBody euvoc:Treaty ) ] ;
-    rdfs:range skos:Concept .
-
 vcard:ContactPoint rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty vcard:hasEmail ] .
 
 euvoc:CorporateBody rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty euvoc:order ],
+            owl:onProperty foaf:homepage ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty foaf:homepage ] .
+            owl:onProperty euvoc:order ] .
 

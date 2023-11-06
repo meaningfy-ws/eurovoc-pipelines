@@ -27,6 +27,7 @@
          xmlns:person="http://www.w3.org/ns/person#"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sf="http://www.opengis.net/ont/sf#"
          xmlns:sh="http://www.w3.org/ns/shacl#"
          xmlns:site-res="http://data.europa.eu/a4g/ontology#"
          xmlns:site-shape="http://data.europa.eu/a4g/data-shape#"
@@ -63,17 +64,18 @@
       <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
       <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#site"/>
       <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#site-restriction"/>
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from site_src_ap_CM.xml on 2023-11-03</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from site_src_ap_CM.xml on 2023-11-06</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-03</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-06</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.3.0</owl:versionInfo>
       <owl:incompatibleWith>3.3.0</owl:incompatibleWith>
@@ -113,26 +115,6 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Site-vcard-fn">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Site-locn-geometry">
-      <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Site-locn-geometry">
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Site-locn-geometry">
-      <sh:sparql rdf:parseType="Resource">
-         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/locn#geometry&gt; ?that . ?that &lt;http://www.w3.org/ns/locn#geometry&gt; ?this .}</sh:select>
-      </sh:sparql>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Site">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-Site-locn-geometry"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Site-locn-geometry">
-      <sh:path rdf:resource="http://www.w3.org/ns/locn#geometry"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Site-locn-geometry">
-      <sh:name>Geometry</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Site-skos-inSchemce">
       <sh:class rdf:resource="http://publications.europa.eu/resource/authority/site"/>

@@ -27,6 +27,7 @@
          xmlns:person="http://www.w3.org/ns/person#"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sf="http://www.opengis.net/ont/sf#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
          xmlns:time="http://www.w3.org/2006/time#"
@@ -60,15 +61,16 @@
       <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
       <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core</dct:title>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-03</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-06</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-03</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-06</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.1.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.1</owl:incompatibleWith>
@@ -85,13 +87,6 @@
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody">
       <skos:definition xml:lang="en">The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible.</skos:definition>
    </rdf:Description>
-   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty"/>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty">
-      <skos:prefLabel xml:lang="en">Treaty</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty">
-      <skos:definition xml:lang="en">The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages.</skos:definition>
-   </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
       <skos:prefLabel xml:lang="en">Contact point</skos:prefLabel>
@@ -103,14 +98,7 @@
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/corporate-body">
       <skos:prefLabel xml:lang="en">Corporate-body</skos:prefLabel>
    </rdf:Description>
-   <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/treaty"/>
-   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/treaty">
-      <skos:prefLabel xml:lang="en">Treaty</skos:prefLabel>
-   </rdf:Description>
    <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/corporate-body">
-      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-   </owl:NamedIndividual>
-   <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/treaty">
       <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
    </owl:NamedIndividual>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>

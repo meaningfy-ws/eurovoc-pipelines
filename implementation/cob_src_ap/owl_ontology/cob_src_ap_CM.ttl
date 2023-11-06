@@ -16,13 +16,13 @@
 :cat2 a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-11-03"^^xsd:date ;
+    dcterms:issued "2023-11-06"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from cob_src_ap_CM.xml on 2023-11-03" ;
+    rdfs:comment "This version is automatically generated from cob_src_ap_CM.xml on 2023-11-06" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -35,6 +35,7 @@
         dcterms:,
         <http://www.lexinfo.net/ontology/2.0/lexinfo>,
         <http://www.opengis.net/ont/geosparql>,
+        <http://www.opengis.net/ont/sf>,
         <http://www.w3.org/2003/01/geo/wgs84_pos>,
         <http://www.w3.org/2004/02/skos/core>,
         <http://www.w3.org/2006/time>,
@@ -56,10 +57,6 @@ euvoc:CorporateBody a owl:Class ;
     skos:definition "The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible."@en ;
     skos:prefLabel "Corporate body"@en .
 
-euvoc:Treaty a owl:Class ;
-    skos:definition "The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages."@en ;
-    skos:prefLabel "Treaty"@en .
-
 euvoc:hasPrimaryContactPoint a owl:ObjectProperty ;
     skos:prefLabel "Has primary contact point"@en .
 
@@ -75,10 +72,6 @@ euvoc:order a owl:DatatypeProperty ;
 at-voc:corporate-body a owl:NamedIndividual,
         skos:ConceptScheme ;
     skos:prefLabel "Corporate-body"@en .
-
-at-voc:treaty a owl:NamedIndividual,
-        skos:ConceptScheme ;
-    skos:prefLabel "Treaty"@en .
 
 dcterms:description a owl:DatatypeProperty ;
     skos:prefLabel "Description"@en .

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://data.europa.eu/a4g/ontology#"
+         xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:at="http://publications.europa.eu/ontology/authority/"
+         xmlns:at-voc="http://publications.europa.eu/resource/authority/"
+         xmlns:at-voc-new="http://publications.europa.eu/resource/authority/new/"
+         xmlns:atold="http://publications.europa.eu/resource/authority/"
+         xmlns:cccev="http://data.europa.eu/m8g/"
+         xmlns:core="http://data.europa.eu/m8g/"
+         xmlns:cpov="http://data.europa.eu/m8g/"
+         xmlns:cpsv="http://data.europa.eu/m8g/"
+         xmlns:cpv="http://data.europa.eu/m8g/"
+         xmlns:cv="http://data.europa.eu/m8g/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+         xmlns:espd="https://github.com/ESPD/ESPD-EDM/"
+         xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+         xmlns:lexinfo="http://www.lexinfo.net/ontology/2.0/lexinfo#"
+         xmlns:lexvo="http://lexvo.org/ontology#"
+         xmlns:locn="http://www.w3.org/ns/locn#"
+         xmlns:nuts="http://data.europa.eu/nuts/"
+         xmlns:org="http://www.w3.org/ns/org#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:person="http://www.w3.org/ns/person#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sf="http://www.opengis.net/ont/sf#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+         xmlns:time="http://www.w3.org/2006/time#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/ontology#tech">
+      <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+      <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+      <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+      <owl:imports rdf:resource="http://data.europa.eu/nuts"/>
+      <owl:imports rdf:resource="ttp://publications.europa.eu/ontology/authority/"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/person"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
+      <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
+      <owl:imports rdf:resource="http://lexvo.org/ontology"/>
+      <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
+      <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
+      <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
+      <dct:title xml:lang="en">technical package  - core</dct:title>
+      <dct:description xml:lang="en">The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
+      <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
+      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-06</rdfs:comment>
+      <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
+      <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
+      <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
+      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-06</dct:issued>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
+      <owl:versionInfo>4.0.0</owl:versionInfo>
+      <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#tech-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/a4g/ontology#tech-3.1.0</owl:priorVersion>
+      <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
+      <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
+      <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
+   </owl:Ontology>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#AddressType"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#AddressType">
+      <skos:prefLabel xml:lang="en">Address type</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#AddressType">
+      <skos:definition xml:lang="en">The Address type authority table (AT) is a controlled vocabulary that provides the address types as used in the EU Whoiswho application. The AT gives the authority code and the English label for each concept. The Address type AT is maintained by the Publications Office of the European Union on the EU Vocabularies website.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CapitalClassification"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CapitalClassification">
+      <skos:prefLabel xml:lang="en">Capital classification</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CapitalClassification">
+      <skos:definition xml:lang="en">The Capital classification NAL provides possible locality statuses.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ConceptStatus"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#ConceptStatus">
+      <skos:prefLabel xml:lang="en">Concept status</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#ConceptStatus">
+      <skos:definition xml:lang="en">The Concept status authority table is an internal controlled vocabulary used at the Publications Office. It provides the various statuses used in a harmonised way amongst the authority tables. Concepts with current, deprecated and retired statuses are published while the remaining statuses are related to the internal workflow.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CorrectionStatus"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorrectionStatus">
+      <skos:prefLabel xml:lang="en">Correction status</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorrectionStatus">
+      <skos:definition xml:lang="en">The Correction status authority table (AT) provides the possible statuses of proofreading of labels and descriptions.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Country"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Country">
+      <skos:prefLabel xml:lang="en">Country</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Country">
+      <skos:definition xml:lang="en">The Country authority table is a controlled vocabulary that lists concepts associated with names of countries and territories. Its main scope is to support documentary metadata activities. The concepts included are correlated with the ISO 3166 international standard. ISO 3166-1 contains a two-letter code which is recommended as the general purpose code, a three-letter code which has better mnenomic properties and a numeric-3 code which can be useful if script independence of the codes is important. The authority code relies on the ISO 3166-1/alpha-3 positions. If an authority code is needed for a country without assigned ISO code, an alphanumeric code is created in order to not confuse with ISO codes that are strictly alphabetic or numeric. A country code comparison is provided between ISO codes, IANA codes (Internet Country-code Top-level Domains) and TIR (Transport International par la Route) Vehicle system codes.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalGender"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalGender">
+      <skos:prefLabel xml:lang="en">Grammatical gender</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalGender">
+      <skos:definition xml:lang="en">The grammatical-gender authority table is a controlled vocabulary which provides the list of the grammatical genders in languages which have gender distinctions: "male", "female", "neuter" or "utrum". It also contains concepts for "no gender" (in languages that do not have gender distinctions) and "generic" (identical forms in languages that make gender distinctions).</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber">
+      <skos:prefLabel xml:lang="en">Grammatical number</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber">
+      <skos:definition xml:lang="en">The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: "singular", "dual" or "plural". There is also a concept "generic" for forms that do not distinguish between grammatical numbers.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Label-type"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Label-type">
+      <skos:prefLabel xml:lang="en">Label-type</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Label-type">
+      <skos:definition xml:lang="en">The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#NotationType"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#NotationType">
+      <skos:prefLabel xml:lang="en">Notation type</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#NotationType">
+      <skos:definition xml:lang="en">The Notation type authority table is a controlled vocabulary providing the list of notation types used in the EU Vocabularies authority tables as well as in the context of DCAT-AP (a specification based on W3C's Data Catalogue vocabulary). It indicates the authority code and start-use date of each concept.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Script"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Script">
+      <skos:prefLabel xml:lang="en">Script</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Script">
+      <skos:definition xml:lang="en">The Script authority table is a controlled vocabulary that lists concepts associated with distinctive scripts. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 15924 international standard. Each script is instantiated according to a writing system, described in writing-system authority table.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty">
+      <skos:prefLabel xml:lang="en">Treaty</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty">
+      <skos:definition xml:lang="en">The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#UseContext"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#UseContext">
+      <skos:prefLabel xml:lang="en">Use context</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#UseContext">
+      <skos:definition xml:lang="en">The Use context authority table is a controlled vocabulary listing different applications and environments that make use of the various authority tables.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://www.opengis.net/ont/sf#Polygon"/>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/sf#Polygon">
+      <skos:prefLabel xml:lang="en">Polygon</skos:prefLabel>
+   </rdf:Description>
+   <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Address"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+      <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
+   </rdf:Description>
+   <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+      <skos:prefLabel xml:lang="en">Spatial thing</skos:prefLabel>
+   </rdf:Description>
+   <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/country"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/country">
+      <skos:prefLabel xml:lang="en">Country</skos:prefLabel>
+   </rdf:Description>
+   <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/treaty"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/treaty">
+      <skos:prefLabel xml:lang="en">Treaty</skos:prefLabel>
+   </rdf:Description>
+   <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/country">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/treaty">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+   </owl:NamedIndividual>
+   <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/type"/>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+      <skos:prefLabel xml:lang="en">Type</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+      <skos:definition xml:lang="en">Specify the context where a specified notation is considered unique. (euvoc:XlNotation -&gt; euvoc:NotationType (+dct:type))</skos:definition>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#role"/>
+   <rdf:Description rdf:about="http://www.w3.org/ns/org#role">
+      <skos:prefLabel xml:lang="en">Role</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#status"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#status">
+      <skos:prefLabel xml:lang="en">Status</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#corrStatus"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#corrStatus">
+      <skos:prefLabel xml:lang="en">Corr status</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#corrStatus">
+      <skos:definition xml:lang="en">A status of proofreading of labels and descriptions. (euvoc:XlNote -&gt; euvoc:CorrectionStatus (+euvoc:corrStatus)) A status of proofreading of labels and descriptions. (skosxl:Label -&gt; euvoc:CorrectionStatus (+euvoc:corrStatus))</skos:definition>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <skos:prefLabel xml:lang="en">In scheme</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin"/>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
+      <skos:prefLabel xml:lang="en">Sf within</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#usedIn"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#usedIn">
+      <skos:prefLabel xml:lang="en">Used in</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#countryCode"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#countryCode">
+      <skos:prefLabel xml:lang="en">Country code</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#gender"/>
+   <rdf:Description rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#gender">
+      <skos:prefLabel xml:lang="en">Gender</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#gender">
+      <skos:definition xml:lang="en">A grammatical category that indicates grammatical relationships between words in sentences. (skosxl:Label -&gt; euvoc:GrammaticalGender (+lexinfo:gender))</skos:definition>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#number"/>
+   <rdf:Description rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#number">
+      <skos:prefLabel xml:lang="en">Number</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.lexinfo.net/ontology/2.0/lexinfo#number">
+      <skos:definition xml:lang="en">Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to. (skosxl:Label -&gt; euvoc:GrammaticalNumber (+lexinfo:number))</skos:definition>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://lexvo.org/ontology#inScript"/>
+   <rdf:Description rdf:about="http://lexvo.org/ontology#inScript">
+      <skos:prefLabel xml:lang="en">In script</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty">
+      <skos:prefLabel xml:lang="en">Legally based on treaty</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#context"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#context">
+      <skos:prefLabel xml:lang="en">Context</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#context">
+      <skos:definition xml:lang="en">It signifies that the concept is applicable or relevant within the context of the identified use context. (skos:Concept -&gt; euvoc:UseContext (+euvoc:context))</skos:definition>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/locn#geometry"/>
+   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
+      <skos:prefLabel xml:lang="en">Geometry</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
+      <skos:prefLabel xml:lang="en">Locality code</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+      <skos:prefLabel xml:lang="en">Has address</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+      <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified"/>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+      <skos:prefLabel xml:lang="en">Modified</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+      <skos:definition xml:lang="en">Date of modification of the resource. (sf:Polygon)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
+      <skos:prefLabel xml:lang="en">As w k t</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
+      <skos:definition xml:lang="en">The property geo:asWKT is defined to link a Geometry with its WKT serialization. (sf:Polygon)</skos:definition>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created"/>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+      <skos:prefLabel xml:lang="en">Created</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://publications.europa.eu/ontology/euvoc#postbox"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#postbox">
+      <skos:prefLabel xml:lang="en">Postbox</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#locality"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+      <skos:prefLabel xml:lang="en">Locality</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#post-office-box"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#post-office-box">
+      <skos:prefLabel xml:lang="en">Post-office-box</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#postal-code"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+      <skos:prefLabel xml:lang="en">Postal-code</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#street-address"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+      <skos:prefLabel xml:lang="en">Street-address</skos:prefLabel>
+   </rdf:Description>
+</rdf:RDF>

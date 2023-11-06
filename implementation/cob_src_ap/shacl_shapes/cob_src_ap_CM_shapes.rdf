@@ -29,6 +29,7 @@
          xmlns:person="http://www.w3.org/ns/person#"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sf="http://www.opengis.net/ont/sf#"
          xmlns:sh="http://www.w3.org/ns/shacl#"
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
@@ -63,17 +64,18 @@
       <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
       <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cat2"/>
       <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cat2-restriction"/>
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-03</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-06</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-03</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-06</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.1.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.1</owl:incompatibleWith>
@@ -93,18 +95,6 @@
       <rdfs:comment>The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat2-shape"/>
-   </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty">
-      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#Treaty"/>
-   </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty">
-      <rdfs:label>Treaty</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty">
-      <rdfs:comment>The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages.</rdfs:comment>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat2-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
@@ -206,23 +196,6 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-legallyBasedOnTreaty">
-      <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#Treaty"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-legallyBasedOnTreaty">
-      <sh:sparql rdf:parseType="Resource">
-         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty&gt; ?this .}</sh:select>
-      </sh:sparql>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-legallyBasedOnTreaty"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-legallyBasedOnTreaty">
-      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-legallyBasedOnTreaty">
-      <sh:name>Legally based on treaty</sh:name>
-   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
       <sh:class rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
    </rdf:Description>
@@ -258,21 +231,5 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-skos-inScheme">
       <sh:description>A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme.</sh:description>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty-skos-inScheme">
-      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/treaty"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty-skos-inScheme">
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-Treaty-skos-inScheme"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty-skos-inScheme">
-      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty-skos-inScheme">
-      <sh:name>In scheme</sh:name>
    </rdf:Description>
 </rdf:RDF>

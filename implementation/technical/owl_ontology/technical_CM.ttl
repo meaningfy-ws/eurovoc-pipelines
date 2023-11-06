@@ -1,0 +1,207 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lexvo: <http://lexvo.org/ontology#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:tech a owl:Ontology ;
+    dcterms:created "2021-06-01"^^xsd:date ;
+    dcterms:description "The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
+    dcterms:issued "2023-11-06"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "technical package  - core"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-06" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports cccev:,
+        <http://data.europa.eu/nuts>,
+        <http://lexvo.org/ontology>,
+        <http://publications.europa.eu/ontology/euvoc>,
+        at-voc:,
+        dcterms:,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.opengis.net/ont/sf>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <ttp://publications.europa.eu/ontology/authority/> ;
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#tech-3.1.0" ;
+    owl:versionIRI :tech-4.0.0 ;
+    owl:versionInfo "4.0.0" .
+
+lexvo:inScript a owl:ObjectProperty ;
+    skos:prefLabel "In script"@en .
+
+euvoc:AddressType a owl:Class ;
+    skos:definition "The Address type authority table (AT) is a controlled vocabulary that provides the address types as used in the EU Whoiswho application. The AT gives the authority code and the English label for each concept. The Address type AT is maintained by the Publications Office of the European Union on the EU Vocabularies website."@en ;
+    skos:prefLabel "Address type"@en .
+
+euvoc:CapitalClassification a owl:Class ;
+    skos:definition "The Capital classification NAL provides possible locality statuses."@en ;
+    skos:prefLabel "Capital classification"@en .
+
+euvoc:ConceptStatus a owl:Class ;
+    skos:definition "The Concept status authority table is an internal controlled vocabulary used at the Publications Office. It provides the various statuses used in a harmonised way amongst the authority tables. Concepts with current, deprecated and retired statuses are published while the remaining statuses are related to the internal workflow."@en ;
+    skos:prefLabel "Concept status"@en .
+
+euvoc:CorrectionStatus a owl:Class ;
+    skos:definition "The Correction status authority table (AT) provides the possible statuses of proofreading of labels and descriptions."@en ;
+    skos:prefLabel "Correction status"@en .
+
+euvoc:Country a owl:Class ;
+    skos:definition "The Country authority table is a controlled vocabulary that lists concepts associated with names of countries and territories. Its main scope is to support documentary metadata activities. The concepts included are correlated with the ISO 3166 international standard. ISO 3166-1 contains a two-letter code which is recommended as the general purpose code, a three-letter code which has better mnenomic properties and a numeric-3 code which can be useful if script independence of the codes is important. The authority code relies on the ISO 3166-1/alpha-3 positions. If an authority code is needed for a country without assigned ISO code, an alphanumeric code is created in order to not confuse with ISO codes that are strictly alphabetic or numeric. A country code comparison is provided between ISO codes, IANA codes (Internet Country-code Top-level Domains) and TIR (Transport International par la Route) Vehicle system codes."@en ;
+    skos:prefLabel "Country"@en .
+
+euvoc:GrammaticalGender a owl:Class ;
+    skos:definition "The grammatical-gender authority table is a controlled vocabulary which provides the list of the grammatical genders in languages which have gender distinctions: \"male\", \"female\", \"neuter\" or \"utrum\". It also contains concepts for \"no gender\" (in languages that do not have gender distinctions) and \"generic\" (identical forms in languages that make gender distinctions)."@en ;
+    skos:prefLabel "Grammatical gender"@en .
+
+euvoc:GrammaticalNumber a owl:Class ;
+    skos:definition "The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: \"singular\", \"dual\" or \"plural\". There is also a concept \"generic\" for forms that do not distinguish between grammatical numbers."@en ;
+    skos:prefLabel "Grammatical number"@en .
+
+euvoc:Label-type a owl:Class ;
+    skos:definition "The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union."@en ;
+    skos:prefLabel "Label-type"@en .
+
+euvoc:NotationType a owl:Class ;
+    skos:definition "The Notation type authority table is a controlled vocabulary providing the list of notation types used in the EU Vocabularies authority tables as well as in the context of DCAT-AP (a specification based on W3C's Data Catalogue vocabulary). It indicates the authority code and start-use date of each concept."@en ;
+    skos:prefLabel "Notation type"@en .
+
+euvoc:Script a owl:Class ;
+    skos:definition "The Script authority table is a controlled vocabulary that lists concepts associated with distinctive scripts. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 15924 international standard. Each script is instantiated according to a writing system, described in writing-system authority table."@en ;
+    skos:prefLabel "Script"@en .
+
+euvoc:Treaty a owl:Class ;
+    skos:definition "The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages."@en ;
+    skos:prefLabel "Treaty"@en .
+
+euvoc:UseContext a owl:Class ;
+    skos:definition "The Use context authority table is a controlled vocabulary listing different applications and environments that make use of the various authority tables."@en ;
+    skos:prefLabel "Use context"@en .
+
+euvoc:context a owl:ObjectProperty ;
+    skos:definition "It signifies that the concept is applicable or relevant within the context of the identified use context. (skos:Concept -> euvoc:UseContext (+euvoc:context))"@en ;
+    skos:prefLabel "Context"@en .
+
+euvoc:corrStatus a owl:ObjectProperty ;
+    skos:definition "A status of proofreading of labels and descriptions. (euvoc:XlNote -> euvoc:CorrectionStatus (+euvoc:corrStatus)) A status of proofreading of labels and descriptions. (skosxl:Label -> euvoc:CorrectionStatus (+euvoc:corrStatus))"@en ;
+    skos:prefLabel "Corr status"@en .
+
+euvoc:countryCode a owl:ObjectProperty ;
+    skos:prefLabel "Country code"@en .
+
+euvoc:legallyBasedOnTreaty a owl:ObjectProperty ;
+    skos:prefLabel "Legally based on treaty"@en .
+
+euvoc:localityCode a owl:ObjectProperty ;
+    skos:prefLabel "Locality code"@en .
+
+euvoc:postbox a owl:DatatypeProperty ;
+    skos:prefLabel "Postbox"@en .
+
+euvoc:status a owl:ObjectProperty ;
+    skos:prefLabel "Status"@en .
+
+euvoc:usedIn a owl:ObjectProperty ;
+    skos:prefLabel "Used in"@en .
+
+at-voc:country a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    skos:prefLabel "Country"@en .
+
+at-voc:treaty a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    skos:prefLabel "Treaty"@en .
+
+dcterms:created a owl:DatatypeProperty ;
+    skos:prefLabel "Created"@en .
+
+dcterms:modified a owl:DatatypeProperty ;
+    skos:definition "Date of modification of the resource. (sf:Polygon)"@en ;
+    skos:prefLabel "Modified"@en .
+
+dcterms:type a owl:ObjectProperty ;
+    skos:definition "Specify the context where a specified notation is considered unique. (euvoc:XlNotation -> euvoc:NotationType (+dct:type))"@en ;
+    skos:prefLabel "Type"@en .
+
+lexinfo:gender a owl:ObjectProperty ;
+    skos:definition "A grammatical category that indicates grammatical relationships between words in sentences. (skosxl:Label -> euvoc:GrammaticalGender (+lexinfo:gender))"@en ;
+    skos:prefLabel "Gender"@en .
+
+lexinfo:number a owl:ObjectProperty ;
+    skos:definition "Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to. (skosxl:Label -> euvoc:GrammaticalNumber (+lexinfo:number))"@en ;
+    skos:prefLabel "Number"@en .
+
+geo:asWKT a owl:DatatypeProperty ;
+    skos:definition "The property geo:asWKT is defined to link a Geometry with its WKT serialization. (sf:Polygon)"@en ;
+    skos:prefLabel "As w k t"@en .
+
+geo:sfWithin a owl:ObjectProperty ;
+    skos:prefLabel "Sf within"@en .
+
+sf:Polygon a owl:Class ;
+    skos:prefLabel "Polygon"@en .
+
+wgs1:SpatialThing a owl:Class ;
+    skos:prefLabel "Spatial thing"@en .
+
+wgs1:location a owl:ObjectProperty ;
+    skos:prefLabel "Location"@en .
+
+skos:inScheme a owl:ObjectProperty ;
+    skos:prefLabel "In scheme"@en .
+
+vcard:Address a owl:Class ;
+    skos:prefLabel "Address"@en .
+
+vcard:hasAddress a owl:ObjectProperty ;
+    skos:prefLabel "Has address"@en .
+
+vcard:locality a owl:DatatypeProperty ;
+    skos:prefLabel "Locality"@en .
+
+vcard:post-office-box a owl:DatatypeProperty ;
+    skos:prefLabel "Post-office-box"@en .
+
+vcard:postal-code a owl:DatatypeProperty ;
+    skos:prefLabel "Postal-code"@en .
+
+vcard:street-address a owl:DatatypeProperty ;
+    skos:prefLabel "Street-address"@en .
+
+locn:geometry a owl:ObjectProperty ;
+    skos:prefLabel "Geometry"@en .
+
+org:role a owl:ObjectProperty ;
+    skos:prefLabel "Role"@en .
+
