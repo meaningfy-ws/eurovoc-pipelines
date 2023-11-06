@@ -49,16 +49,6 @@
                         is ensured when possible. </td>
                   </tr>
                   <tr>
-                     <td>euvoc:Treaty</td>
-                     <td>The Treaty authority table (AT) is a controlled vocabulary listing the different EU
-                        treaties, including treaties and protocols, accession treaties, Schengen Convention
-                        and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used
-                        in the exchange between the institutions involved in the legal decision-making process
-                        and the Publications Office of the European Union. It is also used by EUR-Lex. It
-                        provides an authority code, the start-use date of the concept and labels in all official
-                        EU languages. </td>
-                  </tr>
-                  <tr>
                      <td>vcard:ContactPoint</td>
                      <td>Information (e.g. e-mail address, telephone number) of a Person or department through
                         which the user can get in touch with.
@@ -128,7 +118,7 @@
                   <tr>
                      <td>euvoc:legallyBasedOnTreaty</td>
                      <td></td>
-                     <td>euvoc:CorporateBody -&gt; euvoc:Treaty [0..*]</td>
+                     <td>euvoc:CorporateBody -&gt; euvoc:Treaty (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>euvoc:managedBy</td>
@@ -144,8 +134,8 @@
                      <td>skos:inScheme</td>
                      <td>A concept scheme in which the concept is included. A concept may be a member of more
                         than one concept scheme.
-                         </td>
-                     <td>euvoc:CorporateBody -&gt; at-voc:corporate-body [1]<br>euvoc:Treaty -&gt; at-voc:treaty [1]<br></td>
+                        </td>
+                     <td>euvoc:CorporateBody -&gt; at-voc:corporate-body [1]</td>
                   </tr>
                   <tr>
                      <td>wgs:location</td>
