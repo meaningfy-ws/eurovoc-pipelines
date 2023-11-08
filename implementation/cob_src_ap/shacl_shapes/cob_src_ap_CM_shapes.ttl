@@ -1,7 +1,7 @@
 @prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix cat2-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix cob-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -15,48 +15,48 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cat2-shape:euvoc-CorporateBody a sh:NodeShape ;
+cob-shape:euvoc-CorporateBody a sh:NodeShape ;
     rdfs:label "Corporate body" ;
     rdfs:comment "The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible." ;
-    rdfs:isDefinedBy cat2-shape:cat2-shape ;
-    sh:property cat2-shape:euvoc-CorporateBody-euvoc-hasPrimaryContactPoint,
-        cat2-shape:euvoc-CorporateBody-euvoc-order,
-        cat2-shape:euvoc-CorporateBody-foaf-homepage,
-        cat2-shape:euvoc-CorporateBody-skos-inScheme ;
+    rdfs:isDefinedBy cob-shape:cob-shape ;
+    sh:property cob-shape:euvoc-CorporateBody-euvoc-hasPrimaryContactPoint,
+        cob-shape:euvoc-CorporateBody-euvoc-order,
+        cob-shape:euvoc-CorporateBody-foaf-homepage,
+        cob-shape:euvoc-CorporateBody-skos-inScheme ;
     sh:targetClass euvoc:CorporateBody .
 
-cat2-shape:vcard-ContactPoint a sh:NodeShape ;
+cob-shape:vcard-ContactPoint a sh:NodeShape ;
     rdfs:label "Contact point" ;
     rdfs:comment "Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with." ;
-    rdfs:isDefinedBy cat2-shape:cat2-shape ;
-    sh:property cat2-shape:vcard-ContactPoint-dct-description,
-        cat2-shape:vcard-ContactPoint-vcard-hasEmail,
-        cat2-shape:vcard-ContactPoint-vcard-telephone ;
+    rdfs:isDefinedBy cob-shape:cob-shape ;
+    sh:property cob-shape:vcard-ContactPoint-dct-description,
+        cob-shape:vcard-ContactPoint-vcard-hasEmail,
+        cob-shape:vcard-ContactPoint-vcard-telephone ;
     sh:targetClass vcard:ContactPoint .
 
-cat2-shape:euvoc-CorporateBody-euvoc-hasPrimaryContactPoint a sh:PropertyShape ;
+cob-shape:euvoc-CorporateBody-euvoc-hasPrimaryContactPoint a sh:PropertyShape ;
     sh:class vcard:ContactPoint ;
     sh:description "It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point" ;
     sh:name "Has primary contact point" ;
     sh:path euvoc:hasPrimaryContactPoint ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint> ?that . ?that <http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint> ?this .}" ] .
 
-cat2-shape:euvoc-CorporateBody-euvoc-order a sh:PropertyShape ;
-    rdfs:isDefinedBy cat2-shape:cat2-shape ;
+cob-shape:euvoc-CorporateBody-euvoc-order a sh:PropertyShape ;
+    rdfs:isDefinedBy cob-shape:cob-shape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:name "Order" ;
     sh:path euvoc:order .
 
-cat2-shape:euvoc-CorporateBody-foaf-homepage a sh:PropertyShape ;
-    rdfs:isDefinedBy cat2-shape:cat2-shape ;
+cob-shape:euvoc-CorporateBody-foaf-homepage a sh:PropertyShape ;
+    rdfs:isDefinedBy cob-shape:cob-shape ;
     sh:datatype xsd:anyURI ;
     sh:description "The main web page used by the instance of the concept." ;
     sh:maxCount 1 ;
     sh:name "Homepage" ;
     sh:path foaf:homepage .
 
-cat2-shape:euvoc-CorporateBody-skos-inScheme a sh:PropertyShape ;
+cob-shape:euvoc-CorporateBody-skos-inScheme a sh:PropertyShape ;
     sh:class at-voc:corporate-body ;
     sh:description "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme." ;
     sh:maxCount 1 ;
@@ -64,26 +64,26 @@ cat2-shape:euvoc-CorporateBody-skos-inScheme a sh:PropertyShape ;
     sh:name "In scheme" ;
     sh:path skos:inScheme .
 
-cat2-shape:vcard-ContactPoint-dct-description a sh:PropertyShape ;
-    rdfs:isDefinedBy cat2-shape:cat2-shape ;
+cob-shape:vcard-ContactPoint-dct-description a sh:PropertyShape ;
+    rdfs:isDefinedBy cob-shape:cob-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-cat2-shape:vcard-ContactPoint-vcard-hasEmail a sh:PropertyShape ;
-    rdfs:isDefinedBy cat2-shape:cat2-shape ;
+cob-shape:vcard-ContactPoint-vcard-hasEmail a sh:PropertyShape ;
+    rdfs:isDefinedBy cob-shape:cob-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Has email" ;
     sh:path vcard:hasEmail .
 
-cat2-shape:vcard-ContactPoint-vcard-telephone a sh:PropertyShape ;
-    rdfs:isDefinedBy cat2-shape:cat2-shape ;
+cob-shape:vcard-ContactPoint-vcard-telephone a sh:PropertyShape ;
+    rdfs:isDefinedBy cob-shape:cob-shape ;
     sh:datatype rdf:PlainLiteral ;
     sh:name "Telephone" ;
     sh:path vcard:telephone .
 
-cat2-shape:cat2-shape a owl:Ontology ;
+cob-shape:cob-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
     dcterms:issued "2023-11-08"^^xsd:date ;
@@ -97,8 +97,8 @@ cat2-shape:cat2-shape a owl:Ontology ;
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports :cat2,
-        :cat2-restriction,
+    owl:imports :cob,
+        :cob-restriction,
         cccev:,
         <http://data.europa.eu/nuts>,
         <http://lexvo.org/ontology>,
@@ -121,7 +121,7 @@ cat2-shape:cat2-shape a owl:Ontology ;
         <https://data.europa.eu/m8g/>,
         <ttp://publications.europa.eu/ontology/authority/> ;
     owl:incompatibleWith "3.1.1" ;
-    owl:priorVersion "http://data.europa.eu/a4g/data-shape#cat2-shape-3.1.1" ;
-    owl:versionIRI cat2-shape:cat2-shape-4.1.0 ;
+    owl:priorVersion "http://data.europa.eu/a4g/data-shape#cob-shape-3.1.1" ;
+    owl:versionIRI cob-shape:cob-shape-4.1.0 ;
     owl:versionInfo "4.1.0" .
 
