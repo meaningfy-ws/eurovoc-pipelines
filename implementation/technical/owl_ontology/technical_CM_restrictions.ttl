@@ -134,9 +134,6 @@ at-voc:treaty a owl:Class ;
             owl:hasValue at-voc:treaty ;
             owl:onProperty skos:inScheme ] .
 
-dcterms:created rdfs:domain vcard:Address ;
-    rdfs:range xsd:dateTime .
-
 dcterms:type a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( vcard:Address skosxl:Label euvoc:XlNotation ) ] ;
@@ -145,6 +142,18 @@ dcterms:type a owl:FunctionalProperty ;
 
 geo:asWKT a owl:FunctionalProperty ;
     rdfs:domain sf:Polygon ;
+    rdfs:range rdf:PlainLiteral .
+
+geo:lat a owl:FunctionalProperty ;
+    rdfs:domain wgs1:SpatialThing ;
+    rdfs:range xsd:string .
+
+geo:long a owl:FunctionalProperty ;
+    rdfs:domain wgs1:SpatialThing ;
+    rdfs:range xsd:string .
+
+rdfs:comment a owl:FunctionalProperty ;
+    rdfs:domain wgs1:SpatialThing ;
     rdfs:range rdf:PlainLiteral .
 
 vcard:hasEmail rdfs:domain vcard:ContactPoint ;
@@ -162,6 +171,10 @@ vcard:postal-code rdfs:domain vcard:Address ;
 
 vcard:street-address rdfs:domain vcard:Address ;
     rdfs:range xsd:string .
+
+dcterms:created rdfs:domain [ a owl:Class ;
+            owl:unionOf ( vcard:Address wgs1:SpatialThing ) ] ;
+    rdfs:range xsd:dateTime .
 
 dcterms:modified rdfs:domain [ a owl:Class ;
             owl:unionOf ( sf:Polygon vcard:Address ) ] ;
@@ -183,29 +196,43 @@ vcard:ContactPoint rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty vcard:hasEmail ] .
 
+wgs1:SpatialThing a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rdfs:comment ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty geo:lat ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty geo:long ] .
+
 vcard:Address a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:created ],
+            owl:onProperty vcard:street-address ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty vcard:postal-code ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty euvoc:postbox ],
+            owl:onProperty dcterms:created ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty vcard:post-office-box ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty vcard:locality ],
+            owl:onProperty euvoc:postbox ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:modified ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:type ],
+            owl:onProperty vcard:locality ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty vcard:street-address ] .
+            owl:onProperty vcard:post-office-box ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:type ] .
 

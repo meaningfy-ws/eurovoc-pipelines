@@ -325,6 +325,9 @@
       <sh:name>Created</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address-dct-created">
+      <sh:description>Date of creation of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address-dct-created">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address-dct-created">
@@ -489,6 +492,85 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-dct-created"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-dct-created">
+      <sh:path rdf:resource="http://purl.org/dc/terms/created"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-dct-created">
+      <sh:name>Created</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-dct-created">
+      <sh:description>Date of creation of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-dct-created">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-dct-created">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-dct-created">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-lat"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-lat">
+      <sh:path rdf:resource="http://www.opengis.net/ont/geosparql#lat"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-lat">
+      <sh:name>Lat</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-lat">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-lat">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-lat">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-long"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-long">
+      <sh:path rdf:resource="http://www.opengis.net/ont/geosparql#long"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-long">
+      <sh:name>Long</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-long">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-long">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-geosparql-long">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-rdfs-comment"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-rdfs-comment">
+      <sh:path rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-rdfs-comment">
+      <sh:name>Comment</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-rdfs-comment">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-rdfs-comment">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing-rdfs-comment">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address-dct-type">
       <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#AddressType"/>

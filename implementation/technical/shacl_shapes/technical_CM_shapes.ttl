@@ -125,6 +125,10 @@ tech-shape:vcard-ContactPoint a sh:NodeShape ;
 tech-shape:wgs-SpatialThing a sh:NodeShape ;
     rdfs:label "Spatial thing" ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:wgs-SpatialThing-dct-created,
+        tech-shape:wgs-SpatialThing-geosparql-lat,
+        tech-shape:wgs-SpatialThing-geosparql-long,
+        tech-shape:wgs-SpatialThing-rdfs-comment ;
     sh:targetClass wgs1:SpatialThing .
 
 tech-shape:euvoc-Country-skos-inScheme a sh:PropertyShape ;
@@ -163,6 +167,7 @@ tech-shape:sf-Polygon-geosparql-asWKT a sh:PropertyShape ;
 tech-shape:vcard-Address-dct-created a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype xsd:dateTime ;
+    sh:description "Date of creation of the resource." ;
     sh:maxCount 1 ;
     sh:name "Created" ;
     sh:path dcterms:created .
@@ -236,6 +241,39 @@ tech-shape:vcard-ContactPoint-vcard-telephone a sh:PropertyShape ;
     sh:datatype rdf:PlainLiteral ;
     sh:name "Telephone" ;
     sh:path vcard:telephone .
+
+tech-shape:wgs-SpatialThing-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of creation of the resource." ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+tech-shape:wgs-SpatialThing-geosparql-lat a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Lat" ;
+    sh:path geo:lat .
+
+tech-shape:wgs-SpatialThing-geosparql-long a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Long" ;
+    sh:path geo:long .
+
+tech-shape:wgs-SpatialThing-rdfs-comment a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Comment" ;
+    sh:path rdfs:comment .
 
 tech-shape:tech-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;

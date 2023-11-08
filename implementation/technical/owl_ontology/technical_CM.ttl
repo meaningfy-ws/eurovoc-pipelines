@@ -149,6 +149,7 @@ at-voc:treaty a owl:NamedIndividual,
     skos:prefLabel "Treaty"@en .
 
 dcterms:created a owl:DatatypeProperty ;
+    skos:definition "Date of creation of the resource. (vcard:Address) Date of creation of the resource. (wgs:SpatialThing)"@en ;
     skos:prefLabel "Created"@en .
 
 dcterms:description a owl:DatatypeProperty ;
@@ -174,12 +175,21 @@ geo:asWKT a owl:DatatypeProperty ;
     skos:definition "The property geosparql:asWKT is defined to link a Geometry with its WKT serialization. (sf:Polygon)"@en ;
     skos:prefLabel "As w k t"@en .
 
+geo:lat a owl:DatatypeProperty ;
+    skos:prefLabel "Lat"@en .
+
+geo:long a owl:DatatypeProperty ;
+    skos:prefLabel "Long"@en .
+
 geo:sfWithin a owl:ObjectProperty ;
     skos:prefLabel "Sf within"@en .
 
 sf:Polygon a owl:Class ;
     skos:definition "A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction."@en ;
     skos:prefLabel "Polygon"@en .
+
+rdfs:comment a owl:DatatypeProperty ;
+    skos:prefLabel "Comment"@en .
 
 wgs1:SpatialThing a owl:Class ;
     skos:prefLabel "Spatial thing"@en .

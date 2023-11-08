@@ -181,6 +181,38 @@
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#lat"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#long"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
       <rdfs:subClassOf>
          <owl:Restriction>
@@ -221,7 +253,14 @@
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Address"/>
+               <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
    </rdf:Description>
    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -276,6 +315,33 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#telephone">
       <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#lat">
+      <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#lat">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#lat">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#long">
+      <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#long">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#long">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+      <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://purl.org/dc/terms/type">
       <rdfs:domain>
