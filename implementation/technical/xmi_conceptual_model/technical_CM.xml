@@ -517,8 +517,8 @@
 			</element>
 			<element xmi:idref="EAID_CDDE42E3_0540_441b_81D3_6A805142A378" xmi:type="uml:Class" name="sf:Polygon" scope="public">
 				<model package="EAPK_A5992B01_0090_42b8_AC30_21D16082D393" tpos="0" ea_localid="74" ea_eleType="element"/>
-				<properties documentation="&#xA;&#xA;" isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-11-06 12:33:45" modified="2023-11-06 14:09:13" complexity="1" status="Proposed"/>
+				<properties documentation="A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction.&#xA;" isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
+				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-11-06 12:33:45" modified="2023-11-07 00:14:58" complexity="1" status="Proposed"/>
 				<code product_name="Java" gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
@@ -542,7 +542,7 @@
 					</attribute>
 					<attribute xmi:idref="EAID_A278B2E1_AB69_4609_AB7C_9E4778688178" name="geosparql:asWKT" scope="Public">
 						<initial/>
-						<documentation value="The property geo:asWKT is defined to link a Geometry with its WKT serialization."/>
+						<documentation value="The property geosparql:asWKT is defined to link a Geometry with its WKT serialization."/>
 						<model ea_localid="61" ea_guid="{A278B2E1-AB69-4609-AB7C-9E4778688178}"/>
 						<properties type="rdf:PlainLiteral" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
@@ -1511,7 +1511,7 @@
 				</target>
 				<model ea_localid="81"/>
 				<properties ea_type="Dependency" direction="Source -&gt; Destination"/>
-				<documentation/>
+				<documentation value="A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme.&#xA;"/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="1" rt="+skos:inScheme"/>
 				<extendedProperties/>
@@ -1546,7 +1546,7 @@
 				<properties ea_type="Association" direction="Source -&gt; Destination"/>
 				<modifiers isRoot="false" isLeaf="false"/>
 				<parameterSubstitutions/>
-				<documentation/>
+				<documentation value="It indicates that the corporate body's operations, existence, or functions are legally grounded in or regulated by the terms and provisions of the specified treaty."/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="0..*" rt="+euvoc:legallyBasedOnTreaty"/>
 				<extendedProperties virtualInheritance="0"/>
@@ -1650,7 +1650,7 @@
 				<properties ea_type="Association" direction="Source -&gt; Destination"/>
 				<modifiers isRoot="false" isLeaf="false"/>
 				<parameterSubstitutions/>
-				<documentation/>
+				<documentation value="It indicates the spatial or geographical representation of each site.&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;"/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="0..1" rt="+locn:geometry"/>
 				<extendedProperties virtualInheritance="0"/>
