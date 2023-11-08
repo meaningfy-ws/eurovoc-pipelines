@@ -85,18 +85,6 @@
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
-      <sh:targetClass rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
-   </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
-      <rdfs:label>Contact point</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
-      <rdfs:comment>Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with.</rdfs:comment>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cob-shape"/>
-   </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
       <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
    </sh:NodeShape>
@@ -108,54 +96,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cob-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description">
-      <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description">
-      <sh:name>Description</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cob-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description">
-      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
-      <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
-      <sh:name>Has email</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cob-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
-      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
-      <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#telephone"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
-      <sh:name>Telephone</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cob-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
-      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
       <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order"/>
@@ -195,26 +135,6 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
-      <sh:class rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
-      <sh:sparql rdf:parseType="Resource">
-         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint&gt; ?this .}</sh:select>
-      </sh:sparql>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
-      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
-      <sh:name>Has primary contact point</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
-      <sh:description>It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-skos-inScheme">
       <sh:class rdf:resource="http://publications.europa.eu/resource/authority/corporate-body"/>

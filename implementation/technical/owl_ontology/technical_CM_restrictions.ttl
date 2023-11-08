@@ -75,6 +75,10 @@ euvoc:corrStatus rdfs:domain [ a owl:Class ;
 euvoc:countryCode rdfs:domain euvoc:Site ;
     rdfs:range euvoc:Country .
 
+euvoc:hasPrimaryContactPoint rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:Site euvoc:CorporateBody ) ] ;
+    rdfs:range vcard:ContactPoint .
+
 euvoc:legallyBasedOnTreaty rdfs:domain euvoc:CorporateBody ;
     rdfs:range euvoc:Treaty .
 
@@ -87,6 +91,9 @@ euvoc:status rdfs:domain [ a owl:Class ;
 
 euvoc:usedIn rdfs:domain euvoc:Currency ;
     rdfs:range euvoc:Country .
+
+dcterms:description rdfs:domain vcard:ContactPoint ;
+    rdfs:range rdf:PlainLiteral .
 
 lexinfo:gender rdfs:domain skosxl:Label ;
     rdfs:range euvoc:GrammaticalGender .
@@ -102,6 +109,9 @@ wgs1:location rdfs:domain euvoc:Place ;
 
 vcard:hasAddress rdfs:domain euvoc:Site ;
     rdfs:range vcard:Address .
+
+vcard:telephone rdfs:domain vcard:ContactPoint ;
+    rdfs:range rdf:PlainLiteral .
 
 locn:geometry rdfs:domain euvoc:Site ;
     rdfs:range sf:Polygon .
@@ -137,6 +147,9 @@ geo:asWKT a owl:FunctionalProperty ;
     rdfs:domain sf:Polygon ;
     rdfs:range rdf:PlainLiteral .
 
+vcard:hasEmail rdfs:domain vcard:ContactPoint ;
+    rdfs:range rdf:PlainLiteral .
+
 vcard:locality a owl:FunctionalProperty ;
     rdfs:domain vcard:Address ;
     rdfs:range xsd:string .
@@ -161,21 +174,22 @@ skos:inScheme rdfs:domain [ a owl:Class ;
 sf:Polygon a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty geo:asWKT ],
+            owl:onProperty dcterms:modified ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:modified ] .
+            owl:onProperty geo:asWKT ] .
+
+vcard:ContactPoint rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty vcard:hasEmail ] .
 
 vcard:Address a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:created ],
         [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty dcterms:type ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:modified ],
+            owl:onProperty vcard:postal-code ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty euvoc:postbox ],
@@ -187,8 +201,11 @@ vcard:Address a owl:Class ;
             owl:onProperty vcard:locality ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty vcard:street-address ],
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:type ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty vcard:postal-code ] .
+            owl:onProperty vcard:street-address ] .
 

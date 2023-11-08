@@ -7,39 +7,20 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cob-shape:euvoc-CorporateBody a sh:NodeShape ;
     rdfs:label "Corporate body" ;
     rdfs:comment "The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible." ;
     rdfs:isDefinedBy cob-shape:cob-shape ;
-    sh:property cob-shape:euvoc-CorporateBody-euvoc-hasPrimaryContactPoint,
-        cob-shape:euvoc-CorporateBody-euvoc-order,
+    sh:property cob-shape:euvoc-CorporateBody-euvoc-order,
         cob-shape:euvoc-CorporateBody-foaf-homepage,
         cob-shape:euvoc-CorporateBody-skos-inScheme ;
     sh:targetClass euvoc:CorporateBody .
-
-cob-shape:vcard-ContactPoint a sh:NodeShape ;
-    rdfs:label "Contact point" ;
-    rdfs:comment "Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with." ;
-    rdfs:isDefinedBy cob-shape:cob-shape ;
-    sh:property cob-shape:vcard-ContactPoint-dct-description,
-        cob-shape:vcard-ContactPoint-vcard-hasEmail,
-        cob-shape:vcard-ContactPoint-vcard-telephone ;
-    sh:targetClass vcard:ContactPoint .
-
-cob-shape:euvoc-CorporateBody-euvoc-hasPrimaryContactPoint a sh:PropertyShape ;
-    sh:class vcard:ContactPoint ;
-    sh:description "It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point" ;
-    sh:name "Has primary contact point" ;
-    sh:path euvoc:hasPrimaryContactPoint ;
-    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint> ?that . ?that <http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint> ?this .}" ] .
 
 cob-shape:euvoc-CorporateBody-euvoc-order a sh:PropertyShape ;
     rdfs:isDefinedBy cob-shape:cob-shape ;
@@ -63,25 +44,6 @@ cob-shape:euvoc-CorporateBody-skos-inScheme a sh:PropertyShape ;
     sh:minCount 1 ;
     sh:name "In scheme" ;
     sh:path skos:inScheme .
-
-cob-shape:vcard-ContactPoint-dct-description a sh:PropertyShape ;
-    rdfs:isDefinedBy cob-shape:cob-shape ;
-    sh:datatype rdf:PlainLiteral ;
-    sh:name "Description" ;
-    sh:path dcterms:description .
-
-cob-shape:vcard-ContactPoint-vcard-hasEmail a sh:PropertyShape ;
-    rdfs:isDefinedBy cob-shape:cob-shape ;
-    sh:datatype rdf:PlainLiteral ;
-    sh:maxCount 1 ;
-    sh:name "Has email" ;
-    sh:path vcard:hasEmail .
-
-cob-shape:vcard-ContactPoint-vcard-telephone a sh:PropertyShape ;
-    rdfs:isDefinedBy cob-shape:cob-shape ;
-    sh:datatype rdf:PlainLiteral ;
-    sh:name "Telephone" ;
-    sh:path vcard:telephone .
 
 cob-shape:cob-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;

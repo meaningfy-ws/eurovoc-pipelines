@@ -250,6 +250,18 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
+      <sh:targetClass rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
+      <rdfs:label>Contact point</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
+      <rdfs:comment>Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#wgs-SpatialThing">
       <sh:targetClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
    </sh:NodeShape>
@@ -429,6 +441,54 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address-vcard-street-address">
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description">
+      <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description">
+      <sh:name>Description</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
+      <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
+      <sh:name>Has email</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-hasEmail">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
+      <sh:path rdf:resource="http://www.w3.org/2006/vcard/ns#telephone"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
+      <sh:name>Telephone</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address-dct-type">
       <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#AddressType"/>

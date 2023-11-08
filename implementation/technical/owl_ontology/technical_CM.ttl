@@ -120,6 +120,10 @@ euvoc:corrStatus a owl:ObjectProperty ;
 euvoc:countryCode a owl:ObjectProperty ;
     skos:prefLabel "Country code"@en .
 
+euvoc:hasPrimaryContactPoint a owl:ObjectProperty ;
+    skos:definition "It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point (euvoc:CorporateBody -> vcard:ContactPoint (+euvoc:hasPrimaryContactPoint))"@en ;
+    skos:prefLabel "Has primary contact point"@en .
+
 euvoc:legallyBasedOnTreaty a owl:ObjectProperty ;
     skos:definition "It indicates that the corporate body's operations, existence, or functions are legally grounded in or regulated by the terms and provisions of the specified treaty. (euvoc:CorporateBody -> euvoc:Treaty (+euvoc:legallyBasedOnTreaty))"@en ;
     skos:prefLabel "Legally based on treaty"@en .
@@ -146,6 +150,9 @@ at-voc:treaty a owl:NamedIndividual,
 
 dcterms:created a owl:DatatypeProperty ;
     skos:prefLabel "Created"@en .
+
+dcterms:description a owl:DatatypeProperty ;
+    skos:prefLabel "Description"@en .
 
 dcterms:modified a owl:DatatypeProperty ;
     skos:definition "Date of modification of the resource. (sf:Polygon)"@en ;
@@ -187,8 +194,15 @@ skos:inScheme a owl:ObjectProperty ;
 vcard:Address a owl:Class ;
     skos:prefLabel "Address"@en .
 
+vcard:ContactPoint a owl:Class ;
+    skos:definition "Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with."@en ;
+    skos:prefLabel "Contact point"@en .
+
 vcard:hasAddress a owl:ObjectProperty ;
     skos:prefLabel "Has address"@en .
+
+vcard:hasEmail a owl:DatatypeProperty ;
+    skos:prefLabel "Has email"@en .
 
 vcard:locality a owl:DatatypeProperty ;
     skos:prefLabel "Locality"@en .
@@ -201,6 +215,9 @@ vcard:postal-code a owl:DatatypeProperty ;
 
 vcard:street-address a owl:DatatypeProperty ;
     skos:prefLabel "Street-address"@en .
+
+vcard:telephone a owl:DatatypeProperty ;
+    skos:prefLabel "Telephone"@en .
 
 locn:geometry a owl:ObjectProperty ;
     skos:definition "It indicates the spatial or geographical representation of each site. (euvoc:Site -> sf:Polygon (+locn:geometry))"@en ;

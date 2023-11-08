@@ -175,6 +175,13 @@
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
       <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
    </rdf:Description>
+   <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
+      <skos:prefLabel xml:lang="en">Contact point</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
+      <skos:definition xml:lang="en">Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with.</skos:definition>
+   </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
       <skos:prefLabel xml:lang="en">Spatial thing</skos:prefLabel>
@@ -281,6 +288,13 @@
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
       <skos:prefLabel xml:lang="en">Has address</skos:prefLabel>
    </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
+      <skos:prefLabel xml:lang="en">Has primary contact point</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
+      <skos:definition xml:lang="en">It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point (euvoc:CorporateBody -&gt; vcard:ContactPoint (+euvoc:hasPrimaryContactPoint))</skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
       <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
@@ -322,5 +336,17 @@
    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#street-address"/>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
       <skos:prefLabel xml:lang="en">Street-address</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description"/>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+      <skos:prefLabel xml:lang="en">Description</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+      <skos:prefLabel xml:lang="en">Has email</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#telephone"/>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#telephone">
+      <skos:prefLabel xml:lang="en">Telephone</skos:prefLabel>
    </rdf:Description>
 </rdf:RDF>

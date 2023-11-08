@@ -113,6 +113,15 @@ tech-shape:vcard-Address a sh:NodeShape ;
         tech-shape:vcard-Address-vcard-street-address ;
     sh:targetClass vcard:Address .
 
+tech-shape:vcard-ContactPoint a sh:NodeShape ;
+    rdfs:label "Contact point" ;
+    rdfs:comment "Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:vcard-ContactPoint-dct-description,
+        tech-shape:vcard-ContactPoint-vcard-hasEmail,
+        tech-shape:vcard-ContactPoint-vcard-telephone ;
+    sh:targetClass vcard:ContactPoint .
+
 tech-shape:wgs-SpatialThing a sh:NodeShape ;
     rdfs:label "Spatial thing" ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
@@ -208,6 +217,25 @@ tech-shape:vcard-Address-vcard-street-address a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:name "Street-address" ;
     sh:path vcard:street-address .
+
+tech-shape:vcard-ContactPoint-dct-description a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Description" ;
+    sh:path dcterms:description .
+
+tech-shape:vcard-ContactPoint-vcard-hasEmail a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:maxCount 1 ;
+    sh:name "Has email" ;
+    sh:path vcard:hasEmail .
+
+tech-shape:vcard-ContactPoint-vcard-telephone a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Telephone" ;
+    sh:path vcard:telephone .
 
 tech-shape:tech-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;

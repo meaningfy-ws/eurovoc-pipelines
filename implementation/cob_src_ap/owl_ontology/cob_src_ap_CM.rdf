@@ -80,13 +80,6 @@
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
-   <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
-   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
-      <skos:prefLabel xml:lang="en">Contact point</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
-      <skos:definition xml:lang="en">Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with.</skos:definition>
-   </rdf:Description>
    <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody">
       <skos:prefLabel xml:lang="en">Corporate body</skos:prefLabel>
@@ -108,13 +101,6 @@
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
       <skos:definition xml:lang="en">A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:CorporateBody -&gt; at-voc:corporate-body (+skos:inScheme))</skos:definition>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"/>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
-      <skos:prefLabel xml:lang="en">Has primary contact point</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
-      <skos:definition xml:lang="en">It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point (euvoc:CorporateBody -&gt; vcard:ContactPoint (+euvoc:hasPrimaryContactPoint))</skos:definition>
-   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
       <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
@@ -129,6 +115,13 @@
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty">
       <skos:definition xml:lang="en">It indicates that the corporate body's operations, existence, or functions are legally grounded in or regulated by the terms and provisions of the specified treaty. (euvoc:CorporateBody -&gt; euvoc:Treaty (+euvoc:legallyBasedOnTreaty))</skos:definition>
    </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
+      <skos:prefLabel xml:lang="en">Has primary contact point</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
+      <skos:definition xml:lang="en">It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point (euvoc:CorporateBody -&gt; vcard:ContactPoint (+euvoc:hasPrimaryContactPoint))</skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteOf"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/org#siteOf">
       <skos:prefLabel xml:lang="en">Site of</skos:prefLabel>
@@ -136,18 +129,6 @@
    <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#managedBy"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#managedBy">
       <skos:prefLabel xml:lang="en">Managed by</skos:prefLabel>
-   </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description"/>
-   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
-      <skos:prefLabel xml:lang="en">Description</skos:prefLabel>
-   </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail"/>
-   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
-      <skos:prefLabel xml:lang="en">Has email</skos:prefLabel>
-   </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#telephone"/>
-   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#telephone">
-      <skos:prefLabel xml:lang="en">Telephone</skos:prefLabel>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://publications.europa.eu/ontology/euvoc#order"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#order">

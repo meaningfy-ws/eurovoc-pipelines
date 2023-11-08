@@ -9,7 +9,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -75,9 +74,6 @@ at-voc:corporate-body a owl:NamedIndividual,
         skos:ConceptScheme ;
     skos:prefLabel "Corporate-body"@en .
 
-dcterms:description a owl:DatatypeProperty ;
-    skos:prefLabel "Description"@en .
-
 wgs1:location a owl:ObjectProperty ;
     skos:definition "It is used to precisely indicate a location's position. (euvoc:CorporateBody -> euvoc:Place (+wgs:location))"@en ;
     skos:prefLabel "Location"@en .
@@ -85,16 +81,6 @@ wgs1:location a owl:ObjectProperty ;
 skos:inScheme a owl:ObjectProperty ;
     skos:definition "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:CorporateBody -> at-voc:corporate-body (+skos:inScheme))"@en ;
     skos:prefLabel "In scheme"@en .
-
-vcard:ContactPoint a owl:Class ;
-    skos:definition "Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with."@en ;
-    skos:prefLabel "Contact point"@en .
-
-vcard:hasEmail a owl:DatatypeProperty ;
-    skos:prefLabel "Has email"@en .
-
-vcard:telephone a owl:DatatypeProperty ;
-    skos:prefLabel "Telephone"@en .
 
 org:siteOf a owl:ObjectProperty ;
     skos:prefLabel "Site of"@en .
