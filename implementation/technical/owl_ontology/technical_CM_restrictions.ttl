@@ -161,34 +161,34 @@ skos:inScheme rdfs:domain [ a owl:Class ;
 sf:Polygon a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:modified ],
+            owl:onProperty geo:asWKT ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty geo:asWKT ] .
+            owl:onProperty dcterms:modified ] .
 
 vcard:Address a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty vcard:postal-code ],
+            owl:onProperty dcterms:created ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:type ],
         [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty vcard:locality ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty vcard:post-office-box ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dcterms:created ],
+            owl:onProperty dcterms:modified ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty euvoc:postbox ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty vcard:post-office-box ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty vcard:locality ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty vcard:street-address ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:modified ] .
+            owl:onProperty vcard:postal-code ] .
 
