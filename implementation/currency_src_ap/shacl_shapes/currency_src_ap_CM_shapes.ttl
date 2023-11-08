@@ -13,6 +13,11 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+curr-shape:Class1 a sh:NodeShape ;
+    rdfs:label "Class1" ;
+    rdfs:isDefinedBy curr-shape:curr-shape ;
+    sh:targetClass :Class1 .
+
 curr-shape:euvoc-Currency a sh:NodeShape ;
     rdfs:label "Currency" ;
     rdfs:comment "The Currency authority table is a controlled vocabulary that lists concepts associated with currencies and currency subunits. The concepts included are correlated with the ISO 4217 international standard. The Currency authority table is updated based on the stakeholders’ needs." ;
@@ -38,13 +43,13 @@ curr-shape:euvoc-Currency-skos-inScheme a sh:PropertyShape ;
 curr-shape:curr-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-11-06"^^xsd:date ;
+    dcterms:issued "2023-11-08"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from currency_src_ap_CM.xml on 2023-11-06" ;
+    rdfs:comment "This version is automatically generated from currency_src_ap_CM.xml on 2023-11-08" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,

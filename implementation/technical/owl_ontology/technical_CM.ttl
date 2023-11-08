@@ -21,13 +21,13 @@
 :tech a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-11-06"^^xsd:date ;
+    dcterms:issued "2023-11-08"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "technical package  - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-06" ;
+    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-08" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -121,6 +121,7 @@ euvoc:countryCode a owl:ObjectProperty ;
     skos:prefLabel "Country code"@en .
 
 euvoc:legallyBasedOnTreaty a owl:ObjectProperty ;
+    skos:definition "It indicates that the corporate body's operations, existence, or functions are legally grounded in or regulated by the terms and provisions of the specified treaty. (euvoc:CorporateBody -> euvoc:Treaty (+euvoc:legallyBasedOnTreaty))"@en ;
     skos:prefLabel "Legally based on treaty"@en .
 
 euvoc:localityCode a owl:ObjectProperty ;
@@ -163,13 +164,14 @@ lexinfo:number a owl:ObjectProperty ;
     skos:prefLabel "Number"@en .
 
 geo:asWKT a owl:DatatypeProperty ;
-    skos:definition "The property geo:asWKT is defined to link a Geometry with its WKT serialization. (sf:Polygon)"@en ;
+    skos:definition "The property geosparql:asWKT is defined to link a Geometry with its WKT serialization. (sf:Polygon)"@en ;
     skos:prefLabel "As w k t"@en .
 
 geo:sfWithin a owl:ObjectProperty ;
     skos:prefLabel "Sf within"@en .
 
 sf:Polygon a owl:Class ;
+    skos:definition "A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction."@en ;
     skos:prefLabel "Polygon"@en .
 
 wgs1:SpatialThing a owl:Class ;
@@ -179,6 +181,7 @@ wgs1:location a owl:ObjectProperty ;
     skos:prefLabel "Location"@en .
 
 skos:inScheme a owl:ObjectProperty ;
+    skos:definition "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:Treaty -> at-voc:treaty (+skos:inScheme))"@en ;
     skos:prefLabel "In scheme"@en .
 
 vcard:Address a owl:Class ;
@@ -200,6 +203,7 @@ vcard:street-address a owl:DatatypeProperty ;
     skos:prefLabel "Street-address"@en .
 
 locn:geometry a owl:ObjectProperty ;
+    skos:definition "It indicates the spatial or geographical representation of each site. (euvoc:Site -> sf:Polygon (+locn:geometry))"@en ;
     skos:prefLabel "Geometry"@en .
 
 org:role a owl:ObjectProperty ;

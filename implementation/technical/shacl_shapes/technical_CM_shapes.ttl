@@ -94,6 +94,7 @@ tech-shape:euvoc-UseContext a sh:NodeShape ;
 
 tech-shape:sf-Polygon a sh:NodeShape ;
     rdfs:label "Polygon" ;
+    rdfs:comment "A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:property tech-shape:sf-Polygon-dct-modified,
         tech-shape:sf-Polygon-geosparql-asWKT ;
@@ -126,6 +127,7 @@ tech-shape:euvoc-Country-skos-inScheme a sh:PropertyShape ;
 
 tech-shape:euvoc-Treaty-skos-inScheme a sh:PropertyShape ;
     sh:class at-voc:treaty ;
+    sh:description "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "In scheme" ;
@@ -143,7 +145,7 @@ tech-shape:sf-Polygon-dct-modified a sh:PropertyShape ;
 tech-shape:sf-Polygon-geosparql-asWKT a sh:PropertyShape ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:datatype rdf:PlainLiteral ;
-    sh:description "The property geo:asWKT is defined to link a Geometry with its WKT serialization." ;
+    sh:description "The property geosparql:asWKT is defined to link a Geometry with its WKT serialization." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "As w k t" ;
@@ -210,13 +212,13 @@ tech-shape:vcard-Address-vcard-street-address a sh:PropertyShape ;
 tech-shape:tech-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-11-06"^^xsd:date ;
+    dcterms:issued "2023-11-08"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "common SRC_AP Ontology - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-06" ;
+    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-08" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,

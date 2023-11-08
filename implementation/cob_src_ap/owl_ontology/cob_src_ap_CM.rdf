@@ -65,12 +65,12 @@
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core</dct:title>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-06</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-08</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-06</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-08</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.1.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.1</owl:incompatibleWith>
@@ -80,19 +80,19 @@
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
-   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody">
-      <skos:prefLabel xml:lang="en">Corporate body</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody">
-      <skos:definition xml:lang="en">The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible.</skos:definition>
-   </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
       <skos:prefLabel xml:lang="en">Contact point</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
       <skos:definition xml:lang="en">Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with.</skos:definition>
+   </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody">
+      <skos:prefLabel xml:lang="en">Corporate body</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody">
+      <skos:definition xml:lang="en">The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible.</skos:definition>
    </rdf:Description>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/corporate-body"/>
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/corporate-body">
@@ -108,6 +108,13 @@
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
       <skos:definition xml:lang="en">A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:CorporateBody -&gt; at-voc:corporate-body (+skos:inScheme))</skos:definition>
    </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
+      <skos:prefLabel xml:lang="en">Has primary contact point</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
+      <skos:definition xml:lang="en">It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point (euvoc:CorporateBody -&gt; vcard:ContactPoint (+euvoc:hasPrimaryContactPoint))</skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
       <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
@@ -119,9 +126,8 @@
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty">
       <skos:prefLabel xml:lang="en">Legally based on treaty</skos:prefLabel>
    </rdf:Description>
-   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"/>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
-      <skos:prefLabel xml:lang="en">Has primary contact point</skos:prefLabel>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty">
+      <skos:definition xml:lang="en">It indicates that the corporate body's operations, existence, or functions are legally grounded in or regulated by the terms and provisions of the specified treaty. (euvoc:CorporateBody -&gt; euvoc:Treaty (+euvoc:legallyBasedOnTreaty))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteOf"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/org#siteOf">
@@ -130,17 +136,6 @@
    <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#managedBy"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#managedBy">
       <skos:prefLabel xml:lang="en">Managed by</skos:prefLabel>
-   </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://publications.europa.eu/ontology/euvoc#order"/>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#order">
-      <skos:prefLabel xml:lang="en">Order</skos:prefLabel>
-   </rdf:Description>
-   <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
-   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
-      <skos:prefLabel xml:lang="en">Homepage</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
-      <skos:definition xml:lang="en">The main web page used by the instance of the concept. (euvoc:CorporateBody)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/description">
@@ -153,5 +148,16 @@
    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#telephone"/>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#telephone">
       <skos:prefLabel xml:lang="en">Telephone</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://publications.europa.eu/ontology/euvoc#order"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#order">
+      <skos:prefLabel xml:lang="en">Order</skos:prefLabel>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+      <skos:prefLabel xml:lang="en">Homepage</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+      <skos:definition xml:lang="en">The main web page used by the instance of the concept. (euvoc:CorporateBody)</skos:definition>
    </rdf:Description>
 </rdf:RDF>

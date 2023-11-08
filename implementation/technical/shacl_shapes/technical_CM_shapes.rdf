@@ -70,12 +70,12 @@
       <dct:title xml:lang="en">common SRC_AP Ontology - core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-06</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-08</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-06</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-08</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
@@ -236,6 +236,9 @@
       <rdfs:label>Polygon</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#sf-Polygon">
+      <rdfs:comment>A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#sf-Polygon">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address">
@@ -288,7 +291,7 @@
       <sh:name>As w k t</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#sf-Polygon-geosparql-asWKT">
-      <sh:description>The property geo:asWKT is defined to link a Geometry with its WKT serialization.</sh:description>
+      <sh:description>The property geosparql:asWKT is defined to link a Geometry with its WKT serialization.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#sf-Polygon-geosparql-asWKT">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -479,5 +482,8 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty-skos-inScheme">
       <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty-skos-inScheme">
+      <sh:description>A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme.</sh:description>
    </rdf:Description>
 </rdf:RDF>

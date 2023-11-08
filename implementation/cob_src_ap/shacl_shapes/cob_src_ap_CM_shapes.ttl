@@ -36,6 +36,7 @@ cat2-shape:vcard-ContactPoint a sh:NodeShape ;
 
 cat2-shape:euvoc-CorporateBody-euvoc-hasPrimaryContactPoint a sh:PropertyShape ;
     sh:class vcard:ContactPoint ;
+    sh:description "It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point" ;
     sh:name "Has primary contact point" ;
     sh:path euvoc:hasPrimaryContactPoint ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint> ?that . ?that <http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint> ?this .}" ] .
@@ -85,13 +86,13 @@ cat2-shape:vcard-ContactPoint-vcard-telephone a sh:PropertyShape ;
 cat2-shape:cat2-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-11-06"^^xsd:date ;
+    dcterms:issued "2023-11-08"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from cob_src_ap_CM.xml on 2023-11-06" ;
+    rdfs:comment "This version is automatically generated from cob_src_ap_CM.xml on 2023-11-08" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,

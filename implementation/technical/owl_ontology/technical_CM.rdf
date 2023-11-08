@@ -65,12 +65,12 @@
       <dct:title xml:lang="en">technical package  - core</dct:title>
       <dct:description xml:lang="en">The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-06</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-08</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-06</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-08</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
@@ -168,6 +168,9 @@
    <rdf:Description rdf:about="http://www.opengis.net/ont/sf#Polygon">
       <skos:prefLabel xml:lang="en">Polygon</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/sf#Polygon">
+      <skos:definition xml:lang="en">A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction.</skos:definition>
+   </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Address"/>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
       <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
@@ -216,6 +219,9 @@
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
       <skos:prefLabel xml:lang="en">In scheme</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+      <skos:definition xml:lang="en">A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:Treaty -&gt; at-voc:treaty (+skos:inScheme))</skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin"/>
    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
       <skos:prefLabel xml:lang="en">Sf within</skos:prefLabel>
@@ -250,6 +256,9 @@
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty">
       <skos:prefLabel xml:lang="en">Legally based on treaty</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#legallyBasedOnTreaty">
+      <skos:definition xml:lang="en">It indicates that the corporate body's operations, existence, or functions are legally grounded in or regulated by the terms and provisions of the specified treaty. (euvoc:CorporateBody -&gt; euvoc:Treaty (+euvoc:legallyBasedOnTreaty))</skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#context"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#context">
       <skos:prefLabel xml:lang="en">Context</skos:prefLabel>
@@ -260,6 +269,9 @@
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/locn#geometry"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
       <skos:prefLabel xml:lang="en">Geometry</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
+      <skos:definition xml:lang="en">It indicates the spatial or geographical representation of each site. (euvoc:Site -&gt; sf:Polygon (+locn:geometry))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
@@ -285,7 +297,7 @@
       <skos:prefLabel xml:lang="en">As w k t</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
-      <skos:definition xml:lang="en">The property geo:asWKT is defined to link a Geometry with its WKT serialization. (sf:Polygon)</skos:definition>
+      <skos:definition xml:lang="en">The property geosparql:asWKT is defined to link a Geometry with its WKT serialization. (sf:Polygon)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/created">

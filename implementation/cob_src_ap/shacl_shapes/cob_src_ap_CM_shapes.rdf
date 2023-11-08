@@ -70,12 +70,12 @@
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-06</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from cob_src_ap_CM.xml on 2023-11-08</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-06</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-08</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.1.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.1</owl:incompatibleWith>
@@ -85,18 +85,6 @@
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
-   </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <rdfs:label>Corporate body</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <rdfs:comment>The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible.</rdfs:comment>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat2-shape"/>
-   </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
       <sh:targetClass rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
    </sh:NodeShape>
@@ -109,44 +97,17 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat2-shape"/>
    </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
+   </sh:NodeShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order"/>
-   </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
-      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#order"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
-      <sh:name>Order</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat2-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
-      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <rdfs:label>Corporate body</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage"/>
+      <rdfs:comment>The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible.</rdfs:comment>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
-      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
-   </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
-      <sh:name>Homepage</sh:name>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
-      <sh:description>The main web page used by the instance of the concept.</sh:description>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat2-shape"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
-      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
-      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint">
       <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-dct-description"/>
@@ -196,6 +157,45 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-ContactPoint-vcard-telephone">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
    </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#order"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
+      <sh:name>Order</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat2-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-order">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
+      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
+      <sh:name>Homepage</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
+      <sh:description>The main web page used by the instance of the concept.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat2-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-foaf-homepage">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
       <sh:class rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
    </rdf:Description>
@@ -212,6 +212,9 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
       <sh:name>Has primary contact point</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-euvoc-hasPrimaryContactPoint">
+      <sh:description>It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorporateBody-skos-inScheme">
       <sh:class rdf:resource="http://publications.europa.eu/resource/authority/corporate-body"/>
