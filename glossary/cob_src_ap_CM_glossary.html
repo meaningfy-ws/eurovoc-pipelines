@@ -48,12 +48,6 @@
                         systems in the Publications Office. The traceability of the chronological modifications
                         is ensured when possible. </td>
                   </tr>
-                  <tr>
-                     <td>vcard:ContactPoint</td>
-                     <td>Information (e.g. e-mail address, telephone number) of a Person or department through
-                        which the user can get in touch with.
-                        </td>
-                  </tr>
                </tbody>
             </table>
             <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Attributes (datatype properties) names and definitions</h2>
@@ -68,12 +62,6 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>vcard:ContactPoint</td>
-                     <td>dct:description</td>
-                     <td></td>
-                     <td>rdf:PlainLiteral [0..*]</td>
-                  </tr>
-                  <tr>
                      <td>euvoc:CorporateBody</td>
                      <td>euvoc:order</td>
                      <td></td>
@@ -85,18 +73,6 @@
                      <td>The main web page used by the instance of the concept.
                         </td>
                      <td>xsd:anyURI [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>vcard:ContactPoint</td>
-                     <td>vcard:hasEmail</td>
-                     <td></td>
-                     <td>rdf:PlainLiteral [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>vcard:ContactPoint</td>
-                     <td>vcard:telephone</td>
-                     <td></td>
-                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                </tbody>
             </table>
@@ -112,9 +88,9 @@
                <tbody>
                   <tr>
                      <td>euvoc:hasPrimaryContactPoint</td>
-                     <td> It indicate the primary means of contact for an entity (e.g., an organization or corporate
+                     <td>It indicate the primary means of contact for an entity (e.g., an organization or corporate
                         body), linking that entity to a specific contact point </td>
-                     <td>euvoc:Site (external) -&gt; vcard:ContactPoint [0..*]<br>euvoc:CorporateBody -&gt; vcard:ContactPoint [0..*]<br></td>
+                     <td>euvoc:CorporateBody -&gt; vcard:ContactPoint (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>euvoc:legallyBasedOnTreaty</td>

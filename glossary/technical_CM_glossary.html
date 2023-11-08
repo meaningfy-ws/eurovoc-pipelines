@@ -152,6 +152,12 @@
                      <td></td>
                   </tr>
                   <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>Information (e.g. e-mail address, telephone number) of a Person or department through
+                        which the user can get in touch with.
+                        </td>
+                  </tr>
+                  <tr>
                      <td>wgs:SpatialThing</td>
                      <td></td>
                   </tr>
@@ -175,6 +181,12 @@
                      <td>xsd:dateTime [0..1]</td>
                   </tr>
                   <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>dct:description</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>sf:Polygon<br>vcard:Address<br></td>
                      <td>dct:modified</td>
                      <td>Date of modification of the resource.
@@ -192,6 +204,12 @@
                      <td>geosparql:asWKT</td>
                      <td>The property geosparql:asWKT is defined to link a Geometry with its WKT serialization.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>vcard:hasEmail</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>vcard:Address</td>
@@ -216,6 +234,12 @@
                      <td>vcard:street-address</td>
                      <td></td>
                      <td>xsd:string [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>vcard:telephone</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                </tbody>
             </table>
@@ -251,6 +275,12 @@
                      <td>euvoc:countryCode</td>
                      <td></td>
                      <td>euvoc:Site (external) -&gt; euvoc:Country [1]</td>
+                  </tr>
+                  <tr>
+                     <td>euvoc:hasPrimaryContactPoint</td>
+                     <td> It indicate the primary means of contact for an entity (e.g., an organization or corporate
+                        body), linking that entity to a specific contact point </td>
+                     <td>euvoc:Site (external) -&gt; vcard:ContactPoint [0..*]<br>euvoc:CorporateBody (external) -&gt; vcard:ContactPoint [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:legallyBasedOnTreaty</td>
