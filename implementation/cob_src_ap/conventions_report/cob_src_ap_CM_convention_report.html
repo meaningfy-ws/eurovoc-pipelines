@@ -19,7 +19,7 @@
    <body>
       <header class="counter-skip">
          <h1 class="title">UML Conventions Comformance Report</h1>
-         <h2>[ 06/11/2023 ]</h2>
+         <h2>[ 08/11/2023 ]</h2>
          <div class="authors col-span">
             <div class="author">
                <div>Publications Office of the European Union</div>
@@ -56,7 +56,7 @@
                   Generalisations</em>. Each major section lists model items that need correction of errors
                or consideration of warnings.</p>
             <p>The UML model in file <em>cob_src_ap_CM.xml</em> 
-               was tested at 13:20 on November 6, 2023.</p>
+               was tested at 09:29 on November 8, 2023.</p>
          </div>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="nomenclature">Nomenclature</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classNames">Class names</h2>
@@ -75,8 +75,8 @@
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="connectorNames">Connector names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#">
             <li><a href="#connector-euvoc:hasPrimaryContactPoint">euvoc:hasPrimaryContactPoint (2)</a><ul><em>
-                     <li>euvoc:CorporateBody -&gt; vcard:ContactPoint [0..*]</li>
-                     <li> -&gt; vcard:ContactPoint [0..*]</li></em></ul>
+                     <li> -&gt; vcard:ContactPoint [0..*]</li>
+                     <li>euvoc:CorporateBody -&gt; vcard:ContactPoint [0..*]</li></em></ul>
             </li>
             <li>euvoc:legallyBasedOnTreaty</li>
             <li>euvoc:managedBy</li>
@@ -123,14 +123,6 @@
          <h1 class="selector-heading" id="object">Object</h1>
          <h1 class="selector-heading" id="generalizations">Generalizations</h1>
          <h1 class="selector-heading" id="associations">Associations</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:CorporateBody -&gt; vcard:ContactPoint (+euvoc:hasPrimaryContactPoint)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt>
-               Unmet association conventions
-               </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
-         </dl>
          <h1 class="selector-heading" id="dependencies">Dependencies</h1>
          <h1 class="selector-heading" id="realisations">Realisations</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:corporate-body -&gt; skos:ConceptScheme (+)</h2>
@@ -139,6 +131,18 @@
             <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
          </dl>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="connectorsUsage">Connectors with multiple usages</h1>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-euvoc:hasPrimaryContactPoint">
+            <dt>euvoc:hasPrimaryContactPoint</dt>
+         </dl>
+         <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>When a property is reused in multiple contexts, the meaning given by the definition
+            is expected to be the same. In this case, multiple definitions are found: 
+            <ul>
+               <li>... (euvoc:Site -&gt; vcard:ContactPoint (+euvoc:hasPrimaryContactPoint)) </li>
+               <li>It indicate the primary means of contact for an entity (e.g., an organization or corporate
+                  body), linking that entity to a specific contact point  (euvoc:CorporateBody -&gt; vcard:ContactPoint
+                  (+euvoc:hasPrimaryContactPoint)) </li>
+            </ul>
+         </dd>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesUsage">Class attributes with multiple usages</h1>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="generalConventions">General conventions</h1>
       </main>

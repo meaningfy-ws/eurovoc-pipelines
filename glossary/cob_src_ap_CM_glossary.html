@@ -112,12 +112,14 @@
                <tbody>
                   <tr>
                      <td>euvoc:hasPrimaryContactPoint</td>
-                     <td> </td>
-                     <td>euvoc:CorporateBody -&gt; vcard:ContactPoint [0..*]<br>euvoc:Site (external) -&gt; vcard:ContactPoint [0..*]<br></td>
+                     <td> It indicate the primary means of contact for an entity (e.g., an organization or corporate
+                        body), linking that entity to a specific contact point </td>
+                     <td>euvoc:Site (external) -&gt; vcard:ContactPoint [0..*]<br>euvoc:CorporateBody -&gt; vcard:ContactPoint [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:legallyBasedOnTreaty</td>
-                     <td></td>
+                     <td>It indicates that the corporate body's operations, existence, or functions are legally
+                        grounded in or regulated by the terms and provisions of the specified treaty.</td>
                      <td>euvoc:CorporateBody -&gt; euvoc:Treaty (external) [0..*]</td>
                   </tr>
                   <tr>

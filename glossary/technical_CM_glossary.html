@@ -141,8 +141,10 @@
                   </tr>
                   <tr>
                      <td>sf:Polygon</td>
-                     <td>
-                        
+                     <td>A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior
+                        boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary
+                        LinearRing defines the top of the surface which is the side of the surface from which
+                        the exterior boundary appears to traverse the boundary in a counter clockwise direction.
                         </td>
                   </tr>
                   <tr>
@@ -188,7 +190,7 @@
                   <tr>
                      <td>sf:Polygon</td>
                      <td>geosparql:asWKT</td>
-                     <td>The property geo:asWKT is defined to link a Geometry with its WKT serialization.</td>
+                     <td>The property geosparql:asWKT is defined to link a Geometry with its WKT serialization.</td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
@@ -252,7 +254,8 @@
                   </tr>
                   <tr>
                      <td>euvoc:legallyBasedOnTreaty</td>
-                     <td></td>
+                     <td>It indicates that the corporate body's operations, existence, or functions are legally
+                        grounded in or regulated by the terms and provisions of the specified treaty.</td>
                      <td>euvoc:CorporateBody (external) -&gt; euvoc:Treaty [0..*]</td>
                   </tr>
                   <tr>
@@ -295,7 +298,13 @@
                   </tr>
                   <tr>
                      <td>locn:geometry</td>
-                     <td></td>
+                     <td>It indicates the spatial or geographical representation of each site.
+                        
+                        
+                        
+                        
+                        
+                        </td>
                      <td>euvoc:Site (external) -&gt; sf:Polygon [0..1]</td>
                   </tr>
                   <tr>
@@ -305,7 +314,9 @@
                   </tr>
                   <tr>
                      <td>skos:inScheme</td>
-                     <td> </td>
+                     <td> A concept scheme in which the concept is included. A concept may be a member of more
+                        than one concept scheme.
+                        </td>
                      <td>euvoc:Country -&gt; at-voc:country [1]<br>euvoc:Treaty -&gt; at-voc:treaty [1]<br></td>
                   </tr>
                   <tr>
