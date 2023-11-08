@@ -175,10 +175,12 @@
                </thead>
                <tbody>
                   <tr>
-                     <td>vcard:Address</td>
+                     <td>vcard:Address<br>wgs:SpatialThing<br></td>
                      <td>dct:created</td>
-                     <td></td>
-                     <td>xsd:dateTime [0..1]</td>
+                     <td>Date of creation of the resource.
+                         Date of creation of the resource.
+                        </td>
+                     <td>xsd:dateTime [0..1]<br>xsd:dateTime [1..1]<br></td>
                   </tr>
                   <tr>
                      <td>vcard:ContactPoint</td>
@@ -203,6 +205,24 @@
                      <td>sf:Polygon</td>
                      <td>geosparql:asWKT</td>
                      <td>The property geosparql:asWKT is defined to link a Geometry with its WKT serialization.</td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>wgs:SpatialThing</td>
+                     <td>geosparql:lat</td>
+                     <td></td>
+                     <td>xsd:string [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>wgs:SpatialThing</td>
+                     <td>geosparql:long</td>
+                     <td></td>
+                     <td>xsd:string [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>wgs:SpatialThing</td>
+                     <td>rdfs:comment</td>
+                     <td></td>
                      <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                   <tr>
