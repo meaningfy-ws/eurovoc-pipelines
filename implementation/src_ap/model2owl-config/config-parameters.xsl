@@ -95,6 +95,10 @@
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
     <xsl:variable name="moduleReference" select="'src'"/>
+    <!--    rdfs:label -->
+<xsl:variable name="ontologyLabelCore" select="'Core Public Organisation Vocabulary - core'"/>
+<xsl:variable name="ontologyLabelRestrictions" select="'Core Public Organisation Vocabulary - core restrictions'"/>
+<xsl:variable name="ontologyLabelShapes" select="'Core Public Organisation Vocabulary - core shapes'"/>
     <!--    dct:title -->
     <xsl:variable name="ontologyTitleCore" select="'common SRC_AP Ontology  - core'"/>
     <xsl:variable name="ontologyTitleRestrictions" select="'common SRC_AP Ontology - core restrictions'"/>
