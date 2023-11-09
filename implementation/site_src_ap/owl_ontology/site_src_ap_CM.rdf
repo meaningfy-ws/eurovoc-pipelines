@@ -63,14 +63,15 @@
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
       <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core</dct:title>
+      <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from site_src_ap_CM.xml on 2023-11-08</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from site_src_ap_CM.xml on 2023-11-09</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-08</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-09</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.3.0</owl:versionInfo>
       <owl:incompatibleWith>3.3.0</owl:incompatibleWith>
@@ -91,6 +92,9 @@
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/site">
       <skos:prefLabel xml:lang="en">Site</skos:prefLabel>
    </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Site">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
       <skos:prefLabel xml:lang="en">In schemce</skos:prefLabel>

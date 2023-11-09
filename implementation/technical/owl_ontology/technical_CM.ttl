@@ -19,15 +19,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :tech a owl:Ontology ;
+    rdfs:label "Core Public Organisation Vocabulary - core"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-11-08"^^xsd:date ;
+    dcterms:issued "2023-11-09"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "technical package  - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-08" ;
+    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-09" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -66,18 +67,22 @@ euvoc:AddressType a owl:Class ;
     skos:prefLabel "Address type"@en .
 
 euvoc:CapitalClassification a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "The Capital classification NAL provides possible locality statuses."@en ;
     skos:prefLabel "Capital classification"@en .
 
 euvoc:ConceptStatus a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "The Concept status authority table is an internal controlled vocabulary used at the Publications Office. It provides the various statuses used in a harmonised way amongst the authority tables. Concepts with current, deprecated and retired statuses are published while the remaining statuses are related to the internal workflow."@en ;
     skos:prefLabel "Concept status"@en .
 
 euvoc:CorrectionStatus a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "The Correction status authority table (AT) provides the possible statuses of proofreading of labels and descriptions."@en ;
     skos:prefLabel "Correction status"@en .
 
 euvoc:Country a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "The Country authority table is a controlled vocabulary that lists concepts associated with names of countries and territories. Its main scope is to support documentary metadata activities. The concepts included are correlated with the ISO 3166 international standard. ISO 3166-1 contains a two-letter code which is recommended as the general purpose code, a three-letter code which has better mnenomic properties and a numeric-3 code which can be useful if script independence of the codes is important. The authority code relies on the ISO 3166-1/alpha-3 positions. If an authority code is needed for a country without assigned ISO code, an alphanumeric code is created in order to not confuse with ISO codes that are strictly alphabetic or numeric. A country code comparison is provided between ISO codes, IANA codes (Internet Country-code Top-level Domains) and TIR (Transport International par la Route) Vehicle system codes."@en ;
     skos:prefLabel "Country"@en .
 
@@ -90,10 +95,12 @@ euvoc:GrammaticalNumber a owl:Class ;
     skos:prefLabel "Grammatical number"@en .
 
 euvoc:Label-type a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union."@en ;
     skos:prefLabel "Label-type"@en .
 
 euvoc:NotationType a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "The Notation type authority table is a controlled vocabulary providing the list of notation types used in the EU Vocabularies authority tables as well as in the context of DCAT-AP (a specification based on W3C's Data Catalogue vocabulary). It indicates the authority code and start-use date of each concept."@en ;
     skos:prefLabel "Notation type"@en .
 
@@ -102,10 +109,12 @@ euvoc:Script a owl:Class ;
     skos:prefLabel "Script"@en .
 
 euvoc:Treaty a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages."@en ;
     skos:prefLabel "Treaty"@en .
 
 euvoc:UseContext a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
     skos:definition "The Use context authority table is a controlled vocabulary listing different applications and environments that make use of the various authority tables."@en ;
     skos:prefLabel "Use context"@en .
 

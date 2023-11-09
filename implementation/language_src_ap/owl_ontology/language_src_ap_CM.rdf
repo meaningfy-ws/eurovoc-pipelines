@@ -63,14 +63,15 @@
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
       <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core</dct:title>
+      <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from language_src_ap_CM.xml on 2023-11-08</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from language_src_ap_CM.xml on 2023-11-09</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-08</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-09</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.2.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.3</owl:incompatibleWith>
@@ -91,6 +92,9 @@
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/language">
       <skos:definition xml:lang="en">The Language authority table is a controlled vocabulary that lists concepts associated with languages. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 639 international standard. This standard is issued in several parts: ISO 639-1 contains strictly two alphabetic letters (alpha-2), ISO 639-2/B (B = bibliographic) is used for bibliographic purpose (alpha-3), ISO 639-2/T (T = terminology) is used for technical purpose (alpha-3), ISO 639-3 covers all the languages and macro-languages of the world (alpha-3); the values are compliant with ISO 639-2/T. If an authority code is needed for a language without assigned ISO code, an alphanumeric code is created in order to not confuse with ISO codes that are strictly alphabetic.</skos:definition>
    </rdf:Description>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Language">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
       <skos:prefLabel xml:lang="en">In schemce</skos:prefLabel>

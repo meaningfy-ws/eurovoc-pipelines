@@ -63,14 +63,15 @@
       <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
       <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
       <dct:title xml:lang="en">technical package  - core</dct:title>
+      <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-08</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-09</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-08</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-09</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
@@ -200,6 +201,30 @@
    <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/treaty">
       <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
    </owl:NamedIndividual>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CapitalClassification">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#ConceptStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#CorrectionStatus">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Country">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Label-type">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#NotationType">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Treaty">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#UseContext">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/type"/>
    <rdf:Description rdf:about="http://purl.org/dc/terms/type">
       <skos:prefLabel xml:lang="en">Type</skos:prefLabel>
