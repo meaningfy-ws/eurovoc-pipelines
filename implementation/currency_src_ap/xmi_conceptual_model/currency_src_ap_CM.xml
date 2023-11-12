@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:umldi="http://www.omg.org/spec/UML/20131001/UMLDI" xmlns:dc="http://www.omg.org/spec/UML/20131001/UMLDC">
-	<xmi:Documentation exporter="EnterpriseArchitect" exporterVersion="6.5" exporterID="1560"/>
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1560"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" name="currency">
+			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" name="at-voc:currency"/>
+			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" name="euvoc:Currency">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_F0F7B9FB_668E_46d4_82CB_9A03C80374F9" name="euvoc:decimalPlace">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_668E_46d4_82CB_9A03C80374F9" value="0"/>
@@ -24,8 +26,6 @@
 				</ownedEnd>
 			</packagedElement>
 			<packagedElement xmi:type="uml:Dependency" xmi:id="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" supplier="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" client="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E"/>
-			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" name="at-voc:currency"/>
-			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
 		</packagedElement>
 		<umldi:Diagram xmi:type="umldi:UMLClassDiagram" xmi:id="EAID_67D1EEE9_7A25_49c4_918E_84DD5E245D50" isFrame="false" modelElement="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357">
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_67D1EEE9_7A25_49c4_9CF1_B961C580F839" modelElement="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839">
@@ -328,12 +328,12 @@
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_6812DA12_5E05_4911_89E6_5C5AFD6D0364" modelElement="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
 				<ownedElement xmi:type="umldi:UMLKeywordLabel" xmi:id="EAID_KL000000_5E05_4911_89E6_5C5AFD6D0364" text="enumeration"/>
 				<ownedElement xmi:type="umldi:UMLNameLabel" xmi:id="EAID_NL000000_5E05_4911_89E6_5C5AFD6D0364" text="at-voc:currency"/>
-				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_5E05_4911_89E6_5C5AFD6D0364" x="533" y="427" width="90" height="60"/>
+				<bounds xmi:type="dc:bounds" xmi:id="EAID_DB000000_5E05_4911_89E6_5C5AFD6D0364" x="577" y="427" width="90" height="60"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLEdge" xmi:id="EAID_6812DA12_5E05_4911_9502_07EB50418363" source="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" target="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" modelElement="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363">
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000000_5E05_4911_9502_07EB50418363" x="336" y="389"/>
 				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000001_5E05_4911_9502_07EB50418363" x="336" y="457"/>
-				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000002_5E05_4911_9502_07EB50418363" x="533" y="457"/>
+				<waypoint xmi:type="dc:waypoint" xmi:id="EAID_WP000002_5E05_4911_9502_07EB50418363" x="577" y="457"/>
 			</ownedElement>
 			<ownedElement xmi:type="umldi:UMLEdge" xmi:id="EAID_6812DA12_5E05_4911_8D43_77E6B516A7AA" source="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" target="EAID_ECBBB41F_9D75_410b_8048_EE8451F78445" modelElement="EAID_B2020431_23F7_4101_8D43_77E6B516A7AA">
 				<ownedElement xmi:type="umldi:UMLAssociationEndLabel" xmi:id="EAID_TEL000000_5E05_4911_8D43_77E6B516A7AA" text="+euvoc:usedIn" modelElement="EAID_dst020431_23F7_4101_8D43_77E6B516A7AA">
@@ -363,6 +363,20 @@
 				<paths/>
 				<times created="2023-10-19 10:37:48" modified="2023-10-19 10:37:48"/>
 				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
+			</element>
+			<element xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" xmi:type="uml:Enumeration" name="at-voc:currency" scope="public">
+				<model package="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" tpos="0" ea_localid="61" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-19 13:22:24" modified="2023-10-19 13:22:36" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="currency"/>
+				<links>
+					<Realisation xmi:id="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E" start="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" end="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
+					<Dependency xmi:id="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" start="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" end="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
+				</links>
 			</element>
 			<element xmi:idref="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" xmi:type="uml:Class" name="euvoc:Currency" scope="public">
 				<model package="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" tpos="0" ea_localid="27" ea_eleType="element"/>
@@ -396,22 +410,75 @@
 					<Dependency xmi:id="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" start="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" end="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
 				</links>
 			</element>
-			<element xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" xmi:type="uml:Enumeration" name="at-voc:currency" scope="public">
-				<model package="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" tpos="0" ea_localid="61" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-19 13:22:24" modified="2023-10-19 13:22:36" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="currency"/>
-				<links>
-					<Realisation xmi:id="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E" start="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" end="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
-					<Dependency xmi:id="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" start="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" end="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364"/>
-				</links>
-			</element>
 		</elements>
 		<connectors>
+			<connector xmi:idref="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E">
+				<source xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
+					<model ea_localid="61" type="Enumeration" name="at-voc:currency"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
+					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="64"/>
+				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363">
+				<source xmi:idref="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E">
+					<model ea_localid="27" type="Class" name="euvoc:Currency"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
+					<model ea_localid="61" type="Enumeration" name="at-voc:currency"/>
+					<role name="skos:inScheme" visibility="Public" targetScope="instance"/>
+					<type multiplicity="1" aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="63"/>
+				<properties ea_type="Dependency" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rb="1" rt="+skos:inScheme"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
 			<connector xmi:idref="EAID_6452D8C6_F959_472b_BA87_FCEEE4AFF748">
 				<source xmi:idref="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E">
 					<model ea_localid="27" type="Class" name="euvoc:Currency"/>
@@ -481,73 +548,6 @@
 				<xrefs/>
 				<tags/>
 			</connector>
-			<connector xmi:idref="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363">
-				<source xmi:idref="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E">
-					<model ea_localid="27" type="Class" name="euvoc:Currency"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
-					<model ea_localid="61" type="Enumeration" name="at-voc:currency"/>
-					<role name="skos:inScheme" visibility="Public" targetScope="instance"/>
-					<type multiplicity="1" aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="63"/>
-				<properties ea_type="Dependency" direction="Source -&gt; Destination"/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="1" rt="+skos:inScheme"/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_5CFFC136_BD87_4dd5_9656_B7BDC1F1836E">
-				<source xmi:idref="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364">
-					<model ea_localid="61" type="Enumeration" name="at-voc:currency"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
-					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="64"/>
-				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
 		</connectors>
 		<primitivetypes>
 			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package">
@@ -607,14 +607,14 @@
 			<diagram xmi:id="EAID_6812DA12_5E05_4911_8ECA_BCE2719E7806">
 				<model package="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357" localID="12" owner="EAPK_49073B1D_A990_4e2f_9FCB_962E6AC91357"/>
 				<properties name="currency external" type="Logical"/>
-				<project author="ahmadjan" version="1.0" created="2023-10-19 13:22:00" modified="2023-11-01 14:13:00"/>
+				<project author="ahmadjan" version="1.0" created="2023-10-19 13:22:00" modified="2023-11-08 10:55:00"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=0;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SIA=1;SaveTag=A81BF00F;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SIA=1;SaveTag=26CCE588;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;hh=0;cls=0;bw=0;hli=0;bro=0;SwimlaneFont=lfh:-16,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
 				<elements>
-					<element geometry="Left=533;Top=427;Right=623;Bottom=487;" subject="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" seqno="1" style="DUID=C809712D;NSL=0;"/>
+					<element geometry="Left=577;Top=427;Right=667;Bottom=487;" subject="EAID_A202636C_27CB_471b_89E6_5C5AFD6D0364" seqno="1" style="DUID=C809712D;NSL=0;"/>
 					<element geometry="Left=454;Top=64;Right=634;Bottom=230;" subject="EAID_ECBBB41F_9D75_410b_8048_EE8451F78445" seqno="2" style="DUID=84DEEE14;NSL=0;"/>
 					<element geometry="Left=207;Top=210;Right=387;Bottom=389;" subject="EAID_F30A1CD7_5A43_4ed1_9ADB_09044CC44D6E" seqno="3" style="DUID=29B700D5;NSL=0;"/>
 					<element geometry="SX=39;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=66:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=6:CY=14:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=336:-457$;" subject="EAID_CA03AA2A_6FC9_4ed1_9502_07EB50418363" style="Mode=3;EOID=C809712D;SOID=29B700D5;Color=-1;LWidth=0;TREE=OR;Hidden=0;"/>
