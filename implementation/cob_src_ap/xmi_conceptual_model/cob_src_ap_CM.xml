@@ -3,8 +3,6 @@
 	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1560"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_D2D3120D_8EE2_4d7e_843F_0CD376A24E87" name="corporate body">
-			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5" name="at-voc:corporate-body"/>
-			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_17FCBDB4_AB2D_4007_AAFB_175F9673F6D0" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5"/>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F" name="euvoc:CorporateBody">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_07C2BBC2_D76C_4736_A915_949CA483F742" name="euvoc:order">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_D76C_4736_A915_949CA483F742" value="0"/>
@@ -69,6 +67,8 @@
 					<type xmi:idref="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB"/>
 				</ownedEnd>
 			</packagedElement>
+			<packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5" name="at-voc:corporate-body"/>
+			<packagedElement xmi:type="uml:Realization" xmi:id="EAID_17FCBDB4_AB2D_4007_AAFB_175F9673F6D0" supplier="EAID_C88789D5_A9CE_43f7_A091_688D08302273" client="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5"/>
 		</packagedElement>
 		<umldi:Diagram xmi:type="umldi:UMLClassDiagram" xmi:id="EAID_0318BDD3_B88C_4131_9C3F_EDBF20AE03E6" isFrame="false" modelElement="EAPK_D2D3120D_8EE2_4d7e_843F_0CD376A24E87">
 			<ownedElement xmi:type="umldi:UMLClassifierShape" xmi:id="EAID_0318BDD3_B88C_4131_9660_1D5F4432695F" modelElement="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F">
@@ -429,20 +429,6 @@
 				<times created="2023-10-18 22:00:30" modified="2023-10-20 11:45:16"/>
 				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
 			</element>
-			<element xmi:idref="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5" xmi:type="uml:Enumeration" name="at-voc:corporate-body" scope="public">
-				<model package="EAPK_D2D3120D_8EE2_4d7e_843F_0CD376A24E87" tpos="0" ea_localid="53" ea_eleType="element"/>
-				<properties documentation="The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible. &#xA;" isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
-				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-19 09:48:43" modified="2023-11-10 11:19:27" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="corporate body"/>
-				<links>
-					<Realisation xmi:id="EAID_17FCBDB4_AB2D_4007_AAFB_175F9673F6D0" start="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5" end="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
-					<Dependency xmi:id="EAID_647796AF_809B_451c_B6CB_0C110CF6FB31" start="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F" end="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5"/>
-				</links>
-			</element>
 			<element xmi:idref="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F" xmi:type="uml:Class" name="euvoc:CorporateBody" scope="public">
 				<model package="EAPK_D2D3120D_8EE2_4d7e_843F_0CD376A24E87" tpos="0" ea_localid="32" ea_eleType="element"/>
 				<properties documentation=" A conceptual entity  represents the abstract notion of corporate bodies. This concept serves as a controlled vocabulary, offering varying names of European Union (EU) corporate bodies." isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
@@ -494,33 +480,47 @@
 					<Association xmi:id="EAID_E56D69A3_556C_41d0_B6D0_093A6C479FDD" start="EAID_AE478A0B_4A8B_4512_ADAB_71945285E9CB" end="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F"/>
 				</links>
 			</element>
+			<element xmi:idref="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5" xmi:type="uml:Enumeration" name="at-voc:corporate-body" scope="public">
+				<model package="EAPK_D2D3120D_8EE2_4d7e_843F_0CD376A24E87" tpos="0" ea_localid="53" ea_eleType="element"/>
+				<properties documentation="The Corporate body authority table is a controlled vocabulary which provides the varying names of EU corporate bodies for a given time span. Some other – international and national – corporate bodies are also included as far as they are used in the various systems in the Publications Office. The traceability of the chronological modifications is ensured when possible. &#xA;" isSpecification="false" sType="Enumeration" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="ahmadjan" version="1.0" phase="1.0" created="2023-10-19 09:48:43" modified="2023-11-10 11:19:27" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="corporate body"/>
+				<links>
+					<Realisation xmi:id="EAID_17FCBDB4_AB2D_4007_AAFB_175F9673F6D0" start="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5" end="EAID_C88789D5_A9CE_43f7_A091_688D08302273"/>
+					<Dependency xmi:id="EAID_647796AF_809B_451c_B6CB_0C110CF6FB31" start="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F" end="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5"/>
+				</links>
+			</element>
 		</elements>
 		<connectors>
-			<connector xmi:idref="EAID_17FCBDB4_AB2D_4007_AAFB_175F9673F6D0">
-				<source xmi:idref="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5">
-					<model ea_localid="53" type="Enumeration" name="at-voc:corporate-body"/>
+			<connector xmi:idref="EAID_5C928A34_134E_4b94_8162_C7EB5B130EB4">
+				<source xmi:idref="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F">
+					<model ea_localid="32" type="Class" name="euvoc:CorporateBody"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
 					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
 					<documentation/>
 					<xrefs/>
 					<tags/>
 				</source>
-				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
-					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
+				<target xmi:idref="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839">
+					<model ea_localid="5" type="Class" name="skos:Concept"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
 					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
 					<documentation/>
 					<xrefs/>
 					<tags/>
 				</target>
-				<model ea_localid="61"/>
-				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
+				<model ea_localid="38"/>
+				<properties ea_type="Generalization" direction="Source -&gt; Destination"/>
 				<parameterSubstitutions/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
@@ -558,40 +558,6 @@
 				<documentation value="A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme.&#xA;"/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="1" rt="+skos:inScheme"/>
-				<extendedProperties virtualInheritance="0"/>
-				<style/>
-				<xrefs/>
-				<tags/>
-			</connector>
-			<connector xmi:idref="EAID_5C928A34_134E_4b94_8162_C7EB5B130EB4">
-				<source xmi:idref="EAID_C7FB50F5_D394_4dcc_9660_1D5F4432695F">
-					<model ea_localid="32" type="Class" name="euvoc:CorporateBody"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</source>
-				<target xmi:idref="EAID_63954C6E_DFC6_470f_9CF1_B961C580F839">
-					<model ea_localid="5" type="Class" name="skos:Concept"/>
-					<role visibility="Public" targetScope="instance"/>
-					<type aggregation="none" containment="Unspecified"/>
-					<constraints/>
-					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
-					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
-					<documentation/>
-					<xrefs/>
-					<tags/>
-				</target>
-				<model ea_localid="38"/>
-				<properties ea_type="Generalization" direction="Source -&gt; Destination"/>
-				<parameterSubstitutions/>
-				<documentation/>
-				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
@@ -767,6 +733,40 @@
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
 				<labels rb="0..*" rt="+euvoc:managedBy"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_17FCBDB4_AB2D_4007_AAFB_175F9673F6D0">
+				<source xmi:idref="EAID_3BBBF924_6DDE_49f9_BD98_FE1F0C36A4A5">
+					<model ea_localid="53" type="Enumeration" name="at-voc:corporate-body"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_C88789D5_A9CE_43f7_A091_688D08302273">
+					<model ea_localid="4" type="Class" name="skos:ConceptScheme"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="61"/>
+				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
