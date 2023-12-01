@@ -71,12 +71,12 @@
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core shapes</rdfs:label>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-09</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from technical_CM.xml on 2023-11-12</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-09</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-12</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
@@ -213,7 +213,7 @@
       <rdfs:label>Treaty</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty">
-      <rdfs:comment>The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages.</rdfs:comment>
+      <rdfs:comment>A conceptual entity represents the abstract notion of treaties. This concept serves as a controlled vocabulary, offering varying names EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Treaty">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
@@ -247,6 +247,9 @@
    </sh:NodeShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address">
       <rdfs:label>Address</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address">
+      <rdfs:comment>It provides a structured way to represent and exchange information about the location of an entity, whether it be a person, organization, or other. The use of specific properties within this class allows for a detailed and standardized description of addresses.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#vcard-Address">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>

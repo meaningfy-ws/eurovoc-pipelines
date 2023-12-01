@@ -22,13 +22,13 @@
     rdfs:label "Core Public Organisation Vocabulary - core"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-11-09"^^xsd:date ;
+    dcterms:issued "2023-11-12"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "technical package  - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-09" ;
+    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-12" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -110,7 +110,7 @@ euvoc:Script a owl:Class ;
 
 euvoc:Treaty a owl:Class ;
     rdfs:subClassOf skos:Concept ;
-    skos:definition "The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages."@en ;
+    skos:definition "A conceptual entity represents the abstract notion of treaties. This concept serves as a controlled vocabulary, offering varying names EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights."@en ;
     skos:prefLabel "Treaty"@en .
 
 euvoc:UseContext a owl:Class ;
@@ -155,6 +155,7 @@ at-voc:country a owl:NamedIndividual,
 
 at-voc:treaty a owl:NamedIndividual,
         skos:ConceptScheme ;
+    skos:definition "The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages."@en ;
     skos:prefLabel "Treaty"@en .
 
 dcterms:created a owl:DatatypeProperty ;
@@ -211,6 +212,7 @@ skos:inScheme a owl:ObjectProperty ;
     skos:prefLabel "In scheme"@en .
 
 vcard:Address a owl:Class ;
+    skos:definition "It provides a structured way to represent and exchange information about the location of an entity, whether it be a person, organization, or other. The use of specific properties within this class allows for a detailed and standardized description of addresses."@en ;
     skos:prefLabel "Address"@en .
 
 vcard:ContactPoint a owl:Class ;

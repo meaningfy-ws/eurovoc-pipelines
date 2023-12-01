@@ -81,7 +81,7 @@ tech-shape:euvoc-Script a sh:NodeShape ;
 
 tech-shape:euvoc-Treaty a sh:NodeShape ;
     rdfs:label "Treaty" ;
-    rdfs:comment "The Treaty authority table (AT) is a controlled vocabulary listing the different EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights. The Treaty AT is part of the Core Metadata used in the exchange between the institutions involved in the legal decision-making process and the Publications Office of the European Union. It is also used by EUR-Lex. It provides an authority code, the start-use date of the concept and labels in all official EU languages." ;
+    rdfs:comment "A conceptual entity represents the abstract notion of treaties. This concept serves as a controlled vocabulary, offering varying names EU treaties, including treaties and protocols, accession treaties, Schengen Convention and Charter of Fundamental Rights." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:property tech-shape:euvoc-Treaty-skos-inScheme ;
     sh:targetClass euvoc:Treaty .
@@ -102,6 +102,7 @@ tech-shape:sf-Polygon a sh:NodeShape ;
 
 tech-shape:vcard-Address a sh:NodeShape ;
     rdfs:label "Address" ;
+    rdfs:comment "It provides a structured way to represent and exchange information about the location of an entity, whether it be a person, organization, or other. The use of specific properties within this class allows for a detailed and standardized description of addresses." ;
     rdfs:isDefinedBy tech-shape:tech-shape ;
     sh:property tech-shape:vcard-Address-dct-created,
         tech-shape:vcard-Address-dct-modified,
@@ -279,13 +280,13 @@ tech-shape:tech-shape a owl:Ontology ;
     rdfs:label "Core Public Organisation Vocabulary - core shapes"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-11-09"^^xsd:date ;
+    dcterms:issued "2023-11-12"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "common SRC_AP Ontology - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-09" ;
+    rdfs:comment "This version is automatically generated from technical_CM.xml on 2023-11-12" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
