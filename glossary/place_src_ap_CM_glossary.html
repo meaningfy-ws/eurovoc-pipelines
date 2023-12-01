@@ -42,15 +42,9 @@
                <tbody>
                   <tr>
                      <td>euvoc:Place</td>
-                     <td>The Place authority table (AT) is a controlled vocabulary that lists concepts associated
-                        with the localities of the world. It provides authority codes that are based on UN/LOCODE
-                        codes. The Place AT uses the classification (membership classification) and the authority
-                        codes of the Country AT. This AT also provides ISO 3166-2 codes, as well as geographical
-                        coordinates. The European capitals of culture are also included. The original name
-                        of each locality is indicated. The Corporate body AT uses this AT to identify the
-                        seat of each concept (LOC_id), and the Site AT uses it to identify the location of
-                        each site (loc_code). The Place authority table is updated based on the stakeholders’
-                        need</td>
+                     <td>A conceptual entity represents the abstract notion of places. This concept serves
+                        as a controlled vocabulary, offering lists concepts associated with the localities
+                        of the world.</td>
                   </tr>
                </tbody>
             </table>
@@ -85,12 +79,13 @@
                <tbody>
                   <tr>
                      <td>euvoc:localityCode</td>
-                     <td> </td>
+                     <td>The locality or geographical context associated with a particular site. </td>
                      <td>euvoc:Site (external) -&gt; euvoc:Place [1]<br>vcard:Address (external) -&gt; euvoc:Place [1]<br></td>
                   </tr>
                   <tr>
                      <td>geosparql:sfWithin</td>
-                     <td></td>
+                     <td>It denotes that the spatial object associated with the subject resource is within
+                        the spatial object associated with the object resource.</td>
                      <td>euvoc:Place -&gt; euvoc:Country (external) [1]</td>
                   </tr>
                   <tr>
@@ -100,7 +95,9 @@
                   </tr>
                   <tr>
                      <td>skos:inSchemce</td>
-                     <td></td>
+                     <td>A concept scheme in which the concept is included. A concept may be a member of more
+                        than one concept scheme.
+                        </td>
                      <td>euvoc:Place -&gt; at-voc:place [1]</td>
                   </tr>
                   <tr>
