@@ -66,12 +66,12 @@
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from place_src_ap_CM.xml on 2023-11-12</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from place_src_ap_CM.xml on 2023-12-01</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-12</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-01</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.2.2</owl:versionInfo>
       <owl:incompatibleWith>3.1.4</owl:incompatibleWith>
@@ -86,11 +86,14 @@
       <skos:prefLabel xml:lang="en">Place</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Place">
-      <skos:definition xml:lang="en">The Place authority table (AT) is a controlled vocabulary that lists concepts associated with the localities of the world. It provides authority codes that are based on UN/LOCODE codes. The Place AT uses the classification (membership classification) and the authority codes of the Country AT. This AT also provides ISO 3166-2 codes, as well as geographical coordinates. The European capitals of culture are also included. The original name of each locality is indicated. The Corporate body AT uses this AT to identify the seat of each concept (LOC_id), and the Site AT uses it to identify the location of each site (loc_code). The Place authority table is updated based on the stakeholders’ need</skos:definition>
+      <skos:definition xml:lang="en">A conceptual entity represents the abstract notion of places. This concept serves as a controlled vocabulary, offering lists concepts associated with the localities of the world.</skos:definition>
    </rdf:Description>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/place"/>
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/place">
       <skos:prefLabel xml:lang="en">Place</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/place">
+      <skos:definition xml:lang="en">The Place authority table (AT) is a controlled vocabulary that lists concepts associated with the localities of the world. It provides authority codes that are based on UN/LOCODE codes. The Place AT uses the classification (membership classification) and the authority codes of the Country AT. This AT also provides ISO 3166-2 codes, as well as geographical coordinates. The European capitals of culture are also included. The original name of each locality is indicated. The Corporate body AT uses this AT to identify the seat of each concept (LOC_id), and the Site AT uses it to identify the location of each site (loc_code). The Place authority table is updated based on the stakeholders’ need</skos:definition>
    </rdf:Description>
    <owl:NamedIndividual rdf:about="http://publications.europa.eu/resource/authority/place">
       <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
@@ -98,10 +101,6 @@
    <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Place">
       <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </owl:Class>
-   <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce"/>
-   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
-      <skos:prefLabel xml:lang="en">In schemce</skos:prefLabel>
-   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
       <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
@@ -117,9 +116,22 @@
    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
       <skos:prefLabel xml:lang="en">Sf within</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
+      <skos:definition xml:lang="en">It denotes that the spatial object associated with the subject resource is within the spatial object associated with the object resource. (euvoc:Place -&gt; euvoc:Country (+geosparql:sfWithin))</skos:definition>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce"/>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
+      <skos:prefLabel xml:lang="en">In schemce</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
+      <skos:definition xml:lang="en">A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:Place -&gt; at-voc:place (+skos:inSchemce))</skos:definition>
+   </rdf:Description>
    <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
       <skos:prefLabel xml:lang="en">Locality code</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
+      <skos:definition xml:lang="en">The locality or geographical context associated with a particular site. (euvoc:Site -&gt; euvoc:Place (+euvoc:localityCode))</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://publications.europa.eu/ontology/euvoc#culturalCity"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#culturalCity">
