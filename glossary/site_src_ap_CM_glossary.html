@@ -42,9 +42,9 @@
                <tbody>
                   <tr>
                      <td>euvoc:Site</td>
-                     <td>The Site authority table provides the sites occupied by the various EU institutions
-                        and bodies and is maintained by the Publications Office of the European Union on the
-                        EU Vocabularies website.</td>
+                     <td>A conceptual entity represents the abstract notion of corporate bodies. This concept
+                        serves as a controlled vocabulary, offering the sites occupied by the various EU institutions.
+                        </td>
                   </tr>
                </tbody>
             </table>
@@ -62,7 +62,7 @@
                   <tr>
                      <td>euvoc:Site</td>
                      <td>vcard:fn</td>
-                     <td></td>
+                     <td>Represents the full name of an individual.</td>
                      <td>xsd:string [1..1]</td>
                   </tr>
                </tbody>
@@ -79,23 +79,24 @@
                <tbody>
                   <tr>
                      <td>euvoc:countryCode</td>
-                     <td></td>
-                     <td>euvoc:Site -&gt; euvoc:Country (external) [1]</td>
+                     <td>It links a site to the corresponding country using a standardized country code</td>
+                     <td>euvoc:Site -&gt; at-voc:country (external) [1]</td>
                   </tr>
                   <tr>
                      <td>euvoc:hasPrimaryContactPoint</td>
-                     <td></td>
+                     <td>The contact information to get in touch with the associated person or department.</td>
                      <td>euvoc:Site -&gt; vcard:ContactPoint (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>euvoc:localityCode</td>
-                     <td></td>
-                     <td>euvoc:Site -&gt; euvoc:Place (external) [1]</td>
+                     <td>The locality or geographical context associated with a particular site.</td>
+                     <td>euvoc:Site -&gt; at-voc:place (external) [1]</td>
                   </tr>
                   <tr>
                      <td>euvoc:managedBy</td>
-                     <td></td>
-                     <td>euvoc:Site -&gt; euvoc:CorporateBody (external) [0..*]</td>
+                     <td>It provides information about the organizational entity or authority that oversees
+                        or administers a particular site.</td>
+                     <td>euvoc:Site -&gt; at-voc:corporate-body (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>locn:geometry</td>
@@ -110,17 +111,21 @@
                   </tr>
                   <tr>
                      <td>org:siteOf</td>
-                     <td></td>
-                     <td>euvoc:Site -&gt; euvoc:CorporateBody (external) [0..*]</td>
+                     <td>It signifies that the site is associated with or serves as a site of the specified
+                        organisation or authority. </td>
+                     <td>euvoc:Site -&gt; at-voc:corporate-body (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>skos:inSchemce</td>
-                     <td></td>
+                     <td>A concept scheme in which the concept is included. A concept may be a member of more
+                        than one concept scheme.
+                        </td>
                      <td>euvoc:Site -&gt; at-voc:site [1]</td>
                   </tr>
                   <tr>
                      <td>vcard:hasAddress</td>
-                     <td></td>
+                     <td>It provide a structured way to represent and exchange information about the location
+                        (address) of a entity.</td>
                      <td>euvoc:Site -&gt; vcard:Address (external) [1]</td>
                   </tr>
                </tbody>

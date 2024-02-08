@@ -42,12 +42,7 @@
                <tbody>
                   <tr>
                      <td>euvoc:Currency</td>
-                     <td>The Currency authority table is a controlled vocabulary that lists concepts associated
-                        with currencies and currency subunits.
-                        
-                        The concepts included are correlated with the ISO 4217 international standard.
-                        
-                        The Currency authority table is updated based on the stakeholders’ needs.</td>
+                     <td></td>
                   </tr>
                </tbody>
             </table>
@@ -82,12 +77,15 @@
                <tbody>
                   <tr>
                      <td>euvoc:usedIn</td>
-                     <td></td>
-                     <td>euvoc:Currency -&gt; euvoc:Country (external) [0..*]</td>
+                     <td>It indicates that the currency is used in or associated with the specified country.
+                        </td>
+                     <td>euvoc:Currency -&gt; at-voc:country (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>skos:inScheme</td>
-                     <td></td>
+                     <td>A concept scheme in which the concept is included. A concept may be a member of more
+                        than one concept scheme.
+                        </td>
                      <td>euvoc:Currency -&gt; at-voc:currency [1]</td>
                   </tr>
                </tbody>

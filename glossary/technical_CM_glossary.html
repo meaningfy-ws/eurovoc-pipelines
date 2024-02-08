@@ -49,14 +49,12 @@
                   </tr>
                   <tr>
                      <td>euvoc:CapitalClassification</td>
-                     <td>The Capital classification NAL provides possible locality statuses.</td>
+                     <td>Locality statuses of the places within the EU Vocabularies.</td>
                   </tr>
                   <tr>
                      <td>euvoc:ConceptStatus</td>
-                     <td>The Concept status authority table is an internal controlled vocabulary used at the
-                        Publications Office. It provides the various statuses used in a harmonised way amongst
-                        the authority tables. Concepts with current, deprecated and retired statuses are published
-                        while the remaining statuses are related to the internal workflow.</td>
+                     <td>It categorizes or represents concept statuses within the EU Vocabularies.
+                        </td>
                   </tr>
                   <tr>
                      <td>euvoc:CorrectionStatus</td>
@@ -65,52 +63,32 @@
                   </tr>
                   <tr>
                      <td>euvoc:Country</td>
-                     <td>The Country authority table is a controlled vocabulary that lists concepts associated
-                        with names of countries and territories.
-                        
-                        Its main scope is to support documentary metadata activities.
-                        
-                        The concepts included are correlated with the ISO 3166 international standard. ISO
-                        3166-1 contains a two-letter code which is recommended as the general purpose code,
-                        a three-letter code which has better mnenomic properties and a numeric-3 code which
-                        can be useful if script independence of the codes is important. The authority code
-                        relies on the ISO 3166-1/alpha-3 positions. If an authority code is needed for a country
-                        without assigned ISO code, an alphanumeric code is created in order to not confuse
-                        with ISO codes that are strictly alphabetic or numeric.
-                        
-                        A country code comparison is provided between ISO codes, IANA codes (Internet Country-code
-                        Top-level Domains) and TIR (Transport International par la Route) Vehicle system codes.
-                        
+                     <td>A conceptual entity represents the abstract notion of places. This concept serves
+                        as a controlled vocabulary, offering lists concepts associated with names of countries
+                        and territories.
                         
                         </td>
                   </tr>
                   <tr>
                      <td>euvoc:GrammaticalGender</td>
-                     <td>The grammatical-gender authority table is a controlled vocabulary which provides the
-                        list of the grammatical genders in languages which have gender distinctions: "male",
-                        "female", "neuter" or "utrum". It also contains concepts for "no gender" (in languages
-                        that do not have gender distinctions) and "generic" (identical forms in languages
-                        that make gender distinctions).</td>
+                     <td></td>
                   </tr>
                   <tr>
                      <td>euvoc:GrammaticalNumber</td>
-                     <td>The grammatical-number authority table is a controlled vocabulary which provides the
-                        list of the grammatical numbers referring to different number of things or persons:
+                     <td> The grammatical-number authority table is a controlled vocabulary which provides
+                        the list of the grammatical numbers referring to different number of things or persons:
                         "singular", "dual" or "plural". There is also a concept "generic" for forms that do
                         not distinguish between grammatical numbers. </td>
                   </tr>
                   <tr>
-                     <td>euvoc:Label-type</td>
+                     <td>euvoc:LabelType</td>
                      <td>The label-type authority table is a controlled vocabulary providing the various forms
                         of labels that are considered alternative labels in the SKOS format. This authority
                         table is an internal table at the Publications Office of the European Union.</td>
                   </tr>
                   <tr>
                      <td>euvoc:NotationType</td>
-                     <td>The Notation type authority table is a controlled vocabulary providing the list of
-                        notation types used in the EU Vocabularies authority tables as well as in the context
-                        of DCAT-AP (a specification based on W3C's Data Catalogue vocabulary). It indicates
-                        the authority code and start-use date of each concept. </td>
+                     <td>A conceptual entity represents the notation types within the EU Vocabularies. </td>
                   </tr>
                   <tr>
                      <td>euvoc:Script</td>
@@ -134,8 +112,8 @@
                   </tr>
                   <tr>
                      <td>euvoc:UseContext</td>
-                     <td>The Use context authority table is a controlled vocabulary listing different applications
-                        and environments that make use of the various authority tables. </td>
+                     <td>Provides different applications and environments that make use of the various controlled
+                        vocabularies.</td>
                   </tr>
                   <tr>
                      <td>sf:Polygon</td>
@@ -160,7 +138,8 @@
                   </tr>
                   <tr>
                      <td>wgs:SpatialThing</td>
-                     <td></td>
+                     <td>Geospatial information associated with the eteities, including latitude and longitude
+                        properties. </td>
                   </tr>
                </tbody>
             </table>
@@ -278,28 +257,28 @@
                      <td>dct:type</td>
                      <td>  Specify the context where a specified notation is considered unique. 
                         </td>
-                     <td>vcard:Address -&gt; euvoc:AddressType [1]<br>skosxl:Label (external) -&gt; euvoc:Label-type [0..*]<br>euvoc:XlNotation (external) -&gt; euvoc:NotationType [1]<br></td>
+                     <td>skosxl:Label (external) -&gt; euvoc:LabelType [0..*]<br>vcard:Address -&gt; at-voc:address-type [1]<br>euvoc:XlNotation (external) -&gt; at-voc:notation-type [1]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:context</td>
                      <td>It signifies that the concept is applicable or relevant within the context of the
                         identified use context.</td>
-                     <td>skos:Concept (external) -&gt; euvoc:UseContext [0..*]</td>
+                     <td>skos:Concept (external) -&gt; at-voc:use-context [0..*]</td>
                   </tr>
                   <tr>
                      <td>euvoc:corrStatus</td>
                      <td>A status of proofreading of labels and descriptions. A status of proofreading of labels and descriptions.
                         </td>
-                     <td>euvoc:XlNote (external) -&gt; euvoc:CorrectionStatus [0..1]<br>skosxl:Label (external) -&gt; euvoc:CorrectionStatus [0..1]<br></td>
+                     <td>euvoc:XlNote (external) -&gt; at-voc:correction-status [0..1]<br>skosxl:Label (external) -&gt; at-voc:correction-status [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:countryCode</td>
-                     <td></td>
-                     <td>euvoc:Site (external) -&gt; euvoc:Country [1]</td>
+                     <td>It links a site to the corresponding country using a standardized country code</td>
+                     <td>euvoc:Site (external) -&gt; at-voc:country [1]</td>
                   </tr>
                   <tr>
                      <td>euvoc:hasPrimaryContactPoint</td>
-                     <td> It indicate the primary means of contact for an entity (e.g., an organization or corporate
+                     <td>The contact information to get in touch with the associated person or department. It indicate the primary means of contact for an entity (e.g., an organization or corporate
                         body), linking that entity to a specific contact point </td>
                      <td>euvoc:Site (external) -&gt; vcard:ContactPoint [0..*]<br>euvoc:CorporateBody (external) -&gt; vcard:ContactPoint [0..*]<br></td>
                   </tr>
@@ -317,35 +296,37 @@
                   <tr>
                      <td>euvoc:status</td>
                      <td> </td>
-                     <td>skosxl:Label (external) -&gt; euvoc:ConceptStatus [0..1]<br>skos:Concept (external) -&gt; euvoc:ConceptStatus [0..1]<br></td>
+                     <td>skosxl:Label (external) -&gt; at-voc:concept-status [0..1]<br>skos:Concept (external) -&gt; at-voc:concept-status [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:usedIn</td>
-                     <td></td>
-                     <td>euvoc:Currency (external) -&gt; euvoc:Country [0..*]</td>
+                     <td>It indicates that the currency is used in or associated with the specified country.
+                        </td>
+                     <td>euvoc:Currency (external) -&gt; at-voc:country [0..*]</td>
                   </tr>
                   <tr>
                      <td>geosparql:sfWithin</td>
-                     <td></td>
-                     <td>euvoc:Place (external) -&gt; euvoc:Country [1]</td>
+                     <td>It denotes that the spatial object associated with the subject resource is within
+                        the spatial object associated with the object resource.</td>
+                     <td>euvoc:Place (external) -&gt; at-voc:country [1]</td>
                   </tr>
                   <tr>
                      <td>lexinfo:gender</td>
                      <td>A grammatical category that indicates grammatical relationships between words in sentences.
                         </td>
-                     <td>skosxl:Label (external) -&gt; euvoc:GrammaticalGender [0..1]</td>
+                     <td>skosxl:Label (external) -&gt; at-voc:gramatical-gender [0..1]</td>
                   </tr>
                   <tr>
                      <td>lexinfo:number</td>
                      <td>Grammatical category for the variation in form of nouns, pronouns, and any words agreeing
                         with them, depending on how many persons or things are referred to.
                         </td>
-                     <td>skosxl:Label (external) -&gt; euvoc:GrammaticalNumber [0..1]</td>
+                     <td>skosxl:Label (external) -&gt; at-voc:grammatical-number [0..1]</td>
                   </tr>
                   <tr>
                      <td>lexvo:inScript</td>
                      <td></td>
-                     <td>skosxl:Label (external) -&gt; euvoc:Script [0..1]</td>
+                     <td>skosxl:Label (external) -&gt; at-voc:script [0..1]</td>
                   </tr>
                   <tr>
                      <td>locn:geometry</td>
@@ -361,18 +342,19 @@
                   <tr>
                      <td>org:role</td>
                      <td></td>
-                     <td>euvoc:Place (external) -&gt; euvoc:CapitalClassification [0..1]</td>
+                     <td>euvoc:Place (external) -&gt; at-voc:capital-classification [0..1]</td>
                   </tr>
                   <tr>
                      <td>skos:inScheme</td>
-                     <td> A concept scheme in which the concept is included. A concept may be a member of more
+                     <td>          A concept scheme in which the concept is included. A concept may be a member of more
                         than one concept scheme.
-                        </td>
-                     <td>euvoc:Country -&gt; at-voc:country [1]<br>euvoc:Treaty -&gt; at-voc:treaty [1]<br></td>
+                         </td>
+                     <td>euvoc:AddressType -&gt; at-voc:address-type [1]<br>euvoc:CapitalClassification -&gt; at-voc:capital-classification [1]<br>euvoc:ConceptStatus -&gt; at-voc:concept-status [1]<br>euvoc:CorrectionStatus -&gt; at-voc:correction-status [1]<br>euvoc:Country -&gt; at-voc:country [1]<br>euvoc:GrammaticalGender -&gt; at-voc:gramatical-gender [1]<br>euvoc:GrammaticalNumber -&gt; at-voc:grammatical-number [1]<br>euvoc:LabelType -&gt; at-voc:label-type [1]<br>euvoc:NotationType -&gt; at-voc:notation-type [1]<br>euvoc:Script -&gt; at-voc:script [1]<br>euvoc:Treaty -&gt; at-voc:treaty [1]<br>euvoc:UseContext -&gt; at-voc:use-context [1]<br></td>
                   </tr>
                   <tr>
                      <td>vcard:hasAddress</td>
-                     <td></td>
+                     <td>It provide a structured way to represent and exchange information about the location
+                        (address) of a entity.</td>
                      <td>euvoc:Site (external) -&gt; vcard:Address [1]</td>
                   </tr>
                   <tr>
