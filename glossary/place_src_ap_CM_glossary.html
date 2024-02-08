@@ -41,10 +41,19 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>euvoc:CapitalClassification</td>
+                     <td>Locality statuses of the places within the EU Vocabularies.</td>
+                  </tr>
+                  <tr>
                      <td>euvoc:Place</td>
                      <td>A conceptual entity represents the abstract notion of places. This concept serves
                         as a controlled vocabulary, offering lists concepts associated with the localities
                         of the world.</td>
+                  </tr>
+                  <tr>
+                     <td>wgs:SpatialThing</td>
+                     <td>Geospatial information associated with the eteities, including latitude and longitude
+                        properties. </td>
                   </tr>
                </tbody>
             </table>
@@ -60,10 +69,35 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>wgs:SpatialThing</td>
+                     <td>dct:created</td>
+                     <td>Date of creation of the resource.
+                        </td>
+                     <td>xsd:dateTime [1..1]</td>
+                  </tr>
+                  <tr>
                      <td>euvoc:Place</td>
                      <td>euvoc:culturalCity</td>
                      <td>It represents the  cities that have been considered as European Capitals of Culture</td>
                      <td>xsd:gYear [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>wgs:SpatialThing</td>
+                     <td>geosparql:lat</td>
+                     <td></td>
+                     <td>xsd:string [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>wgs:SpatialThing</td>
+                     <td>geosparql:long</td>
+                     <td></td>
+                     <td>xsd:string [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>wgs:SpatialThing</td>
+                     <td>rdfs:comment</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [1..1]</td>
                   </tr>
                </tbody>
             </table>
@@ -91,7 +125,7 @@
                   <tr>
                      <td>org:role</td>
                      <td></td>
-                     <td>euvoc:Place -&gt; at-voc:capital-classification (external) [0..1]</td>
+                     <td>euvoc:Place -&gt; at-voc:capital-classification [0..1]</td>
                   </tr>
                   <tr>
                      <td>skos:inSchemce</td>
@@ -101,9 +135,14 @@
                      <td>euvoc:Place -&gt; at-voc:place [1]</td>
                   </tr>
                   <tr>
+                     <td>skos:inScheme</td>
+                     <td></td>
+                     <td>euvoc:CapitalClassification -&gt; at-voc:capital-classification [1]</td>
+                  </tr>
+                  <tr>
                      <td>wgs:location</td>
                      <td>  It is used to precisely indicate a location's position.</td>
-                     <td>euvoc:Place -&gt; wgs:SpatialThing (external) [0..*]<br>euvoc:CorporateBody (external) -&gt; euvoc:Place [0..*]<br></td>
+                     <td>euvoc:Place -&gt; wgs:SpatialThing [0..*]<br>euvoc:CorporateBody (external) -&gt; euvoc:Place [0..*]<br></td>
                   </tr>
                </tbody>
             </table>
