@@ -4,10 +4,12 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
@@ -17,13 +19,13 @@
     rdfs:label "Core Public Organisation Vocabulary - core"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-12-01"^^xsd:date ;
+    dcterms:issued "2024-02-09"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from site_src_ap_CM.xml on 2023-12-01" ;
+    rdfs:comment "This version is automatically generated from site_src_ap_CM.xml on 2024-02-09" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -54,39 +56,106 @@
     owl:versionIRI :site-4.3.0 ;
     owl:versionInfo "4.3.0" .
 
+euvoc:AddressType a owl:Class ;
+    skos:definition "The Address type authority table (AT) is a controlled vocabulary that provides the address types as used in the EU Whoiswho application. The AT gives the authority code and the English label for each concept. The Address type AT is maintained by the Publications Office of the European Union on the EU Vocabularies website."@en ;
+    skos:prefLabel "Address type"@en .
+
 euvoc:Site a owl:Class ;
     rdfs:subClassOf skos:Concept ;
-    skos:definition "The Site authority table provides the sites occupied by the various EU institutions and bodies and is maintained by the Publications Office of the European Union on the EU Vocabularies website."@en ;
+    skos:definition "A conceptual entity represents the abstract notion of corporate bodies. This concept serves as a controlled vocabulary, offering the sites occupied by the various EU institutions."@en ;
     skos:prefLabel "Site"@en .
 
 euvoc:countryCode a owl:ObjectProperty ;
+    skos:definition "It links a site to the corresponding country using a standardized country code (euvoc:Site -> at-voc:country (+euvoc:countryCode))"@en ;
     skos:prefLabel "Country code"@en .
 
 euvoc:hasPrimaryContactPoint a owl:ObjectProperty ;
+    skos:definition "The contact information to get in touch with the associated person or department. (euvoc:Site -> vcard:ContactPoint (+euvoc:hasPrimaryContactPoint)) It indicate the primary means of contact for an entity (e.g., an organization or corporate body), linking that entity to a specific contact point (euvoc:CorporateBody -> vcard:ContactPoint (+euvoc:hasPrimaryContactPoint))"@en ;
     skos:prefLabel "Has primary contact point"@en .
 
 euvoc:localityCode a owl:ObjectProperty ;
+    skos:definition "The locality or geographical context associated with a particular site. (euvoc:Site -> at-voc:place (+euvoc:localityCode))"@en ;
     skos:prefLabel "Locality code"@en .
 
 euvoc:managedBy a owl:ObjectProperty ;
+    skos:definition "It provides information about the organizational entity or authority that oversees or administers a particular site. (euvoc:Site -> at-voc:corporate-body (+euvoc:managedBy))"@en ;
     skos:prefLabel "Managed by"@en .
 
+euvoc:postbox a owl:DatatypeProperty ;
+    skos:prefLabel "Postbox"@en .
+
+at-voc:address-type a skos:ConceptScheme ;
+    skos:prefLabel "Address-type"@en .
+
 at-voc:site a skos:ConceptScheme ;
+    skos:definition "The Site authority table provides the sites occupied by the various EU institutions and bodies and is maintained by the Publications Office of the European Union on the EU Vocabularies website."@en ;
     skos:prefLabel "Site"@en .
 
+dcterms:created a owl:DatatypeProperty ;
+    skos:definition "Date of creation of the resource. (vcard:Address)"@en ;
+    skos:prefLabel "Created"@en .
+
+dcterms:description a owl:DatatypeProperty ;
+    skos:prefLabel "Description"@en .
+
+dcterms:modified a owl:DatatypeProperty ;
+    skos:definition "Date of modification of the resource. (sf:Polygon)"@en ;
+    skos:prefLabel "Modified"@en .
+
+dcterms:type a owl:ObjectProperty ;
+    skos:prefLabel "Type"@en .
+
+geo:asWKT a owl:DatatypeProperty ;
+    skos:definition "The property geosparql:asWKT is defined to link a Geometry with its WKT serialization. (sf:Polygon)"@en ;
+    skos:prefLabel "As w k t"@en .
+
+sf:Polygon a owl:Class ;
+    skos:definition "A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction."@en ;
+    skos:prefLabel "Polygon"@en .
+
 skos:inSchemce a owl:ObjectProperty ;
+    skos:definition "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:Site -> at-voc:site (+skos:inSchemce))"@en ;
     skos:prefLabel "In schemce"@en .
 
+vcard:Address a owl:Class ;
+    skos:definition "It provides a structured way to represent and exchange information about the location of an entity, whether it be a person, organization, or other. The use of specific properties within this class allows for a detailed and standardized description of addresses."@en ;
+    skos:prefLabel "Address"@en .
+
+vcard:ContactPoint a owl:Class ;
+    skos:definition "Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with."@en ;
+    skos:prefLabel "Contact point"@en .
+
 vcard:fn a owl:DatatypeProperty ;
+    skos:definition "Represents the full name of an individual. (euvoc:Site)"@en ;
     skos:prefLabel "Fn"@en .
 
 vcard:hasAddress a owl:ObjectProperty ;
+    skos:definition "It provide a structured way to represent and exchange information about the location (address) of a entity. (euvoc:Site -> vcard:Address (+vcard:hasAddress))"@en ;
     skos:prefLabel "Has address"@en .
+
+vcard:hasEmail a owl:DatatypeProperty ;
+    skos:prefLabel "Has email"@en .
+
+vcard:locality a owl:DatatypeProperty ;
+    skos:prefLabel "Locality"@en .
+
+vcard:post-office-box a owl:DatatypeProperty ;
+    skos:prefLabel "Post-office-box"@en .
+
+vcard:postal-code a owl:DatatypeProperty ;
+    skos:prefLabel "Postal-code"@en .
+
+vcard:street-address a owl:DatatypeProperty ;
+    skos:prefLabel "Street-address"@en .
+
+vcard:telephone a owl:DatatypeProperty ;
+    skos:prefLabel "Telephone"@en .
 
 locn:geometry a owl:ObjectProperty ;
     skos:definition "It indicates the spatial or geographical representation of each site. (euvoc:Site -> sf:Polygon (+locn:geometry))"@en ;
     skos:prefLabel "Geometry"@en .
 
 org:siteOf a owl:ObjectProperty ;
+    skos:definition "It signifies that the site is associated with or serves as a site of the specified organisation or authority. (euvoc:Site -> at-voc:corporate-body (+org:siteOf))"@en ;
     skos:prefLabel "Site of"@en .
 

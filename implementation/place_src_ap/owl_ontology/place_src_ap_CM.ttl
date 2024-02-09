@@ -17,13 +17,13 @@
     rdfs:label "Core Public Organisation Vocabulary - core"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-12-01"^^xsd:date ;
+    dcterms:issued "2024-02-09"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from place_src_ap_CM.xml on 2023-12-01" ;
+    rdfs:comment "This version is automatically generated from place_src_ap_CM.xml on 2024-02-09" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -54,6 +54,11 @@
     owl:versionIRI :place-4.2.2 ;
     owl:versionInfo "4.2.2" .
 
+euvoc:CapitalClassification a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "Locality statuses of the places within the EU Vocabularies."@en ;
+    skos:prefLabel "Capital classification"@en .
+
 euvoc:Place a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     skos:definition "A conceptual entity represents the abstract notion of places. This concept serves as a controlled vocabulary, offering lists concepts associated with the localities of the world."@en ;
@@ -64,17 +69,39 @@ euvoc:culturalCity a owl:DatatypeProperty ;
     skos:prefLabel "Cultural city"@en .
 
 euvoc:localityCode a owl:ObjectProperty ;
-    skos:definition "The locality or geographical context associated with a particular site. (euvoc:Site -> euvoc:Place (+euvoc:localityCode))"@en ;
+    skos:definition "The locality or geographical context associated with a particular site. (euvoc:Site -> at-voc:place (+euvoc:localityCode))"@en ;
     skos:prefLabel "Locality code"@en .
+
+at-voc:capital-classification a owl:NamedIndividual,
+        skos:ConceptScheme ;
+    skos:definition "The Capital classification NAL provides possible locality statuses."@en ;
+    skos:prefLabel "Capital-classification"@en .
 
 at-voc:place a owl:NamedIndividual,
         skos:ConceptScheme ;
     skos:definition "The Place authority table (AT) is a controlled vocabulary that lists concepts associated with the localities of the world. It provides authority codes that are based on UN/LOCODE codes. The Place AT uses the classification (membership classification) and the authority codes of the Country AT. This AT also provides ISO 3166-2 codes, as well as geographical coordinates. The European capitals of culture are also included. The original name of each locality is indicated. The Corporate body AT uses this AT to identify the seat of each concept (LOC_id), and the Site AT uses it to identify the location of each site (loc_code). The Place authority table is updated based on the stakeholders’ need"@en ;
     skos:prefLabel "Place"@en .
 
+dcterms:created a owl:DatatypeProperty ;
+    skos:definition "Date of creation of the resource. (wgs:SpatialThing)"@en ;
+    skos:prefLabel "Created"@en .
+
+geo:lat a owl:DatatypeProperty ;
+    skos:prefLabel "Lat"@en .
+
+geo:long a owl:DatatypeProperty ;
+    skos:prefLabel "Long"@en .
+
 geo:sfWithin a owl:ObjectProperty ;
-    skos:definition "It denotes that the spatial object associated with the subject resource is within the spatial object associated with the object resource. (euvoc:Place -> euvoc:Country (+geosparql:sfWithin))"@en ;
+    skos:definition "It denotes that the spatial object associated with the subject resource is within the spatial object associated with the object resource. (euvoc:Place -> at-voc:country (+geosparql:sfWithin))"@en ;
     skos:prefLabel "Sf within"@en .
+
+rdfs:comment a owl:DatatypeProperty ;
+    skos:prefLabel "Comment"@en .
+
+wgs1:SpatialThing a owl:Class ;
+    skos:definition "Geospatial information associated with the eteities, including latitude and longitude properties."@en ;
+    skos:prefLabel "Spatial thing"@en .
 
 wgs1:location a owl:ObjectProperty ;
     skos:definition "It is used to precisely indicate a location's position. (euvoc:CorporateBody -> euvoc:Place (+wgs:location))"@en ;
@@ -83,6 +110,9 @@ wgs1:location a owl:ObjectProperty ;
 skos:inSchemce a owl:ObjectProperty ;
     skos:definition "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme. (euvoc:Place -> at-voc:place (+skos:inSchemce))"@en ;
     skos:prefLabel "In schemce"@en .
+
+skos:inScheme a owl:ObjectProperty ;
+    skos:prefLabel "In scheme"@en .
 
 org:role a owl:ObjectProperty ;
     skos:prefLabel "Role"@en .

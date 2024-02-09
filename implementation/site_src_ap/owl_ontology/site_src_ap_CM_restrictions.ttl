@@ -4,9 +4,11 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,14 +20,14 @@
     rdfs:label "Core Public Organisation Vocabulary - core restrictions"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-12-01"^^xsd:date ;
+    dcterms:issued "2024-02-09"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from site_src_ap_CM.xml on 
-                2023-12-01""" ;
+                2024-02-09""" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -58,40 +60,133 @@
     owl:versionInfo "4.3.0" .
 
 euvoc:countryCode rdfs:domain euvoc:Site ;
-    rdfs:range euvoc:Country .
+    rdfs:range skos:Concept .
 
-euvoc:hasPrimaryContactPoint rdfs:domain euvoc:Site ;
+euvoc:hasPrimaryContactPoint rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:Site euvoc:CorporateBody ) ] ;
     rdfs:range vcard:ContactPoint .
 
-euvoc:localityCode rdfs:domain euvoc:Site ;
-    rdfs:range euvoc:Place .
+euvoc:localityCode rdfs:domain [ a owl:Class ;
+            owl:unionOf ( vcard:Address euvoc:Site ) ] ;
+    rdfs:range euvoc:Place,
+        skos:Concept .
 
 euvoc:managedBy rdfs:domain euvoc:Site ;
-    rdfs:range euvoc:CorporateBody .
+    rdfs:range skos:Concept .
+
+dcterms:description rdfs:domain vcard:ContactPoint ;
+    rdfs:range rdf:PlainLiteral .
+
+dcterms:type rdfs:domain vcard:Address ;
+    rdfs:range at-voc:address-type .
 
 skos:inSchemce rdfs:domain euvoc:Site ;
     rdfs:range skos:Concept .
 
-vcard:hasAddress rdfs:domain euvoc:Site ;
-    rdfs:range vcard:Address .
-
-locn:geometry rdfs:domain euvoc:Site ;
-    rdfs:range sf:Polygon .
+vcard:telephone rdfs:domain vcard:ContactPoint ;
+    rdfs:range rdf:PlainLiteral .
 
 org:siteOf rdfs:domain euvoc:Site ;
-    rdfs:range euvoc:CorporateBody .
+    rdfs:range skos:Concept .
 
-at-voc:site a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:site ;
-            owl:onProperty skos:inScheme ] .
+euvoc:postbox rdfs:domain vcard:Address ;
+    rdfs:range xsd:string .
+
+dcterms:created rdfs:domain vcard:Address ;
+    rdfs:range xsd:dateTime .
+
+geo:asWKT a owl:FunctionalProperty ;
+    rdfs:domain sf:Polygon ;
+    rdfs:range rdf:PlainLiteral .
 
 vcard:fn a owl:FunctionalProperty ;
     rdfs:domain euvoc:Site ;
     rdfs:range xsd:string .
 
+vcard:hasAddress a owl:FunctionalProperty ;
+    rdfs:domain euvoc:Site ;
+    rdfs:range vcard:Address .
+
+vcard:hasEmail rdfs:domain vcard:ContactPoint ;
+    rdfs:range rdf:PlainLiteral .
+
+vcard:locality a owl:FunctionalProperty ;
+    rdfs:domain vcard:Address ;
+    rdfs:range xsd:string .
+
+vcard:post-office-box rdfs:domain vcard:Address ;
+    rdfs:range xsd:string .
+
+vcard:postal-code rdfs:domain vcard:Address ;
+    rdfs:range xsd:string .
+
+vcard:street-address rdfs:domain vcard:Address ;
+    rdfs:range xsd:string .
+
+locn:geometry rdfs:domain euvoc:Site ;
+    rdfs:range sf:Polygon .
+
+at-voc:address-type a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:address-type ;
+            owl:onProperty skos:inScheme ] .
+
+at-voc:site a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:site ;
+            owl:onProperty skos:inScheme ],
+        [ a owl:Restriction ;
+            owl:hasValue at-voc:site ;
+            owl:onProperty skos:inScheme ] .
+
+dcterms:modified rdfs:domain [ a owl:Class ;
+            owl:unionOf ( vcard:Address sf:Polygon ) ] ;
+    rdfs:range xsd:dateTime .
+
+sf:Polygon a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty geo:asWKT ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:modified ] .
+
+vcard:ContactPoint rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty vcard:hasEmail ] .
+
 euvoc:Site rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty vcard:fn ] .
+            owl:onProperty vcard:fn ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty vcard:hasAddress ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:geometry ] .
+
+vcard:Address a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty vcard:locality ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty vcard:postal-code ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:postbox ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty vcard:street-address ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty vcard:post-office-box ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:created ] .
 

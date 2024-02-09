@@ -69,12 +69,12 @@
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core.</dct:description>
       <rdfs:comment>This version is automatically generated from site_src_ap_CM.xml on 
-                2023-12-01</rdfs:comment>
+                2024-02-09</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-01</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-09</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.3.0</owl:versionInfo>
       <owl:incompatibleWith>3.3.0</owl:incompatibleWith>
@@ -84,6 +84,15 @@
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
+   <owl:Class rdf:about="http://publications.europa.eu/resource/authority/address-type">
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/address-type"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
    <owl:Class rdf:about="http://publications.europa.eu/resource/authority/site">
       <owl:equivalentClass>
          <owl:Restriction>
@@ -93,6 +102,95 @@
       </owl:equivalentClass>
       <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    </owl:Class>
+   <owl:Class rdf:about="http://publications.europa.eu/resource/authority/site">
+      <owl:equivalentClass>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+            <owl:hasValue rdf:resource="http://publications.europa.eu/resource/authority/site"/>
+         </owl:Restriction>
+      </owl:equivalentClass>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </owl:Class>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/modified"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://publications.europa.eu/ontology/euvoc#postbox"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#locality"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#post-office-box"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#postal-code"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#street-address"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#ContactPoint">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/sf#Polygon">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://purl.org/dc/terms/modified"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/sf#Polygon">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Site">
       <rdfs:subClassOf>
          <owl:Restriction>
@@ -101,8 +199,118 @@
          </owl:Restriction>
       </rdfs:subClassOf>
    </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Site">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#hasAddress"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:cardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Site">
+      <rdfs:subClassOf>
+         <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/ns/locn#geometry"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:maxCardinality>
+         </owl:Restriction>
+      </rdfs:subClassOf>
+   </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
       <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/ns/org#siteOf">
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#countryCode">
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#managedBy">
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Address"/>
+               <owl:Class rdf:about="http://www.opengis.net/ont/sf#Polygon"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#postbox">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#postbox">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#post-office-box">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#post-office-box">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#telephone">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#telephone">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
+      <rdfs:domain rdf:resource="http://www.opengis.net/ont/sf#Polygon"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
+      <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
       <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
@@ -113,26 +321,24 @@
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
    </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+      <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+      <rdfs:range rdf:resource="http://publications.europa.eu/resource/authority/address-type"/>
+   </rdf:Description>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
-      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address"/>
+               <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Site"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
    </rdf:Description>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#localityCode">
       <rdfs:range rdf:resource="http://publications.europa.eu/ontology/euvoc#Place"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/ns/org#siteOf">
-      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/ns/org#siteOf">
-      <rdfs:range rdf:resource="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
-      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
-      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
-      <rdfs:range rdf:resource="http://www.opengis.net/ont/sf#Polygon"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
       <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
@@ -140,22 +346,35 @@
    <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
       <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
+   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inSchemce">
       <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
+      <rdfs:domain>
+         <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+               <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Site"/>
+               <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
+            </owl:unionOf>
+         </owl:Class>
+      </rdfs:domain>
    </rdf:Description>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint">
       <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#ContactPoint"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#countryCode">
+   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
+      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
+      <rdfs:range rdf:resource="http://www.opengis.net/ont/sf#Polygon"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.w3.org/ns/org#siteOf">
       <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#countryCode">
-      <rdfs:range rdf:resource="http://publications.europa.eu/ontology/euvoc#Country"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#managedBy">
       <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#managedBy">
-      <rdfs:range rdf:resource="http://publications.europa.eu/ontology/euvoc#CorporateBody"/>
+      <rdfs:domain rdf:resource="http://publications.europa.eu/ontology/euvoc#Site"/>
    </rdf:Description>
 </rdf:RDF>

@@ -19,14 +19,14 @@
     rdfs:label "Core Public Organisation Vocabulary - core restrictions"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-12-01"^^xsd:date ;
+    dcterms:issued "2024-02-09"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from place_src_ap_CM.xml on 
-                2023-12-01""" ;
+                2024-02-09""" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -62,11 +62,12 @@ euvoc:culturalCity rdfs:domain euvoc:Place ;
     rdfs:range xsd:gYear .
 
 euvoc:localityCode rdfs:domain [ a owl:Class ;
-            owl:unionOf ( euvoc:Site vcard:Address ) ] ;
-    rdfs:range euvoc:Place .
+            owl:unionOf ( vcard:Address euvoc:Site ) ] ;
+    rdfs:range euvoc:Place,
+        skos:Concept .
 
 geo:sfWithin rdfs:domain euvoc:Place ;
-    rdfs:range euvoc:Country .
+    rdfs:range skos:Concept .
 
 wgs1:location rdfs:domain [ a owl:Class ;
             owl:unionOf ( euvoc:Place euvoc:CorporateBody ) ] ;
@@ -77,11 +78,52 @@ skos:inSchemce rdfs:domain euvoc:Place ;
     rdfs:range skos:Concept .
 
 org:role rdfs:domain euvoc:Place ;
-    rdfs:range euvoc:CapitalClassification .
+    rdfs:range skos:Concept .
+
+at-voc:capital-classification a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:capital-classification ;
+            owl:onProperty skos:inScheme ] .
 
 at-voc:place a owl:Class ;
     rdfs:subClassOf skos:Concept ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:hasValue at-voc:place ;
             owl:onProperty skos:inScheme ] .
+
+dcterms:created a owl:FunctionalProperty ;
+    rdfs:domain wgs1:SpatialThing ;
+    rdfs:range xsd:dateTime .
+
+geo:lat a owl:FunctionalProperty ;
+    rdfs:domain wgs1:SpatialThing ;
+    rdfs:range xsd:string .
+
+geo:long a owl:FunctionalProperty ;
+    rdfs:domain wgs1:SpatialThing ;
+    rdfs:range xsd:string .
+
+rdfs:comment a owl:FunctionalProperty ;
+    rdfs:domain wgs1:SpatialThing ;
+    rdfs:range rdf:PlainLiteral .
+
+skos:inScheme rdfs:domain euvoc:CapitalClassification ;
+    rdfs:range skos:Concept .
+
+wgs1:SpatialThing rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty geo:lat ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty geo:long ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rdfs:comment ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:created ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( euvoc:CapitalClassification euvoc:Place ) .
 

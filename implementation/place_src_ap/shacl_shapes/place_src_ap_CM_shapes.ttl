@@ -4,22 +4,51 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix place-shape: <http://data.europa.eu/a4g/data-shape#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wgs1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+place-shape:euvoc-CapitalClassification a sh:NodeShape ;
+    rdfs:label "Capital classification" ;
+    rdfs:comment "Locality statuses of the places within the EU Vocabularies." ;
+    rdfs:isDefinedBy place-shape:place-shape ;
+    sh:property place-shape:euvoc-CapitalClassification-skos-inScheme ;
+    sh:targetClass euvoc:CapitalClassification .
 
 place-shape:euvoc-Place a sh:NodeShape ;
     rdfs:label "Place" ;
     rdfs:comment "A conceptual entity represents the abstract notion of places. This concept serves as a controlled vocabulary, offering lists concepts associated with the localities of the world." ;
     rdfs:isDefinedBy place-shape:place-shape ;
     sh:property place-shape:euvoc-Place-euvoc-culturalCity,
-        place-shape:euvoc-Place-skos-inSchemce ;
+        place-shape:euvoc-Place-org-role,
+        place-shape:euvoc-Place-skos-inSchemce,
+        place-shape:euvoc-Place-wgs-location ;
     sh:targetClass euvoc:Place .
+
+place-shape:wgs-SpatialThing a sh:NodeShape ;
+    rdfs:label "Spatial thing" ;
+    rdfs:comment "Geospatial information associated with the eteities, including latitude and longitude properties." ;
+    rdfs:isDefinedBy place-shape:place-shape ;
+    sh:property place-shape:wgs-SpatialThing-dct-created,
+        place-shape:wgs-SpatialThing-geosparql-lat,
+        place-shape:wgs-SpatialThing-geosparql-long,
+        place-shape:wgs-SpatialThing-rdfs-comment ;
+    sh:targetClass wgs1:SpatialThing .
+
+place-shape:euvoc-CapitalClassification-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:capital-classification ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
 
 place-shape:euvoc-Place-euvoc-culturalCity a sh:PropertyShape ;
     rdfs:isDefinedBy place-shape:place-shape ;
@@ -27,6 +56,12 @@ place-shape:euvoc-Place-euvoc-culturalCity a sh:PropertyShape ;
     sh:description "It represents the cities that have been considered as European Capitals of Culture" ;
     sh:name "Cultural city" ;
     sh:path euvoc:culturalCity .
+
+place-shape:euvoc-Place-org-role a sh:PropertyShape ;
+    sh:class at-voc:capital-classification ;
+    sh:maxCount 1 ;
+    sh:name "Role" ;
+    sh:path org:role .
 
 place-shape:euvoc-Place-skos-inSchemce a sh:PropertyShape ;
     sh:class at-voc:place ;
@@ -36,17 +71,56 @@ place-shape:euvoc-Place-skos-inSchemce a sh:PropertyShape ;
     sh:name "In schemce" ;
     sh:path skos:inSchemce .
 
+place-shape:euvoc-Place-wgs-location a sh:PropertyShape ;
+    sh:class wgs1:SpatialThing ;
+    sh:name "Location" ;
+    sh:path wgs1:location ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2003/01/geo/wgs84_pos#location> ?that . ?that <http://www.w3.org/2003/01/geo/wgs84_pos#location> ?this .}" ] .
+
+place-shape:wgs-SpatialThing-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy place-shape:place-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of creation of the resource." ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+place-shape:wgs-SpatialThing-geosparql-lat a sh:PropertyShape ;
+    rdfs:isDefinedBy place-shape:place-shape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Lat" ;
+    sh:path geo:lat .
+
+place-shape:wgs-SpatialThing-geosparql-long a sh:PropertyShape ;
+    rdfs:isDefinedBy place-shape:place-shape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Long" ;
+    sh:path geo:long .
+
+place-shape:wgs-SpatialThing-rdfs-comment a sh:PropertyShape ;
+    rdfs:isDefinedBy place-shape:place-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Comment" ;
+    sh:path rdfs:comment .
+
 place-shape:place-shape a owl:Ontology ;
     rdfs:label "Core Public Organisation Vocabulary - core shapes"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-12-01"^^xsd:date ;
+    dcterms:issued "2024-02-09"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from place_src_ap_CM.xml on 2023-12-01" ;
+    rdfs:comment "This version is automatically generated from place_src_ap_CM.xml on 2024-02-09" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,

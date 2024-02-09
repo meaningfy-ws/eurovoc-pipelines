@@ -71,12 +71,12 @@
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core shapes</rdfs:label>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from currency_src_ap_CM.xml on 2023-12-01</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from currency_src_ap_CM.xml on 2024-02-09</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-01</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-09</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.1.1</owl:versionInfo>
       <owl:incompatibleWith>3.1.2</owl:incompatibleWith>
@@ -91,9 +91,6 @@
    </sh:NodeShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Currency">
       <rdfs:label>Currency</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Currency">
-      <rdfs:comment>The Currency authority table is a controlled vocabulary that lists concepts associated with currencies and currency subunits. The concepts included are correlated with the ISO 4217 international standard. The Currency authority table is updated based on the stakeholders’ needs.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Currency">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#curr-shape"/>
@@ -131,5 +128,8 @@
    </sh:PropertyShape>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Currency-skos-inScheme">
       <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Currency-skos-inScheme">
+      <sh:description>A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme.</sh:description>
    </rdf:Description>
 </rdf:RDF>

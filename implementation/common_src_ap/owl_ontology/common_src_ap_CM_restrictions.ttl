@@ -1,0 +1,361 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lexvo: <http://lexvo.org/ontology#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:tech-restriction a owl:Ontology ;
+    rdfs:label "Core Public Organisation Vocabulary - core restrictions"@en ;
+    dcterms:created "2021-06-01"^^xsd:date ;
+    dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
+    dcterms:issued "2024-02-09"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "common SRC_AP Ontology - core restrictions"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment """This version is automatically generated from common_src_ap_CM.xml on 
+                2024-02-09""" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports :tech,
+        cccev:,
+        <http://data.europa.eu/nuts>,
+        <http://lexvo.org/ontology>,
+        <http://publications.europa.eu/ontology/euvoc>,
+        at-voc:,
+        dcterms:,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.opengis.net/ont/sf>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <ttp://publications.europa.eu/ontology/authority/> ;
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#tech-restriction-3.1.0" ;
+    owl:versionIRI :tech-restriction-4.0.0 ;
+    owl:versionInfo "4.0.0" .
+
+lexvo:inScript rdfs:domain skosxl:Label ;
+    rdfs:range skos:Concept .
+
+euvoc:context rdfs:domain skos:Concept ;
+    rdfs:range skos:Concept .
+
+euvoc:corrStatus rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:XlNote skosxl:Label ) ] ;
+    rdfs:range at-voc:correction-status .
+
+euvoc:status rdfs:domain [ a owl:Class ;
+            owl:unionOf ( skos:Concept skosxl:Label ) ] ;
+    rdfs:range skos:Concept .
+
+euvoc:xlChangeNote rdfs:domain skos:Concept ;
+    rdfs:range euvoc:XlNote .
+
+euvoc:xlDefinition rdfs:domain skos:Concept ;
+    rdfs:range euvoc:XlNote .
+
+euvoc:xlHistoryNote rdfs:domain skos:Concept ;
+    rdfs:range euvoc:XlNote .
+
+euvoc:xlNotation rdfs:domain skos:Concept ;
+    rdfs:range euvoc:XlNotation .
+
+euvoc:xlNote rdfs:domain skos:Concept ;
+    rdfs:range euvoc:XlNote .
+
+dcterms:isReplacedBy a owl:AsymmetricProperty ;
+    rdfs:domain skos:Concept ;
+    rdfs:range skos:Concept .
+
+dcterms:replaces a owl:AsymmetricProperty ;
+    rdfs:domain skos:Concept ;
+    rdfs:range skos:Concept .
+
+dcterms:type rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:XlNotation skosxl:Label ) ] ;
+    rdfs:range skos:Concept .
+
+lexinfo:gender rdfs:domain skosxl:Label ;
+    rdfs:range skos:Concept .
+
+lexinfo:number rdfs:domain skosxl:Label ;
+    rdfs:range skos:Concept .
+
+skos:broader a owl:AsymmetricProperty ;
+    rdfs:domain skos:Concept ;
+    rdfs:range skos:Concept .
+
+skos:exactMatch a owl:AsymmetricProperty ;
+    rdfs:domain skos:Concept ;
+    rdfs:range skos:Concept .
+
+skos:hasTopConcept rdfs:domain skos:ConceptScheme ;
+    rdfs:range skos:Concept .
+
+skos:narrower a owl:AsymmetricProperty ;
+    rdfs:domain skos:Concept ;
+    rdfs:range skos:Concept .
+
+skos:topConceptOf rdfs:domain skos:Concept ;
+    rdfs:range skos:ConceptScheme .
+
+skosxl:altLabel rdfs:domain skos:Concept ;
+    rdfs:range skosxl:Label .
+
+skosxl:hiddenLabel rdfs:domain skos:Concept ;
+    rdfs:range skosxl:Label .
+
+skosxl:prefLabel rdfs:domain skos:Concept ;
+    rdfs:range skosxl:Label .
+
+:date a owl:Class .
+
+at-voc:concept-status a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:concept-status ;
+            owl:onProperty skos:inScheme ] .
+
+at-voc:gramatical-gender a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:gramatical-gender ;
+            owl:onProperty skos:inScheme ] .
+
+at-voc:grammatical-number a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:grammatical-number ;
+            owl:onProperty skos:inScheme ] .
+
+at-voc:label-type a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:label-type ;
+            owl:onProperty skos:inScheme ] .
+
+at-voc:notation-type a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:notation-type ;
+            owl:onProperty skos:inScheme ] .
+
+at-voc:script a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:script ;
+            owl:onProperty skos:inScheme ] .
+
+at-voc:use-context a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:use-context ;
+            owl:onProperty skos:inScheme ] .
+
+dcterms:creator rdfs:domain euvoc:XlNote ;
+    rdfs:range xsd:string .
+
+dcterms:dateAccepted rdfs:domain skos:Concept ;
+    rdfs:range xsd:date .
+
+dcterms:dateSubmitted rdfs:domain skos:Concept ;
+    rdfs:range xsd:date .
+
+dcterms:identifier rdfs:domain skos:ConceptScheme ;
+    rdfs:range xsd:string .
+
+dcterms:title rdfs:domain skos:ConceptScheme ;
+    rdfs:range rdf:langString .
+
+skosxl:literalForm a owl:FunctionalProperty ;
+    rdfs:domain skosxl:Label ;
+    rdfs:range rdf:langString .
+
+at-voc:correction-status a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue at-voc:correction-status ;
+            owl:onProperty skos:inScheme ] .
+
+rdf:value a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:XlNotation euvoc:XlNote ) ] ;
+    rdfs:range rdf:langString .
+
+owl:versionInfo rdfs:domain [ a owl:Class ;
+            owl:unionOf ( skos:Concept skos:ConceptScheme ) ] ;
+    rdfs:range rdf:PlainaLiteral .
+
+xsd:date a owl:Class .
+
+euvoc:endDate rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:XlNotation euvoc:XlNote skos:Concept skos:ConceptScheme skosxl:Label ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( xsd:date :date ) ] .
+
+euvoc:startDate rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:XlNotation euvoc:XlNote skos:Concept skos:ConceptScheme skosxl:Label ) ] ;
+    rdfs:range xsd:date .
+
+dcterms:created rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:XlNotation euvoc:XlNote skos:Concept skos:ConceptScheme skosxl:Label ) ] ;
+    rdfs:range xsd:dateTime .
+
+dcterms:modified rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:XlNotation euvoc:XlNote skos:Concept skos:ConceptScheme skosxl:Label ) ] ;
+    rdfs:range xsd:dateTime .
+
+owl:deprecated rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:XlNotation euvoc:XlNote skos:Concept skos:ConceptScheme skosxl:Label ) ] ;
+    rdfs:range xsd:boolean .
+
+euvoc:XlNotation a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty owl:deprecated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:startDate ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rdf:value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:endDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:modified ] .
+
+skos:inScheme rdfs:domain [ a owl:Class ;
+            owl:unionOf ( euvoc:ConceptStatus euvoc:CorrectionStatus euvoc:GrammaticalGender euvoc:GrammaticalNumber euvoc:LabelType euvoc:NotationType euvoc:Script euvoc:UseContext skos:Concept ) ] ;
+    rdfs:range skos:Concept,
+        skos:ConceptScheme .
+
+skos:ConceptScheme a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty owl:deprecated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:endDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:startDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:title ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty owl:versionInfo ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:identifier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:created ] .
+
+euvoc:XlNote a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:endDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty owl:deprecated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:creator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:startDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rdf:value ] .
+
+skosxl:Label a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:endDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:startDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty owl:deprecated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty skosxl:literalForm ] .
+
+skos:Concept a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty owl:versionInfo ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty owl:deprecated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:dateAccepted ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:dateSubmitted ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty skos:inScheme ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:startDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:endDate ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( euvoc:ConceptStatus euvoc:CorrectionStatus euvoc:GrammaticalGender euvoc:LabelType euvoc:NotationType euvoc:Script euvoc:UseContext ) .
+

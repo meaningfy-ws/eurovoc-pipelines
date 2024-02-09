@@ -1,0 +1,722 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lexvo: <http://lexvo.org/ontology#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix tech-shape: <http://data.europa.eu/a4g/data-shape#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tech-shape:euvoc-ConceptStatus a sh:NodeShape ;
+    rdfs:label "Concept status" ;
+    rdfs:comment "It categorizes or represents concept statuses within the EU Vocabularies." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-ConceptStatus-skos-inScheme ;
+    sh:targetClass euvoc:ConceptStatus .
+
+tech-shape:euvoc-CorrectionStatus a sh:NodeShape ;
+    rdfs:label "Correction status" ;
+    rdfs:comment "The Correction status authority table (AT) provides the possible statuses of proofreading of labels and descriptions." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-CorrectionStatus-skos-inScheme ;
+    sh:targetClass euvoc:CorrectionStatus .
+
+tech-shape:euvoc-GrammaticalGender a sh:NodeShape ;
+    rdfs:label "Grammatical gender" ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-GrammaticalGender-skos-inScheme ;
+    sh:targetClass euvoc:GrammaticalGender .
+
+tech-shape:euvoc-GrammaticalNumber a sh:NodeShape ;
+    rdfs:label "Grammatical number" ;
+    rdfs:comment "The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: \"singular\", \"dual\" or \"plural\". There is also a concept \"generic\" for forms that do not distinguish between grammatical numbers." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-GrammaticalNumber-skos-inScheme ;
+    sh:targetClass euvoc:GrammaticalNumber .
+
+tech-shape:euvoc-LabelType a sh:NodeShape ;
+    rdfs:label "Label type" ;
+    rdfs:comment "The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-LabelType-skos-inScheme ;
+    sh:targetClass euvoc:LabelType .
+
+tech-shape:euvoc-NotationType a sh:NodeShape ;
+    rdfs:label "Notation type" ;
+    rdfs:comment "A conceptual entity represents the notation types within the EU Vocabularies." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-NotationType-skos-inScheme ;
+    sh:targetClass euvoc:NotationType .
+
+tech-shape:euvoc-Script a sh:NodeShape ;
+    rdfs:label "Script" ;
+    rdfs:comment "The Script authority table is a controlled vocabulary that lists concepts associated with distinctive scripts. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 15924 international standard. Each script is instantiated according to a writing system, described in writing-system authority table." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-Script-skos-inScheme ;
+    sh:targetClass euvoc:Script .
+
+tech-shape:euvoc-UseContext a sh:NodeShape ;
+    rdfs:label "Use context" ;
+    rdfs:comment "Provides different applications and environments that make use of the various controlled vocabularies." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-UseContext-skos-inScheme ;
+    sh:targetClass euvoc:UseContext .
+
+tech-shape:euvoc-XlNotation a sh:NodeShape ;
+    rdfs:label "Xl notation" ;
+    rdfs:comment "A notation is a string of characters used to uniquely identify a concept within a specified context. Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SKOS notation statements. This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-XlNotation-dct-created,
+        tech-shape:euvoc-XlNotation-dct-modified,
+        tech-shape:euvoc-XlNotation-dct-type,
+        tech-shape:euvoc-XlNotation-euvoc-endDate,
+        tech-shape:euvoc-XlNotation-euvoc-startDate,
+        tech-shape:euvoc-XlNotation-owl-deprecated,
+        tech-shape:euvoc-XlNotation-rdf-value ;
+    sh:targetClass euvoc:XlNotation .
+
+tech-shape:euvoc-XlNote a sh:NodeShape ;
+    rdfs:label "Xl note" ;
+    rdfs:comment "Like the skosxl:Label class reifies SKOS label statements, XlNote reifies SKOS note statements (i.e. skos:editorialNote, skos:example, skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote). This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:euvoc-XlNote-dct-created,
+        tech-shape:euvoc-XlNote-dct-creator,
+        tech-shape:euvoc-XlNote-dct-modified,
+        tech-shape:euvoc-XlNote-euvoc-corrStatus,
+        tech-shape:euvoc-XlNote-euvoc-endDate,
+        tech-shape:euvoc-XlNote-euvoc-startDate,
+        tech-shape:euvoc-XlNote-owl-deprecated,
+        tech-shape:euvoc-XlNote-rdf-value ;
+    sh:targetClass euvoc:XlNote .
+
+tech-shape:skos-Concept a sh:NodeShape ;
+    rdfs:label "Concept" ;
+    rdfs:comment "A concept is a unit of thought. The semantic content of a concept can be re-expressed by a combination of other and different concepts, which may vary from one language or culture to another. Concepts exist in the mind as abstract entities that are independent of the terms used to label them." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:skos-Concept-dct-created,
+        tech-shape:skos-Concept-dct-dateAccepted,
+        tech-shape:skos-Concept-dct-dateSubmitted,
+        tech-shape:skos-Concept-dct-isReplacedBy,
+        tech-shape:skos-Concept-dct-modified,
+        tech-shape:skos-Concept-dct-replaces,
+        tech-shape:skos-Concept-euvoc-context,
+        tech-shape:skos-Concept-euvoc-endDate,
+        tech-shape:skos-Concept-euvoc-startDate,
+        tech-shape:skos-Concept-euvoc-status,
+        tech-shape:skos-Concept-euvoc-xlChangeNote,
+        tech-shape:skos-Concept-euvoc-xlDefinition,
+        tech-shape:skos-Concept-euvoc-xlHistoryNote,
+        tech-shape:skos-Concept-euvoc-xlNotation,
+        tech-shape:skos-Concept-euvoc-xlNote,
+        tech-shape:skos-Concept-owl-deprecated,
+        tech-shape:skos-Concept-owl-versionInfo,
+        tech-shape:skos-Concept-skos-broader,
+        tech-shape:skos-Concept-skos-exactMatch,
+        tech-shape:skos-Concept-skos-inScheme,
+        tech-shape:skos-Concept-skos-narrower,
+        tech-shape:skos-Concept-skos-topConceptOf,
+        tech-shape:skos-Concept-skosxl-altLabel,
+        tech-shape:skos-Concept-skosxl-hiddenLabel,
+        tech-shape:skos-Concept-skosxl-prefLabel ;
+    sh:targetClass skos:Concept .
+
+tech-shape:skos-ConceptScheme a sh:NodeShape ;
+    rdfs:label "Concept scheme" ;
+    rdfs:comment "A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:skos-ConceptScheme-dct-created,
+        tech-shape:skos-ConceptScheme-dct-identifier,
+        tech-shape:skos-ConceptScheme-dct-modified,
+        tech-shape:skos-ConceptScheme-dct-title,
+        tech-shape:skos-ConceptScheme-euvoc-endDate,
+        tech-shape:skos-ConceptScheme-euvoc-startDate,
+        tech-shape:skos-ConceptScheme-owl-deprecated,
+        tech-shape:skos-ConceptScheme-owl-versionInfo,
+        tech-shape:skos-ConceptScheme-skos-hasTopConcept ;
+    sh:targetClass skos:ConceptScheme .
+
+tech-shape:skosxl-Label a sh:NodeShape ;
+    rdfs:label "Label" ;
+    rdfs:comment "The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI. An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [<xref scope=\"external\" href=\"https://www.w3.org/TR/rdf-concepts/\"><foreign otherprops=\"#0000ff\"><u>RDF-CONCEPTS</u></foreign></xref>]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource." ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:property tech-shape:skosxl-Label-dct-created,
+        tech-shape:skosxl-Label-dct-modified,
+        tech-shape:skosxl-Label-dct-type,
+        tech-shape:skosxl-Label-euvoc-corrStatus,
+        tech-shape:skosxl-Label-euvoc-endDate,
+        tech-shape:skosxl-Label-euvoc-startDate,
+        tech-shape:skosxl-Label-euvoc-status,
+        tech-shape:skosxl-Label-lexinfo-gender,
+        tech-shape:skosxl-Label-lexinfo-number,
+        tech-shape:skosxl-Label-lexvo-inScript,
+        tech-shape:skosxl-Label-owl-deprecated,
+        tech-shape:skosxl-Label-skosxl-literalForm ;
+    sh:targetClass skosxl:Label .
+
+tech-shape:euvoc-ConceptStatus-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:concept-status ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
+
+tech-shape:euvoc-CorrectionStatus-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:correction-status ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
+
+tech-shape:euvoc-GrammaticalGender-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:gramatical-gender ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
+
+tech-shape:euvoc-GrammaticalNumber-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:grammatical-number ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
+
+tech-shape:euvoc-LabelType-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:label-type ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
+
+tech-shape:euvoc-NotationType-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:notation-type ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
+
+tech-shape:euvoc-Script-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:script ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
+
+tech-shape:euvoc-UseContext-skos-inScheme a sh:PropertyShape ;
+    sh:class at-voc:use-context ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme .
+
+tech-shape:euvoc-XlNotation-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of creation of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+tech-shape:euvoc-XlNotation-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of modification of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+tech-shape:euvoc-XlNotation-dct-type a sh:PropertyShape ;
+    sh:class at-voc:notation-type ;
+    sh:description "Specify the context where a specified notation is considered unique." ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Type" ;
+    sh:path dcterms:type .
+
+tech-shape:euvoc-XlNotation-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "End of the validity period. If a resource has an end date then it must be marked as deprecated." ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+tech-shape:euvoc-XlNotation-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "Beginning of the validity period." ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+tech-shape:euvoc-XlNotation-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:boolean ;
+    sh:description "States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future." ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+tech-shape:euvoc-XlNotation-rdf-value a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "The literal form of the note." ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Value" ;
+    sh:path rdf:value .
+
+tech-shape:euvoc-XlNote-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of creation of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+tech-shape:euvoc-XlNote-dct-creator a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:string ;
+    sh:description "The entity or entities responsible for creating the resource," ;
+    sh:maxCount 1 ;
+    sh:name "Creator" ;
+    sh:path dcterms:creator .
+
+tech-shape:euvoc-XlNote-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of modification of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+tech-shape:euvoc-XlNote-euvoc-corrStatus a sh:PropertyShape ;
+    sh:class at-voc:correction-status ;
+    sh:description "A status of proofreading of labels and descriptions." ;
+    sh:maxCount 1 ;
+    sh:name "Corr status" ;
+    sh:path euvoc:corrStatus ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#corrStatus> ?that . ?that <http://publications.europa.eu/ontology/euvoc#corrStatus> ?this .}" ] .
+
+tech-shape:euvoc-XlNote-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:description "End of the validity period. If a resource has an end date then it must be marked as deprecated." ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+tech-shape:euvoc-XlNote-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "Beginning of the validity period." ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+tech-shape:euvoc-XlNote-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:boolean ;
+    sh:description "States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future." ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+tech-shape:euvoc-XlNote-rdf-value a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "The literal form of the note." ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Value" ;
+    sh:path rdf:value .
+
+tech-shape:skos-Concept-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of creation of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+tech-shape:skos-Concept-dct-dateAccepted a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "Date of acceptance of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Date accepted" ;
+    sh:path dcterms:dateAccepted .
+
+tech-shape:skos-Concept-dct-dateSubmitted a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "Date of submission of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Date submitted" ;
+    sh:path dcterms:dateSubmitted .
+
+tech-shape:skos-Concept-dct-isReplacedBy a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:description "A related resource that supplants, displaces, or supersedes the described resource." ;
+    sh:name "Is replaced by" ;
+    sh:path dcterms:isReplacedBy ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/isReplacedBy> ?that . ?that <http://purl.org/dc/terms/isReplacedBy> ?this .}" ] .
+
+tech-shape:skos-Concept-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of modification of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+tech-shape:skos-Concept-dct-replaces a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:description "A related resource that is supplanted, displaced, or superseded by the described resource." ;
+    sh:name "Replaces" ;
+    sh:path dcterms:replaces ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/replaces> ?that . ?that <http://purl.org/dc/terms/replaces> ?this .}" ] .
+
+tech-shape:skos-Concept-euvoc-context a sh:PropertyShape ;
+    sh:class at-voc:use-context ;
+    sh:description "It signifies that the concept is applicable or relevant within the context of the identified use context." ;
+    sh:name "Context" ;
+    sh:path euvoc:context .
+
+tech-shape:skos-Concept-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "End of the validity period. If a resource has an end date then it must be marked as deprecated." ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+tech-shape:skos-Concept-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "Beginning of the validity period." ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+tech-shape:skos-Concept-euvoc-status a sh:PropertyShape ;
+    sh:class at-voc:concept-status ;
+    sh:maxCount 1 ;
+    sh:name "Status" ;
+    sh:path euvoc:status .
+
+tech-shape:skos-Concept-euvoc-xlChangeNote a sh:PropertyShape ;
+    sh:class euvoc:XlNote ;
+    sh:description "A note about a modification to a concept." ;
+    sh:name "Xl change note" ;
+    sh:path euvoc:xlChangeNote ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlChangeNote> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlChangeNote> ?this .}" ] .
+
+tech-shape:skos-Concept-euvoc-xlDefinition a sh:PropertyShape ;
+    sh:class euvoc:XlNote ;
+    sh:description "A statement or formal explanation of the meaning of a concept." ;
+    sh:name "Xl definition" ;
+    sh:path euvoc:xlDefinition ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlDefinition> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlDefinition> ?this .}" ] .
+
+tech-shape:skos-Concept-euvoc-xlHistoryNote a sh:PropertyShape ;
+    sh:class euvoc:XlNote ;
+    sh:description "A note about the past state/use/meaning of a concept." ;
+    sh:name "Xl history note" ;
+    sh:path euvoc:xlHistoryNote ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlHistoryNote> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlHistoryNote> ?this .}" ] .
+
+tech-shape:skos-Concept-euvoc-xlNotation a sh:PropertyShape ;
+    sh:class euvoc:XlNotation ;
+    sh:description "A notation is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme or within a specified context." ;
+    sh:name "Xl notation" ;
+    sh:path euvoc:xlNotation ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlNotation> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlNotation> ?this .}" ] .
+
+tech-shape:skos-Concept-euvoc-xlNote a sh:PropertyShape ;
+    sh:class euvoc:XlNote ;
+    sh:name "Xl note" ;
+    sh:path euvoc:xlNote ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#xlNote> ?that . ?that <http://publications.europa.eu/ontology/euvoc#xlNote> ?this .}" ] .
+
+tech-shape:skos-Concept-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:boolean ;
+    sh:description "States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future" ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+tech-shape:skos-Concept-owl-versionInfo a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:description "An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Version info" ;
+    sh:path owl:versionInfo .
+
+tech-shape:skos-Concept-skos-broader a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:description "A concept that is more general in meaning. Broader concepts are typically rendered as parents in a concept hierarchy (tree)." ;
+    sh:name "Broader" ;
+    sh:path skos:broader ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#broader> ?that . ?that <http://www.w3.org/2004/02/skos/core#broader> ?this .}" ] .
+
+tech-shape:skos-Concept-skos-exactMatch a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:description "The property skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch." ;
+    sh:name "Exact match" ;
+    sh:path skos:exactMatch ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#exactMatch> ?that . ?that <http://www.w3.org/2004/02/skos/core#exactMatch> ?this .}" ] .
+
+tech-shape:skos-Concept-skos-inScheme a sh:PropertyShape ;
+    sh:class skos:ConceptScheme ;
+    sh:description "A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme." ;
+    sh:minCount 1 ;
+    sh:name "In scheme" ;
+    sh:path skos:inScheme ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#inScheme> ?that . ?that <http://www.w3.org/2004/02/skos/core#inScheme> ?this .}" ] .
+
+tech-shape:skos-Concept-skos-narrower a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:description "A concept that is less general in meaning. Narrower concepts are typically rendered as children in a concept hierarchy (tree)." ;
+    sh:name "Narrower" ;
+    sh:path skos:narrower ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#narrower> ?that . ?that <http://www.w3.org/2004/02/skos/core#narrower> ?this .}" ] .
+
+tech-shape:skos-Concept-skos-topConceptOf a sh:PropertyShape ;
+    sh:class skos:ConceptScheme ;
+    sh:description "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme." ;
+    sh:name "Top concept of" ;
+    sh:path skos:topConceptOf ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#topConceptOf> ?that . ?that <http://www.w3.org/2004/02/skos/core#topConceptOf> ?this .}" ] .
+
+tech-shape:skos-Concept-skosxl-altLabel a sh:PropertyShape ;
+    sh:class skosxl:Label ;
+    sh:description "An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept." ;
+    sh:name "Alt label" ;
+    sh:path skosxl:altLabel ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2008/05/skos-xl#altLabel> ?that . ?that <http://www.w3.org/2008/05/skos-xl#altLabel> ?this .}" ] .
+
+tech-shape:skos-Concept-skosxl-hiddenLabel a sh:PropertyShape ;
+    sh:class skosxl:Label ;
+    sh:description "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations. Mis-spelled terms are normally included as hidden labels." ;
+    sh:name "Hidden label" ;
+    sh:path skosxl:hiddenLabel ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2008/05/skos-xl#hiddenLabel> ?that . ?that <http://www.w3.org/2008/05/skos-xl#hiddenLabel> ?this .}" ] .
+
+tech-shape:skos-Concept-skosxl-prefLabel a sh:PropertyShape ;
+    sh:class skosxl:Label ;
+    sh:description "The preferred lexical label for a resource, in a given language. No two concepts in the same concept scheme may have the same preferred label in a given language." ;
+    sh:name "Pref label" ;
+    sh:path skosxl:prefLabel ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2008/05/skos-xl#prefLabel> ?that . ?that <http://www.w3.org/2008/05/skos-xl#prefLabel> ?this .}" ] .
+
+tech-shape:skos-ConceptScheme-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of creation of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+tech-shape:skos-ConceptScheme-dct-identifier a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:string ;
+    sh:description "An unambiguous reference to the resource within a given context. Recommended best practice is to identify the resource by means of a string conforming to a formal identification system." ;
+    sh:maxCount 1 ;
+    sh:name "Identifier" ;
+    sh:path dcterms:identifier .
+
+tech-shape:skos-ConceptScheme-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of modification of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+tech-shape:skos-ConceptScheme-dct-title a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "It represents the title or name of a resource." ;
+    sh:maxCount 1 ;
+    sh:name "Title" ;
+    sh:path dcterms:title .
+
+tech-shape:skos-ConceptScheme-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "End of the validity period. If a resource has an end date then it must be marked as deprecated." ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+tech-shape:skos-ConceptScheme-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "Beginning of the validity period." ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+tech-shape:skos-ConceptScheme-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:boolean ;
+    sh:description "States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future" ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+tech-shape:skos-ConceptScheme-owl-versionInfo a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:description "An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Version info" ;
+    sh:path owl:versionInfo .
+
+tech-shape:skos-ConceptScheme-skos-hasTopConcept a sh:PropertyShape ;
+    sh:class skos:Concept ;
+    sh:name "Has top concept" ;
+    sh:path skos:hasTopConcept ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/2004/02/skos/core#hasTopConcept> ?that . ?that <http://www.w3.org/2004/02/skos/core#hasTopConcept> ?this .}" ] .
+
+tech-shape:skosxl-Label-dct-created a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of creation of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Created" ;
+    sh:path dcterms:created .
+
+tech-shape:skosxl-Label-dct-modified a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:description "Date of modification of the resource." ;
+    sh:maxCount 1 ;
+    sh:name "Modified" ;
+    sh:path dcterms:modified .
+
+tech-shape:skosxl-Label-dct-type a sh:PropertyShape ;
+    sh:class at-voc:label-type ;
+    sh:name "Type" ;
+    sh:path dcterms:type .
+
+tech-shape:skosxl-Label-euvoc-corrStatus a sh:PropertyShape ;
+    sh:class at-voc:correction-status ;
+    sh:description "A status of proofreading of labels and descriptions." ;
+    sh:maxCount 1 ;
+    sh:name "Corr status" ;
+    sh:path euvoc:corrStatus ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://publications.europa.eu/ontology/euvoc#corrStatus> ?that . ?that <http://publications.europa.eu/ontology/euvoc#corrStatus> ?this .}" ] .
+
+tech-shape:skosxl-Label-euvoc-endDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "End of the validity period. If a resource has an end date then it must be marked as deprecated." ;
+    sh:maxCount 1 ;
+    sh:name "End date" ;
+    sh:path euvoc:endDate .
+
+tech-shape:skosxl-Label-euvoc-startDate a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:date ;
+    sh:description "Beginning of the validity period." ;
+    sh:maxCount 1 ;
+    sh:name "Start date" ;
+    sh:path euvoc:startDate .
+
+tech-shape:skosxl-Label-euvoc-status a sh:PropertyShape ;
+    sh:class at-voc:concept-status ;
+    sh:maxCount 1 ;
+    sh:name "Status" ;
+    sh:path euvoc:status .
+
+tech-shape:skosxl-Label-lexinfo-gender a sh:PropertyShape ;
+    sh:class at-voc:gramatical-gender ;
+    sh:description "A grammatical category that indicates grammatical relationships between words in sentences." ;
+    sh:maxCount 1 ;
+    sh:name "Gender" ;
+    sh:path lexinfo:gender .
+
+tech-shape:skosxl-Label-lexinfo-number a sh:PropertyShape ;
+    sh:class at-voc:grammatical-number ;
+    sh:description "Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to." ;
+    sh:maxCount 1 ;
+    sh:name "Number" ;
+    sh:path lexinfo:number .
+
+tech-shape:skosxl-Label-lexvo-inScript a sh:PropertyShape ;
+    sh:class at-voc:script ;
+    sh:maxCount 1 ;
+    sh:name "In script" ;
+    sh:path lexvo:inScript .
+
+tech-shape:skosxl-Label-owl-deprecated a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype xsd:boolean ;
+    sh:description "States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future." ;
+    sh:maxCount 1 ;
+    sh:name "Deprecated" ;
+    sh:path owl:deprecated .
+
+tech-shape:skosxl-Label-skosxl-literalForm a sh:PropertyShape ;
+    rdfs:isDefinedBy tech-shape:tech-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "An instance of the class skosxl:Label has one and only one literal form." ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Literal form" ;
+    sh:path skosxl:literalForm .
+
+tech-shape:tech-shape a owl:Ontology ;
+    rdfs:label "Core Public Organisation Vocabulary - core shapes"@en ;
+    dcterms:created "2021-06-01"^^xsd:date ;
+    dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
+    dcterms:issued "2024-02-09"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "common SRC_AP Ontology - core shapes"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from common_src_ap_CM.xml on 2024-02-09" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports :tech,
+        :tech-restriction,
+        cccev:,
+        <http://data.europa.eu/nuts>,
+        <http://lexvo.org/ontology>,
+        <http://publications.europa.eu/ontology/euvoc>,
+        at-voc:,
+        dcterms:,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.opengis.net/ont/sf>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <ttp://publications.europa.eu/ontology/authority/> ;
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/data-shape#tech-shape-3.1.0" ;
+    owl:versionIRI tech-shape:tech-shape-4.0.0 ;
+    owl:versionInfo "4.0.0" .
+

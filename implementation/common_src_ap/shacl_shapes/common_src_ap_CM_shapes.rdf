@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://data.europa.eu/a4g/ontology#"
+         xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:at="http://publications.europa.eu/ontology/authority/"
+         xmlns:at-voc="http://publications.europa.eu/resource/authority/"
+         xmlns:at-voc-new="http://publications.europa.eu/resource/authority/new/"
+         xmlns:atold="http://publications.europa.eu/resource/authority/"
+         xmlns:cccev="http://data.europa.eu/m8g/"
+         xmlns:core="http://data.europa.eu/m8g/"
+         xmlns:cpov="http://data.europa.eu/m8g/"
+         xmlns:cpsv="http://data.europa.eu/m8g/"
+         xmlns:cpv="http://data.europa.eu/m8g/"
+         xmlns:cv="http://data.europa.eu/m8g/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+         xmlns:espd="https://github.com/ESPD/ESPD-EDM/"
+         xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+         xmlns:lexinfo="http://www.lexinfo.net/ontology/2.0/lexinfo#"
+         xmlns:lexvo="http://lexvo.org/ontology#"
+         xmlns:locn="http://www.w3.org/ns/locn#"
+         xmlns:nuts="http://data.europa.eu/nuts/"
+         xmlns:org="http://www.w3.org/ns/org#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:person="http://www.w3.org/ns/person#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sf="http://www.opengis.net/ont/sf#"
+         xmlns:sh="http://www.w3.org/ns/shacl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+         xmlns:tech-res="http://data.europa.eu/a4g/ontology#"
+         xmlns:tech-shape="http://data.europa.eu/a4g/data-shape#"
+         xmlns:time="http://www.w3.org/2006/time#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#tech-shape">
+      <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+      <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+      <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+      <owl:imports rdf:resource="http://data.europa.eu/nuts"/>
+      <owl:imports rdf:resource="ttp://publications.europa.eu/ontology/authority/"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/person"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
+      <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/ontology/euvoc"/>
+      <owl:imports rdf:resource="http://lexvo.org/ontology"/>
+      <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
+      <owl:imports rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo"/>
+      <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/sf"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#tech"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#tech-restriction"/>
+      <dct:title xml:lang="en">common SRC_AP Ontology - core shapes</dct:title>
+      <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core shapes</rdfs:label>
+      <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
+      <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
+      <rdfs:comment>This version is automatically generated from common_src_ap_CM.xml on 2024-02-09</rdfs:comment>
+      <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
+      <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
+      <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
+      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-09</dct:issued>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
+      <owl:versionInfo>4.0.0</owl:versionInfo>
+      <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/a4g/data-shape#tech-shape-3.1.0</owl:priorVersion>
+      <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
+      <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
+      <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
+   </owl:Ontology>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#ConceptStatus"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus">
+      <rdfs:label>Concept status</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus">
+      <rdfs:comment>It categorizes or represents concept statuses within the EU Vocabularies.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#CorrectionStatus"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus">
+      <rdfs:label>Correction status</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus">
+      <rdfs:comment>The Correction status authority table (AT) provides the possible statuses of proofreading of labels and descriptions.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#GrammaticalGender"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender">
+      <rdfs:label>Grammatical gender</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber">
+      <rdfs:label>Grammatical number</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber">
+      <rdfs:comment>The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: "singular", "dual" or "plural". There is also a concept "generic" for forms that do not distinguish between grammatical numbers.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#LabelType"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType">
+      <rdfs:label>Label type</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType">
+      <rdfs:comment>The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#NotationType"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType">
+      <rdfs:label>Notation type</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType">
+      <rdfs:comment>A conceptual entity represents the notation types within the EU Vocabularies.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#Script"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script">
+      <rdfs:label>Script</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script">
+      <rdfs:comment>The Script authority table is a controlled vocabulary that lists concepts associated with distinctive scripts. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 15924 international standard. Each script is instantiated according to a writing system, described in writing-system authority table.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#UseContext"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext">
+      <rdfs:label>Use context</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext">
+      <rdfs:comment>Provides different applications and environments that make use of the various controlled vocabularies.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNotation"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <rdfs:label>Xl notation</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <rdfs:comment>A notation is a string of characters used to uniquely identify a concept within a specified context. Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SKOS notation statements. This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:targetClass rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <rdfs:label>Xl note</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <rdfs:comment>Like the skosxl:Label class reifies SKOS label statements, XlNote reifies SKOS note statements (i.e. skos:editorialNote, skos:example, skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote). This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:targetClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <rdfs:label>Concept</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <rdfs:comment>A concept is a unit of thought. The semantic content of a concept can be re-expressed by a combination of other and different concepts, which may vary from one language or culture to another. Concepts exist in the mind as abstract entities that are independent of the terms used to label them.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:targetClass rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <rdfs:label>Concept scheme</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <rdfs:comment>A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:targetClass rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <rdfs:label>Label</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <rdfs:comment>The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI. An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [&lt;xref scope="external" href="https://www.w3.org/TR/rdf-concepts/"&gt;&lt;foreign otherprops="#0000ff"&gt;&lt;u&gt;RDF-CONCEPTS&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
+      <sh:path rdf:resource="http://purl.org/dc/terms/created"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
+      <sh:name>Created</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
+      <sh:description>Date of creation of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-created">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
+      <sh:path rdf:resource="http://purl.org/dc/terms/modified"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
+      <sh:name>Modified</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
+      <sh:description>Date of modification of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-modified">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#endDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
+      <sh:name>End date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-endDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#startDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
+      <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
+      <sh:description>Beginning of the validity period.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-euvoc-startDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
+      <sh:path rdf:resource="http://www.w3.org/2002/07/owl#deprecated"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
+      <sh:name>Deprecated</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-owl-deprecated">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
+      <sh:path rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
+      <sh:name>Value</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
+      <sh:description>The literal form of the note.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-rdf-value">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created">
+      <sh:path rdf:resource="http://purl.org/dc/terms/created"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created">
+      <sh:name>Created</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created">
+      <sh:description>Date of creation of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-created">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator">
+      <sh:path rdf:resource="http://purl.org/dc/terms/creator"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator">
+      <sh:name>Creator</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator">
+      <sh:description>The entity or entities responsible for creating the resource,</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-creator">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified">
+      <sh:path rdf:resource="http://purl.org/dc/terms/modified"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified">
+      <sh:name>Modified</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified">
+      <sh:description>Date of modification of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-dct-modified">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#endDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
+      <sh:name>End date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-endDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#startDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
+      <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
+      <sh:description>Beginning of the validity period.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-startDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated">
+      <sh:path rdf:resource="http://www.w3.org/2002/07/owl#deprecated"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated">
+      <sh:name>Deprecated</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated">
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-owl-deprecated">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value">
+      <sh:path rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value">
+      <sh:name>Value</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value">
+      <sh:description>The literal form of the note.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-rdf-value">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
+      <sh:path rdf:resource="http://purl.org/dc/terms/created"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
+      <sh:name>Created</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
+      <sh:description>Date of creation of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-created">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
+      <sh:path rdf:resource="http://purl.org/dc/terms/dateAccepted"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
+      <sh:name>Date accepted</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
+      <sh:description>Date of acceptance of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateAccepted">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
+      <sh:path rdf:resource="http://purl.org/dc/terms/dateSubmitted"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
+      <sh:name>Date submitted</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
+      <sh:description>Date of submission of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-dateSubmitted">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
+      <sh:path rdf:resource="http://purl.org/dc/terms/modified"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
+      <sh:name>Modified</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
+      <sh:description>Date of modification of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-modified">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#endDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
+      <sh:name>End date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-endDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#startDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
+      <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
+      <sh:description>Beginning of the validity period.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-startDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
+      <sh:path rdf:resource="http://www.w3.org/2002/07/owl#deprecated"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
+      <sh:name>Deprecated</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-deprecated">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <sh:path rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <sh:name>Version info</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <sh:description>An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-owl-versionInfo">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
+      <sh:path rdf:resource="http://purl.org/dc/terms/created"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
+      <sh:name>Created</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
+      <sh:description>Date of creation of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-created">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
+      <sh:path rdf:resource="http://purl.org/dc/terms/identifier"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
+      <sh:name>Identifier</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
+      <sh:description>An unambiguous reference to the resource within a given context. Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-identifier">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
+      <sh:path rdf:resource="http://purl.org/dc/terms/modified"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
+      <sh:name>Modified</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
+      <sh:description>Date of modification of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-modified">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title">
+      <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title">
+      <sh:name>Title</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title">
+      <sh:description>It represents the title or name of a resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-dct-title">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#endDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
+      <sh:name>End date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-endDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#startDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
+      <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
+      <sh:description>Beginning of the validity period.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-euvoc-startDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated">
+      <sh:path rdf:resource="http://www.w3.org/2002/07/owl#deprecated"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated">
+      <sh:name>Deprecated</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated">
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-deprecated">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo">
+      <sh:path rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo">
+      <sh:name>Version info</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo">
+      <sh:description>An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-owl-versionInfo">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
+      <sh:path rdf:resource="http://purl.org/dc/terms/created"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
+      <sh:name>Created</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
+      <sh:description>Date of creation of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-created">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
+      <sh:path rdf:resource="http://purl.org/dc/terms/modified"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
+      <sh:name>Modified</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
+      <sh:description>Date of modification of the resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-modified">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#endDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
+      <sh:name>End date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
+      <sh:description>End of the validity period. If a resource has an end date then it must be marked as deprecated.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-endDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#startDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
+      <sh:name>Start date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
+      <sh:description>Beginning of the validity period.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-startDate">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
+      <sh:path rdf:resource="http://www.w3.org/2002/07/owl#deprecated"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
+      <sh:name>Deprecated</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
+      <sh:description>States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents. Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-owl-deprecated">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
+      <sh:path rdf:resource="http://www.w3.org/2008/05/skos-xl#literalForm"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
+      <sh:name>Literal form</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
+      <sh:description>An instance of the class skosxl:Label has one and only one literal form.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#tech-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-skosxl-literalForm">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation">
+      <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNotation"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlNotation&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlNotation&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#xlNotation"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation">
+      <sh:name>Xl notation</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNotation">
+      <sh:description>A notation is a string of characters such as "T58.5" or "303.4833" used to uniquely identify a concept within the scope of a given concept scheme or within a specified context.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-corrStatus">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/correction-status"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-corrStatus">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-corrStatus">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#corrStatus&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#corrStatus&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-corrStatus"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-corrStatus">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#corrStatus"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-corrStatus">
+      <sh:name>Corr status</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNote-euvoc-corrStatus">
+      <sh:description>A status of proofreading of labels and descriptions.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
+      <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlHistoryNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlHistoryNote&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#xlHistoryNote"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
+      <sh:name>Xl history note</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlHistoryNote">
+      <sh:description>A note about the past state/use/meaning of a concept.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNote">
+      <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNote">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlNote&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNote"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNote">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#xlNote"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlNote">
+      <sh:name>Xl note</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote">
+      <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlChangeNote&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlChangeNote&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#xlChangeNote"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote">
+      <sh:name>Xl change note</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlChangeNote">
+      <sh:description>A note about a modification to a concept.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
+      <sh:class rdf:resource="http://publications.europa.eu/ontology/euvoc#XlNote"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#xlDefinition&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#xlDefinition&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#xlDefinition"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
+      <sh:name>Xl definition</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-xlDefinition">
+      <sh:description>A statement or formal explanation of the meaning of a concept.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-altLabel">
+      <sh:class rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-altLabel">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#altLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#altLabel&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-altLabel"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-altLabel">
+      <sh:path rdf:resource="http://www.w3.org/2008/05/skos-xl#altLabel"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-altLabel">
+      <sh:name>Alt label</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-altLabel">
+      <sh:description>An alternative lexical label for a resource. Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel">
+      <sh:class rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#prefLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#prefLabel&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel">
+      <sh:path rdf:resource="http://www.w3.org/2008/05/skos-xl#prefLabel"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel">
+      <sh:name>Pref label</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-prefLabel">
+      <sh:description>The preferred lexical label for a resource, in a given language. No two concepts in the same concept scheme may have the same preferred label in a given language.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-exactMatch">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-exactMatch">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-exactMatch"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-exactMatch">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-exactMatch">
+      <sh:name>Exact match</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-exactMatch">
+      <sh:description>The property skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#topConceptOf&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#topConceptOf&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf">
+      <sh:name>Top concept of</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-topConceptOf">
+      <sh:description>A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/isReplacedBy&gt; ?that . ?that &lt;http://purl.org/dc/terms/isReplacedBy&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
+      <sh:path rdf:resource="http://purl.org/dc/terms/isReplacedBy"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
+      <sh:name>Is replaced by</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-isReplacedBy">
+      <sh:description>A related resource that supplants, displaces, or supersedes the described resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#narrower&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#narrower&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
+      <sh:name>Narrower</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-narrower">
+      <sh:description>A concept that is less general in meaning. Narrower concepts are typically rendered as children in a concept hierarchy (tree).</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#broader&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#broader&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
+      <sh:name>Broader</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-broader">
+      <sh:description>A concept that is more general in meaning. Broader concepts are typically rendered as parents in a concept hierarchy (tree).</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel">
+      <sh:class rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2008/05/skos-xl#hiddenLabel&gt; ?that . ?that &lt;http://www.w3.org/2008/05/skos-xl#hiddenLabel&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel">
+      <sh:path rdf:resource="http://www.w3.org/2008/05/skos-xl#hiddenLabel"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel">
+      <sh:name>Hidden label</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skosxl-hiddenLabel">
+      <sh:description>A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations. Mis-spelled terms are normally included as hidden labels.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/replaces&gt; ?that . ?that &lt;http://purl.org/dc/terms/replaces&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
+      <sh:path rdf:resource="http://purl.org/dc/terms/replaces"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
+      <sh:name>Replaces</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-dct-replaces">
+      <sh:description>A related resource that is supplanted, displaced, or superseded by the described resource.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#inScheme&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#inScheme&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-skos-inScheme">
+      <sh:description>A Concept Scheme in which the Concept is included. A Concept may be a member of more than one concept scheme.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-skos-hasTopConcept">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-skos-hasTopConcept">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/2004/02/skos/core#hasTopConcept&gt; ?that . ?that &lt;http://www.w3.org/2004/02/skos/core#hasTopConcept&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-skos-hasTopConcept"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-skos-hasTopConcept">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-ConceptScheme-skos-hasTopConcept">
+      <sh:name>Has top concept</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-corrStatus">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/correction-status"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-corrStatus">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-corrStatus">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://publications.europa.eu/ontology/euvoc#corrStatus&gt; ?that . ?that &lt;http://publications.europa.eu/ontology/euvoc#corrStatus&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-corrStatus"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-corrStatus">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#corrStatus"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-corrStatus">
+      <sh:name>Corr status</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-corrStatus">
+      <sh:description>A status of proofreading of labels and descriptions.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus-skos-inScheme">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/concept-status"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus-skos-inScheme">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-ConceptStatus-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus-skos-inScheme">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/correction-status"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus-skos-inScheme">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-CorrectionStatus-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender-skos-inScheme">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/gramatical-gender"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender-skos-inScheme">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalGender-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber-skos-inScheme">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/grammatical-number"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber-skos-inScheme">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-GrammaticalNumber-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType-skos-inScheme">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType-skos-inScheme">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-LabelType-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-LabelType-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType-skos-inScheme">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/notation-type"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType-skos-inScheme">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-NotationType-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-NotationType-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script-skos-inScheme">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/script"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script-skos-inScheme">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-Script-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-Script-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext-skos-inScheme">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext-skos-inScheme">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-UseContext-skos-inScheme"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext-skos-inScheme">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-UseContext-skos-inScheme">
+      <sh:name>In scheme</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-type">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/notation-type"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-type">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+      <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-type"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-type">
+      <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-type">
+      <sh:name>Type</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#euvoc-XlNotation-dct-type">
+      <sh:description>Specify the context where a specified notation is considered unique.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-context">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/use-context"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-context"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-context">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#context"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-context">
+      <sh:name>Context</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-context">
+      <sh:description>It signifies that the concept is applicable or relevant within the context of the identified use context.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-status">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/concept-status"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-status">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-status"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-status">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#status"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept-euvoc-status">
+      <sh:name>Status</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-type">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/label-type"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-type"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-type">
+      <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-dct-type">
+      <sh:name>Type</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-status">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/concept-status"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-status">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-status"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-status">
+      <sh:path rdf:resource="http://publications.europa.eu/ontology/euvoc#status"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-euvoc-status">
+      <sh:name>Status</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-gender">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/gramatical-gender"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-gender">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-gender"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-gender">
+      <sh:path rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#gender"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-gender">
+      <sh:name>Gender</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-gender">
+      <sh:description>A grammatical category that indicates grammatical relationships between words in sentences.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexvo-inScript">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/script"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexvo-inScript">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexvo-inScript"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexvo-inScript">
+      <sh:path rdf:resource="http://lexvo.org/ontology#inScript"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexvo-inScript">
+      <sh:name>In script</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-number">
+      <sh:class rdf:resource="http://publications.europa.eu/resource/authority/grammatical-number"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-number">
+      <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-number"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-number">
+      <sh:path rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#number"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-number">
+      <sh:name>Number</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skosxl-Label-lexinfo-number">
+      <sh:description>Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to.</sh:description>
+   </rdf:Description>
+</rdf:RDF>
