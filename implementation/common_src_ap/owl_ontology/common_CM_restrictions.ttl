@@ -200,42 +200,42 @@ vcard:ContactPoint rdfs:subClassOf [ a owl:Restriction ;
 wgs1:SpatialThing a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:created ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
             owl:onProperty geo:lat ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty rdfs:comment ],
+            owl:onProperty geo:long ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty geo:long ] .
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rdfs:comment ] .
 
 vcard:Address a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty vcard:street-address ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty euvoc:postbox ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:modified ],
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty dcterms:type ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty vcard:postal-code ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:created ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty vcard:post-office-box ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:type ],
+            owl:onProperty vcard:locality ],
         [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty vcard:locality ] .
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty vcard:street-address ] .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( euvoc:CapitalClassification euvoc:ConceptStatus euvoc:CorrectionStatus euvoc:Country euvoc:Label-type euvoc:NotationType euvoc:Treaty euvoc:UseContext ) .

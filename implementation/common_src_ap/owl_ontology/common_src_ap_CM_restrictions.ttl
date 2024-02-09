@@ -236,22 +236,22 @@ owl:deprecated rdfs:domain [ a owl:Class ;
 euvoc:XlNotation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty owl:deprecated ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dcterms:created ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty euvoc:startDate ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty rdf:value ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty euvoc:endDate ],
+            owl:onProperty owl:deprecated ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:modified ] .
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:endDate ] .
 
 skos:inScheme rdfs:domain [ a owl:Class ;
             owl:unionOf ( euvoc:ConceptStatus euvoc:CorrectionStatus euvoc:GrammaticalGender euvoc:GrammaticalNumber euvoc:LabelType euvoc:NotationType euvoc:Script euvoc:UseContext skos:Concept ) ] ;
@@ -261,100 +261,100 @@ skos:inScheme rdfs:domain [ a owl:Class ;
 skos:ConceptScheme a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty dcterms:title ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty owl:deprecated ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty euvoc:endDate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty euvoc:startDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:modified ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:title ],
+            owl:onProperty dcterms:created ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty owl:versionInfo ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:startDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:identifier ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:created ] .
+            owl:onProperty euvoc:endDate ] .
 
 euvoc:XlNote a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty euvoc:endDate ],
+            owl:onProperty dcterms:creator ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rdf:value ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty owl:deprecated ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:creator ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty euvoc:startDate ],
+            owl:onProperty euvoc:endDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:modified ],
         [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty rdf:value ] .
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:startDate ] .
 
 skosxl:Label a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty euvoc:endDate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty dcterms:modified ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty euvoc:startDate ],
+            owl:onProperty euvoc:endDate ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty skosxl:literalForm ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:created ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty owl:deprecated ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:created ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty skosxl:literalForm ] .
+            owl:onProperty euvoc:startDate ] .
 
 skos:Concept a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:startDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty euvoc:endDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:dateSubmitted ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:dateAccepted ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:modified ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty owl:versionInfo ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:created ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty owl:deprecated ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dcterms:dateAccepted ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dcterms:dateSubmitted ],
-        [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty skos:inScheme ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty euvoc:startDate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dcterms:modified ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty euvoc:endDate ] .
+            owl:onProperty owl:deprecated ] .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( euvoc:ConceptStatus euvoc:CorrectionStatus euvoc:GrammaticalGender euvoc:LabelType euvoc:NotationType euvoc:Script euvoc:UseContext ) .

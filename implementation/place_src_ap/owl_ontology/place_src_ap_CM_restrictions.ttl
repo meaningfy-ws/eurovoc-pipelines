@@ -113,16 +113,16 @@ skos:inScheme rdfs:domain euvoc:CapitalClassification ;
 
 wgs1:SpatialThing rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty geo:lat ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
             owl:onProperty geo:long ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty rdfs:comment ],
+            owl:onProperty geo:lat ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty dcterms:created ] .
+            owl:onProperty dcterms:created ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty rdfs:comment ] .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( euvoc:CapitalClassification euvoc:Place ) .
