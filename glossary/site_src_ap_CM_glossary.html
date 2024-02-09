@@ -41,9 +41,37 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>euvoc:AddressType</td>
+                     <td>The Address type authority table (AT) is a controlled vocabulary that provides the
+                        address types as used in the EU Whoiswho application. The AT gives the authority code
+                        and the English label for each concept. The Address type AT is maintained by the Publications
+                        Office of the European Union on the EU Vocabularies website. </td>
+                  </tr>
+                  <tr>
                      <td>euvoc:Site</td>
                      <td>A conceptual entity represents the abstract notion of corporate bodies. This concept
                         serves as a controlled vocabulary, offering the sites occupied by the various EU institutions.
+                        </td>
+                  </tr>
+                  <tr>
+                     <td>sf:Polygon</td>
+                     <td>A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior
+                        boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary
+                        LinearRing defines the top of the surface which is the side of the surface from which
+                        the exterior boundary appears to traverse the boundary in a counter clockwise direction.
+                        </td>
+                  </tr>
+                  <tr>
+                     <td>vcard:Address</td>
+                     <td>It provides a structured way to represent and exchange information about the location
+                        of an entity, whether it be a person, organization, or other. The use of specific
+                        properties within this class allows for a detailed and standardized description of
+                        addresses.</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>Information (e.g. e-mail address, telephone number) of a Person or department through
+                        which the user can get in touch with.
                         </td>
                   </tr>
                </tbody>
@@ -60,10 +88,78 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>vcard:Address</td>
+                     <td>dct:created</td>
+                     <td>Date of creation of the resource.
+                        </td>
+                     <td>xsd:dateTime [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>dct:description</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:Address<br>sf:Polygon<br></td>
+                     <td>dct:modified</td>
+                     <td> Date of modification of the resource.
+                        </td>
+                     <td>xsd:dateTime [0..1]<br>xsd:dateTime [1..1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>vcard:Address</td>
+                     <td>euvoc:postbox</td>
+                     <td></td>
+                     <td>xsd:string [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>sf:Polygon</td>
+                     <td>geosparql:asWKT</td>
+                     <td>The property geosparql:asWKT is defined to link a Geometry with its WKT serialization.</td>
+                     <td>rdf:PlainLiteral [1..1]</td>
+                  </tr>
+                  <tr>
                      <td>euvoc:Site</td>
                      <td>vcard:fn</td>
                      <td>Represents the full name of an individual.</td>
                      <td>xsd:string [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>vcard:hasEmail</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:Address</td>
+                     <td>vcard:locality</td>
+                     <td></td>
+                     <td>xsd:string [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:Address</td>
+                     <td>vcard:postal-code</td>
+                     <td></td>
+                     <td>xsd:string [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:Address</td>
+                     <td>vcard:post-office-box</td>
+                     <td></td>
+                     <td>xsd:string [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:Address</td>
+                     <td>vcard:street-address</td>
+                     <td></td>
+                     <td>xsd:string [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>vcard:ContactPoint</td>
+                     <td>vcard:telephone</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                </tbody>
             </table>
@@ -78,19 +174,25 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>dct:type</td>
+                     <td></td>
+                     <td>vcard:Address -&gt; at-voc:address-type [1]</td>
+                  </tr>
+                  <tr>
                      <td>euvoc:countryCode</td>
                      <td>It links a site to the corresponding country using a standardized country code</td>
                      <td>euvoc:Site -&gt; at-voc:country (external) [1]</td>
                   </tr>
                   <tr>
                      <td>euvoc:hasPrimaryContactPoint</td>
-                     <td>The contact information to get in touch with the associated person or department.</td>
-                     <td>euvoc:Site -&gt; vcard:ContactPoint (external) [0..*]</td>
+                     <td>The contact information to get in touch with the associated person or department. It indicate the primary means of contact for an entity (e.g., an organization or corporate
+                        body), linking that entity to a specific contact point </td>
+                     <td>euvoc:Site -&gt; vcard:ContactPoint [0..*]<br>euvoc:CorporateBody (external) -&gt; vcard:ContactPoint [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:localityCode</td>
-                     <td>The locality or geographical context associated with a particular site.</td>
-                     <td>euvoc:Site -&gt; at-voc:place (external) [1]</td>
+                     <td> The locality or geographical context associated with a particular site.</td>
+                     <td>vcard:Address -&gt; euvoc:Place (external) [1]<br>euvoc:Site -&gt; at-voc:place (external) [1]<br></td>
                   </tr>
                   <tr>
                      <td>euvoc:managedBy</td>
@@ -107,7 +209,7 @@
                         
                         
                         </td>
-                     <td>euvoc:Site -&gt; sf:Polygon (external) [0..1]</td>
+                     <td>euvoc:Site -&gt; sf:Polygon [0..1]</td>
                   </tr>
                   <tr>
                      <td>org:siteOf</td>
@@ -123,10 +225,15 @@
                      <td>euvoc:Site -&gt; at-voc:site [1]</td>
                   </tr>
                   <tr>
+                     <td>skos:inScheme</td>
+                     <td></td>
+                     <td>euvoc:AddressType -&gt; at-voc:address-type [1]</td>
+                  </tr>
+                  <tr>
                      <td>vcard:hasAddress</td>
                      <td>It provide a structured way to represent and exchange information about the location
                         (address) of a entity.</td>
-                     <td>euvoc:Site -&gt; vcard:Address (external) [1]</td>
+                     <td>euvoc:Site -&gt; vcard:Address [1]</td>
                   </tr>
                </tbody>
             </table>
