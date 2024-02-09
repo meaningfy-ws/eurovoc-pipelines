@@ -19,7 +19,7 @@
    <body>
       <header class="counter-skip">
          <h1 class="title">UML Conventions Comformance Report</h1>
-         <h2>[ 08/02/2024 ]</h2>
+         <h2>[ 09/02/2024 ]</h2>
          <div class="authors col-span">
             <div class="author">
                <div>Publications Office of the European Union</div>
@@ -55,116 +55,124 @@
                   and
                   Generalisations</em>. Each major section lists model items that need correction of errors
                or consideration of warnings.</p>
-            <p>The UML model in file <em>technical_CM.xml</em> 
-               was tested at 23:05 on February 8, 2024.</p>
+            <p>The UML model in file <em>common_src_ap_CM.xml</em> 
+               was tested at 13:26 on February 9, 2024.</p>
          </div>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="nomenclature">Nomenclature</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classNames">Class names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#" class="display-in-two-columns">
-            <li><a href="#euvoc:AddressType">euvoc:AddressType</a></li>
-            <li><a href="#euvoc:CapitalClassification">euvoc:CapitalClassification</a></li>
             <li><a href="#euvoc:ConceptStatus">euvoc:ConceptStatus</a></li>
             <li><a href="#euvoc:CorrectionStatus">euvoc:CorrectionStatus</a></li>
-            <li><a href="#euvoc:Country">euvoc:Country</a></li>
             <li><a href="#euvoc:GrammaticalGender">euvoc:GrammaticalGender</a></li>
             <li><a href="#euvoc:GrammaticalNumber">euvoc:GrammaticalNumber</a></li>
             <li><a href="#euvoc:LabelType">euvoc:LabelType</a></li>
             <li><a href="#euvoc:NotationType">euvoc:NotationType</a></li>
             <li><a href="#euvoc:Script">euvoc:Script</a></li>
-            <li><a href="#euvoc:Treaty">euvoc:Treaty</a></li>
             <li><a href="#euvoc:UseContext">euvoc:UseContext</a></li>
-            <li><a href="#sf:Polygon">sf:Polygon</a></li>
-            <li><a href="#vcard:Address">vcard:Address</a></li>
-            <li><a href="#vcard:ContactPoint">vcard:ContactPoint</a></li>
-            <li><a href="#wgs:SpatialThing">wgs:SpatialThing</a></li>
+            <li><a href="#euvoc:XlNotation">euvoc:XlNotation</a></li>
+            <li><a href="#euvoc:XlNote">euvoc:XlNote</a></li>
+            <li><a href="#skos:Concept">skos:Concept</a></li>
+            <li><a href="#skos:ConceptScheme">skos:ConceptScheme</a></li>
+            <li><a href="#skosxl:Label">skosxl:Label</a></li>
          </ul>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesNames">Class attribute names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#">
-            <li><a href="#attribute-dct:created-usage">dct:created (2)</a><ul><em>
-                     <li>vcard:Address (xsd:dateTime) [0..1]</li>
-                     <li>wgs:SpatialThing (xsd:dateTime) [1..1]</li></em></ul>
+            <li><a href="#attribute-dct:created-usage">dct:created (5)</a><ul><em>
+                     <li>euvoc:XlNotation (xsd:dateTime) [0..1]</li>
+                     <li>euvoc:XlNote (xsd:dateTime) [0..1]</li>
+                     <li>skos:Concept (xsd:dateTime) [0..1]</li>
+                     <li>skos:ConceptScheme (xsd:dateTime) [0..1]</li>
+                     <li>skosxl:Label (xsd:dateTime) [0..1]</li></em></ul>
             </li>
-            <li><a href="#attribute-dct:description">dct:description</a></li>
-            <li><a href="#attribute-dct:modified-usage">dct:modified (2)</a><ul><em>
-                     <li>sf:Polygon (xsd:dateTime) [1..1]</li>
-                     <li>vcard:Address (xsd:dateTime) [0..1]</li></em></ul>
+            <li><a href="#attribute-dct:creator">dct:creator</a></li>
+            <li><a href="#attribute-dct:dateAccepted">dct:dateAccepted</a></li>
+            <li><a href="#attribute-dct:dateSubmitted">dct:dateSubmitted</a></li>
+            <li><a href="#attribute-dct:identifier">dct:identifier</a></li>
+            <li><a href="#attribute-dct:modified-usage">dct:modified (5)</a><ul><em>
+                     <li>euvoc:XlNotation (xsd:dateTime) [0..1]</li>
+                     <li>euvoc:XlNote (xsd:dateTime) [0..1]</li>
+                     <li>skos:Concept (xsd:dateTime) [0..1]</li>
+                     <li>skos:ConceptScheme (xsd:dateTime) [0..1]</li>
+                     <li>skosxl:Label (xsd:dateTime) [0..1]</li></em></ul>
             </li>
-            <li><a href="#attribute-euvoc:postbox">euvoc:postbox</a></li>
-            <li><a href="#attribute-geosparql:asWKT">geosparql:asWKT</a></li>
-            <li><a href="#attribute-geosparql:lat">geosparql:lat</a></li>
-            <li><a href="#attribute-geosparql:long">geosparql:long</a></li>
-            <li><a href="#attribute-rdfs:comment">rdfs:comment</a></li>
-            <li><a href="#attribute-vcard:hasEmail">vcard:hasEmail</a></li>
-            <li><a href="#attribute-vcard:locality">vcard:locality</a></li>
-            <li><a href="#attribute-vcard:postal-code">vcard:postal-code</a></li>
-            <li><a href="#attribute-vcard:post-office-box">vcard:post-office-box</a></li>
-            <li><a href="#attribute-vcard:street-address">vcard:street-address</a></li>
-            <li><a href="#attribute-vcard:telephone">vcard:telephone</a></li>
+            <li><a href="#attribute-dct:title">dct:title</a></li>
+            <li><a href="#attribute-euvoc:endDate-usage">euvoc:endDate (5)</a><ul><em>
+                     <li>euvoc:XlNotation (xsd:date) [0..1]</li>
+                     <li>euvoc:XlNote (:xsd:date) [0..1]</li>
+                     <li>skos:Concept (xsd:date) [0..1]</li>
+                     <li>skos:ConceptScheme (xsd:date) [0..1]</li>
+                     <li>skosxl:Label (xsd:date) [0..1]</li></em></ul>
+            </li>
+            <li><a href="#attribute-euvoc:startDate-usage">euvoc:startDate (5)</a><ul><em>
+                     <li>euvoc:XlNotation (xsd:date) [0..1]</li>
+                     <li>euvoc:XlNote (xsd:date) [0..1]</li>
+                     <li>skos:Concept (xsd:date) [0..1]</li>
+                     <li>skos:ConceptScheme (xsd:date) [0..1]</li>
+                     <li>skosxl:Label (xsd:date) [0..1]</li></em></ul>
+            </li>
+            <li><a href="#attribute-owl:deprecated-usage">owl:deprecated (5)</a><ul><em>
+                     <li>euvoc:XlNotation (xsd:boolean) [0..1]</li>
+                     <li>euvoc:XlNote (xsd:boolean) [0..1]</li>
+                     <li>skos:Concept (xsd:boolean) [0..1]</li>
+                     <li>skos:ConceptScheme (xsd:boolean) [0..1]</li>
+                     <li>skosxl:Label (xsd:boolean) [0..1]</li></em></ul>
+            </li>
+            <li><a href="#attribute-owl:versionInfo-usage">owl:versionInfo (2)</a><ul><em>
+                     <li>skos:Concept (rdf:PlainaLiteral) [0..1]</li>
+                     <li>skos:ConceptScheme (rdf:PlainaLiteral) [0..1]</li></em></ul>
+            </li>
+            <li><a href="#attribute-rdf:value-usage">rdf:value (2)</a><ul><em>
+                     <li>euvoc:XlNotation (rdf:langString) [1..1]</li>
+                     <li>euvoc:XlNote (rdf:langString) [1..1]</li></em></ul>
+            </li>
+            <li><a href="#attribute-skosxl:literalForm">skosxl:literalForm</a></li>
          </ul>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="connectorNames">Connector names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#">
-            <li><a href="#connector-dct:type">dct:type (3)</a><ul><em>
-                     <li> -&gt; euvoc:LabelType [0..*]</li>
-                     <li>vcard:Address -&gt; at-voc:address-type [1]</li>
-                     <li> -&gt; at-voc:notation-type [1]</li></em></ul>
+            <li>dct:isReplacedBy</li>
+            <li>dct:replaces</li>
+            <li><a href="#connector-dct:type">dct:type (2)</a><ul><em>
+                     <li>euvoc:XlNotation -&gt; at-voc:notation-type [1]</li>
+                     <li>skosxl:Label -&gt; at-voc:label-type [0..*]</li></em></ul>
             </li>
             <li>euvoc:context</li>
             <li><a href="#connector-euvoc:corrStatus">euvoc:corrStatus (2)</a><ul><em>
-                     <li> -&gt; at-voc:correction-status [0..1]</li>
-                     <li> -&gt; at-voc:correction-status [0..1]</li></em></ul>
+                     <li>euvoc:XlNote -&gt; at-voc:correction-status [0..1]</li>
+                     <li>skosxl:Label -&gt; at-voc:correction-status [0..1]</li></em></ul>
             </li>
-            <li>euvoc:countryCode</li>
-            <li><a href="#connector-euvoc:hasPrimaryContactPoint">euvoc:hasPrimaryContactPoint (2)</a><ul><em>
-                     <li> -&gt; vcard:ContactPoint [0..*]</li>
-                     <li> -&gt; vcard:ContactPoint [0..*]</li></em></ul>
-            </li>
-            <li>euvoc:legallyBasedOnTreaty</li>
-            <li>euvoc:localityCode</li>
             <li><a href="#connector-euvoc:status">euvoc:status (2)</a><ul><em>
-                     <li> -&gt; at-voc:concept-status [0..1]</li>
-                     <li> -&gt; at-voc:concept-status [0..1]</li></em></ul>
+                     <li>skos:Concept -&gt; at-voc:concept-status [0..1]</li>
+                     <li>skosxl:Label -&gt; at-voc:concept-status [0..1]</li></em></ul>
             </li>
-            <li>euvoc:usedIn</li>
-            <li>geosparql:sfWithin</li>
+            <li>euvoc:xlChangeNote</li>
+            <li>euvoc:xlDefinition</li>
+            <li>euvoc:xlHistoryNote</li>
+            <li>euvoc:xlNotation</li>
+            <li>euvoc:xlNote</li>
             <li>lexinfo:gender</li>
             <li>lexinfo:number</li>
             <li>lexvo:inScript</li>
-            <li>locn:geometry</li>
-            <li>org:role</li>
-            <li><a href="#connector-skos:inScheme">skos:inScheme (12)</a><ul><em>
-                     <li>euvoc:AddressType -&gt; at-voc:address-type [1]</li>
-                     <li>euvoc:CapitalClassification -&gt; at-voc:capital-classification [1]</li>
+            <li>skos:broader</li>
+            <li>skos:exactMatch</li>
+            <li>skos:hasTopConcept</li>
+            <li><a href="#connector-skos:inScheme">skos:inScheme (9)</a><ul><em>
                      <li>euvoc:ConceptStatus -&gt; at-voc:concept-status [1]</li>
                      <li>euvoc:CorrectionStatus -&gt; at-voc:correction-status [1]</li>
-                     <li>euvoc:Country -&gt; at-voc:country [1]</li>
                      <li>euvoc:GrammaticalGender -&gt; at-voc:gramatical-gender [1]</li>
                      <li>euvoc:GrammaticalNumber -&gt; at-voc:grammatical-number [1]</li>
                      <li>euvoc:LabelType -&gt; at-voc:label-type [1]</li>
                      <li>euvoc:NotationType -&gt; at-voc:notation-type [1]</li>
                      <li>euvoc:Script -&gt; at-voc:script [1]</li>
-                     <li>euvoc:Treaty -&gt; at-voc:treaty [1]</li>
-                     <li>euvoc:UseContext -&gt; at-voc:use-context [1]</li></em></ul>
+                     <li>euvoc:UseContext -&gt; at-voc:use-context [1]</li>
+                     <li>skos:Concept -&gt; skos:ConceptScheme [1..*]</li></em></ul>
             </li>
-            <li>vcard:hasAddress</li>
-            <li>wgs:location</li>
+            <li>skos:narrower</li>
+            <li>skos:topConceptOf</li>
+            <li>skosxl:altLabel</li>
+            <li>skosxl:hiddenLabel</li>
+            <li>skosxl:prefLabel</li>
          </ul>
          <h1 class="selector-heading" id="classes">Classes</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:AddressType">euvoc:AddressType</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class euvoc:AddressType has no attributes provided. A class should define some
-                  attributes.</dd>
-            </dl>
-         </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:CapitalClassification">euvoc:CapitalClassification</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class euvoc:CapitalClassification has no attributes provided. A class should define
-                  some attributes.</dd>
-            </dl>
-         </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:ConceptStatus">euvoc:ConceptStatus</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
@@ -183,13 +191,6 @@
                   in singular number.</dd>
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class euvoc:CorrectionStatus has no attributes provided. A class should define
                   some attributes.</dd>
-            </dl>
-         </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:Country">euvoc:Country</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class euvoc:Country has no attributes provided. A class should define some attributes.</dd>
             </dl>
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:GrammaticalGender">euvoc:GrammaticalGender</h2>
@@ -232,13 +233,6 @@
                <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class euvoc:Script has no attributes provided. A class should define some attributes.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:Treaty">euvoc:Treaty</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class euvoc:Treaty has no attributes provided. A class should define some attributes.</dd>
-            </dl>
-         </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:UseContext">euvoc:UseContext</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
@@ -247,87 +241,34 @@
                   attributes.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="vcard:Address">vcard:Address</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="euvoc:XlNote">euvoc:XlNote</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name is possibly in plural grammatical number. Names shall be usually provided
-                  in singular number.</dd>
-            </dl>
-            <dl id="attribute-dct:modified">
-               <dt>dct:modified</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:modified is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-euvoc:postbox">
-               <dt>euvoc:postbox</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>euvoc:postbox is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-vcard:locality">
-               <dt>vcard:locality</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>vcard:locality is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-vcard:post-office-box">
-               <dt>vcard:post-office-box</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>vcard:post-office-box is missing a description. All concepts should be defined or
-                  described.</dd>
-            </dl>
-            <dl id="attribute-vcard:postal-code">
-               <dt>vcard:postal-code</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>vcard:postal-code is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-vcard:street-address">
-               <dt>vcard:street-address</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>vcard:street-address is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name is possibly in plural grammatical number. Names shall be usually provided
-                  in singular number.</dd>
+            <dl id="attribute-euvoc:endDate">
+               <dt>euvoc:endDate</dt>
+               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The attribute type :xsd:date type is invalid. Attributes must use types that are either:
+                  (a) XSD or RDF datatypes or (b) belonging to a shortlist of custom URIs (datatypes
+                  or classes).</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="vcard:ContactPoint">vcard:ContactPoint</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="skos:Concept">skos:Concept</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl id="attribute-dct:description">
-               <dt>dct:description</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>dct:description is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-vcard:hasEmail">
-               <dt>vcard:hasEmail</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>vcard:hasEmail is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-vcard:telephone">
-               <dt>vcard:telephone</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>vcard:telephone is missing a description. All concepts should be defined or described.</dd>
+            <dl id="attribute-owl:versionInfo">
+               <dt>owl:versionInfo</dt>
+               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The attribute type rdf:PlainaLiteral type is invalid. Attributes must use types that
+                  are either: (a) XSD or RDF datatypes or (b) belonging to a shortlist of custom URIs
+                  (datatypes or classes).</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="wgs:SpatialThing">wgs:SpatialThing</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="skos:ConceptScheme">skos:ConceptScheme</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl id="attribute-geosparql:lat">
-               <dt>geosparql:lat</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>geosparql:lat is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-geosparql:long">
-               <dt>geosparql:long</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>geosparql:long is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-            <dl id="attribute-rdfs:comment">
-               <dt>rdfs:comment</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>rdfs:comment is missing a description. All concepts should be defined or described.</dd>
+            <dl id="attribute-owl:versionInfo">
+               <dt>owl:versionInfo</dt>
+               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The attribute type rdf:PlainaLiteral type is invalid. Attributes must use types that
+                  are either: (a) XSD or RDF datatypes or (b) belonging to a shortlist of custom URIs
+                  (datatypes or classes).</dd>
             </dl>
          </section>
          <h1 class="selector-heading" id="enumerations">Enumerations</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:address-type</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet enumeration conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>at-voc:address-type is missing a description. All concepts should be defined or described.</dd>
-            </dl>
-         </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:capital-classification</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet enumeration conventions</dt>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The enumeration at-voc:capital-classification should not connect to other elements.
-                  An Enumeration stands for an controlled list and can only be referred to.</dd>
-            </dl>
-         </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:concept-status</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
@@ -348,14 +289,6 @@
                   in singular number.</dd>
                <dd class="filter errors"><i class="fa fa-times-circle error"></i>The enumeration at-voc:correction-status should not connect to other elements. An
                   Enumeration stands for an controlled list and can only be referred to.</dd>
-            </dl>
-         </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:country</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet enumeration conventions</dt>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The enumeration at-voc:country should not connect to other elements. An Enumeration
-                  stands for an controlled list and can only be referred to.</dd>
             </dl>
          </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:gramatical-gender</h2>
@@ -402,14 +335,6 @@
                   stands for an controlled list and can only be referred to.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:treaty</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl>
-               <dt>Unmet enumeration conventions</dt>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The enumeration at-voc:treaty should not connect to other elements. An Enumeration
-                  stands for an controlled list and can only be referred to.</dd>
-            </dl>
-         </section>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:use-context</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
@@ -423,76 +348,155 @@
          <h1 class="selector-heading" id="object">Object</h1>
          <h1 class="selector-heading" id="generalizations">Generalizations</h1>
          <h1 class="selector-heading" id="associations">Associations</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">vcard:Address -&gt; at-voc:address-type (+dct:type)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:XlNote -&gt; at-voc:correction-status (+euvoc:corrStatus)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt>
+               Unmet association conventions
+               </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>Associations can be provided only between classes to classes and classes to objects.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; euvoc:XlNote (+euvoc:xlNote)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
                </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
-            <dd class="filter errors"><i class="fa fa-times-circle error"></i>Associations can be provided only between classes to classes and classes to objects.</dd>
-            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name dct:type is not unique.The Connector role names can
-               be reused within the model, but only as connector role names on the same type of connector.
-               I.e. the  name of a dependecy role should not be reused as the name of association
-               role, and the name of association role should not be reused as the  name of a dependecy
-               role.</dd>
          </dl>
-         <h1 class="selector-heading" id="dependencies">Dependencies</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:CapitalClassification -&gt; at-voc:capital-classification (+skos:inScheme)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; skos:ConceptScheme (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt> Unmet dependency conventions </dt>
+            <dt>
+               Unmet association conventions
+               </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:ConceptScheme -&gt; skos:Concept (+skos:hasTopConcept)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt>
+               Unmet association conventions
+               </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
          </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skosxl:Label -&gt; at-voc:correction-status (+euvoc:corrStatus)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt>
+               Unmet association conventions
+               </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>Associations can be provided only between classes to classes and classes to objects.</dd>
+         </dl>
+         <h1 class="selector-heading" id="dependencies">Dependencies</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:ConceptStatus -&gt; at-voc:concept-status (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:CorrectionStatus -&gt; at-voc:correction-status (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
-         </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:Country -&gt; at-voc:country (+skos:inScheme)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt> Unmet dependency conventions </dt>
-            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
-               define and describe all the relations.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:GrammaticalGender -&gt; at-voc:gramatical-gender (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:GrammaticalNumber -&gt; at-voc:grammatical-number (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:LabelType -&gt; at-voc:label-type (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:NotationType -&gt; at-voc:notation-type (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:Script -&gt; at-voc:script (+skos:inScheme)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
                define and describe all the relations.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:UseContext -&gt; at-voc:use-context (+skos:inScheme)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet dependency conventions </dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
+               define and describe all the relations.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector source role name skos:inScheme is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector. I.e. the  name of a dependecy role should not be reused as the name
+               of association role, and the name of association role should not be reused as the
+               name of a dependecy role.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skos:Concept -&gt; at-voc:concept-status (+euvoc:status)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet dependency conventions </dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
+               define and describe all the relations.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skosxl:Label -&gt; at-voc:label-type (+dct:type)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet dependency conventions </dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
+               define and describe all the relations.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skosxl:Label -&gt; at-voc:concept-status (+euvoc:status)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet dependency conventions </dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
+               define and describe all the relations.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">skosxl:Label -&gt; at-voc:script (+lexvo:inScript)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The connector is missing a description. It is recommended                      to
@@ -509,12 +513,22 @@
             <dt> Unmet realisation conventions </dt>
             <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
          </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:corporate-body -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:correction-status -&gt; skos:ConceptScheme (+)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet realisation conventions </dt>
             <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
          </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:country -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:currency -&gt; skos:ConceptScheme (+)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet realisation conventions </dt>
             <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
@@ -534,12 +548,32 @@
             <dt> Unmet realisation conventions </dt>
             <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
          </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:language -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:notation-type -&gt; skos:ConceptScheme (+)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet realisation conventions </dt>
             <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
          </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:place -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:script -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:site -&gt; skos:ConceptScheme (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet realisation conventions </dt>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">at-voc:site -&gt; skos:ConceptScheme (+)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet realisation conventions </dt>
             <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
@@ -554,14 +588,6 @@
             <dt> Unmet realisation conventions </dt>
             <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">euvoc:AddressType -&gt; at-voc:address-type (+skos:inScheme)</h2>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dt> Unmet realisation conventions </dt>
-            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation connector has a role name. No source or target roles can be provided
-               to realisations.</dd>
-            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation has multiplicity. No multiplicity can be provided to realisations.</dd>
-            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The realisation can be provided only from an Object to a Class or Enumeration.</dd>
-         </dl>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="connectorsUsage">Connectors with multiple usages</h1>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-dct:type">
             <dt>dct:type</dt>
@@ -571,14 +597,11 @@
          <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>When a property is reused in multiple contexts, the meaning given by the definition
             is expected to be the same. In this case, multiple definitions are found: 
             <ul>
-               <li>... (skosxl:Label -&gt; euvoc:LabelType (+dct:type)) </li>
-               <li>... (vcard:Address -&gt; at-voc:address-type (+dct:type)) </li>
                <li>Specify the context where a specified notation is considered unique. 
                   (euvoc:XlNotation -&gt; at-voc:notation-type (+dct:type)) </li>
+               <li>... (skosxl:Label -&gt; at-voc:label-type (+dct:type)) </li>
             </ul>
          </dd>
-         <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter errors"><i class="fa fa-times-circle error"></i>The name dct:type appears on connectors of different types.  A name shall be reused
-            only on connectors of the same type.</dd>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-euvoc:corrStatus">
             <dt>euvoc:corrStatus</dt>
          </dl>
@@ -591,40 +614,24 @@
                   (skosxl:Label -&gt; at-voc:correction-status (+euvoc:corrStatus)) </li>
             </ul>
          </dd>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-euvoc:hasPrimaryContactPoint">
-            <dt>euvoc:hasPrimaryContactPoint</dt>
-         </dl>
-         <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>When a property is reused in multiple contexts, the meaning given by the definition
-            is expected to be the same. In this case, multiple definitions are found: 
-            <ul>
-               <li>The contact information to get in touch with the associated person or department.
-                  (euvoc:Site -&gt; vcard:ContactPoint (+euvoc:hasPrimaryContactPoint)) </li>
-               <li>It indicate the primary means of contact for an entity (e.g., an organization or corporate
-                  body), linking that entity to a specific contact point  (euvoc:CorporateBody -&gt; vcard:ContactPoint
-                  (+euvoc:hasPrimaryContactPoint)) </li>
-            </ul>
-         </dd>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-skos:inScheme">
             <dt>skos:inScheme</dt>
          </dl>
+         <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter infos"><i class="fa fa-info-circle info"></i>When a property is reused in multiple contexts, the multiplicity is expected to be
+            the same. Please check the nomenclature above for a summary.</dd>
          <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>When a property is reused in multiple contexts, the meaning given by the definition
             is expected to be the same. In this case, multiple definitions are found: 
             <ul>
-               <li>... (euvoc:AddressType -&gt; at-voc:address-type (+skos:inScheme)) </li>
-               <li>... (euvoc:CapitalClassification -&gt; at-voc:capital-classification (+skos:inScheme))
-                  </li>
                <li>... (euvoc:ConceptStatus -&gt; at-voc:concept-status (+skos:inScheme)) </li>
                <li>... (euvoc:CorrectionStatus -&gt; at-voc:correction-status (+skos:inScheme)) </li>
-               <li>... (euvoc:Country -&gt; at-voc:country (+skos:inScheme)) </li>
                <li>... (euvoc:GrammaticalGender -&gt; at-voc:gramatical-gender (+skos:inScheme)) </li>
                <li>... (euvoc:GrammaticalNumber -&gt; at-voc:grammatical-number (+skos:inScheme)) </li>
                <li>... (euvoc:LabelType -&gt; at-voc:label-type (+skos:inScheme)) </li>
                <li>... (euvoc:NotationType -&gt; at-voc:notation-type (+skos:inScheme)) </li>
                <li>... (euvoc:Script -&gt; at-voc:script (+skos:inScheme)) </li>
-               <li>A concept scheme in which the concept is included. A concept may be a member of more
-                  than one concept scheme.
-                  (euvoc:Treaty -&gt; at-voc:treaty (+skos:inScheme)) </li>
                <li>... (euvoc:UseContext -&gt; at-voc:use-context (+skos:inScheme)) </li>
+               <li>A Concept Scheme in which the Concept is included. A Concept may be a member of more
+                  than one concept scheme. (skos:Concept -&gt; skos:ConceptScheme (+skos:inScheme)) </li>
             </ul>
          </dd>
          <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter errors"><i class="fa fa-times-circle error"></i>The name skos:inScheme appears on connectors of different types.  A name shall be
@@ -632,32 +639,133 @@
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesUsage">Class attributes with multiple usages</h1>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-dct:created-usage">
             <dt>dct:created</dt>
-            <dd class="filter infos"><i class="fa fa-info-circle info"></i>The attribute dct:created has different multiplicities in reuse contexts.        
-               When a property is reused in multiple contexts, the multiplicity is expected to be
-               the same. Please see usage below:
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute dct:created is defined differently in reuse contexts. When a property
+               is reused in multiple contexts, the meaning given by the definition is expected to
+               be the same.In this case, multiple definitions are found: 
                <ul>
-                  <li>vcard:Address (xsd:dateTime) [0..1]</li>
-                  <li>wgs:SpatialThing (xsd:dateTime) [1..1]</li>
+                  <li>Date of creation of the resource.
+                     
+                     (euvoc:XlNotation) </li>
+                  <li>Date of creation of the resource.
+                     
+                     
+                     (euvoc:XlNote) </li>
+                  <li>Date of creation of the resource.
+                     (skos:Concept) </li>
+                  <li>Date of creation of the resource.
+                     
+                     (skos:ConceptScheme) </li>
+                  <li>Date of creation of the resource.
+                     (skosxl:Label) </li>
                </ul>
             </dd>
          </dl>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-dct:modified-usage">
             <dt>dct:modified</dt>
-            <dd class="filter infos"><i class="fa fa-info-circle info"></i>The attribute dct:modified has different multiplicities in reuse contexts.       
-               When a property is reused in multiple contexts, the multiplicity is expected to be
-               the same. Please see usage below:
-               <ul>
-                  <li>sf:Polygon (xsd:dateTime) [1..1]</li>
-                  <li>vcard:Address (xsd:dateTime) [0..1]</li>
-               </ul>
-            </dd>
             <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute dct:modified is defined differently in reuse contexts. When a property
                is reused in multiple contexts, the meaning given by the definition is expected to
                be the same.In this case, multiple definitions are found: 
                <ul>
                   <li>Date of modification of the resource.
-                     (sf:Polygon) </li>
-                  <li>... (vcard:Address) </li>
+                     
+                     (euvoc:XlNotation) </li>
+                  <li>Date of modification of the resource.
+                     
+                     
+                     (euvoc:XlNote) </li>
+                  <li>Date of modification of the resource.
+                     
+                     (skos:Concept) </li>
+                  <li>Date of modification of the resource.
+                     
+                     (skos:ConceptScheme) </li>
+                  <li>Date of modification of the resource.
+                     
+                     (skosxl:Label) </li>
+               </ul>
+            </dd>
+         </dl>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-euvoc:endDate-usage">
+            <dt>euvoc:endDate</dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute euvoc:endDate is has different datatypes in reuse contexts.When a property
+               is reused in multiple contexts, the data-type is expected to be the same.In this case,
+               multiple data-types are found: 
+               <ul>
+                  <li>xsd:date (euvoc:XlNotation) </li>
+                  <li>:xsd:date (euvoc:XlNote) </li>
+                  <li>xsd:date (skos:Concept) </li>
+                  <li>xsd:date (skos:ConceptScheme) </li>
+                  <li>xsd:date (skosxl:Label) </li>
+               </ul>
+            </dd>
+         </dl>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-euvoc:startDate-usage">
+            <dt>euvoc:startDate</dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute euvoc:startDate is defined differently in reuse contexts. When a property
+               is reused in multiple contexts, the meaning given by the definition is expected to
+               be the same.In this case, multiple definitions are found: 
+               <ul>
+                  <li>Beginning of the validity period.  (euvoc:XlNotation) </li>
+                  <li>Beginning of the validity period.  (euvoc:XlNote) </li>
+                  <li>Beginning of the validity period. 
+                     
+                     (skos:Concept) </li>
+                  <li>Beginning of the validity period. (skos:ConceptScheme) </li>
+                  <li>Beginning of the validity period.
+                     (skosxl:Label) </li>
+               </ul>
+            </dd>
+         </dl>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-owl:deprecated-usage">
+            <dt>owl:deprecated</dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute owl:deprecated is defined differently in reuse contexts. When a property
+               is reused in multiple contexts, the meaning given by the definition is expected to
+               be the same.In this case, multiple definitions are found: 
+               <ul>
+                  <li>States whether the resource is current or deprecated. By deprecating a resource, it
+                     means that it should not be used in new documents.
+                     Deprecation is a feature commonly used in versioning software to indicate that a particular
+                     feature is preserved for backward-compatibility purposes, but may be phased out in
+                     the future. 
+                     (euvoc:XlNotation) </li>
+                  <li>States whether the resource is current or deprecated. By deprecating a resource, it
+                     means that it should not be used in new documents.
+                     Deprecation is a feature commonly used in versioning software to indicate that a particular
+                     feature is preserved for backward-compatibility purposes, but may be phased out in
+                     the future.  (euvoc:XlNote) </li>
+                  <li>States whether the resource is current or deprecated. By deprecating a resource, it
+                     means that it should not be used in new documents.
+                     Deprecation is a feature commonly used in versioning software to indicate that a particular
+                     feature is preserved for backward-compatibility purposes, but may be phased out in
+                     the future (skos:Concept) </li>
+                  <li>States whether the resource is current or deprecated. By deprecating a resource, it
+                     means that it should not be used in new documents.
+                     Deprecation is a feature commonly used in versioning software to indicate that a particular
+                     feature is preserved for backward-compatibility purposes, but may be phased out in
+                     the future (skos:ConceptScheme) </li>
+                  <li>States whether the resource is current or deprecated. By deprecating a resource, it
+                     means that it should not be used in new documents.
+                     Deprecation is a feature commonly used in versioning software to indicate that a particular
+                     feature is preserved for backward-compatibility purposes, but may be phased out in
+                     the future.  (skosxl:Label) </li>
+               </ul>
+            </dd>
+         </dl>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-owl:versionInfo-usage">
+            <dt>owl:versionInfo</dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute owl:versionInfo is defined differently in reuse contexts. When a property
+               is reused in multiple contexts, the meaning given by the definition is expected to
+               be the same.In this case, multiple definitions are found: 
+               <ul>
+                  <li>An owl:versionInfo statement generally has as its object a string giving information
+                     about this version. This statement does not contribute to the logical meaning of the
+                     resource.
+                     
+                     (skos:Concept) </li>
+                  <li>An owl:versionInfo statement generally has as its object a string giving information
+                     about this version. This statement does not contribute to the logical meaning of the
+                     resource.
+                     (skos:ConceptScheme) </li>
                </ul>
             </dd>
          </dl>
