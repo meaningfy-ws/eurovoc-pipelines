@@ -19,13 +19,13 @@
     rdfs:label "Core Public Organisation Vocabulary - core"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2024-02-09"^^xsd:date ;
+    dcterms:issued "2024-02-13"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "technical package  - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from common_src_ap_CM.xml on 2024-02-09" ;
+    rdfs:comment "This version is automatically generated from common_src_ap_CM.xml on 2024-02-13" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -74,7 +74,6 @@ euvoc:GrammaticalGender a owl:Class ;
     skos:prefLabel "Grammatical gender"@en .
 
 euvoc:GrammaticalNumber a owl:Class ;
-    skos:definition "The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: \"singular\", \"dual\" or \"plural\". There is also a concept \"generic\" for forms that do not distinguish between grammatical numbers."@en ;
     skos:prefLabel "Grammatical number"@en .
 
 euvoc:LabelType a owl:Class ;
@@ -89,7 +88,6 @@ euvoc:NotationType a owl:Class ;
 
 euvoc:Script a owl:Class ;
     rdfs:subClassOf skos:Concept ;
-    skos:definition "The Script authority table is a controlled vocabulary that lists concepts associated with distinctive scripts. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 15924 international standard. Each script is instantiated according to a writing system, described in writing-system authority table."@en ;
     skos:prefLabel "Script"@en .
 
 euvoc:UseContext a owl:Class ;
@@ -171,10 +169,12 @@ at-voc:gramatical-gender a owl:NamedIndividual,
 
 at-voc:grammatical-number a owl:NamedIndividual,
         skos:ConceptScheme ;
+    skos:definition "The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: \"singular\", \"dual\" or \"plural\". There is also a concept \"generic\" for forms that do not distinguish between grammatical numbers."@en ;
     skos:prefLabel "Grammatical-number"@en .
 
 at-voc:label-type a owl:NamedIndividual,
         skos:ConceptScheme ;
+    skos:definition "The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union."@en ;
     skos:prefLabel "Label-type"@en .
 
 at-voc:language a owl:NamedIndividual,
@@ -190,6 +190,7 @@ at-voc:place a owl:NamedIndividual,
 
 at-voc:script a owl:NamedIndividual,
         skos:ConceptScheme ;
+    skos:definition "The Script authority table is a controlled vocabulary that lists concepts associated with distinctive scripts. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 15924 international standard. Each script is instantiated according to a writing system, described in writing-system authority table."@en ;
     skos:prefLabel "Script"@en .
 
 at-voc:site a owl:NamedIndividual,

@@ -66,12 +66,12 @@
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The common SRC_AP Ontology core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from common_src_ap_CM.xml on 2024-02-09</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from common_src_ap_CM.xml on 2024-02-13</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-09</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-13</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
@@ -103,9 +103,6 @@
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber">
       <skos:prefLabel xml:lang="en">Grammatical number</skos:prefLabel>
    </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber">
-      <skos:definition xml:lang="en">The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: "singular", "dual" or "plural". There is also a concept "generic" for forms that do not distinguish between grammatical numbers.</skos:definition>
-   </rdf:Description>
    <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#LabelType"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#LabelType">
       <skos:prefLabel xml:lang="en">Label type</skos:prefLabel>
@@ -123,9 +120,6 @@
    <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#Script"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Script">
       <skos:prefLabel xml:lang="en">Script</skos:prefLabel>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#Script">
-      <skos:definition xml:lang="en">The Script authority table is a controlled vocabulary that lists concepts associated with distinctive scripts. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 15924 international standard. Each script is instantiated according to a writing system, described in writing-system authority table.</skos:definition>
    </rdf:Description>
    <owl:Class rdf:about="http://publications.europa.eu/ontology/euvoc#UseContext"/>
    <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#UseContext">
@@ -191,9 +185,15 @@
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/grammatical-number">
       <skos:prefLabel xml:lang="en">Grammatical-number</skos:prefLabel>
    </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/grammatical-number">
+      <skos:definition xml:lang="en">The grammatical-number authority table is a controlled vocabulary which provides the list of the grammatical numbers referring to different number of things or persons: "singular", "dual" or "plural". There is also a concept "generic" for forms that do not distinguish between grammatical numbers.</skos:definition>
+   </rdf:Description>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/label-type"/>
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/label-type">
       <skos:prefLabel xml:lang="en">Label-type</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/label-type">
+      <skos:definition xml:lang="en">The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union.</skos:definition>
    </rdf:Description>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/notation-type"/>
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/notation-type">
@@ -205,6 +205,9 @@
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/script"/>
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/script">
       <skos:prefLabel xml:lang="en">Script</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/script">
+      <skos:definition xml:lang="en">The Script authority table is a controlled vocabulary that lists concepts associated with distinctive scripts. Its main scope is to support activities associated with publication process. The concepts included are correlated with the ISO 15924 international standard. Each script is instantiated according to a writing system, described in writing-system authority table.</skos:definition>
    </rdf:Description>
    <skos:ConceptScheme rdf:about="http://publications.europa.eu/resource/authority/use-context"/>
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/use-context">
