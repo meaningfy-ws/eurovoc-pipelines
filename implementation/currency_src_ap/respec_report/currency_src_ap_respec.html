@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+	
+    <meta charset="utf-8" />
+    <title>eProcurement Ontology Catalogue - core</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+
+
+		
+	function quickreference() {
+		$('#table-quickoverview').DataTable();
+	};
+
+    	var editors = [
+	    
+		
+		   {
+		    name: "Editor One",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Editor Two",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		
+		
+             
+		]
+
+        	var authors = [
+	    
+		
+		   {
+		    name: "Author One",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Author Two",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		
+		
+             
+		]
+
+   
+    var respecConfig = {
+      postProcess: [quickreference],
+      publishDate: "2024-02-26",
+      shortName: "eProcurement Ontology Catalogue - core",
+        editors: editors,
+      authors: authors,
+        github: "https://github.com/meaningfy-ws/eurovoc-pipelines",
+      xref: "web-platform",
+      generatedSubtitle: "",
+      additionalCopyrightHolders: ""
+    };
+
+    
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+      max-width: 100%;
+      margin: auto;
+      height: auto;
+      }
+    </style>
+    
+    <p class="copyright">
+        Copyright © 2023
+    </p>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#7ED956" />
+</head>
+<body>
+
+
+
+
+<section id="abstract">
+    <h2>Summary</h2>
+        The purpose of a currency Application Profile is to provide a structured knowledge model for concepts associated with currencies and their subunits.
+</section>
+
+
+
+
+<section id="specterminology">
+    <h2>Terminology</h2>
+<p>
+An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.
+</p><p>
+A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.
+A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and reuse of the datasets.
+
+<h3>Used Prefixes</h3>
+
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            
+                <tr><td><code>euvoc</code></td><td><code>http://publications.europa.eu/ontology/euvoc#</code></td></tr>
+            
+                <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            
+                <tr><td><code>at-voc</code></td><td><code>http://publications.europa.eu/resource/authority/</code></td></tr>
+            
+            </tbody>
+        </table>
+
+</section>
+
+<section>
+
+
+    
+
+<h2>
+   Main Entities
+</h2>
+The main entities are those that form the core of the Application Profile.
+
+
+
+   
+        <section>
+            <h3 id="Currency">
+                <a href="http://publications.europa.eu/ontology/euvoc#Currency"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#Currency"
+                   data-placement="right">Currency</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    
+                </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Currency.Decimalplace">Decimal place</a>
+                            , <a href="#Currency.Usedin">Used in</a>
+                            , <a href="#Currency.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Currency.Decimalplace"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#decimalPlace"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Decimal place%20in%20Currency" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#decimalPlace"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#decimalPlace"
+                                           data-placement="right">
+                                        Decimal place</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Currency.Usedin"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#usedIn"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Used in%20in%20Currency" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#usedIn"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#usedIn"
+                                           data-placement="right">
+                                        Used in</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Currency.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Currency" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+</section>
+
+</body>
+
+<!-- This must be at the end of the template, to ensure that the iterator properly works -->
+    <script defer>
+
+
+	    var prefixes = [ 
+{'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
+{'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
+{'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
+{'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
+				];
+
+	    function shorturl (url) {
+				var short = url;
+				for (e in prefixes) {
+				   var elem = prefixes[e];
+				   if (short.startsWith(elem.ns)) {
+  					short = elem.pref + short.slice(elem.ns.length);
+					}
+				};
+				return short;
+			};
+
+	    var shorten = document.getElementsByClassName("shorten");
+	    for (k=0;k < shorten.length ; k++){
+			var selem = shorten[k];	
+	                selem.innerHTML = shorturl(selem.innerHTML.trim());
+			}
+    </script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"> 
+	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
+    <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
+    <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+    <script src="./html/example.js" ></script>
+	<script type="text/javascript">
+		function elementInView(elem){
+				goesIn = ($(window).height() + $(window).scrollTop()) > $(elem).offset().top;
+				goesOut = ($(window).scrollTop()) > ($(elem).offset().top + $(elem).height());
+				if (goesIn && !goesOut)
+					return 1;
+				else
+					return 0;
+			};
+
+		$(window).scroll(function(){
+			$('.CodeMirror').each(function(){
+				if (elementInView($(this))){
+					$(this).each(function(i, el){
+						el.CodeMirror.refresh();
+					});
+				}
+			});
+			
+		});
+	</script>
+	<style>
+		.CodeMirror {
+		  border: 1px solid #eee;
+		  height: auto;
+		}
+		.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
+	li.ui-tabs-tab > a:hover {
+		background-color:dodgerblue;
+		color:white;
+	}
+  </style>
+
+    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</html>

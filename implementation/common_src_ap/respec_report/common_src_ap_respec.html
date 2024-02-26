@@ -1,0 +1,3907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+	
+    <meta charset="utf-8" />
+    <title>technical package  - core</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+
+
+		
+	function quickreference() {
+		$('#table-quickoverview').DataTable();
+	};
+
+    	var editors = [
+	    
+		
+		   {
+		    name: "Editor One",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Editor Two",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		
+		
+             
+		]
+
+        	var authors = [
+	    
+		
+		   {
+		    name: "Author One",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Author Two",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		
+		
+             
+		]
+
+   
+    var respecConfig = {
+      postProcess: [quickreference],
+      publishDate: "2024-02-26",
+      shortName: "technical package  - core",
+        editors: editors,
+      authors: authors,
+        github: "https://github.com/meaningfy-ws/eurovoc-pipelines",
+      xref: "web-platform",
+      generatedSubtitle: "",
+      additionalCopyrightHolders: ""
+    };
+
+    
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+      max-width: 100%;
+      margin: auto;
+      height: auto;
+      }
+    </style>
+    
+    <p class="copyright">
+        Copyright © 2023
+    </p>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#7ED956" />
+</head>
+<body>
+
+
+
+
+<section id="abstract">
+    <h2>Summary</h2>
+        The purpose of a currency Application Profile is to provide a structured knowledge model for concepts associated with currencies and their subunits.
+</section>
+
+
+
+
+<section id="specterminology">
+    <h2>Terminology</h2>
+<p>
+An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.
+</p><p>
+A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.
+A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and reuse of the datasets.
+
+<h3>Used Prefixes</h3>
+
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            
+                <tr><td><code>euvoc</code></td><td><code>http://publications.europa.eu/ontology/euvoc#</code></td></tr>
+            
+                <tr><td><code>at-voc</code></td><td><code>http://publications.europa.eu/resource/authority/</code></td></tr>
+            
+                <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            
+                <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+            
+                <tr><td><code>skosxl</code></td><td><code>http://www.w3.org/2008/05/skos-xl#</code></td></tr>
+            
+                <tr><td><code>lexinfo</code></td><td><code>http://www.lexinfo.net/ontology/2.0/lexinfo#</code></td></tr>
+            
+                <tr><td><code>lexvo</code></td><td><code>http://lexvo.org/ontology#</code></td></tr>
+            
+                <tr><td><code>owl</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
+            
+                <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+            
+            </tbody>
+        </table>
+
+</section>
+
+<section>
+
+
+    
+
+<h2>
+   Main Entities
+</h2>
+The main entities are those that form the core of the Application Profile.
+
+
+
+   
+        <section>
+            <h3 id="Conceptstatus">
+                <a href="http://publications.europa.eu/ontology/euvoc#ConceptStatus"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#ConceptStatus"
+                   data-placement="right">Concept status</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    It categorizes or represents concept statuses within the EU Vocabularies.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        It categorizes or represents concept statuses within the EU Vocabularies.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Conceptstatus.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Conceptstatus.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Concept status" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Correctionstatus">
+                <a href="http://publications.europa.eu/ontology/euvoc#CorrectionStatus"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#CorrectionStatus"
+                   data-placement="right">Correction status</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    The Correction status authority table (AT) provides the possible statuses of proofreading of labels and descriptions.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The Correction status authority table (AT) provides the possible statuses of proofreading of labels and descriptions.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Correctionstatus.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Correctionstatus.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Correction status" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Grammaticalgender">
+                <a href="http://publications.europa.eu/ontology/euvoc#GrammaticalGender"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#GrammaticalGender"
+                   data-placement="right">Grammatical gender</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    
+                </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Grammaticalgender.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Grammaticalgender.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Grammatical gender" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Grammaticalnumber">
+                <a href="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#GrammaticalNumber"
+                   data-placement="right">Grammatical number</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    
+                </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Grammaticalnumber.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Grammaticalnumber.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Grammatical number" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Labeltype">
+                <a href="http://publications.europa.eu/ontology/euvoc#LabelType"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#LabelType"
+                   data-placement="right">Label type</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The label-type authority table is a controlled vocabulary providing the various forms of labels that are considered alternative labels in the SKOS format. This authority table is an internal table at the Publications Office of the European Union.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Labeltype.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Labeltype.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Label type" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Notationtype">
+                <a href="http://publications.europa.eu/ontology/euvoc#NotationType"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#NotationType"
+                   data-placement="right">Notation type</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A conceptual entity represents the notation types within the EU Vocabularies.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A conceptual entity represents the notation types within the EU Vocabularies.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Notationtype.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Notationtype.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Notation type" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Script">
+                <a href="http://publications.europa.eu/ontology/euvoc#Script"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#Script"
+                   data-placement="right">Script</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    
+                </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Script.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Script.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Script" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Usecontext">
+                <a href="http://publications.europa.eu/ontology/euvoc#UseContext"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#UseContext"
+                   data-placement="right">Use context</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Provides different applications and environments that make use of the various controlled vocabularies.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Provides different applications and environments that make use of the various controlled vocabularies.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Usecontext.Inscheme">In scheme</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Usecontext.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Use context" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Xlnotation">
+                <a href="http://publications.europa.eu/ontology/euvoc#XlNotation"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#XlNotation"
+                   data-placement="right">Xl notation</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A notation is a string of characters used to uniquely identify a concept within a specified context.Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SKOS notation statements. This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A notation is a string of characters used to uniquely identify a concept within a specified context.Like the skosxl:Label class reifies SKOS label statements, XlNotation reifies SKOS notation statements. This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Xlnotation.Created">Created</a>
+                            , <a href="#Xlnotation.Modified">Modified</a>
+                            , <a href="#Xlnotation.Enddate">End date</a>
+                            , <a href="#Xlnotation.Startdate">Start date</a>
+                            , <a href="#Xlnotation.Deprecated">Deprecated</a>
+                            , <a href="#Xlnotation.Value">Value</a>
+                            , <a href="#Xlnotation.Type">Type</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Xlnotation.Created"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/created"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Created%20in%20Xl notation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/created"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/created"
+                                           data-placement="right">
+                                        Created</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of creation of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnotation.Modified"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/modified"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Modified%20in%20Xl notation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/modified"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/modified"
+                                           data-placement="right">
+                                        Modified</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of modification of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnotation.Enddate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#endDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20End date%20in%20Xl notation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-placement="right">
+                                        End date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    End of the validity period. If a resource has an end date then it must be marked as deprecated.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnotation.Startdate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#startDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Start date%20in%20Xl notation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-placement="right">
+                                        Start date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Beginning of the validity period.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnotation.Deprecated"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2002/07/owl#deprecated"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Deprecated%20in%20Xl notation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-placement="right">
+                                        Deprecated</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">xsd:boolean</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnotation.Value"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Value%20in%20Xl notation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+                                           data-placement="right">
+                                        Value</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">rdf:langString</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The literal form of the note.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnotation.Type"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/type"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Type%20in%20Xl notation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/type"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/type"
+                                           data-placement="right">
+                                        Type</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Xlnote">
+                <a href="http://publications.europa.eu/ontology/euvoc#XlNote"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#XlNote"
+                   data-placement="right">Xl note</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Like the skosxl:Label class reifies SKOS label statements, XlNote reifies SKOS note statements (i.e. skos:editorialNote, skos:example, skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote). This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Like the skosxl:Label class reifies SKOS label statements, XlNote reifies SKOS note statements (i.e. skos:editorialNote, skos:example, skos:historyNote, skos:definition, skos:scopeNote and skos:changeNote). This class permits, if needed, to maintain the historical view of the values and add additional provenance descriptions.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Xlnote.Created">Created</a>
+                            , <a href="#Xlnote.Creator">Creator</a>
+                            , <a href="#Xlnote.Modified">Modified</a>
+                            , <a href="#Xlnote.Enddate">End date</a>
+                            , <a href="#Xlnote.Startdate">Start date</a>
+                            , <a href="#Xlnote.Deprecated">Deprecated</a>
+                            , <a href="#Xlnote.Value">Value</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Xlnote.Created"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/created"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Created%20in%20Xl note" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/created"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/created"
+                                           data-placement="right">
+                                        Created</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of creation of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnote.Creator"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/creator"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Creator%20in%20Xl note" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/creator"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/creator"
+                                           data-placement="right">
+                                        Creator</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The entity or entities responsible for creating the resource,
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnote.Modified"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/modified"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Modified%20in%20Xl note" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/modified"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/modified"
+                                           data-placement="right">
+                                        Modified</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of modification of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnote.Enddate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#endDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20End date%20in%20Xl note" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-placement="right">
+                                        End date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://data.europa.eu/a4g/ontology#date" data-placement="right">:xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    End of the validity period. If a resource has an end date then it must be marked as deprecated.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnote.Startdate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#startDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Start date%20in%20Xl note" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-placement="right">
+                                        Start date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Beginning of the validity period.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnote.Deprecated"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2002/07/owl#deprecated"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Deprecated%20in%20Xl note" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-placement="right">
+                                        Deprecated</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">xsd:boolean</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Xlnote.Value"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Value%20in%20Xl note" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+                                           data-placement="right">
+                                        Value</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">rdf:langString</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The literal form of the note.
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Concept">
+                <a href="http://www.w3.org/2004/02/skos/core#Concept"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/2004/02/skos/core#Concept"
+                   data-placement="right">Concept</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A concept is a unit of thought. The semantic content of a concept can be re-expressed by a combination of other and different concepts, which may vary from one language or culture to another. Concepts exist in the mind as abstract entities that are independent of the terms used to label them.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A concept is a unit of thought. The semantic content of a concept can be re-expressed by a combination of other and different concepts, which may vary from one language or culture to another. Concepts exist in the mind as abstract entities that are independent of the terms used to label them.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Concept.Created">Created</a>
+                            , <a href="#Concept.Dateaccepted">Date accepted</a>
+                            , <a href="#Concept.Datesubmitted">Date submitted</a>
+                            , <a href="#Concept.Modified">Modified</a>
+                            , <a href="#Concept.Enddate">End date</a>
+                            , <a href="#Concept.Startdate">Start date</a>
+                            , <a href="#Concept.Deprecated">Deprecated</a>
+                            , <a href="#Concept.Versioninfo">Version info</a>
+                            , <a href="#Concept.Xlnotation">Xl notation</a>
+                            , <a href="#Concept.Xlhistorynote">Xl history note</a>
+                            , <a href="#Concept.Xlnote">Xl note</a>
+                            , <a href="#Concept.Xlchangenote">Xl change note</a>
+                            , <a href="#Concept.Xldefinition">Xl definition</a>
+                            , <a href="#Concept.Altlabel">Alt label</a>
+                            , <a href="#Concept.Preflabel">Pref label</a>
+                            , <a href="#Concept.Exactmatch">Exact match</a>
+                            , <a href="#Concept.Topconceptof">Top concept of</a>
+                            , <a href="#Concept.Isreplacedby">Is replaced by</a>
+                            , <a href="#Concept.Narrower">Narrower</a>
+                            , <a href="#Concept.Broader">Broader</a>
+                            , <a href="#Concept.Hiddenlabel">Hidden label</a>
+                            , <a href="#Concept.Replaces">Replaces</a>
+                            , <a href="#Concept.Inscheme">In scheme</a>
+                            , <a href="#Concept.Context">Context</a>
+                            , <a href="#Concept.Status">Status</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Concept.Created"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/created"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Created%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/created"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/created"
+                                           data-placement="right">
+                                        Created</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of creation of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Dateaccepted"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/dateAccepted"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Date accepted%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/dateAccepted"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/dateAccepted"
+                                           data-placement="right">
+                                        Date accepted</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of acceptance of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Datesubmitted"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/dateSubmitted"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Date submitted%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/dateSubmitted"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/dateSubmitted"
+                                           data-placement="right">
+                                        Date submitted</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of submission of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Modified"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/modified"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Modified%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/modified"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/modified"
+                                           data-placement="right">
+                                        Modified</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of modification of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Enddate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#endDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20End date%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-placement="right">
+                                        End date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    End of the validity period. If a resource has an end date then it must be marked as deprecated.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Startdate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#startDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Start date%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-placement="right">
+                                        Start date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Beginning of the validity period.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Deprecated"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2002/07/owl#deprecated"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Deprecated%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-placement="right">
+                                        Deprecated</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">xsd:boolean</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Versioninfo"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2002/07/owl#versionInfo"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Version info%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2002/07/owl#versionInfo"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2002/07/owl#versionInfo"
+                                           data-placement="right">
+                                        Version info</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainaLiteral" data-placement="right">rdf:PlainaLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Xlnotation"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#xlNotation"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Xl notation%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#xlNotation"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#xlNotation"
+                                           data-placement="right">
+                                        Xl notation</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://publications.europa.eu/ontology/euvoc#XlNotation" data-placement="right">euvoc:XlNotation</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Xlhistorynote"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#xlHistoryNote"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Xl history note%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#xlHistoryNote"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#xlHistoryNote"
+                                           data-placement="right">
+                                        Xl history note</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://publications.europa.eu/ontology/euvoc#XlNote" data-placement="right">euvoc:XlNote</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Xlnote"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#xlNote"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Xl note%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#xlNote"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#xlNote"
+                                           data-placement="right">
+                                        Xl note</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://publications.europa.eu/ontology/euvoc#XlNote" data-placement="right">euvoc:XlNote</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Xlchangenote"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#xlChangeNote"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Xl change note%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#xlChangeNote"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#xlChangeNote"
+                                           data-placement="right">
+                                        Xl change note</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://publications.europa.eu/ontology/euvoc#XlNote" data-placement="right">euvoc:XlNote</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Xldefinition"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#xlDefinition"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Xl definition%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#xlDefinition"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#xlDefinition"
+                                           data-placement="right">
+                                        Xl definition</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://publications.europa.eu/ontology/euvoc#XlNote" data-placement="right">euvoc:XlNote</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Altlabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2008/05/skos-xl#altLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Alt label%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2008/05/skos-xl#altLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2008/05/skos-xl#altLabel"
+                                           data-placement="right">
+                                        Alt label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2008/05/skos-xl#Label" data-placement="right">skosxl:Label</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Preflabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2008/05/skos-xl#prefLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Pref label%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2008/05/skos-xl#prefLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2008/05/skos-xl#prefLabel"
+                                           data-placement="right">
+                                        Pref label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2008/05/skos-xl#Label" data-placement="right">skosxl:Label</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Exactmatch"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#exactMatch"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Exact match%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#exactMatch"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#exactMatch"
+                                           data-placement="right">
+                                        Exact match</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Topconceptof"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#topConceptOf"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Top concept of%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#topConceptOf"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#topConceptOf"
+                                           data-placement="right">
+                                        Top concept of</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" data-placement="right">skos:ConceptScheme</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Isreplacedby"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/isReplacedBy"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Is replaced by%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/isReplacedBy"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/isReplacedBy"
+                                           data-placement="right">
+                                        Is replaced by</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Narrower"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#narrower"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Narrower%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#narrower"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#narrower"
+                                           data-placement="right">
+                                        Narrower</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Broader"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#broader"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Broader%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#broader"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#broader"
+                                           data-placement="right">
+                                        Broader</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Hiddenlabel"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2008/05/skos-xl#hiddenLabel"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Hidden label%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2008/05/skos-xl#hiddenLabel"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2008/05/skos-xl#hiddenLabel"
+                                           data-placement="right">
+                                        Hidden label</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2008/05/skos-xl#Label" data-placement="right">skosxl:Label</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Replaces"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/replaces"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Replaces%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/replaces"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/replaces"
+                                           data-placement="right">
+                                        Replaces</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Inscheme"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In scheme%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
+                                           data-placement="right">
+                                        In scheme</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" data-placement="right">skos:ConceptScheme</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Context"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#context"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Context%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#context"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#context"
+                                           data-placement="right">
+                                        Context</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Concept.Status"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#status"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Status%20in%20Concept" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#status"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#status"
+                                           data-placement="right">
+                                        Status</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Conceptscheme">
+                <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                   data-placement="right">Concept scheme</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A concept schema is a set of concepts, which may include statements about the semantic relationships between those concepts. Thesauri, classification schemes, subject heading lists, taxonomies, terminologies, glossaries, and other types of controlled vocabularies are examples of concept schemas.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Conceptscheme.Created">Created</a>
+                            , <a href="#Conceptscheme.Identifier">Identifier</a>
+                            , <a href="#Conceptscheme.Modified">Modified</a>
+                            , <a href="#Conceptscheme.Title">Title</a>
+                            , <a href="#Conceptscheme.Enddate">End date</a>
+                            , <a href="#Conceptscheme.Startdate">Start date</a>
+                            , <a href="#Conceptscheme.Deprecated">Deprecated</a>
+                            , <a href="#Conceptscheme.Versioninfo">Version info</a>
+                            , <a href="#Conceptscheme.Hastopconcept">Has top concept</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Conceptscheme.Created"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/created"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Created%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/created"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/created"
+                                           data-placement="right">
+                                        Created</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of creation of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Conceptscheme.Identifier"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/identifier"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Identifier%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/identifier"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/identifier"
+                                           data-placement="right">
+                                        Identifier</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An unambiguous reference to the resource within a given context.Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Conceptscheme.Modified"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/modified"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Modified%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/modified"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/modified"
+                                           data-placement="right">
+                                        Modified</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of modification of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Conceptscheme.Title"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Title%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        Title</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">rdf:langString</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    It represents the title or name of a resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Conceptscheme.Enddate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#endDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20End date%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-placement="right">
+                                        End date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    End of the validity period. If a resource has an end date then it must be marked as deprecated.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Conceptscheme.Startdate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#startDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Start date%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-placement="right">
+                                        Start date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Beginning of the validity period.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Conceptscheme.Deprecated"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2002/07/owl#deprecated"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Deprecated%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-placement="right">
+                                        Deprecated</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">xsd:boolean</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Conceptscheme.Versioninfo"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2002/07/owl#versionInfo"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Version info%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2002/07/owl#versionInfo"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2002/07/owl#versionInfo"
+                                           data-placement="right">
+                                        Version info</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainaLiteral" data-placement="right">rdf:PlainaLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An owl:versionInfo statement generally has as its object a string giving information about this version. This statement does not contribute to the logical meaning of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Conceptscheme.Hastopconcept"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Has top concept%20in%20Concept scheme" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#hasTopConcept"
+                                           data-placement="right">
+                                        Has top concept</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Label">
+                <a href="http://www.w3.org/2008/05/skos-xl#Label"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/2008/05/skos-xl#Label"
+                   data-placement="right">Label</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI.An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [<xref scope=external href=https://www.w3.org/TR/rdf-concepts/><foreign otherprops=#0000ff><u>RDF-CONCEPTS</u></foreign></xref>]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The class skosxl:Label is a special class of lexical entities. An instance of the class skosxl:Label is a resource and may be named with a URI.An instance of the class skosxl:Label has a single literal form. This literal form is an RDF plain literal (which is a string of UNICODE characters and an optional language tag [<xref scope=external href=https://www.w3.org/TR/rdf-concepts/><foreign otherprops=#0000ff><u>RDF-CONCEPTS</u></foreign></xref>]). The property skosxl:literalForm is used to give the literal form of an skosxl:Label. If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Label.Created">Created</a>
+                            , <a href="#Label.Modified">Modified</a>
+                            , <a href="#Label.Enddate">End date</a>
+                            , <a href="#Label.Startdate">Start date</a>
+                            , <a href="#Label.Deprecated">Deprecated</a>
+                            , <a href="#Label.Literalform">Literal form</a>
+                            , <a href="#Label.Type">Type</a>
+                            , <a href="#Label.Status">Status</a>
+                            , <a href="#Label.Gender">Gender</a>
+                            , <a href="#Label.Inscript">In script</a>
+                            , <a href="#Label.Number">Number</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Label.Created"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/created"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Created%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/created"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/created"
+                                           data-placement="right">
+                                        Created</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of creation of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Modified"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/modified"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Modified%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/modified"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/modified"
+                                           data-placement="right">
+                                        Modified</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of modification of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Enddate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#endDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20End date%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#endDate"
+                                           data-placement="right">
+                                        End date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    End of the validity period. If a resource has an end date then it must be marked as deprecated.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Startdate"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#startDate"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Start date%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#startDate"
+                                           data-placement="right">
+                                        Start date</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#date" data-placement="right">xsd:date</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Beginning of the validity period.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Deprecated"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2002/07/owl#deprecated"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Deprecated%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2002/07/owl#deprecated"
+                                           data-placement="right">
+                                        Deprecated</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">xsd:boolean</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    States whether the resource is current or deprecated. By deprecating a resource, it means that it should not be used in new documents.Deprecation is a feature commonly used in versioning software to indicate that a particular feature is preserved for backward-compatibility purposes, but may be phased out in the future.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Literalform"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2008/05/skos-xl#literalForm"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Literal form%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2008/05/skos-xl#literalForm"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2008/05/skos-xl#literalForm"
+                                           data-placement="right">
+                                        Literal form</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" data-placement="right">rdf:langString</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An instance of the class skosxl:Label has one and only one literal form.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Type"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/type"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Type%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/type"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/type"
+                                           data-placement="right">
+                                        Type</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Status"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#status"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Status%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#status"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#status"
+                                           data-placement="right">
+                                        Status</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Gender"
+                                typeof="rdfs:Property"
+                                resource="http://www.lexinfo.net/ontology/2.0/lexinfo#gender"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Gender%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.lexinfo.net/ontology/2.0/lexinfo#gender"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.lexinfo.net/ontology/2.0/lexinfo#gender"
+                                           data-placement="right">
+                                        Gender</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Inscript"
+                                typeof="rdfs:Property"
+                                resource="http://lexvo.org/ontology#inScript"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In script%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://lexvo.org/ontology#inScript"
+                                           data-toggle="tooltip"
+                                           data-content="http://lexvo.org/ontology#inScript"
+                                           data-placement="right">
+                                        In script</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Label.Number"
+                                typeof="rdfs:Property"
+                                resource="http://www.lexinfo.net/ontology/2.0/lexinfo#number"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Number%20in%20Label" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.lexinfo.net/ontology/2.0/lexinfo#number"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.lexinfo.net/ontology/2.0/lexinfo#number"
+                                           data-placement="right">
+                                        Number</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+</section>
+
+</body>
+
+<!-- This must be at the end of the template, to ensure that the iterator properly works -->
+    <script defer>
+
+
+	    var prefixes = [ 
+{'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
+{'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
+{'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
+{'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
+				];
+
+	    function shorturl (url) {
+				var short = url;
+				for (e in prefixes) {
+				   var elem = prefixes[e];
+				   if (short.startsWith(elem.ns)) {
+  					short = elem.pref + short.slice(elem.ns.length);
+					}
+				};
+				return short;
+			};
+
+	    var shorten = document.getElementsByClassName("shorten");
+	    for (k=0;k < shorten.length ; k++){
+			var selem = shorten[k];	
+	                selem.innerHTML = shorturl(selem.innerHTML.trim());
+			}
+    </script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"> 
+	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
+    <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
+    <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+    <script src="./html/example.js" ></script>
+	<script type="text/javascript">
+		function elementInView(elem){
+				goesIn = ($(window).height() + $(window).scrollTop()) > $(elem).offset().top;
+				goesOut = ($(window).scrollTop()) > ($(elem).offset().top + $(elem).height());
+				if (goesIn && !goesOut)
+					return 1;
+				else
+					return 0;
+			};
+
+		$(window).scroll(function(){
+			$('.CodeMirror').each(function(){
+				if (elementInView($(this))){
+					$(this).each(function(i, el){
+						el.CodeMirror.refresh();
+					});
+				}
+			});
+			
+		});
+	</script>
+	<style>
+		.CodeMirror {
+		  border: 1px solid #eee;
+		  height: auto;
+		}
+		.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
+	li.ui-tabs-tab > a:hover {
+		background-color:dodgerblue;
+		color:white;
+	}
+  </style>
+
+    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</html>

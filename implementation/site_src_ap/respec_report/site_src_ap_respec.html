@@ -1,0 +1,1526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+	
+    <meta charset="utf-8" />
+    <title>eProcurement Ontology Catalogue - core</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+
+
+		
+	function quickreference() {
+		$('#table-quickoverview').DataTable();
+	};
+
+    	var editors = [
+	    
+		
+		   {
+		    name: "Editor One",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Editor Two",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		
+		
+             
+		]
+
+        	var authors = [
+	    
+		
+		   {
+		    name: "Author One",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		, 
+		
+		   {
+		    name: "Author Two",
+		    companyURL: "",
+		    company: "",
+		    mailto: ""
+
+		    }
+		
+		
+             
+		]
+
+   
+    var respecConfig = {
+      postProcess: [quickreference],
+      publishDate: "2024-02-26",
+      shortName: "eProcurement Ontology Catalogue - core",
+        editors: editors,
+      authors: authors,
+        github: "https://github.com/meaningfy-ws/eurovoc-pipelines",
+      xref: "web-platform",
+      generatedSubtitle: "",
+      additionalCopyrightHolders: ""
+    };
+
+    
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+      max-width: 100%;
+      margin: auto;
+      height: auto;
+      }
+    </style>
+    
+    <p class="copyright">
+        Copyright © 2023
+    </p>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#7ED956" />
+</head>
+<body>
+
+
+
+
+<section id="abstract">
+    <h2>Summary</h2>
+        The purpose of a currency Application Profile is to provide a structured knowledge model for concepts associated with currencies and their subunits.
+</section>
+
+
+
+
+<section id="specterminology">
+    <h2>Terminology</h2>
+<p>
+An <strong>Application Profile</strong> is a specification that reuses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.
+</p><p>
+A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.
+A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and reuse of the datasets.
+
+<h3>Used Prefixes</h3>
+
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            
+                <tr><td><code>vcard</code></td><td><code>http://www.w3.org/2006/vcard/ns#</code></td></tr>
+            
+                <tr><td><code>at-voc</code></td><td><code>http://publications.europa.eu/resource/authority/</code></td></tr>
+            
+                <tr><td><code>dct</code></td><td><code>http://purl.org/dc/terms/</code></td></tr>
+            
+                <tr><td><code>euvoc</code></td><td><code>http://publications.europa.eu/ontology/euvoc#</code></td></tr>
+            
+                <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            
+                <tr><td><code>sf</code></td><td><code>http://www.opengis.net/ont/sf#</code></td></tr>
+            
+                <tr><td><code>locn</code></td><td><code>http://www.w3.org/ns/locn#</code></td></tr>
+            
+                <tr><td><code>org</code></td><td><code>http://www.w3.org/ns/org#</code></td></tr>
+            
+                <tr><td><code>geosparql</code></td><td><code>http://www.opengis.net/ont/geosparql#</code></td></tr>
+            
+            </tbody>
+        </table>
+
+</section>
+
+<section>
+
+
+    
+
+<h2>
+   Main Entities
+</h2>
+The main entities are those that form the core of the Application Profile.
+
+
+
+   
+        <section>
+            <h3 id="Addresstype">
+                <a href="http://publications.europa.eu/ontology/euvoc#AddressType"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#AddressType"
+                   data-placement="right">Address type</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    The Address type authority table (AT) is a controlled vocabulary that provides the address types as used in the EU Whoiswho application. The AT gives the authority code and the English label for each concept. The Address type AT is maintained by the Publications Office of the European Union on the EU Vocabularies website.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The Address type authority table (AT) is a controlled vocabulary that provides the address types as used in the EU Whoiswho application. The AT gives the authority code and the English label for each concept. The Address type AT is maintained by the Publications Office of the European Union on the EU Vocabularies website.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Address">
+                <a href="http://www.w3.org/2006/vcard/ns#Address"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/2006/vcard/ns#Address"
+                   data-placement="right">Address</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    It provides a structured way to represent and exchange information about the location of an entity, whether it be a person, organization, or other. The use of specific properties within this class allows for a detailed and standardized description of addresses.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        It provides a structured way to represent and exchange information about the location of an entity, whether it be a person, organization, or other. The use of specific properties within this class allows for a detailed and standardized description of addresses.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Address.Created">Created</a>
+                            , <a href="#Address.Modified">Modified</a>
+                            , <a href="#Address.Postbox">Postbox</a>
+                            , <a href="#Address.Locality">Locality</a>
+                            , <a href="#Address.Post-office-box">Post-office-box</a>
+                            , <a href="#Address.Postal-code">Postal-code</a>
+                            , <a href="#Address.Street-address">Street-address</a>
+                            , <a href="#Address.Localitycode">Locality code</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Address.Created"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/created"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Created%20in%20Address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/created"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/created"
+                                           data-placement="right">
+                                        Created</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of creation of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Address.Modified"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/modified"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Modified%20in%20Address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/modified"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/modified"
+                                           data-placement="right">
+                                        Modified</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Address.Postbox"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#postbox"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Postbox%20in%20Address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#postbox"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#postbox"
+                                           data-placement="right">
+                                        Postbox</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Address.Locality"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2006/vcard/ns#locality"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Locality%20in%20Address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2006/vcard/ns#locality"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2006/vcard/ns#locality"
+                                           data-placement="right">
+                                        Locality</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Address.Post-office-box"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2006/vcard/ns#post-office-box"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Post-office-box%20in%20Address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2006/vcard/ns#post-office-box"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2006/vcard/ns#post-office-box"
+                                           data-placement="right">
+                                        Post-office-box</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Address.Postal-code"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2006/vcard/ns#postal-code"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Postal-code%20in%20Address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2006/vcard/ns#postal-code"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2006/vcard/ns#postal-code"
+                                           data-placement="right">
+                                        Postal-code</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Address.Street-address"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2006/vcard/ns#street-address"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Street-address%20in%20Address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2006/vcard/ns#street-address"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2006/vcard/ns#street-address"
+                                           data-placement="right">
+                                        Street-address</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Address.Localitycode"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#localityCode"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Locality code%20in%20Address" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#localityCode"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#localityCode"
+                                           data-placement="right">
+                                        Locality code</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://publications.europa.eu/ontology/euvoc#Place" data-placement="right">euvoc:Place</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Contactpoint">
+                <a href="http://www.w3.org/2006/vcard/ns#ContactPoint"
+                   data-toggle="tooltip"
+                   data-content="http://www.w3.org/2006/vcard/ns#ContactPoint"
+                   data-placement="right">Contact point</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Information (e.g. e-mail address, telephone number) of a Person or department through which the user can get in touch with.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Contactpoint.Description">Description</a>
+                            , <a href="#Contactpoint.Hasemail">Has email</a>
+                            , <a href="#Contactpoint.Telephone">Telephone</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Contactpoint.Description"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Description%20in%20Contact point" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        Description</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Contactpoint.Hasemail"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2006/vcard/ns#hasEmail"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Has email%20in%20Contact point" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2006/vcard/ns#hasEmail"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2006/vcard/ns#hasEmail"
+                                           data-placement="right">
+                                        Has email</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Contactpoint.Telephone"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2006/vcard/ns#telephone"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Telephone%20in%20Contact point" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2006/vcard/ns#telephone"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2006/vcard/ns#telephone"
+                                           data-placement="right">
+                                        Telephone</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Polygon">
+                <a href="http://www.opengis.net/ont/sf#Polygon"
+                   data-toggle="tooltip"
+                   data-content="http://www.opengis.net/ont/sf#Polygon"
+                   data-placement="right">Polygon</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A Polygon is a planar Surface defined by 1 exterior boundary and 0 or more interior boundaries. Each interior boundary defines a hole in the Polygon. The exterior boundary LinearRing defines the top of the surface which is the side of the surface from which the exterior boundary appears to traverse the boundary in a counter clockwise direction.
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Polygon.Modified">Modified</a>
+                            , <a href="#Polygon.Aswkt">As w k t</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Polygon.Modified"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/modified"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Modified%20in%20Polygon" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/modified"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/modified"
+                                           data-placement="right">
+                                        Modified</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#dateTime" data-placement="right">xsd:dateTime</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Date of modification of the resource.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Polygon.Aswkt"
+                                typeof="rdfs:Property"
+                                resource="http://www.opengis.net/ont/geosparql#asWKT"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20As w k t%20in%20Polygon" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.opengis.net/ont/geosparql#asWKT"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.opengis.net/ont/geosparql#asWKT"
+                                           data-placement="right">
+                                        As w k t</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral" data-placement="right">rdf:PlainLiteral</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The property geosparql:asWKT is defined to link a Geometry with its WKT serialization.
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Site">
+                <a href="http://publications.europa.eu/ontology/euvoc#Site"
+                   data-toggle="tooltip"
+                   data-content="http://publications.europa.eu/ontology/euvoc#Site"
+                   data-placement="right">Site</a>
+
+            </h3>
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A conceptual entity represents the abstract notion of corporate bodies. This concept serves as a controlled vocabulary, offering the sites occupied by the various EU institutions.
+                </dd>
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        A conceptual entity represents the abstract notion of corporate bodies. This concept serves as a controlled vocabulary, offering the sites occupied by the various EU institutions.
+                    </dd>
+                
+                
+                    <dt>
+                        Subclass of
+                        <dt>
+                            <dd> <a href="">Concept</a>
+                                
+                        </dd>
+                    
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Site.Fn">Fn</a>
+                            , <a href="#Site.Hasaddress">Has address</a>
+                            , <a href="#Site.Hasprimarycontactpoint">Has primary contact point</a>
+                            , <a href="#Site.Geometry">Geometry</a>
+                            , <a href="#Site.Inschemce">In schemce</a>
+                            , <a href="#Site.Localitycode">Locality code</a>
+                            , <a href="#Site.Siteof">Site of</a>
+                            , <a href="#Site.Countrycode">Country code</a>
+                            , <a href="#Site.Managedby">Managed by</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition
+                            </th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Site.Fn"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2006/vcard/ns#fn"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Fn%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2006/vcard/ns#fn"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2006/vcard/ns#fn"
+                                           data-placement="right">
+                                        Fn</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2001/XMLSchema#string" data-placement="right">xsd:string</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Represents the full name of an individual.
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Site.Hasaddress"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2006/vcard/ns#hasAddress"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Has address%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2006/vcard/ns#hasAddress"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2006/vcard/ns#hasAddress"
+                                           data-placement="right">
+                                        Has address</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2006/vcard/ns#Address" data-placement="right">vcard:Address</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Site.Hasprimarycontactpoint"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Has primary contact point%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#hasPrimaryContactPoint"
+                                           data-placement="right">
+                                        Has primary contact point</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2006/vcard/ns#ContactPoint" data-placement="right">vcard:ContactPoint</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Site.Geometry"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#geometry"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Geometry%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#geometry"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#geometry"
+                                           data-placement="right">
+                                        Geometry</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.opengis.net/ont/sf#Polygon" data-placement="right">sf:Polygon</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Site.Inschemce"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/2004/02/skos/core#inSchemce"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20In schemce%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2004/02/skos/core#inSchemce"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inSchemce"
+                                           data-placement="right">
+                                        In schemce</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Site.Localitycode"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#localityCode"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Locality code%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#localityCode"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#localityCode"
+                                           data-placement="right">
+                                        Locality code</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Site.Siteof"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/org#siteOf"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Site of%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/org#siteOf"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/org#siteOf"
+                                           data-placement="right">
+                                        Site of</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Site.Countrycode"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#countryCode"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Country code%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#countryCode"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#countryCode"
+                                           data-placement="right">
+                                        Country code</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Site.Managedby"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#managedBy"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Managed by%20in%20Site" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#managedBy"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#managedBy"
+                                           data-placement="right">
+                                        Managed by</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">skos:Concept</a>
+
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+
+
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+</section>
+
+</body>
+
+<!-- This must be at the end of the template, to ensure that the iterator properly works -->
+    <script defer>
+
+
+	    var prefixes = [ 
+{'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
+{'pref':'dct:', 'ns': 'http://purl.org/dc/terms/'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
+{'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
+{'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'eli:', 'ns' : 'http://data.europa.eu/eli/ontology#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
+				];
+
+	    function shorturl (url) {
+				var short = url;
+				for (e in prefixes) {
+				   var elem = prefixes[e];
+				   if (short.startsWith(elem.ns)) {
+  					short = elem.pref + short.slice(elem.ns.length);
+					}
+				};
+				return short;
+			};
+
+	    var shorten = document.getElementsByClassName("shorten");
+	    for (k=0;k < shorten.length ; k++){
+			var selem = shorten[k];	
+	                selem.innerHTML = shorturl(selem.innerHTML.trim());
+			}
+    </script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+	<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"> 
+	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
+    <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
+    <!--    <script src="https://semiceu.github.io/MLDCAT-AP/releases/1.0.0/example.js" ></script> -->
+    <script src="./html/example.js" ></script>
+	<script type="text/javascript">
+		function elementInView(elem){
+				goesIn = ($(window).height() + $(window).scrollTop()) > $(elem).offset().top;
+				goesOut = ($(window).scrollTop()) > ($(elem).offset().top + $(elem).height());
+				if (goesIn && !goesOut)
+					return 1;
+				else
+					return 0;
+			};
+
+		$(window).scroll(function(){
+			$('.CodeMirror').each(function(){
+				if (elementInView($(this))){
+					$(this).each(function(i, el){
+						el.CodeMirror.refresh();
+					});
+				}
+			});
+			
+		});
+	</script>
+	<style>
+		.CodeMirror {
+		  border: 1px solid #eee;
+		  height: auto;
+		}
+		.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
+	li.ui-tabs-tab > a:hover {
+		background-color:dodgerblue;
+		color:white;
+	}
+  </style>
+
+    	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</html>
