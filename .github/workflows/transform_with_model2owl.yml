@@ -30,6 +30,9 @@ jobs:
       - name: get-saxon
         run: pwd && cd model2owl && make get-saxon
 
+      - name: get-jinja
+        run: cd model2owl && make create-virtual-env && make get-jinja
+
 
       - name: generate convention report and glossary
         run: |
