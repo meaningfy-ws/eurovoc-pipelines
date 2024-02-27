@@ -66,12 +66,12 @@
       <rdfs:label xml:lang="en">Core Public Organisation Vocabulary - core</rdfs:label>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from place_src_ap_CM.xml on 2024-02-26</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from place_src_ap_CM.xml on 2024-02-27</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-26</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-27</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.2.2</owl:versionInfo>
       <owl:incompatibleWith>3.1.4</owl:incompatibleWith>
@@ -131,6 +131,13 @@
    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
       <skos:prefLabel xml:lang="en">In scheme</skos:prefLabel>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://publications.europa.eu/ontology/euvoc#xlDefinition"/>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#xlDefinition">
+      <skos:prefLabel xml:lang="en">Xl definition</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://publications.europa.eu/ontology/euvoc#xlDefinition">
+      <skos:definition xml:lang="en">Additional Information - For now the definitions are manually created. (euvoc:Place -&gt; euvoc:XlNote (+euvoc:xlDefinition))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
    <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
