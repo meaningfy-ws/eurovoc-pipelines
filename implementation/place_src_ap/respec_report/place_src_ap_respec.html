@@ -68,7 +68,7 @@
    
     var respecConfig = {
       postProcess: [quickreference],
-      publishDate: "2024-02-26",
+      publishDate: "2024-02-27",
       shortName: "eProcurement Ontology Catalogue - core",
         editors: editors,
       authors: authors,
@@ -367,6 +367,7 @@ The main entities are those that form the core of the Application Profile.
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#Place.Culturalcity">Cultural city</a>
+                            , <a href="#Place.Xldefinition">Xl definition</a>
                             , <a href="#Place.Location">Location</a>
                             , <a href="#Place.Role">Role</a>
                             , <a href="#Place.Sfwithin">Sf within</a>
@@ -434,6 +435,44 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
                                 <td property="rdfs:comment">
                                     It represents the cities that have been considered as European Capitals of Culture
+                                </td>
+
+
+
+                            </tr>
+                        
+                            <tr id="Place.Xldefinition"
+                                typeof="rdfs:Property"
+                                resource="http://publications.europa.eu/ontology/euvoc#xlDefinition"
+                                class="class mandatory">
+                                <td>
+
+                                    <a href="https://github.com/meaningfy-ws/eurovoc-pipelines/issues/new?title=Issue%20for%20Xl definition%20in%20Place" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+
+                                    <i class="fa-regular fa-message"></i>
+                                    </a>
+
+                                </td>
+                                <td>
+                                        <a href="http://publications.europa.eu/ontology/euvoc#xlDefinition"
+                                           data-toggle="tooltip"
+                                           data-content="http://publications.europa.eu/ontology/euvoc#xlDefinition"
+                                           data-placement="right">
+                                        Xl definition</a>
+                                </td>
+                                <td>
+                                    
+
+                                            <a href="http://publications.europa.eu/ontology/euvoc#XlNote" data-placement="right">euvoc:XlNote</a>
+
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    
                                 </td>
 
 
