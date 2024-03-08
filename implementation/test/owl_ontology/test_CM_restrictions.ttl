@@ -1,57 +1,32 @@
 @prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
-@prefix curr-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-curr-shape:euvoc-Currency a sh:NodeShape ;
-    rdfs:label "Currency" ;
-    rdfs:isDefinedBy curr-shape:curr-shape ;
-    sh:property curr-shape:euvoc-Currency-euvoc-decimalPlace,
-        curr-shape:euvoc-Currency-skos-inScheme ;
-    sh:targetClass euvoc:Currency .
-
-curr-shape:euvoc-Currency-euvoc-decimalPlace a sh:PropertyShape ;
-    rdfs:isDefinedBy curr-shape:curr-shape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:name "Decimal place" ;
-    sh:path euvoc:decimalPlace .
-
-curr-shape:euvoc-Currency-skos-inScheme a sh:PropertyShape ;
-    sh:class at-voc:currency ;
-    sh:description "A concept scheme in which the concept is included. A concept may be a member of more than one concept scheme." ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:name "In scheme" ;
-    sh:path skos:inScheme .
-
-curr-shape:curr-shape a owl:Ontology ;
-    rdfs:label "Core Public Organisation Vocabulary - core shapes"@en ;
+:test-restriction a owl:Ontology ;
+    rdfs:label "Core Public Organisation Vocabulary - core restrictions"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
-    dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
+    dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
     dcterms:issued "2024-03-08"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "eProcurement Ontology Catalogue - core shapes"@en ;
+    dcterms:title "eProcurement Ontology Catalogue - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from currency_src_ap_CM.xml on 2024-03-08" ;
+    rdfs:comment """This version is automatically generated from test_CM.xml on 
+                2024-03-08""" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports :curr,
-        :curr-restriction,
+    owl:imports :test,
         cccev:,
         <http://data.europa.eu/nuts>,
         <http://lexvo.org/ontology>,
@@ -73,8 +48,41 @@ curr-shape:curr-shape a owl:Ontology ;
         foaf:,
         <https://data.europa.eu/m8g/>,
         <ttp://publications.europa.eu/ontology/authority/> ;
-    owl:incompatibleWith "3.1.2" ;
-    owl:priorVersion "http://data.europa.eu/a4g/data-shape#curr-shape-3.1.2" ;
-    owl:versionIRI curr-shape:curr-shape-4.1.1 ;
-    owl:versionInfo "4.1.1" .
+    owl:incompatibleWith "3.3.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#test-restriction-3.3.0" ;
+    owl:versionIRI :test-restriction-4.3.0 ;
+    owl:versionInfo "4.3.0" .
+
+foaf:familyName rdfs:domain foaf:Person ;
+    rdfs:range rdf:PlainLiteral .
+
+foaf:givenName rdfs:domain foaf:Person ;
+    rdfs:range rdf:PlainLiteral .
+
+foaf:mbox rdfs:domain foaf:Agent ;
+    rdfs:range rdf:PlainLiteral .
+
+foaf:member rdfs:domain foaf:Group ;
+    rdfs:range foaf:Agent .
+
+foaf:name rdfs:domain foaf:Person ;
+    rdfs:range rdf:PlainLiteral .
+
+foaf:age a owl:FunctionalProperty ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:integer .
+
+foaf:gender rdfs:domain foaf:Agent ;
+    rdfs:range rdf:PlainLiteral .
+
+foaf:Agent rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty foaf:gender ] .
+
+foaf:Person rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty foaf:age ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( foaf:Group foaf:Person foaf:Organisation ) .
 
