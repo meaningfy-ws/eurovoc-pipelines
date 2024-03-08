@@ -11,6 +11,7 @@ on:
       - "implementation/language_src_ap/xmi_conceptual_model/language_src_ap_CM.xml"
       - "implementation/currency_src_ap/xmi_conceptual_model/currency_src_ap_CM.xml"
       - "implementation/common_src_ap/xmi_conceptual_model/common_src_ap_CM.xml"
+      - "implementation/test/xmi_conceptual_model/test.xml"
 
 jobs:
   report_and_glossary:
@@ -36,7 +37,7 @@ jobs:
 
       - name: generate convention report and glossary
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap common_src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap common_src_ap test)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
@@ -144,7 +145,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap common_src_ap)
+          AVAILABLE_IMPLEMENTATIONS=(cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap common_src_ap test)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
