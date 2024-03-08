@@ -37,7 +37,7 @@ jobs:
 
       - name: generate convention report and glossary
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap common_src_ap test)
+          AVAILABLE_IMPLEMENTATIONS=(cob_src_ap site_src_ap place_src_ap language_src_ap currency_src_ap common_src_ap)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
